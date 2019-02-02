@@ -25,7 +25,7 @@ class hTemplateInstallShell extends hShell {
         $this->hDatabase->insert(
             array(
                 'hTemplateId'               => 1,
-                'hTemplatePath'             => '/HotToddy/HotToddy.template.php',
+                'hTemplatePath'             => '/hFramework/hFrameworkDefault/hFrameworkDefault.template.php',
                 'hTemplateName'             => 'Default',
                 'hTemplateDescription'      => 'Default site template',
                 'hTemplateToggleVariables'  => 0,
@@ -34,7 +34,7 @@ class hTemplateInstallShell extends hShell {
             ),
             'hTemplates'
         );
-        
+
         $this->hDatabase->insert(
             array(
                 'hTemplateId'  => 1,
@@ -43,7 +43,9 @@ class hTemplateInstallShell extends hShell {
             'hTemplateDirectories'
         );
 
-        echo "Installed the default template, /hFramework/hFrameworkDefault/template.php\n";
+        echo "Installed the default template, /hFramework/hFrameworkDefault/hFrameworkDefault.template.php\n";
+        
+        
     }
 }
 

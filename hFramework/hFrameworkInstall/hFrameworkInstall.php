@@ -202,6 +202,16 @@ else
 echo `chmod -R 775 "{$installPath}/Plugins"`;
 echo `chown -R {$user}:{$group} "{$installPath}/Plugins"`;
 
+if (!file_exists($installPath.'/Plugins/HotToddy'))
+{
+    echo "Making directory {$installPath}/Plugins/HotToddy\n";
+    echo `mkdir "{$installPath}/Plugins/HotToddy"`;
+}
+else
+{
+    echo "Directory {$installPath}/Plugins/HotToddy already exists\n";
+}
+
 if (!file_exists($installPath.'/Library'))
 {
     echo "Checking out 3rd-Party Libraries from git to {$installPath}/Library\n\n";
