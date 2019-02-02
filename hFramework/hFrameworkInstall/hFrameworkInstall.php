@@ -89,7 +89,8 @@ echo `chown -R {$user}:{$group} "{$installPath}/www"`;
 echo `cp "{$installPath}/Hot Toddy/hFramework/hFramework.default.php" "{$installPath}/www/index.php"`;
 
 echo `cp "{$installPath}/Hot Toddy/hFramework/hFramework.shell.php" "{$installPath}/hot"`;
-echo `chown -R {$user}:{$group} "{$installPath}/hot"`;
+echo `chown {$user}:{$group} "{$installPath}/hot"`;
+echo `chmod 775 '{$installPath}/hot'`;
 
 if (!file_exists($installPath.'/images/Icons'))
 {
@@ -252,7 +253,7 @@ else
     exit;
 }
 
-$hot = $installPath.'/Hot Toddy/hFramework/hFramework.shell.php';
+$hot = $installPath.'/hot';
 
 if (file_exists($hot))
 {

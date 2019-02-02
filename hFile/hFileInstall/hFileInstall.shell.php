@@ -30,6 +30,8 @@ class hFileInstallShell extends hShell {
 
     public function hConstructor()
     {
+        $this->console('hFileInstallShell loaded...');
+        
         if (!$this->hFrameworkSite)
         {
             $this->hFrameworkSite = $this->hServerHost;
