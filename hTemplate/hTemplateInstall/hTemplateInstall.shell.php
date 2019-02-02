@@ -25,7 +25,7 @@ class hTemplateInstallShell extends hShell {
         $this->hDatabase->insert(
             array(
                 'hTemplateId'               => 1,
-                'hTemplatePath'             => '/hFramework/hFrameworkDefault/hFrameworkDefault.template.php',
+                'hTemplatePath'             => '/hTemplate/hTemplateDefault/hTemplateDefault.template.php',
                 'hTemplateName'             => 'Default',
                 'hTemplateDescription'      => 'Default site template',
                 'hTemplateToggleVariables'  => 0,
@@ -43,9 +43,7 @@ class hTemplateInstallShell extends hShell {
             'hTemplateDirectories'
         );
 
-        echo "Installed the default template, /hFramework/hFrameworkDefault/hFrameworkDefault.template.php\n";
-        
-        
+        echo "Installed the default template, /hTemplate/hTemplateDefault/hTemplateDefault.template.php\n";
     }
 }
 

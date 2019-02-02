@@ -2283,6 +2283,10 @@ class hFramework extends hHTTP {
         {
             $this->hPrivateFramework = $this->plugin($this->hPrivatePlugin, array(), true);
         }
+        else
+        {
+            $this->hPrivateFramework = $this->plugin('hTemplate/hTemplateDefault', array(), true);
+        }
 
         # <h3>Template Plug-ins</h3>
         # <p>

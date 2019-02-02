@@ -14,7 +14,7 @@
 #//@@@@@@\     \@@@@@|
 #//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-class HotToddy extends hPlugin implements hPrivatePlugin {
+class hTemplateDefault extends hPlugin implements hPrivatePlugin {
 
     public function hConstructor()
     {
