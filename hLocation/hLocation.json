@@ -1,0 +1,26 @@
+{
+    plugin : {
+        library : {
+            name : "Location Library"
+        },
+        service : {
+            name : "Location Listener",
+            methods : [
+                "getState",
+                "getStates",
+                "getLocationByPostalCode",
+                "getZipCodeCounties",
+                "getStateCounties"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hLocation",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hLocation"
+        }
+    }
+}

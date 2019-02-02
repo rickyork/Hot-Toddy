@@ -1,0 +1,25 @@
+{
+    plugin : {
+        name : "List",
+        database : {
+            name : "List Database"
+        },
+        service : {
+            name : "List Service",
+            methods : [
+                "getListFilesAsList",
+                "getListFileHTML",
+                "getMultipleListFilesHTML"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hList",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hList"
+        }
+    }
+}

@@ -1,0 +1,55 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+div#hTerminal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+div#hTerminalTop {
+    position: absolute;
+    height: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 5px 0 5px;
+    text-align: right;
+}
+div#hTerminalOutput {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    bottom: 30px;
+    left: 0;
+    font: 10px Monaco, "Courier New", monospace;
+    overflow: auto;
+    overflow-x: hidden;
+}
+div.hTerminalOutputInner {
+    white-space: pre-wrap;
+}
+div#hTerminalOutput h4 {
+    margin: 0;
+    padding: 5px;
+}
+div.hTerminalOutputInner {
+    padding: 5px 5px 5px 15px;
+}
+div#hTerminalOutput div.hTerminalOutput:nth-child(even) {
+    background: rgb(244, 244, 244);
+}
+div#hTerminalInput {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font 10px Monaco, "Courier New", monospace;
+    padding: 5px;
+    background: #fff;
+    border-top: 1px solid rgb(200, 200, 200);
+    height: 19px;
+}

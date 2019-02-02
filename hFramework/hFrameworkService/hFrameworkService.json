@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Framework Service"
+    },
+    file : {
+        title : "Framework Service",
+        path : "/System/Applications/Framework/Service.plugin",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

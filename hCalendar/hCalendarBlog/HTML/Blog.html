@@ -1,0 +1,28 @@
+<div id='hCalendarBlog'>
+    <div id='hCalendarBlogInner'>
+        {hCalendarBlog}
+        <div id='hCalendarBlogLinks'>
+            <div id='hCalendarBlogLinksInner'>
+                {rssLink?
+                <div id='hCalendarRSSLink'>
+                    <a href='{rssLink}'><img src='{rssIcon}' alt='RSS' /> <span>Subscribe to Feed</span></a>
+                </div>
+                }
+                {hCalendarTagCategoryId?
+                <div class='hCalendarBlogCategories hCalendarBlogTags'>
+                    <h4>Tags</h4>
+                    <ul>
+                        <li><a href='{hCalendarBlogPath}'>All Posts</a></li>
+                        {hCategoryTags[]?<li><a href='{hFileCategoryPath}'>{hCategoryName}</a></li>
+                        }
+                    </ul>
+                </div>
+                }
+                {hCalendarRecentPosts}
+            </div>
+        </div>
+    </div>
+    <div id='hCalendarBlogArchiveWrapper'>
+{hCalendarBlogArchive}
+    </div>
+</div>

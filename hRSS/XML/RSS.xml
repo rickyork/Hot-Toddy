@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+{hRSSStylesheetPath?<?xml-stylesheet type="text/css" href="{hRSSStylesheetPath}"?>}
+<rss version="2.0">
+    <channel>
+        <title><![CDATA[{hRSSTitle}]]></title>
+        <link>{hRSSLink}</link>
+        <description><![CDATA[{hRSSDescription}]]></description>
+        <language>{hRSSLanguage}</language>
+        <copyright>{hRSSCopyright}</copyright>
+        {hRSSManagingEditor?<managingEditor>{hRSSManagingEditor}</managingEditor>}
+        <webMaster>{hRSSWebMaster}</webMaster>
+        {hRSSPubDate?<pubDate>{hRSSPubDate}</pubDate>}
+        {hRSSLastBuildDate?<lastBuildDate>{hRSSLastBuildDate}</lastBuildDate>}
+        {hRSSCategory?<category>{hRSSCategory}</category>}
+        <generator>Hot Toddy - http://www.hframework.com</generator>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        {hRSSCloud?<cloud>{hRSSCloud}</cloud>}
+        <ttl>{hRSSTTL}</ttl>
+        {hRSSImage?<image>{hRSSImage}</image>}
+        {hRSSDocs?<docs>{hRSSDocs}</docs>}
+        {hRSSRating?<rating>{hRSSRating}</rating>}
+        {hRSSTextInput?<textInput>{hRSSTextInput}</textInput>}
+        {hRSSSkipHours?<skipHours>{hRSSSkipHours}</skipHours>}
+        {hRSSSkipDays?<skipDays>{hRSSSkipDays}</skipDays>}
+        {hFiles[]?
+        <item>
+            <title><![CDATA[{hFileHeadingTitle}]]></title>
+            <link>{hFilePath}</link>
+            {hFileDocument? <description><![CDATA[{hFileDocument}]]></description>}
+            <author>{hFileOwner}</author>
+            {hRSSCategory?<category>{hRSSCategory}</category>}
+            <comments>{hFilePath}#hFileComments</comments>
+            {hRSSEnclosure?<enclosure>{hRSSEnclosure}</enclosure>}
+            <guid isPermaLink="true">{hFilePath}</guid>
+            <pubDate>{hFileLastModified}</pubDate>
+            {hRSSSource?<source url="{hRSSSourceURL}">{hRSSSource}</source>}
+        </item>
+        }
+    </channel>
+</rss>

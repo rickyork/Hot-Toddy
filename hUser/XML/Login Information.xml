@@ -1,0 +1,11 @@
+<hUserName>{hUserName}</hUserName>
+<hUserEmail>{hUserEmail}</hUserEmail>
+<hUserGroups>
+    {hUserGroups[]?<hUserGroupId>{hUserGroupId}</hUserGroupId>
+    }
+</hUserGroups>
+{hUserIsGroup?
+<hUserGroupOwner>{hUserGroupOwner}</hUserGroupOwner>
+<hUserGroupIsElevated>{hUserGroupIsElevated}</hUserGroupIsElevated>
+<hUserGroupLoginEnabled>{hUserGroupLoginEnabled}</hUserGroupLoginEnabled>
+}

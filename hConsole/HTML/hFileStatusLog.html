@@ -1,0 +1,34 @@
+<table>
+    <thead>
+        <tr>
+            <th class='hFileStatusLog-hUserId'>User Id</th>
+            <th class='hFileStatusLog-hUserName'>User Name</th>
+            <th class='hFileStatusLog-hUserFullName'>Full Name</th>
+            <th class='hFileStatusLog-hFileStatusPath'>Path</th>
+            <th class='hFileStatusLog-hFileStatusCode'>Status Code</th>
+            <th class='hFileStatusLog-hFileStatusReferrerPath'>Referrer</th>
+            <th class='hFileStatusLog-hFileStatusAccessCount'>Access Count</th>
+        </tr>
+    </thead>
+</table>
+<div id='hConsoleLogContainer'>
+    <table>
+        <tbody>
+            {log[]?
+                <tr>
+                    <td class='hFileStatusLog-hUserId'>{hUserId}</td>
+                    <td class='hFileStatusLog-hUserName'>{hUserId_hUserName}</td>
+                    <td class='hFileStatusLog-hUserFullName'>{hUserId_hUserFullName}</td>
+                    <td class='hFileStatusLog-hFileStatusPath'>
+                        <a href='{hFileStatusPath}' target='_blank'>{hFileStatusPath}</a>
+                    </td>
+                    <td class='hFileStatusLog-hFileStatusCode'>{hFileStatusCode}</td>
+                    <td class='hFileStatusLog-hFileStatusReferrerPath'>
+                        <a href='{hFileStatusReferrerPath}' target='_blank'>{hFileStatusReferrerPath}</a>
+                    </td>
+                    <td class='hFileStatusLog-hFileStatusAccessCount'>{hFileStatusAccessCount}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

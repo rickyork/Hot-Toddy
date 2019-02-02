@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Spot Light Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hSpotlight",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hSpotlight"
+        }
+    }
+}

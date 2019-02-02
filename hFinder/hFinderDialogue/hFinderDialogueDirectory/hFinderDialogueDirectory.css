@@ -1,0 +1,40 @@
+body#hFinderDialogueDirectory div.hFinderTree {
+    margin: 0 0 35px 0;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid rgb(64, 64, 64);
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0 0 0;
+    overflow: auto;
+}
+div#hFinderDialogueDirectoryButtons {
+    position: absolute;
+    bottom: 7px;
+    right: 5px;
+    width: 400px;
+    z-index: 5;
+}
+div#hFinderDialogueDirectoryButtonsLeft {
+    position: absolute;
+    bottom: 7px;
+    left: 5px;
+    z-index: 6;
+}
+div#hFinderDialogueDirectoryButtons input {
+    float: right;
+    margin: 0 0 0 5px;
+}
+div#hFinderDialogueDirectoryButtonsLeft input,
+div#hFinderDialogueDirectoryButtons input {
+    padding: 0 10px;
+}
+div.hFinderTreeRoot span.hFinderTreeSelected {
+    background: #3470CB;
+    color: white;
+}

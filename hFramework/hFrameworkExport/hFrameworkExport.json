@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "Framework Export Library"
+        },
+        shell : {
+            name : "Framework Export Shell"
+        }
+    }
+}

@@ -1,0 +1,2 @@
+<?php
+  class hFileDomains_2to3 extends hPlugin { public function hConstructor() { $this->hFileDomains ->addColumn('hTemplateId', hDatabase::id, 'hServerHost') ->renameColumn('hServerHost', 'hFrameworkSite') ->modifyColumn('hFrameworkSite', hDatabase::name); } public function undo() { $this->hFileDomains ->dropColumn('hTemplateId') ->renameColumn('hFrameworkSite', 'hServerHost'); } } ?>

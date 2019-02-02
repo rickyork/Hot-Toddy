@@ -1,0 +1,25 @@
+{
+    plugin : {
+        name : "User Permissions",
+        library : {
+            name : "User Permissions Library"
+        },
+        service : {
+            name : "User Permissions Service",
+            methods : [
+                "save"
+            ]
+        }
+    },
+    file : {
+        title : "Set Permissions",
+        path : "/System/Applications/Permissions.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

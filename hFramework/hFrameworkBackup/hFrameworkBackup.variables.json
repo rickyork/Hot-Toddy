@@ -1,0 +1,7 @@
+{
+  hFrameworkBackupServer: "",
+  hFrameworkBackupShare: "",
+  hFrameworkBackupServerProtocol: "afs", // Only smb is presently supported
+  hFrameworkBackupUser: "",              // Defaults to value of hContactDirectoryAdministratorUser
+  hFrameworkBackupPassword: ""           // Defaults to value of hContactDirectoryAdministratorPassword
+}

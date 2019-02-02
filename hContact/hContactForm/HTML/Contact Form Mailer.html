@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Contact Form</title>
+    </head>
+    <body style="font: 14px Arial, sans-serif;">
+        <h3>Contact Form</h4>
+        <ul style="list-style: none;">
+          <li>{$hContactDisplayName}</li>
+          <li><a href='mailto:{$hContactEmailAddress}'>{$hContactEmailAddress}</a></li>
+        </ul>
+        {$hContactFormWhy?
+          <p>
+            Why: {$hContactFormWhy}
+          </p>
+        }
+        <h4>Comments:</h4>
+        <p>
+          {$hContactFormComments}
+        </p>
+        <table></table> <!--  empty table for Entourage bug fix -->
+    </body>
+</html> 

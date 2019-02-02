@@ -1,0 +1,13 @@
+{
+    plugin : {
+        library : {
+            name : "User Select Library"
+        },
+        service : {
+            name : "User Select Listener",
+            methods : [
+                "getUsersByLetter"
+            ]
+        }
+    }
+}

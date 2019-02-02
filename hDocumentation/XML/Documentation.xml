@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plugin name='{$plugin}' type='{$type}'>
+  <description>
+    <![CDATA[
+    ]]>
+  </description>
+  {$methods[]?
+   <method name='{$name}' visibility='{$visibility}' reference='{$isReference?true}{!$isReference?false}'>
+    <signature>
+      <![CDATA[
+        {$signature}
+      ]]>
+    </signature>
+    <description>
+      <![CDATA[
+        
+      ]]>
+    </description>
+    {$arguments[]?
+    <argument type='' name='{$argumentName}' optional='{$argumentIsOptional?true}{!$argumentIsOptional?false}' reference='{$argumentIsReference?true}{!$argumentIsReference?false}'{$default? default='{$default}'}>
+      <description>
+      <![CDATA[
+      ]]>
+      </description>
+    </argument>
+    }
+    <return type='' />
+  </method>
+  }
+</plugin>

@@ -1,0 +1,14 @@
+{
+    plugin : {
+        name : "Finder Categories",
+        service : {
+            name : "Finder Categories Listener",
+            methods : [
+                "getCategory",
+                "saveCategoryIcon",
+                "saveCategory",
+                "moveToCategory"
+            ]
+        }
+    }
+}

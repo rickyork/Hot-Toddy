@@ -1,0 +1,148 @@
+
+@import 'Format.css';
+
+div#hEditorToolbarPanel {
+    position: fixed;
+    font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+    letter-spacing: normal;
+    word-spacing: normal;
+    top: 5px;
+    left: 5px;
+    z-index: 601;
+    padding: 1px;
+    background: rgb(75, 75, 75);
+    background: rgba(75, 75, 75, 0.8);
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.6);
+    {userAgent.vendorPrefix}box-shadow: 0 7px 15px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    {userAgent.vendorPrefix}border-radius: 8px;
+    color: white;
+    width: 660px;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div.hEditorTemplatePanelPane {
+    display: none;
+}
+div.hEditorTemplatePanelPaneSelected {
+    display: block;
+}
+div.hEditorTemplatePanel h1.hEditorTemplatePanelTitle {
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 4px 10px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    cursor: move;
+    text-transform: none;
+    text-decoration: none;
+}
+span#hEditorContentSelected {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 25px;
+    height: 15px;
+    background: white;
+}
+span#hEditorContentSelectedLabel {
+    position: absolute;
+    right: 45px;
+    top: 10px;
+    width: 500px;
+    text-align: right;
+    color: rgb(244, 244, 244);
+    font-size: 12px;
+}
+ul.hEditorTemplatePanelTabs,
+ul#hEditorTemplateObjectMediaTabs {
+    list-style: none;
+    margin: 0 0 0 11px;
+    padding: 0;
+    height: 23px;
+    position: relative;
+    left: -1px;
+}
+ul#hEditorTemplateObjectMediaTabs {
+    margin: 25px 0 0 11px;
+}
+ul.hEditorTemplatePanelTabs li,
+ul#hEditorTemplateObjectMediaTabs li {
+    float: left;
+    height: 23px;
+    padding: 0 7px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 0 3px 0 0;
+    cursor: pointer;
+    background: rgb(75, 75, 75);
+    {userAgent.isWebkit?
+        background: -webkit-gradient(linear, left top, left bottom, from(rgb(100, 100, 100)), to(rgb(25, 25, 25)));
+    }
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(100, 100, 100), rgb(25, 25, 25));
+    background: linear-gradient(to bottom, rgb(100, 100, 100), rgb(25, 25, 25));
+}
+ul.hEditorTemplatePanelTabs li.hEditorTemplatePanelTabSelected,
+ul#hEditorTemplateObjectMediaTabs li.hEditorTemplateObjectMediaTabSelected {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background: rgb(96, 97, 98);
+    {userAgent.isWebkit?
+        background: -webkit-gradient(linear, left top, left bottom, from(rgb(138, 138, 138)), to(rgb(96, 97, 98)));
+    }
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(138, 138, 138), rgb(96, 97, 98));
+    background: linear-gradient(to bottom, rgb(138, 138, 138), rgb(96, 97, 98));
+}
+ul.hEditorTemplatePanelTabs li span,
+ul#hEditorTemplateObjectMediaTabs li span {
+    line-height: 23px;
+    vertical-align: middle;
+    color: #fff;
+}
+div.hEditorTemplatePanelPane {
+    margin: 0 10px 10px 10px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 1px 0 0 0;
+    background: rgb(100, 100, 100);
+    background: rgba(100, 100, 100, 0.9);
+    min-height: 100px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    {userAgent.vendorPrefix}border-bottom-left-radius: 5px;
+    {userAgent.vendorPrefix}border-bottom-right-radius: 5px;
+    {userAgent.isGecko?
+        -moz-border-radius-bottomleft: 5px;
+        -moz-border-radius-bottomright: 5px;
+    }
+}
+div.hEditorTemplatePanelPane table.hEditorTemplatePanelTable {
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+div.hEditorTemplatePanelPane table.hEditorTemplatePanelTable th {
+    text-align: left;
+    background: rgb(0, 0, 0);
+    padding: 5px;
+}
+div.hEditorTemplatePanelPane table.hEditorTemplatePanelTable td {
+    vertical-align: middle;
+    padding: 5px;
+}
+td.hEditorTemplatePropertyLabel {
+    text-align: right;
+}
+img.hEditorTemplateExpandProperty {
+    float: left;
+    cursor: pointer;
+}
+tr.hEditorTemplateExpandProperty {
+    display: none;
+}
+tr.hEditorTemplateExpanded {
+    background: rgb(200, 200, 200);
+    color: #000;
+}
+

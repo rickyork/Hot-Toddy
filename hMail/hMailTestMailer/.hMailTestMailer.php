@@ -1,0 +1,2 @@
+<?php
+  class hMailTestMailer extends hPlugin { public function hConstructor() { $this->sendMail( 'hMailTestMail', array( 'hContactDisplayName' => 'John Appleseed', 'hContactEmailAddress' => 'john@example.com', 'hContactFirstName' => 'John', 'hUserName' => 'jappleseed', 'hUserPassword' => 'SomePassword123', 'testVariable' => true ) ); if (!$this->hFileDocument) { $this->hFileTitle = ''; $this->hFileDocument = $this->getTemplate('Test Mail'); } } } ?>

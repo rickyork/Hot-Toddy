@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+div#hFinderContextMenu ul li,
+ul#hFinderMenu ul li {
+    text-align: left;
+    display: block;
+}
+div#hFinder-toolbar {
+    text-align: left;
+}
+div#hFinderContextMenu ul li span {
+    display: block;
+}
+form {
+    display: inline;
+}
+body#hFinderTemplate div.hFinderFiles {
+    width: expression(
+        document.all('hFinderTemplate').offsetWidth - 245
+    );
+    height: expression(
+        document.all('hFinderTemplate').offsetHeight - 67
+    );
+}
+body#hFinderTemplate div#hFinderTree {
+    height: expression(
+        document.all('hFinderTemplate').offsetHeight - 67
+    );
+}
+body#hFinderDialogue div.hFinderFiles {
+    height: expression(
+        document.all('hFinderDialogue').offsetHeight - 170
+    );
+    width: expression(
+        document.all('hFinderDialogue').offsetWidth - 35
+    );
+    zoom: 1;
+    overflow: auto;
+    overflow-x: visible;
+    overflow-y: auto;
+}
+body#hFinderDialogue div#hFinderActions {
+    bottom: 5px;
+    margin: 0 15px -5px 0;
+    width: expression(
+        document.all('hFinderDialogue').offsetWidth - 5
+    );
+}
+div.hFinderFiles {
+    overflow: visible;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 22px;
+    zoom: 1;
+}
+div.hFinderIcon {
+    zoom: 1;
+}
+div#hFinderFilesDetails div.hFinderFile {
+    height: 47px;
+    zoom: 1;
+}
+div.hFinderFileWrapper {
+    zoom: 1;
+}
+div#hFinderFilesList div.hFinderFile,
+div#hFinderFilesList div.hFinderDirectory {
+    height: 25px;
+    width: 250px;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+ul.hFinderTree div.hFinderTreeDirectory {
+    zoom: 1;
+}
+body.hFinderFilesList div.hFinderNode {
+    float: left;
+    width: 200px;
+    zoom: 1;
+}
+body.hFinderFilesList div.hFinderNodeWrapper {
+    height: 20px;
+}
+body.hFinderFilesXDetails div.hFinderNode,
+body.hFinderFilesXDetails div.hFinderNodeWrapper {
+    zoom: 1;
+}
+ul.hFinderTree li {
+    zoom: 1;
+}
+body div.hDialogueShadow {
+    filter: none;
+}

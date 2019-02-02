@@ -1,0 +1,5 @@
+<select class='{hContactFieldSelectClass}'>
+  {hContactFields[]?
+    <option value='{hContactFieldId}'{hContactFieldIsSelected? selected='selected'}>{hContactFieldLabel}</option>
+  }
+</select>

@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "File Index Volume"
+        },
+        shell : {
+            name : "File Index Volume"
+        }
+    }
+}

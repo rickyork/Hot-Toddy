@@ -1,0 +1,47 @@
+{
+    plugin : {
+        name : "Editor",
+        library : {
+            name : "Editor Library"
+        },
+        service : {
+            name : "Editor Service",
+            methods : [
+                "saveColumnDimensions",
+                "saveWindowDimensions",
+                "savePreferences",
+                "save"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hEditor",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hEditor"
+        }
+    },
+    file : {
+        directory : {
+            properties : {
+                isApplication : 1,
+                icon : {
+                    name : "Edit.png",
+                    icns : "Edit.icns",
+                    mime : "plugins/editor"
+                }
+            }
+        },
+        path : "/Applications/Editor/index.html",
+        title : "Editor",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "w"
+            }
+        }
+    }
+}

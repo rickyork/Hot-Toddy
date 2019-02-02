@@ -1,0 +1,7 @@
+{
+    plugin : {
+        library : {
+            name : "File Path Category Library"
+        }
+    }
+}

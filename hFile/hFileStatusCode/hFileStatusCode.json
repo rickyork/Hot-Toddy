@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Status Code"
+    },
+    file : {
+        title : "Status Code",
+        path : "/System/Applications/File/Status Code.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

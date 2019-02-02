@@ -1,0 +1,2 @@
+<?php
+  class hFacebookLibrary extends hPlugin { public function hConstructor() { $this->hFileDocumentAppend .= $this->getTemplate('Facebook'); } public function like() { } public function comments() { } } ?>

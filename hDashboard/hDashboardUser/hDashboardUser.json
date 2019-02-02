@@ -1,0 +1,34 @@
+{
+    plugin : {
+        name : "Dashboard User",
+        library : {
+            name : "Dashboard User Library"
+        },
+        service : {
+            name : "Dashboard User Service",
+            methods : [
+                "get",
+                "save",
+                "delete",
+                "getUser",
+                "enable",
+                "disable",
+                "getGroup",
+                "saveGroup"
+            ]
+        }
+    },
+    file : {
+        path : "/Hot Toddy/Dashboard/User.html",
+        title : "User Account Management",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                groups : [
+                    ["Website Administrators", "r"]
+                ]
+            }
+        }
+    }
+}

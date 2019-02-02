@@ -1,0 +1,10 @@
+{
+  hMailTemplateDescription: "Contact Form Mailer",
+  hMailSubject: "{$hContactFormMailerSubject}",
+  hMailTo: "{$hContactFormTo}",
+  hMailCc: "{$hContactFormCc}",
+  hMailBcc: "{$hContactFormBcc}",
+  hMailFrom: "{$hContactFormFrom}",
+  hMailReplyTo: "{$hContactFormReplyTo}",
+  hMailHTML: "Contact Form Mailer"
+}

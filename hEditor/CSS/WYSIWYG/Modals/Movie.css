@@ -1,0 +1,24 @@
+div#hEditorMovieWrapper {
+    overflow: hidden;
+}
+div#hEditorMovieWrapper label {
+    float: left;
+    width: 100px;
+    text-align: right;
+    padding: 17px 5px 0 0;
+}
+div#hEditorTemplateMovieRemoveWrapper {
+    position: absolute;
+    bottom: 12px;
+    left: 5px;
+    border-right: none;
+}
+div#hEditorTemplateMovie div#hEditorTemplateMovieServerWrapper {
+    display: inline-block;
+    float: none;
+    position: relative;
+    top: 6px;
+}
+div#hEditorMovieTargetWrapper {
+    padding: 15px 0 15px 120px;
+}

@@ -1,0 +1,10 @@
+{
+    hContactPageTitle : {
+        defaultValue : "",
+        description : ""
+    },
+    hContactDirectoryEnabled : {
+        defaultValue : 0,
+        description : ""
+    }
+}

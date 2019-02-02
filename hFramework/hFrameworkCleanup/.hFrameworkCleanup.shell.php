@@ -1,0 +1,2 @@
+<?php
+  class hFrameworkCleanupShell extends hPlugin { private $hFrameworkCleanup; public function hConstructor() { $this->hFrameworkCleanup = $this->library('hFramework/hFrameworkCleanup'); $this->hFrameworkCleanup->all(); } } ?>

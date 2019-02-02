@@ -1,0 +1,37 @@
+<!-- Begin Hot Toddy Categories -->
+{hCategories?
+  <div id='hCategory'>
+    <h2>({hCategoryCount}) Categories</h2>
+    {hCategories[]?
+      <div id='hCategoryId-{hCategoryId}' class='hCategory'>
+        {hFileIconPath?
+          <div class='hCategoryImage'>
+            <a href='{hFileCategoryPath}'><img src='{hFileIconPath}' alt='{hCategoryName}' /></a>
+          </div>
+        }
+        <span><a href='{hFileCategoryPath}'>{hCategoryName}</a></span>
+      </div>
+    }
+    <div id='hCategoryFollow'></div>
+  </div>
+}
+<div id='hCategoryDocuments'>
+  <h2>({hCategoryFileCount}) Documents in Category</h2>
+  <div id='hCategoryDocumentsInner'>
+  {hFiles[]?
+    <div class='hCategoryDocument'>
+      <img src='{hFileIconPath}' alt='icon' class='hCategoryDocumentIcon' />
+      <h4><a href='{hFilePath}'>{hFileTitle}{!hFileTitle?{hFileName}}</a></h4>
+      <div class='hFileDescription'>
+        {hFileDescription}
+      </div>
+    </div>
+  }
+  {!hFiles?
+    <p id='hCategoryNoDocuments'>
+      There are no documents in this category.
+    </p>
+  }
+  </div>
+</div>
+<!-- End Hot Toddy Categories -->

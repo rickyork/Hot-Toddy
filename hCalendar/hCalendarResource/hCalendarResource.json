@@ -1,0 +1,7 @@
+{
+    plugin : {
+        shell : {
+            name : "Calendar Resource Shell"
+        }
+    }
+}

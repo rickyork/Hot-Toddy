@@ -1,0 +1,82 @@
+<!-- Begin Dialogue -->
+{.hDialogueTargetFrame(false)?<iframe name='{hDialogueTarget}' id='{hDialogueTarget}' class='hDialogueFrame'></iframe>}
+{hDialoguePrepend}
+<form method='post'
+      role='dialog'
+      action='{hDialogueAction}'
+      id='{dialogueName}Dialogue'
+      name='{dialogueName}Dialogue'
+      aria-describedby='{hDialogueContentId}'
+      class='hDialogue hDialogueInactive {hDialogueClass}{hDialogueFullScreen? hDialogueFullScreen}{hDialogueDisableFocus? hDialogueDisableFocus}{!hDialogueTitlebar? hDialogueTitlebarDisabled}{hDialogueModal? hDialogueModal}{!.hDialogueShadow(true)? hDialogueShadowDisabled}'
+{.hDialogueEnctype(false)?      enctype='multipart/form-data'}
+{.hDialogueTarget(null)?      target='{hDialogueTarget}'}
+{hDialogueTitlebarId?      aria-labelledby='{hDialogueTitlebarId}'}>
+{userAgent:(ie < 9)?
+    {.hDialogueShadow(true)?
+    <div class='hDialogueShadow'>
+        <div class='hDialogueShadowTopLeft'></div>
+        <div class='hDialogueShadowTopRight'></div>
+        <div class='hDialogueShadowTopMiddle'></div>
+        <div class='hDialogueShadowLeft'></div>
+        <div class='hDialogueShadowRight'></div>
+        <div class='hDialogueShadowBottomLeft'></div>
+        <div class='hDialogueShadowBottomRight'></div>
+        <div class='hDialogueShadowBottomMiddle'></div>
+    </div>
+    }
+}
+<div class='hDialogueContent'>
+{!hDialogueFullScreen?
+    {.hDialogueTitlebar(true)?
+        <div class='hDialogueTitlebarButtons'>
+            <span class='hDialogueClose{!.hDialogueClose(true)? hDialogueDisabled}'>Close</span>
+            <span class='hDialogueMinimize{!.hDialogueMinimize(false)? hDialogueDisabled}'>Minimize</span>
+            <span class='hDialogueZoom{!.hDialogueZoom(false)? hDialogueDisabled}'>Zoom</span>
+        </div>
+        <h4 class='hDialogueTitlebar'{.hDialogueTitlebarId(null)? id='{hDialogueTitlebarId}'}{.hDialogueTitleBarId(null)? id='{hDialogueTitleBarId}'}>
+            <div><span>{title}</span></div>
+        </h4>
+    }
+}
+{hDialogueContentPrepend}
+<div id='{hDialogueContentId}'>
+{.hDialogueEnableTabs(true)?
+{.hDialogueTabs(null)}
+{tabs?
+    <div class='hDialogueTabsOuter hApplicationUIButtonSegmentedAquaOuter'>
+        <ul class='hDialogueTabs hApplicationUIButtonSegmentedAqua'>
+        {tabs[]?
+            <li class='hDialogueTab{hDialogueTabFirst? hApplicationUIButtonSegmentedAquaFirst}{hDialogueTabLast? hApplicationUIButtonSegmentedAquaLast}' id='hDialogueTab-{hDialogueTabId}'><span>{hDialogueTabLabel}</span></li>
+        }
+        </ul>
+    </div>
+    <div class='hDialogueContentWrapper hApplicationUIButtonSegmentedAquaContentWrapper'>
+}
+}
+{content}
+{.hDialogueEnableTabs(true)?
+{tabs?
+    </div>
+}
+}
+</div>
+{hDialogueFullScreen?
+    <input type='hidden' id='hDialogueFullScreen' value='1' />
+}
+{.hDialogueButtons(null)?
+    <div class='hDialogueButtons'>
+        {hDialogueButtons}
+    </div>
+}
+{buttons?
+    <div class='hDialogueButtons'>
+    {buttons[]?
+        <input type='submit' id='{dialogueName}Dialogue{hDialogueButtonId}' value='{hDialogueButtonLabel}' />
+    }
+    </div>
+}
+{hDialogueContentAppend}
+</div>
+</form>
+<!-- End Dialogue -->
+{hDialogueAppend}

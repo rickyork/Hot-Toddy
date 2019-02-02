@@ -1,0 +1,55 @@
+ul#hEditorTemplates {
+    list-style: none;
+    padding: 2px;
+    margin: 10px;
+    max-height: 200px;
+    overflow: auto;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+ul#hEditorTemplates > li {
+    position: relative;
+    padding: 1px;
+}
+input.hEditorTemplateRadio {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    margin: -5px 0 0 0;
+}
+ul#hEditorTemplates h4.hEditorTemplateName {
+    color: white;
+    margin: 15px 0 5px 30px;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+ul#hEditorTemplates div.hEditorTemplatePreview {
+    padding: 5px;
+    margin: 0 10px 5px 30px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 3px;
+    {userAgent.vendorPrefix}border-radius: 3px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    {userAgent.vendorPrefix}box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+ul#hEditorTemplates li.hEditorTemplateSelected div.hEditorTemplatePreview {
+    background: lightblue;
+}
+ul#hEditorTemplates div.hEditorTemplatePreview * {
+    margin: 0;
+}
+div.hEditorTemplatePreview.ui-draggable-dragging {
+    background: white;
+    opacity: 0.7;
+    border: 1px solid black;
+    overflow: auto;
+    min-height: 30px;
+    border-radius: 4px;
+    {userAgent.vendorPrefix}border-radius: 4px;
+}
+.hEditorTemplateDroppableOver {
+    background: lightblue !important;
+    min-height: 50px !important;
+}

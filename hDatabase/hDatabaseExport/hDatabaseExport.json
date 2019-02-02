@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "Database Export Library"
+        },
+        shell : {
+            name : "Database Export Shell"
+        }
+    }
+}

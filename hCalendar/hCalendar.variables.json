@@ -1,0 +1,238 @@
+{
+    hCalendarMiniState : {
+        defaultValue : 1,
+        description : ""
+    }, 
+    hCalendarEnableWYSIWYG : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarWYSIWYGToolbarType : {
+        defaultValue : "BasicCMS",
+        description : ""
+    },
+    hCalendarLinkEnabled : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarImportDocumentEnabled : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarAttachMovie : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarAttachSWFObject : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarEnabled : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarId : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarCategoryEnabled : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarCategoryId : {
+        defaultValue : 3,
+        description : ""
+    },
+    hCalendarEnableThumbnail : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarFileThumbnailId : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarTimeEnabled : {
+        defaultValue : 1,
+        description : ""
+    },,
+    hCalendarFileCategoryId : {
+        defaultValue : "",
+        description : ""
+    },,
+    hCalendarTagCategoryId : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarFileCategoriesToExclude : {
+        defaultValue : [],
+        description : ""
+    },
+    hCalendarPathEnabled : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarCommentsEnabled : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarWorldReadEnabled : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarPlugin : {
+        defaultValue : "",
+        description : ""
+    },
+    hCalendarPlugins : {
+        defaultValue : [],
+        description : ""
+    },
+    hCalendarFileEventPlugin : {
+        defaultValue : "",
+        description : ""
+    },
+    hCalendarFilePlugin : {
+        defaultValue : "",
+        description : ""
+    },
+    hCalendarEnableEventPaging : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarEventsResultsPerPage : {
+        defaultValue : 15,
+        description : ""
+    },
+    hCalendarEventsPagesPerChapter : {
+        defaultValue : 5,
+        description : ""
+    },
+    hCalendarBlogRollLinks : {
+        defaultValue : [],
+        description : ""
+    },
+    hCalendarBlogPath : {
+        defaultValue : "",
+        description : ""
+    },
+    hCalendarRecentPostsTitle : {
+        defaultValue : "Recent Posts",
+        description : ""
+    },
+    hCalendarBlogRollTitle : {
+        defaultValue : "Blog Roll",
+        description : ""
+    },
+    hCalendarRecentPosts : {
+        defaultValue : [],
+        description : ""
+    },
+    hCalendarRecentPostsTitles : {
+        defaultValue : [],
+        description : ""
+    },
+    hCalendarBlogPost : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarNewsPost : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarEventPost : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarGenericPost : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarBlogArchiveEnabled : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarBlogSyntaxHighlighting : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarBlogTemplateMarkup : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarBlogPostDateFormat : {
+        defaultValue : "F j, Y",
+        description : ""
+    },
+    hCalendarBlogPostAuthor : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarBlogFullName : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarBlogFirstName : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarBlogUserName : {
+        defaultValue : 0,
+        description : ""
+    },
+    hCalendarBlogCount : {
+        defaultValue : 7,
+        description : ""
+    },
+    hCalendarBlogPostLinkArguments : {
+        defaultValue : "",
+        description : ""
+    },
+    hCalendarBlogRSSTemplate : {
+        defaultValue : "RSS",
+        description : ""
+    },
+    hCalendarBlogRecentPostsTemplate : {
+        defaultValue : "Recent Posts",
+        description : ""
+    },
+    hCalendarBlogTemplate : {
+        defaultValue : "Blog",
+        description : ""
+    },
+    hCalendarBlogSinglePostTemplate : {
+        defaultValue : "Single Post",
+        description : ""
+    },
+    hCalendarBlogPostTemplate : {
+        defaultValue : "Post",
+        description : ""
+    },
+    hCalendarBlogRecentPostTemplate : {
+        defaultValue : "Recent Post",
+        description : ""
+    },
+    hCalendarBlogArchiveYearsTemplate : {
+        defaultValue : "Archive Year",
+        description : ""
+    },
+    hCalendarBlogArchiveTemplate : {
+        defaultValue : "Archive",
+        description : ""
+    },
+    hCalendarEventsPath : {
+        defaultValue : "/Events.html",
+        description : ""
+    },
+    hCalendarEventCount : {
+        defaultValue : 10,
+        description : ""
+    },
+    hCalendarEventPosts : {
+        defaultValue : 1,
+        description : ""
+    },
+    hCalendarEventPostLinkArguments : {
+        defaultValue : "",
+        description : ""
+    }
+}

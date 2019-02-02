@@ -1,0 +1,5 @@
+<select class='hLocationCountry'>
+  {hLocationCountries[]?
+    <option value='{hLocationCountryId}:{hLocationCountryISO2}'{hLocationCountryIsSelected? selected='selected'}>{hLocationCountryName}</option>
+  }
+</select>

@@ -1,0 +1,19 @@
+div#HotToddyAccount {
+    padding: 10px 5px;
+}
+ul.HotToddyAccountPanel {
+    list-style: none;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgb(244, 244, 244);
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 4px;
+}
+li.HotToddyAccountLabel,
+li.HotToddyAccountData {
+    padding: 5px;
+}
+li.HotToddyAccountAction {
+    padding: 5px;
+    text-align: right;
+}

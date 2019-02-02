@@ -1,0 +1,140 @@
+div#hUserAccountWrapper {
+    position: relative;
+    top: 15px;
+}
+div#hUserAccountWrapper a {
+    text-decoration: none;
+}
+div#hUserAccountIconPanel {
+    height: 148px;
+    margin: 25px 0;
+    clear: both;
+}
+div#hUserServerLogin {
+    background: mistyrose;
+    border: 1px solid pink;
+    padding: 5px;
+    margin: 0 0 5px 5px;
+    font-size: 14px;
+}
+div.hUserAccountPanel {
+    float: left;
+    width: 49.99%;
+    position: relative;
+    top: -15px;
+}
+div.hUserAccountPanel ul.hUserAccountPanel {
+    list-style: none;
+    margin: 0 0 20px 0;
+    padding: 5px 0 30px 0;
+    border-top: none;
+    height: 200px;
+    overflow: auto;
+    position: relative;
+}
+div#hContacts ul.hUserAccountPanel {
+    margin-right: 0;    
+}
+div.hUserAccountPanelSlim {
+    width: 33.33%;
+}
+div.hUserAccountPanelSlim ul.hUserAccountPanel {
+    height: 200px;
+}
+ul.hUserAccountPanel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.hUserAccountPanel li {
+    padding: 3px;
+    margin: 2px !important;
+    overflow: hidden;
+}
+p.hUserAccountPanelDescription {
+    font-size: 12px;
+    font-style: italic;
+    padding: 5px 5px 5px 5px;
+    margin: 0 0 0 5px;
+}
+div#hContacts li {
+    padding: 3px 3px 3px 10px;
+}
+li#hContactAddresses {
+    padding: 10px 0;
+}
+ul.hContactPhoneNumber span.hContactPhoneNumberField,
+span.hUserAccountLoginLabel {
+    float: left;
+    width: 50px;
+    text-align: right;
+    padding: 0 5px 0 0;
+}
+span.hUserAccountLoginLabel {
+    width: 100px;
+}
+div.hUserAccountPanel h4 {
+    height: 24px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 5px;
+    color: rgb(50, 50, 50);
+}
+div.hUserAccountPanel h4 span {
+    line-height: 23px;
+    vertical-align: middle;
+}
+div.hUserAccountPanel h4 a {
+    float: right;
+    padding: 4px 10px 0 10px;
+    height: 19px;
+}
+div.hUserAccountPanel form {
+    margin: 0;
+}
+div.hUserAccountPanel label {
+    float: left;
+    width: 120px;
+    text-align: right;
+    padding: 2px 5px 0 0;
+}
+div#hUserLogin ul input.hUserTextInput {
+    width: 140px;
+}
+div.hUserAccountPanel div.hUserAccountButtons {
+    position: absolute;
+    bottom: 10px;
+    right: 6px;
+}
+div.hUserAccountButtons {
+
+}
+li.hGroupDomain {
+    color: rgb(128, 128, 128);
+}
+div#hUserAccountIconPanel table {
+    border-collapse: collapse;    
+}
+div#hUserAccountIconPanel td {
+    text-align: center;
+}
+div#hUserAccountIconPanel td span {
+    display: block;
+    padding: 5px 0;    
+}
+span#hUserAccountPassword {
+    font: 14px monospace;
+}
+div.hUserAccountPanelInner {
+    padding: 0 10px;
+}
+.hUserAccountFinder,
+.hUserAccountMy860 {
+    cursor: pointer;
+}
+div#hUserAccountFollow {
+    clear: both;
+}
+li#hUserEmail {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Contact Dialogue"
+    },
+    file : {
+        path : "/Applications/Contacts/Dialogue.html",
+        title : "Contact Dialogue",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

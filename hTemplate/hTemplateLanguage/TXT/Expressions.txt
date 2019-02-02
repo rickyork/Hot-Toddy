@@ -1,0 +1,23 @@
+Expression Tests:
+  Simple variable:
+    {@compare1?}
+
+
+  With Parenthesis:
+
+  
+  
+    {({compare1} == {$compare2})? Include }
+    
+    {({compare1} == '?')? Include?}
+
+  Without Parenthesis:
+    {{compare1} == {compare2}? Include content}
+    
+    {{compare2} != {compare3}? Include content}
+    
+    This should also work, in theory:
+  
+    {{compare4} && ({$compare5} || {$compare6})? Include content}
+  
+    {{compare} == "This is a statement to compare to"?Then include this.}

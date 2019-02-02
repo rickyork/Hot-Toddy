@@ -1,0 +1,113 @@
+body {
+    font-size: 12px;
+}
+fieldset#hEditorProperties td.hFormLabel,
+fieldset#hEditorPermissions td.hFormLabel,
+fieldset#hEditorOther td.hFormLabel {
+    text-align: left;
+}
+textarea {
+    width: 98%;
+}
+input#hFileTitle {
+    width: 98%;
+    border: 1px solid rgb(153, 153, 153);
+}
+div.hFormWYSIWYGWrapper iframe {
+    margin: 0 !important;
+    border: 1px solid rgb(153, 153, 153) !important;
+    position: relative;
+    left: 3px;
+}
+div#hEditorPropertyCategoryButtons {
+    padding: 5px 0 0 0;
+}
+div#hEditorPropertyCategoryButtons input {
+    float: right;
+    margin: 0 0 0 5px;
+}
+div#hEditorPropertyCategories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    border: 1px solid rgb(128, 128, 128);
+    margin: 5px;
+    height: 100px;
+    overflow: auto;
+}
+div#hEditorPropertyCategories ul li {
+
+}
+div#hEditorPropertyCategories ul div {
+    padding: 3px 3px 3px 40px;
+    height: 32px;
+    background: url('/images/icons/32x32/category_folder.png') no-repeat 3px center;
+}
+div#hEditorPropertyCategories ul li span {
+    line-height: 32px;
+    vertical-align: middle;
+}
+li.hCategorySelected {
+    background: url('/images/themes/aqua/backgrounds/itemSelected.png') repeat-x top;
+    color: #fff;
+}
+div#hEditorPropertiesButtons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 35px;
+    left: 260px;
+    padding: 15px 10px 0 0;
+    border-left: 1px solid rgb(128, 128, 128);
+    background: rgb(240, 240, 240);
+}
+div#hEditorPropertiesButtons input {
+    float: right;
+    margin: 0 0 0 5px;
+}
+div#hEditorPropertiesDiv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 50px;
+    left: 260px;
+    padding: 0 0 50px 0;
+    border-left: 1px solid rgb(128, 128, 128);
+    background: rgb(244, 244, 244);
+    overflow: auto;
+}
+div#hEditorPermissionsDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+}
+select#hUserPermissionsGroups {
+    width: 98%;
+}
+td#hFileIcon {
+    text-align: center;
+}
+td#hFileSize {
+    padding-left: 25px;
+}
+iframe#hEditorPropertiesFrame {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgb(128, 128, 128);
+    background: #fff;
+    display: none;
+}
+div.hApplicationStatus {
+    bottom: 15px;
+    left: 10px;
+    width: 220px;
+}
+li.hCategoryIsHidden {
+    display: none;
+}

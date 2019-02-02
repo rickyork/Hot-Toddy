@@ -1,0 +1,2 @@
+<?php
+  class hDashboardUserGuides extends hPlugin { private $hDashboard; public function hConstructor() { $this->hDashboard = $this->library('hDashboard'); $this->hFileDocument = $this->getTemplate($this->hFileName); } } ?>

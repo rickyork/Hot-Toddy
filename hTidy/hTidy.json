@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Tidy Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hTidy",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hTidy"
+        }
+    }
+}

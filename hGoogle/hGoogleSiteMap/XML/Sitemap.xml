@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.google.com/schemas/sitemap/0.84">
+  {hFiles[]?
+  <url>
+    <loc>http://{hServerHost}{hFilePath}</loc>
+    <lastmod>{hFileLastModified}</lastmod>
+    {hGoogleChangeFrequency?<changefreq>{hGoogleChangeFrequency}</changefreq>}
+    {hGooglePriority?<priority>{hGooglePriority}</priority>}{!hGooglePriority?<priority>0.5</priority>}
+  </url>
+  }
+  <!-- Execution Time: {benchmark} Seconds -->
+</urlset>

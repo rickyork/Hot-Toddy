@@ -1,0 +1,65 @@
+{
+    plugin : {
+        name : "Calendar",
+        library : {
+            name : "Calendar Library"
+        },
+        database : {
+            name : "Calendar Database"
+        },
+        service : {
+            name : "Calendar Service",
+            methods : [
+                "getCalendar",
+                "newCategory",
+                "deleteCategory",
+                "newCalendar",
+                "deleteCalendar",
+                "saveMiniCalendarState",
+                "getEvents",
+                "getSidebarEvents",
+                "getEvent",
+                "saveEvent",
+                "deleteEvent",
+                "RSS",
+                "getAttachedDocument",
+                "getImportedDocument",
+                "updateFileDate",
+                "duplicateEvent",
+                "saveCalendarToggleState",
+                "saveColumnDimensions",
+                "saveWindowDimensions"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hCalendar",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hCalendar"
+        }
+    },
+    file : {
+        title : "Calendar",
+        path : "/Applications/Calendar/index.html",
+        directory : {
+            properties : {
+                isApplication : true,
+                icon : {
+                    name : "Calendar.png",
+                    icns : "App.icns",
+                    mime : "plugins/calendar"
+                }
+            }
+        },
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

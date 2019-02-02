@@ -1,0 +1,23 @@
+<div id='hPanelControls'>
+  <div id='hPanelControlShowAll' class='hApplicationUIButtonGradient'><div><span>Show All</span></div></div>
+</div>
+<ul id='hPanel'>
+{hPanels[]?
+  <li>
+    <h4>{hPanelName}</h4>
+    <ul>
+      {hPanelApplications[]?
+        <li class='hPanelApplication' data-file-path='{hFilePath}'>
+          <div class='hPanelIcon'>
+            <img src='{hFileIconPath}' alt='{hFileTitle}' />
+          </div>
+          <div class='hPanelCaption'>{hFileTitle}</div>
+        </li>
+      }
+    </ul>  
+  </li>
+}
+</ul>
+<div id='hPanelApplicationWrapper'>
+  <iframe src='/hFile/blank' id='hPanelApplication' frameborder='0' framemargin='0'></iframe>
+</div>

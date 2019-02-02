@@ -1,0 +1,36 @@
+div#httpDebugger {
+    display: none;
+}
+div#httpDebuggerOuter div#httpDebugger {
+    display: block;
+}
+div#httpDebugger table {
+    width: 100%;
+}
+div#httpDebuggerOuter {
+    font: 12px Helvetica, Arial, sans-serif;
+}
+td#httpResponse,
+td#httpCallbackFunction,
+td#httpOptions {
+    white-space: pre;
+    overflow: auto;
+    font: 11px Monaco, Courier, monospace;
+}
+div#httpDebugger table tbody th,
+div#httpDebugger table tbody td {
+    padding: 5px;
+}
+div#httpDebugger table tbody th {
+    text-align: right;
+    vertical-align: top;
+    width: 150px;
+}
+div#httpDebugger table tbody td {
+    font: 11px Monaco, Courier, monospace;
+}
+div#httpDebugger table tbody ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

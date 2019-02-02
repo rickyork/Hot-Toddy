@@ -1,0 +1,9 @@
+{
+    hMailSendMethod : "sendmail",                       // One of smtp, mail, sendmail
+    hMailQueue : 0,                                     // true or false.
+    hMailSendmailPath : "/usr/sbin/sendmail -ti -r",
+    hMailReturnPath : "",
+    hMailSMTPServer : "",
+    hMailSMTPHelo : ""
+         
+}

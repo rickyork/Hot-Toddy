@@ -1,0 +1,10 @@
+<div id='hListsWrapper'>
+    <select id='hLists' name='hLists' size='6'>
+    {hLists[]?
+        <option value='{hListId}'{!$hListHasFiles? class='hListNoFiles'}>{hListName}</option>
+    }
+    </select>
+    <div class='hListButtons'>
+        <img src='/images/themes/aqua/icons/misc/add.png' alt='Add List' title='Add List' id='hListAdd' class='hFileDocumentAddButton' /><img src='/images/themes/aqua/icons/misc/remove.png' alt='Remove List' title='Remove List' id='hListRemove' class='hFileDocumentRemoveButton' />
+    </div>
+</div>

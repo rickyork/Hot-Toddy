@@ -1,0 +1,26 @@
+{
+    plugin : {
+        name : "Movie",
+        library : {
+            name : "Movie Library"
+        },
+        database : {
+            name : "Movie Database"
+        },
+        service : {
+            name : "Movie Listener",
+            methods : [
+                "getMovies"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hMovie",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hMovie"
+        }
+    }
+}

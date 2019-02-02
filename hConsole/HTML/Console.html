@@ -1,0 +1,59 @@
+<div id='hConsole'>
+    <ul id='hConsoleLogs'>
+        <li>
+            <h4>Errors</h4>
+            <ul>
+                <li id='hConsole-hFrameworkErrors'><span>Framework Errors</span></li>
+                <li id='hConsole-hFileStatusLog'><span>File Status Codes</span></li>
+            </ul>
+        </li>
+        <li>
+            <h4>File System Activity</h4>
+            <ul>
+                <li id='hConsole-hUserActivity'><span>User Activity Log</span></li>
+                <li id='hConsole-hFileUserStatistics'><span>User Document History</span></li>
+            </ul>
+        </li>
+        <li>
+            <h4>User Account Activity</h4>
+            <ul>
+                <li id='hConsole-hUserLog'><span>User Account Activity</span></li>
+            </ul>
+        </li>
+    </ul>
+    <div id='hConsoleResizeGrip'></div>
+    <div id='hConsoleToolbar'>
+        <span id='hConsoleRefresh'></span>
+
+        <div id='hFrameworkErrorsControls'>    
+            <input type='submit' id='hFrameworkErrorsTruncate' value='Truncate Error Log' />
+            <!-- <label for='hFrameworkErrorReportingLevel'>Reporting Level:</label>
+            <select id='hFrameworkErrorReportingLevel'>
+                <option>Fatal</option>
+                <option>Warning</option>
+                <option>Notice</option>
+                <option>Console</option>
+            </select> -->
+        </div>
+        
+        
+        <div id='hConsoleRecordCountWrapper'>
+            <label for='hConsoleRecordCount'>Show:</label>
+            <input id='hConsoleRecordCount' value='30' />
+            <span>Records</span>
+        </div>
+    </div>
+    <div id='hConsoleItems'>
+        
+    </div>
+    <div id='hConsoleControls'>
+        <div id='hConsolePagingNavigation'>
+            
+        </div>
+    </div>
+</div>
+<script type='text/javascript'>
+    console.width = {user.getVariable('hConsoleWindowWidth', 1200)};
+    console.height = {user.getVariable('hConsoleWindowHeight', 700)};
+    console.logsWidth = {user.getVariable('hConsoleLogsColumnWidth', 0)};
+</script>

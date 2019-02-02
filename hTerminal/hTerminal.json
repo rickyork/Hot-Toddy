@@ -1,0 +1,41 @@
+{
+    plugin : {
+        name : "Terminal",
+        service : {
+            name : "Terminal Service",
+            methods : [
+                "execute",
+                "saveWindowDimensions"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hTerminal",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hTerminal"
+        }
+    },
+    file : {
+        title : "Terminal",
+        path : "/Applications/Terminal/index.html",
+        directory: {
+            properties : {
+                isApplication: 1,
+                icon : {
+                    name : "terminal.png",
+                    icns : "Terminal.icns",
+                    mime : "plugins/terminal"
+                }
+            }
+        },
+        user: {
+            id : 1,
+            permissions : {
+                owner : "rw"
+            }
+        }
+    }
+}

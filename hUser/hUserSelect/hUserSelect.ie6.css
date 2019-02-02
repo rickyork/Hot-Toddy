@@ -1,0 +1,11 @@
+div.user-select-control {
+    zoom: 1;
+    width: expression(
+        document.getElementById('user-template').offsetWidth - 2
+    );
+    height: expression(
+        document.getElementById('user-template').offsetHeight - 58
+    );
+    bottom: auto;
+    right: auto;
+}

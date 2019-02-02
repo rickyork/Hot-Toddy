@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "User Account Contact Information"
+    },
+    file : {
+        title : "Account Contact Information",
+        path : "/Applications/Users/Contact Information.html",
+        user: {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

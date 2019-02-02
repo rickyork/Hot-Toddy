@@ -1,0 +1,9 @@
+{
+    templateDescription : "Comment Mailer",
+    subject : "New Comment on {hFileTitle}",
+    to : "{hContactDisplayName} <{hUserEmail}>",
+    from : "{hFrameworkName} <{hFrameworkAdministrator}>",
+    replyTo : "donotreply@{hServerHost}",
+    html : "Comment Mailer",
+    debug : false
+}

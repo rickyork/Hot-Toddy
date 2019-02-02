@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Subscription Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hSubscription",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hSubscription"
+        }
+    }
+}

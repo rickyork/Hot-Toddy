@@ -1,0 +1,143 @@
+{
+    # This documents the possible variables that you can use in
+    # a .mail.json mailer configuration.
+    
+    # To send mail using a .mail.json configuration, you do the following:
+    #
+    # $this->sendMail(
+    #     "ConfigName",
+    #     array(
+    #             # Mailer template variables
+    #     )
+    # )
+    #
+    # ConfigName as passed to the sendMail() method maps to ConfigName.mail.json in 
+    # the plugin folder.  For example:
+    #
+    #  Plugin
+    #     Plugin.php
+    #     ConfigName.mail.json
+    #
+
+    # hMailTo, optional To recipient(s)
+    #
+    # Example: user@example.com
+    #
+    # With name: John Appleseed <john@example.com>
+    #
+    # Multiple names: John Appleseed <john@example.com>, Jane Appleseed <jane@example.com>
+    #
+    # Template variables may be used in any mailer variable.  For example, 
+    #
+    # hMailTo: "{dynamicToAddress}".  Then when calling the sendMail() method, 
+    # a variable called 'dynamicToAddress' should be passed in the array, like so:
+    #
+    # $this->sendMail(
+    #     "ConfigName",
+    #     array(
+    #         'dynamicToAddress' => 'john@example.com'
+    #     )
+    # )
+
+    hMailTo : "", 
+    
+    # hMailCc, optional Cc recipients(s)
+    
+    hMailCc : "",
+    
+    # hMailBcc, optional Bcc recipient(s)
+    #
+    # One or more recipients must be defined under the hMailTo, hMailCc, or hMailBcc 
+    # variables.
+    
+    hMailBcc : "",
+    
+    # hMailFrom, the From address.
+
+    hMailFrom : "",
+    
+    # hMailReplyTo, the Reply-To address
+    # The recipient will see this address when clicking "Reply" or "Reply All".
+
+    hMailReplyTo : "",
+    
+    # hMailReturnPath, the Return-Path address
+    
+    hMailReturnPath : "",
+    
+    # The mailer subject
+
+    hMailSubject : "",
+    
+    # A short description explaining the purpose of the mailer.
+
+    hMailTemplateDescription : "",
+    
+    # The HTML file to use for the HTML part of the mailer.
+    # 
+    # The HTML file will reside in the HTML folder.  For example, a plugin folder:
+    #
+    #  Plugin
+    #    HTML
+    #      HTMLMailer.html
+    #    Plugin.php
+    #    PluginMailConfig.mail.json
+    #
+    # hMailHTML will be configured with the value "HTMLMailer", the ".html" portion
+    # is not necessary.  You may use template scripting syntax in the HTML mailer.
+    
+    hMailHTML : "",
+    
+    # The text file to use for the text part of the mailer.
+    # 
+    # The text file will reside in the TXT folder.  For example, a plugin folder:
+    #
+    #  Plugin
+    #    TXT
+    #      TXTMailer.html
+    #    Plugin.php
+    #    PluginMailConfig.mail.json
+    #
+    # hMailText will be configured with the value "TXTMailer", the ".txt" portion
+    # is not necessary.  You may use template scripting syntax in the TXT mailer.
+
+    # Debugging Mailers 
+    #
+    # When using *any* of the following debug methods, the mailer is NOT actually 
+    # sent.
+
+    # Override the template and show the entire mailer in the browser in raw form 
+    # including all mail headers.  Set hMailSaveToDisk to true to save the raw mailer
+    # to the www.example.com/Temporary folder instead.
+
+    hMailDebug : false,
+
+    # Override the template and show the HTML part of the mailer in the browser 
+
+    hMailPreview : false,       
+    
+    # If hMailDebug is true, this option will save the complete mailer with headers to 
+    # the Temporary folder.  If hMailPreview is true, only the HTML part of the mailer
+    # will be saved to the Temporary folder.
+
+    hMailSaveToDisk : false,
+    
+    # Whether or not mail should be added to a database-driven queue.  If this option
+    # is set true, you must set up a cron/launchd scheduled task to empty the queue 
+    # with the commands:
+    #
+    # ./hot mail queue
+    #
+    # OR
+    #
+    # ./hot -p hMail queue
+    
+    hMailQueue : false,
+    
+    hMailDebugSendmail : false,
+    
+    hMailSendmailPath : "",
+    
+    hMailReturnPath : ""
+    
+}

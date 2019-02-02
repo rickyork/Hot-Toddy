@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "SOAP Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hSoap",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hSoap"
+        }
+    }
+}

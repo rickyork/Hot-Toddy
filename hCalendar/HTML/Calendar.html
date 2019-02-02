@@ -1,0 +1,106 @@
+    <script type='text/javascript'>
+        calendar.states['hCalendarControlMini'] = {hCalendarMiniState};
+        calendar.defaultCalendar = {hCalendarDefault};
+        calendar.width           = {user.getVariable('hCalendarWindowWidth', 1200)};
+        calendar.height          = {user.getVariable('hCalendarWindowHeight', 700)};
+        calendar.calendarsWidth  = {user.getVariable('hCalendarCalendarsColumnWidth', 0)};
+        calendar.eventsWidth     = {user.getVariable('hCalendarEventsColumnWidth', 0)};
+    </script>
+    <!-- Begin Left Column -->
+    <div id='hCalendar'>
+        <h4>Calendars</h4>
+        <div id='hCalendarOwner'>
+            {hCalendarOwner}
+        </div>
+    </div>
+    <div id='hCalendarMini'>
+        <div id='hCalendarMiniControls'>
+            <table cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td><img src='/images/themes/aqua/calendar/mini/up.png' id='hCalendarMiniUp' title='Go back in the calendar.' /></td>
+                        <td><img src='/images/themes/aqua/calendar/mini/sep.png' class='hCalendarMiniSep' /></td>
+                        <td><img src='/images/themes/aqua/calendar/mini/current.png' id='hCalendarMiniCurrent' title='Go to the current month.' /></td>
+                        <td><img src='/images/themes/aqua/calendar/mini/sep.png' class='hCalendarMiniSep' /></td>
+                        <td><img src='/images/themes/aqua/calendar/mini/down.png' id='hCalendarMiniDown' title='Go forward in the calendar.' /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id='hCalendarMiniInner'>
+            {hCalendarMini}
+        </div>
+    </div>
+    <div id='hCalendarsResizeGrip'></div>
+    <!-- End Left Column -->
+    <!-- Begin Calendar -->
+    <div id='hCalendarView'>
+        <div id='hCalendarViewInner'>
+            {hCalendar}
+        </div>
+    </div>
+    <ul id='hCalendarNavigation'>
+        <li id='hCalendarNavigationPrevious'><span>&lt;</span></li>
+        <li id='hCalendarNavigationToday'><span>Today</span></li>
+        <li id='hCalendarNavigationNext'><span>&gt;</span></li>
+    </ul>
+    <!-- End Calendar -->
+    <!-- Begin Event Form -->
+    <div id='hCalendarEvent'>
+        <div class='hApplicationUIButtonSegmentedAquaOuter'>
+            <ul id='hCalendarEventTabs' class='hApplicationUIButtonSegmentedAqua'>
+                <li class='hCalendarEventTab hCalendarEventTabSelected' id='hCalendarEventTab-Content'><span>Content</span></li>
+                <li class='hCalendarEventTab' id='hCalendarEventTab-Properties'><span>Properties</span></li>
+            </ul>
+        </div>
+        <div id='hCalendarEventBackground'>
+
+        </div>
+        <div id='hCalendarEventForm' class='hApplicationUIButtonSegmentedAquaContentWrapper'>
+            <iframe src='/hFile/blank' name='hCalendarEventFrame' id='hCalendarEventFrame' framemargin='0' frameborder='0'></iframe>
+            <form action='/hCalendar/saveEvent' target='hCalendarEventFrame' method='post' enctype='multipart/form-data'>
+                {hCalendarEventForm}
+            </form>
+        </div>
+        <div id='hCalendarEventFormButtons'>
+            <input type='submit' alt='Save' id='hCalendarEventFormSave' value='Save' />
+            <input type='submit' alt='Continue' id='hCalendarEventFormContinue' value='Continue' />
+            <input type='submit' alt='Back' id='hCalendarEventFormBack' value='Back' />
+            <input type='submit' alt='Cancel' id='hCalendarEventFormCancel' value='Cancel' />
+        </div>
+    </div>
+    <!-- End Event Form -->
+    <!-- Begin Right Column -->
+    <div id='hCalendarEvents'>
+        <div id='hCalendarEventButtons'>
+            <ul>
+                <li id='hCalendarEventNew'><span>New Document</span></li>
+                <li id='hCalendarEventDelete'><span>Delete Document</span></li>
+            </ul>
+            <!--
+                <img src='/images/themes/aqua/calendar/buttons/New Event.png' alt='New Event' id='hCalendarEventNew' />
+                <img src='/images/themes/aqua/calendar/buttons/Modify Event.png' alt='Modify Event' id='hCalendarEventModify' />
+                <img src='/images/themes/aqua/calendar/buttons/Delete Event.png' alt='Delete Event' id='hCalendarEventDelete' />
+            -->
+        </div>
+        <h4>Documents</h4>
+        <ul id='hCalendarEventsList'>
+            {hCalendarEvents}
+        </ul>
+        {hCalendarEventNavigation?
+        <div id='hCalendarEventNavigation'>
+            {hCalendarEventNavigation}
+        </div>
+        }
+    </div>
+    <div id='hCalendarEventsResizeGrip'></div>
+    <!-- End Right Column -->
+    <!-- Begin Event Template -->
+    <div class='hCalendarEventTemplate hCalendarEvent'>
+        <div class='hCalendarEventTitle'></div>
+        <div class='hCalendarEventData'>
+            <div class='hCalendarEventDescription'></div>
+            <span class='hCalendarEventPath'></span>
+        </div>
+    </div>
+    {hCalendarSelectCategoryDialogue}

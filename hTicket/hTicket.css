@@ -1,0 +1,9 @@
+form#hTicketDialogue {
+    display: block;
+    width: 600px;
+    height: 400px;
+    margin: -200px 0 0 -300px;
+}
+form#hTicketDialogue div.hFormDivision {
+    display: block;
+}

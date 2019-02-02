@@ -1,0 +1,14 @@
+{
+    plugin : {
+        name : "Database"
+    },
+    source : {
+        destination : "/Hot Toddy/hDatabase",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hDatabase"
+        }
+    }
+}

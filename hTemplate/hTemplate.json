@@ -1,0 +1,23 @@
+{
+    plugin : {
+        name : "Template",
+        database : {
+            name : "Template Database"
+        },
+        shell : {
+            name : "Template Shell"
+        },
+        library : {
+            name : "Template Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hTemplate",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hTemplate"
+        }
+    }
+}

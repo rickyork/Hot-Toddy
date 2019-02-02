@@ -1,0 +1,32 @@
+Sandbox Help
+
+    The sandbox allows you to experiment with Hot Toddy API calls in the 
+    context of a shell plugin.  You can type PHP code and execute that 
+    code in the sandbox.
+
+    - Type Hot Toddy code.  To include a plugin, do something like this:
+    
+        $file = $this->library('hFile');
+        
+      Something like this won't work:
+      
+        $this->hFile = $this->library('hFile');
+        
+      Since you are in the context of a plugin, member properties must be
+      declared when including plugins, and declaring member properties is 
+      not possible using the sandbox.
+      
+      Also possible:
+      
+        echo $this->getFilePathByFileId(1);
+        
+      Prints the file path for the file with fileId 1.
+
+    - To execute code, type 'r', 'e', exe', 'exec', or 'execute' and press return.
+    
+    - To clear the code you've written thus far, type 'clear'.
+    
+    - To exit the sandbox, type 'exit'.
+
+    Warning: Data changes you make using the sandbox are permanent and 
+    cannot be reversed.

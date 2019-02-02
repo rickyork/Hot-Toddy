@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Test Mail"
+    },
+    file : {
+        title : "Test Mailer",
+        path : "/System/Applications/Mail/Test.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

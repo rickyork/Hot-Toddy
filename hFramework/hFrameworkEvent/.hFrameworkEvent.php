@@ -1,0 +1,2 @@
+<?php
+  class hFrameworkEvent extends hPlugin { public function hConstructor() { $query = $this->hFrameworkEvents->select(); foreach ($query as $data) { $event = $data['hFrameworkEvent']; $this->on->$event( $data['hPlugin'], $data['hPluginMethod'] ); } } } ?>

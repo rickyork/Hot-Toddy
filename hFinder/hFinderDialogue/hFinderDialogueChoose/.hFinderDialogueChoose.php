@@ -1,0 +1,2 @@
+<?php
+  class hFinderDialogueChoose extends hPlugin implements hFinderDialogueTemplate { private $hFinderDialogueChoose; private $hForm; private $hDialogue; public function hConstructor() { $this->getPluginFiles(); $this->hFinderHasFiles = true; $this->hFileTitle = 'Choose...'; $this->hFinderButtons = true; $this->hFinderButtonUpload = true; $this->hFinderButtonsRight = false; } public function getControls() { return $this->getTemplate('Buttons'); } } ?>

@@ -1,0 +1,68 @@
+div.hDashboardButton {
+    background: rgb(150, 150, 150);
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: white;
+    display: inline-block;
+}
+div.hDashboardButton:hover {
+    background: rgb(75, 75, 75);
+    cursor: pointer;
+}
+ul.hDashboardListActions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: -4px;
+}
+html body div ul.hDashboardListActions li {
+    padding: 5px;
+}
+html body div ul.hDashboardListActions li:hover {
+    background: rgb(91, 111, 141);
+    color: white;
+    cursor: pointer;
+}
+div.hDashboardActionButton {
+    position: absolute;
+    right: 22px;
+    top: 10px;
+}
+div#hDashboard table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+div#hDashboard table td {
+    text-align: center;
+    padding: 15px 0;
+}
+td.hDashboardApplication {
+    cursor: pointer;
+}
+table#hDashboardApplications img {
+    width: 48px;
+}
+span.hDashboardItemActions {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+span.hDashboardItemActions a {
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+    padding: 3px;
+    font-size: 11px;
+}
+span.hDashboardItemActions a:hover {
+    background: rgb(75, 75, 75);
+    color: #fff;
+    border-radius: 2px;
+}
+span.hDashboardItemActions a.hDashboardItemDelete:hover {
+    background: crimson;
+    color: #fff;
+    border-radius: 2px;
+}

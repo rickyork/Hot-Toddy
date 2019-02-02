@@ -1,0 +1,78 @@
+/**
+* Tiles View
+*
+*/
+body.hFinderFilesTiles p.hFinderFileDescription,
+body.hFinderFilesTiles h4.hFinderFileTitle,
+body.hFinderFilesTiles span.hFinderPath {
+    display: none;
+}
+body.hFinderFilesTiles div.hFinderNode {
+    float: left;
+    position: relative;
+}
+body.hFinderFilesTiles div.hFinderNodeWrapper {
+    width: 200px;
+    height: 42px;
+    overflow: hidden;
+    padding: 5px;
+}
+body.hFinderFilesTiles div.hFinderCaptionWrapper {
+    position: absolute;
+    left: 48px;
+    top: 14px;
+    width: 180px;
+    height: 30px;
+    overflow: hidden;
+}
+body.hFinderFilesTiles div.hFinderIcon {
+    float: left;
+    padding: 3px;
+}
+body.hFinderFilesTiles div.hFinderIcon .hFinderSymbolicLink {
+    width: 10px;
+    height: 10px;
+    right: -2px;
+    bottom: -2px;
+}
+body.hFinderFilesTiles div.hFinderThumbnail {
+    float: left;
+    height: 42px;
+    overflow: hidden;
+    display: block;
+    padding: 3px;
+    width: 32px;
+}
+body.hFinderFilesTiles div.hFinderThumbnail img {
+    width: 32px;
+}
+body.hFinderFilesTiles div.hFinderIconThumbnail {
+    display: none;
+}
+body.hFinderFilesTiles .hFinderSelected div.hFinderServerWrapper,
+body.hFinderFilesTiles .hFinderSelected div.hFinderNodeWrapper,
+body.hFinderFilesTiles .hFinderDragOver hFinderServerWrapper,
+body.hFinderFilesTiles .hFinderDragOver div.hFinderNodeWrapper {
+    background: none;
+}
+body.hFinderFilesTiles span.hFinderDirectoryName,
+body.hFinderFilesTiles span.hFinderFileName {
+    padding: 2px 5px;
+}
+body.hFinderFilesTiles .hFinderSelected span.hFinderDirectoryName,
+body.hFinderFilesTiles .hFinderSelected span.hFinderFileName,
+body.hFinderFilesTiles .hFinderDragOver span.hFinderDirectoryName,
+body.hFinderFilesTiles .hFinderDragOver span.hFinderFileName {
+    background: #3470CB;
+    color: white;
+    border-radius: 5px;
+    {userAgent.vendorPrefix}border-radius: 7px;
+}
+body.hFinderFilesTiles .hFinderSelected div.hFinderIcon,
+body.hFinderFilesTiles .hFinderSelected div.hFinderThumbnail,
+body.hFinderFilesTiles .hFinderDragOver div.hFinderIcon,
+body.hFinderFilesTiles .hFinderDragOver div.hFinderThumbnail {
+    background-color: rgb(200, 200, 200);
+    border-radius: 5px;
+    {userAgent.vendorPrefix}border-radius: 5px;
+}

@@ -1,0 +1,26 @@
+{
+    plugin : {
+        name : "Dashboard Blog",
+        service : {
+            name : "Dashboard Blog Service",
+            methods : [
+                "get",
+                "save",
+                "delete"
+            ]
+        }
+    },
+    file : {
+        path : "/Hot Toddy/Dashboard/Blog.html",
+        title : "Blog Management",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                groups : [
+                    ["Website Administrators", "r"]
+                ]
+            }
+        }
+    }
+}

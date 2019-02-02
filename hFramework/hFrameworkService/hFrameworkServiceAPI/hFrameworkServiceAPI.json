@@ -1,0 +1,5 @@
+{
+    plugin : {
+        name : "Framework Service API"
+    }
+}

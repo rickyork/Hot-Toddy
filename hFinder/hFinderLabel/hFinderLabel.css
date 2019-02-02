@@ -1,0 +1,100 @@
+div#hFinderLabels {
+    overflow: auto;
+    zoom: 1;
+    position: relative;
+    height: 32px;
+}
+div.hFinderLabelName {
+    height: 14px;
+    overflow: hidden;
+    clear: both;
+    padding: 0;
+    margin: 0;
+}
+div.hFinderLabelName div {
+    display: none;
+    padding: 0 0 0 52px;
+    margin: 0;
+    color: rgb(146, 146, 146);
+    font-weight: bold;
+    font-size: 12px;
+}
+div#hFinderLabels span.hFileLabel {
+    float: left;
+    width: 18px;
+    height: 18px;
+    background: url("/hFinder/hFinderLabel/Pictures/labels.png") no-repeat;
+}
+div#hFinderLabels span.hFinderLabelNone {
+    margin-right: 5px;
+    background-position: -18px 0;
+}
+div#hFinderLabels span.hFinderLabelNone:hover {
+    background-position: 0 0;
+}
+body div#hFinderLabels span.hFinderLabelNoneOn {
+    background-position: -36px 0;
+}
+div#hFinderLabels span.hFinderLabelRed {
+    background-position: -18px -18px;
+}
+div#hFinderLabels span.hFinderLabelRed:hover {
+    background-position: 0 -18px;
+}
+body div#hFinderLabels span.hFinderLabelRedOn {
+    background-position: -36px -18px;
+}
+div#hFinderLabels span.hFinderLabelOrange {
+    background-position: -18px -36px;
+}
+div#hFinderLabels span.hFinderLabelOrange:hover {
+    background-position: 0 -36px;
+}
+body div#hFinderLabels span.hFinderLabelOrangeOn {
+    background-position: -36px -36px;
+}
+div#hFinderLabels span.hFinderLabelYellow {
+    background-position: -18px -54px;
+}
+div#hFinderLabels span.hFinderLabelYellow:hover {
+    background-position: 0 -54px;
+}
+body div#hFinderLabels span.hFinderLabelYellowOn {
+    background-position: -36px -54px;
+}
+div#hFinderLabels span.hFinderLabelGreen {
+    background-position: -18px -72px;
+}
+div#hFinderLabels span.hFinderLabelGreen:hover {
+    background-position: 0 -72px;
+}
+body div#hFinderLabels span.hFinderLabelGreenOn {
+    background-position: -36px -72px;
+}
+div#hFinderLabels span.hFinderLabelBlue {
+    background-position: -18px -90px;
+}
+div#hFinderLabels span.hFinderLabelBlue:hover {
+    background-position: 0 -90px;
+}
+body div#hFinderLabels span.hFinderLabelBlueOn {
+    background-position: -36px -90px;
+}
+div#hFinderLabels span.hFinderLabelPurple {
+    background-position: -18px -108px;
+}
+div#hFinderLabels span.hFinderLabelPurple:hover {
+    background-position: 0 -108px;
+}
+body div#hFinderLabels span.hFinderLabelPurpleOn {
+    background-position: -36px -108px;
+}
+div#hFinderLabels span.hFinderLabelGray {
+    background-position: -18px -126px;
+}
+div#hFinderLabels span.hFinderLabelGray:hover {
+    background-position: 0 -126px;
+}
+body div#hFinderLabels span.hFinderLabelGrayOn {
+    background-position: -36px -126px;
+}

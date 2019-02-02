@@ -1,0 +1,10 @@
+{
+  hMailTemplateName:        "hMailTestMail",
+  hMailTemplateDescription: "Test Mailer",
+  hMailSubject:             "[Hot Toddy] Test Mailer",
+  hMailTo:                  "Richard York <richard@deadmarshes.com>",
+  hMailFrom:                "{hContactDisplayName} <{hContactEmailAddress}>",
+  hMailReplyTo:             "{hContactDisplayName} <{hContactEmailAddress}>",
+  hMailHTML:                "Mail Template",
+  hMailText:                "Mail Template"
+}

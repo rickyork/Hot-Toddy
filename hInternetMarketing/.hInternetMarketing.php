@@ -1,0 +1,2 @@
+<?php
+  class hInternetMarketing extends hPlugin { private $hGoogleAdwords; private $hYahooAdvertising; public function hConstructor() { if ($this->hGoogleAdwordsConversion) { $this->plugin('hGoogle/hGoogleAdwords'); } if ($this->hYahooAdvertisingAccountId) { $this->plugin('hYahoo/hYahooAdvertising'); } } } ?>

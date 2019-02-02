@@ -1,0 +1,2 @@
+<?php
+  class hGoogleAdwords extends hPlugin { public function hConstructor() {  if ($this->hGoogleAdwordsConversion) { list( $adwordsConversionId, $adwordsConversionLabel, $adwordsConversionFormat ) = explode(',', $this->hGoogleAdwordsConversion); $this->hFileDocument .= $this->getTemplate( 'Conversion', array( 'adwordsConversionId' => $adwordsConversionId, 'adwordsConversionLabel' => $adwordsConversionLabel, 'adwordsConversionFormat' => $adwordsConversionFormat ) ); } } } ?>

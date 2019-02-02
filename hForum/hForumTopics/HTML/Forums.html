@@ -1,0 +1,125 @@
+<div id='hForumCopy'>
+{hFileDocument}
+</div>
+<!-- Begin Hot Toddy Forum Output -->
+<div id='hForum'>
+  <div class='hForumRecentPosts'>
+    <a href='{hFilePath}?hForum={hFileId}/0/0&hForumRecent=1'><span>Recent Posts</span></a>
+  </div>
+  <div id='hForumWrapper'>
+    <ul>
+{hForums[]?
+      <li class='hForum' id='hForum-{hForumId}'>
+        <div class='hForumTitleOuter' id='hForumTitle-{hForumId}'>
+          <div class='hForumTitleMiddle'>
+            <div class='hForumTitleInner'>
+              <span>{hForum}</span>
+            </div>
+          </div>
+        </div>
+        <div class='hForumTopicWrapper'>
+          <table class='hForumTopics'>
+            <colgroup>
+              <col class='hForumTopic' />
+              <col class='hForumSubscription' />
+              <col class='hForumThreadCount' />
+              <col class='hForumPostCount' />
+              <col class='hForumLastPost' />
+              <col class='hForumModerators' />
+            </colgroup>
+            <thead>
+              <tr>
+                <th class='hForumTopic'>Topic</th>
+                {isLoggedIn?<th class='hForumSubscription'>Subscription</th>}
+                <th class='hForumThreadCount'>Threads</th>
+                <th class='hForumPostCount'>Posts</th>
+                <th class='hForumLastPost'>Last Post</th>
+                <th class='hForumModerators'>Moderators</th>
+              </tr>
+            </thead>
+            <tbody id='hForumTopics-{hForumId}'>
+{hForumTopics}
+            </tbody>
+           </table>
+         </div>
+         {isAdministrator?
+           <div class='hForumTopicButtons'>
+             <a class='hForumTopicButtonRemove'>Remove Topic</a>
+             <a class='hForumTopicButtonAdd'>New Topic</a>
+             <a class='hForumTopicButtonEdit'>Edit Topic</a>
+           </div>
+         }
+       </li>
+}
+
+      <li class='hForum hForumTemplate' id='hForum-0'>
+        <div class='hForumTitleOuter' id='hForumTitle-0'>
+          <div class='hForumTitleMiddle'>
+            <div class='hForumTitleInner'>
+              <span>New Forum</span>
+            </div>
+          </div>
+        </div>
+        <div class='hForumTopicWrapper'>
+          <table class='hForumTopics'>
+            <colgroup>
+              <col class='hForumTopic' />
+              <col class='hForumSubscription' />
+              <col class='hForumThreadCount' />
+              <col class='hForumPostCount' />
+              <col class='hForumLastPost' />
+              <col class='hForumModerators' />
+            </colgroup>
+            <thead>
+              <tr>
+                <th class='hForumTopic'>Topic</th>
+                <th class='hForumSubscription'>Subscription</th>
+                <th class='hForumThreadCount'>Threads</th>
+                <th class='hForumPostCount'>Posts</th>
+                <th class='hForumLastPost'>Last Post</th>
+                <th class='hForumModerators'>Moderators</th>
+              </tr>
+            </thead>
+            <tbody id='hForumTopics-0'>
+              <tr id='hForumTopic-0' class='hForumTopic hForumTopicTemplate'>
+               <td class='hForumTopic'>
+                 <span class='hForumTopicIsModerated'>{hForumTopicIsModerated}</span>
+                 <span class='hForumTopicIsLocked'>{hForumTopicIsLocked}</span>
+                 <img src='/images/icons/16x16/folder.png' alt='Folder' />
+                 <a href='#'></a>
+               </td>
+               <td class='hForumSubscription' id='hForumSubscription-0'>
+                 <a href='/hForum/toggleTopicSubscription?hForumTopicId=0&html=1' target='_blank'>Subscribe</a>
+               </td>
+               <td class='hForumThreadCount'>0</td>
+               <td class='hForumPostCount'>0</td>
+               <td class='hForumLastPost'><i>No Posts</i></td>
+               <td class='hForumModerators'>
+                 <span class='hForumTopicPermissions'></span>
+                 <span class='hForumNoModerators'><i>No Moderators</i></span>
+               </td>
+             </tr>
+             <tr class='hForumNoPosts'>
+               <td colspan='6' class='hForumNoPosts'>
+                 <div>There are no topics in this forum.</div>
+               </td>
+             </tr>
+            </tbody>
+           </table>
+         </div>
+           <div class='hForumTopicButtons'>
+             <a class='hForumTopicButtonRemove'>Remove Topic</a>
+             <a class='hForumTopicButtonAdd'>New Topic</a>
+             <a class='hForumTopicButtonEdit'>Edit Topic</a>
+           </div>
+       </li>
+    </ul>
+    {isAdministrator?
+    <div class='hForumButtons'>
+      <a href='#' id='hForumDelete'>Delete Forum</a>
+      <a href='#' id='hForumNew'>New Forum</a>
+    </div>
+    }
+  </div>
+</div>
+<!-- End Hot Toddy Forum Output -->

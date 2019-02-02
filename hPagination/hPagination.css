@@ -1,0 +1,62 @@
+ul.hPaginationNavigation {
+    height: 30px;
+    clear: both;
+    overflow: auto;
+    position: relative;
+}
+ul.hPaginationNavigation,
+ul.hPaginationNavigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li.hPaginationPreviousPage {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+li.hPaginationNextPage {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+li.hPaginationPreviousPage,
+li.hPaginationNextPage {
+    width: 80px;
+    text-align: center;
+}
+ul.hPaginationNavigation li.hPaginationPreviousPage a,
+ul.hPaginationNavigation li.hPaginationNextPage a {
+    font-size: 12px;
+}
+ul.hPaginationNavigation li.hPaginationPages {
+    width: 390px;
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -195px;
+}
+ul.hPaginationNavigation li.hPaginationPages li {
+    float: left;
+    width: 25px;
+    text-align: center;
+    margin: 0;
+}
+ul.hPaginationNavigation li.hPaginationPages ul li.hPaginationPageLabel {
+    padding: 0 5px;
+    width: 30px;
+}
+ul.hPaginationNavigation li.hPaginationPages ul li.hPaginationPageLabelMiddle {
+    width: 20px;
+}
+ul.hPaginationNavigation li.hPaginationPages ul li.hPaginationPageLabel span {
+    font-size: 12px;
+}
+ul.hPaginationNavigation a:active,
+ul.hPaginationNavigation li li.hPaginationYouAreHere a,
+ul.hPaginationNavigation li li.hPaginationYouAreHere a:visited {
+    opacity: 0.2;
+}
+ul.hPaginationNavigation li.hPaginationDisabled {
+    opacity: 0.2;
+    font-size: 12px;
+}

@@ -1,0 +1,90 @@
+@import '/hApplication/hApplicationUI/hApplicationUIListView/hApplicationUIListView.css';
+
+span.hContactRecordUserId {
+    float: right;
+    background: lightyellow;
+    padding: 3px;
+    margin: 3px;
+    color: black;
+    display: none;
+}
+td.hFormButton {
+    text-align: right;
+}
+input#hUserGroupAdd {
+    float: right;
+}
+input#hUserGroupRemove {
+    float: left;
+}
+select#hUserMemberGroups,
+select#hUserGroups {
+    width: 98%;
+}
+div.hContactRecord ul {
+    background: url('/images/icons/24x24/user.png') no-repeat top left;
+    padding: 0 0 0 30px;
+}
+div.hContactGroupRecord ul {
+    background-image: url('/images/icons/24x24/group.png');
+    min-height: 30px;
+}
+input#hUserName,
+input#hUserEmail {
+    width: 200px;
+}
+div#hUserHistory,
+div#hUserActivity {
+    height: 200px;
+    overflow: auto;
+}
+div#hUserHistory a {
+    color: rgb(25, 25, 25);
+    text-decoration: none;
+}
+th.hUserHistoryAccessCount,
+td.hUserHistoryAccessCount {
+    width: 100px;
+}
+th.hUserHistoryLastAccessed,
+td.hUserHistoryLastAccessed,
+th.hUserActivityTime,
+td.hUserActivityTime {
+    width: 150px;
+}
+td.hUserHistoryPath,
+td.hUserActivity {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div#hUserActivityPagination a,
+div#hUserHistoryPagination a {
+    color: rgb(50, 50, 50);
+    text-decoration: none;
+}
+div#hUserActivityPagination,
+div#hUserHistoryPagination {
+    padding: 10px 0;
+}
+ul#hUserMemberGroupsList {
+    list-style: none;
+    padding: 0;
+    margin: 3px 0 0 0;
+}
+div#hUserDisabledAccounts h4 {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0 0 0 5px;
+    color: rgb(94, 94, 94);
+}
+div#hUserDisabledAccounts div.hContactRecord {
+    opacity: 0.3;
+}
+td.hFormHTML {
+    padding: 5px 0 5px 0;
+    vertical-align: middle;
+}
+fieldset#hUserRegistrationSetId td.hFormLabel {
+    padding-top: 16px;
+}

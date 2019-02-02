@@ -1,0 +1,2 @@
+<?php
+  class hFileIconDatabase extends hPlugin { public function hConstructor() { } public function save($hFileMIME, $hFileName, $hFileICNS, $hFileExtension) { return $this->hFileIcons->save( array( 'hFileIconId' => $this->hFileIcons->selectColumn( 'hFileIconId', array( 'hFileMIME' => $hFileMIME, 'hFileName' => $hFileName, 'hFileICNS' => $hFileICNS, 'hFileExtension' => $hFileExtension ) ), 'hFileMIME' => $hFileMIME, 'hFileName' => $hFileName, 'hFileICNS' => $hFileICNS, 'hFileExtension' => $hFileExtension ) ); } } ?>

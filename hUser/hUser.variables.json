@@ -1,0 +1,54 @@
+{
+    hUserEnableGroupProperties : {
+        defaultValue : "true",
+        description : ""
+    },
+    hUserEnableGroupSelection : {
+        defaultValue : "true",
+        description : ""
+    },
+    hUserPrivatePlugin : {
+        defaultValue : "null",
+        description : ""
+    },
+    hUserAutoGroupMembership : {
+        defaultValue : "false",
+        description : ""
+    },
+    hUserSavePlugin : {
+        defaultValue : "null",
+        description : ""
+    },
+    hUserLoginInformationPlugin : {
+        defaultValue : "null",
+        description : ""
+    },
+    hUserSearchHistoryDirectories : {
+        defaultValue: "",
+        description : ""
+    },
+    hUserAccountFinder : {
+        defaultValue : "false",
+        description : ""
+    },
+    hUserAccountGroups : {
+        defaultValue : "true",
+        description : ""
+    },
+    hUserAccountSubscriptions : {
+        defaultValue : "true",
+        description : ""
+    },
+    hUserAccountContactInformationRedirect : {
+        defaultValue : "null",
+        description : ""
+    },
+    hUserAccountContactInformationButtonLabel : {
+        defaultValue : "Save",
+        description : ""
+    },
+    hUserAccountContactInformationCallback : {
+        defaultValue : "null",
+        description : ""
+    }
+}

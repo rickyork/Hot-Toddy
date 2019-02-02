@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "File Thumbnail Generator"
+    },
+    file : {
+        title : "Thumbnail Generator",
+        path : "/System/Applications/File/Thumbnail.plugin",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

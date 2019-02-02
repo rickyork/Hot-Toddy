@@ -1,0 +1,11 @@
+{
+    source : {
+        destination : "/Hot Toddy/hGoogle",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hGoogle"
+        }
+    }
+}

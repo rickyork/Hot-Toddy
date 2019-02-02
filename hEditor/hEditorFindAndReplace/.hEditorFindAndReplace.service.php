@@ -1,0 +1,3 @@
+
+<?php
+  class hEditorFindAndReplaceService extends hService { private $hEditorFindAndReplace; public function hConstructor() { if (!$this->isLoggedIn()) { $this->JSON(-6); return; } if (!$this->inGroup('root')) { $this->JSON(-1); return; } if (!isset($_POST['find'])) { $this->JSON(-5); return; } ini_set('max_execution_time', 0); $this->hEditorFindAndReplace = $this->library('hEditor/hEditorFindAndReplace', $_POST); } public function find() { $this->JSON( $this->hEditorFindAndReplace->find( hString::decodeEntitiesAndUTF8($_POST['find']) ) ); } public function replace() { $this->JSON( $this->hEditorFindAndReplace->replace( hString::decodeEntitiesAndUTF8($_POST['find']), hString::decodeEntitiesAndUTF8($_POST['replace']) ) ); } } ?>

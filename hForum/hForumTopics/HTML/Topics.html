@@ -1,0 +1,34 @@
+{hForumTopics[]?
+           <tr id='hForumTopic-{hForumTopicId}' class='hForumTopic'>
+             <td class='hForumTopic'>
+               <span class='hForumTopicIsModerated'>{hForumTopicIsModerated}</span>
+               <span class='hForumTopicIsLocked'>{hForumTopicIsLocked}</span>
+               <img src='/images/icons/16x16/folder.png' alt='Folder' />
+               <a href='{hFilePath}?hForum={hForum}'>{hForumTopic}</a>
+               {hForumTopicDescription?
+                 <p>{hForumTopicDescription}</p>
+               }
+             </td>
+{isLoggedIn?
+             <td class='hForumSubscription' id='hForumSubscription-{hForumTopicId}'>
+               <a href='/hForum/toggleTopicSubscription?hForumTopicId={hForumTopicId}&html=1' target='_blank'>{hForumTopicSubscribeLabel}</a>
+             </td>
+}
+             <td class='hForumThreadCount'>{hForumThreadCount}</td>
+             <td class='hForumPostCount'>{hForumPostCount}</td>
+             <td class='hForumLastPost'>{hForumPostCount?{hForumLastPost}}{!$hForumPostCount?<i>No Posts</i>}</td>
+             <td class='hForumModerators'>
+               {isAdministrator?
+                 <span class='hForumTopicPermissions'></span>
+               }               
+               {hForumModerators?{hForumModerators}}{!hForumModerators?<span class='hForumNoModerators'><i>No Moderators</i></span>}   
+             </td>
+           </tr>
+}
+{!hForumTopics?
+           <tr class='hForumNoPosts'>
+             <td colspan='6' class='hForumNoPosts'>
+               <div>There are no topics in this forum.</div>
+             </td>
+           </tr>
+}

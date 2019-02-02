@@ -1,0 +1,16 @@
+<body id='hFinderTreeTemplate'>
+    <div id='hDocumentation'>
+        {hDocumentationNaviation}
+        <div id='hDocumentationCopy'>
+            <div id='hDocumentationCopyInner'>
+            {hFileDocument}
+            </div>
+        </div>
+        <div id='hDocumentationSource'>
+            <iframe src='{hDocumentationSourcePath}' id='hDocumentationSourceFrame' name='hDocumentationSourceFrame'></iframe>
+        </div>
+        <div id='hDocumentationToggleMethods'>
+            <a href='{path}?hDocumentation=TogglePrivate'>{TogglePrivate} Private</a> | 
+            <a href='{path}?hDocumentation=ToggleProtected'>{ToggleProtected} Protected</a>
+        </div>
+    </div>

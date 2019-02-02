@@ -1,0 +1,19 @@
+{
+    plugin : {
+        name : "Application Columns",
+        library : {
+            name : "Application Columns Library"
+        }
+    },
+    file : {
+        path : "/System/Applications/UI Test/Columns.html",
+        title : "Application Columns",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "w"
+            }
+        }
+    }
+}

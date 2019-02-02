@@ -1,0 +1,2 @@
+<?php
+  class hPreferencesService extends hService { public function hConstructor() { if (!$this->isLoggedIn()) { $this->JSON(-6); return; } if (!$this->inGroup('Website Administrators')) { $this->JSON(-1); return; } } public function save() { } public function get() { } } ?>

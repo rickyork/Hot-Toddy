@@ -1,0 +1,14 @@
+{
+    plugin : {
+        name : "Language"
+    },
+    source : {
+        destination : "/Hot Toddy/hLanguage",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hLanguage"
+        }
+    }
+}

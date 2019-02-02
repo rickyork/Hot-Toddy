@@ -1,0 +1,43 @@
+Iteration Tests:
+  
+The old way:
+
+{files[]?
+    hFilePath:{hFilePath}
+    hFileName:{hFileName}
+    hFileTitle:{hFileTitle}
+
+    {subfiles[]?
+        hFilePath:{hFilePath}
+        hFileName:{hFileName}
+        hFileTitle:{hFileTitle}
+    }
+}
+    
+New syntax for the old way:
+
+{for.each in iteration?
+    {arrayTest}
+}
+
+{counter = 1}
+
+{for.while({condition})?
+
+}
+  
+{for.each array as |key, value|?
+
+    {key} : {value} {counter}
+    {{counter} % 2? Odd}
+    {!{counter} % 2? Even}
+
+    {counter++}
+
+    Nested Iterator
+    {for.}
+}
+
+{for.list anotherArray as |item1, item2, item3, item4|?
+
+}

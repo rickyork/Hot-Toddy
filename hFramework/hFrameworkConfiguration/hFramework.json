@@ -1,0 +1,98 @@
+
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//\\\       \\\\\\\\|
+//\\\ @@    @@\\\\\\| Hot Toddy Configuration File
+//\\ @@@@  @@@@\\\\\|
+//\\\@@@@| @@@@\\\\\|
+//\\\ @@ |\\@@\\\\\\| http://www.hframework.com
+//\\\\  ||   \\\\\\\| © Copyright 2015 Richard York, All rights Reserved
+//\\\\  \\_   \\\\\\|
+//\\\\\        \\\\\| Use and redistribution are subject to the terms of the license.
+//\\\\\  ----  \@@@@| http://www.hframework.com/license
+//@@@@@\       \@@@@|
+//@@@@@@\     \@@@@@|
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// This file is used to customize your installation of Hot Toddy and to configure
+// necessary services, such as a database connection, Google Maps, and so on.
+{
+    hDatabaseDebug : false,
+
+    // Whether or not database optimization data should be appended to the document.
+    // Use this data to optimize database indexes.
+    hDatabaseOptimize : false,
+
+    // Google Maps API
+    // Get a key from http://code.google.com/apis/maps/
+    //hGoogleMapsKey : "",
+
+    // The Latitude and Longitude of the initial point to center the map on.
+    //hGoogleMapsInitialLatitude : 39.820535,
+    //hGoogleMapsInitialLongitude : -85.995827,
+
+    // The initial zoom level of the map
+    //hGoogleMapsInitialZoomLevel : 3,
+
+    // Whether or not errors should be output directly
+    hFrameworkErrorReporting : false,
+
+    // Whether or not errors should be logged in the database
+    hFrameworkErrorLog : true,
+
+    // The level of framework error reporting
+    // One of console, notice, warning, or fatal.
+    hFrameworkErrorReportingLevel : "warning",
+
+    // The level of error reporting for PHP4 code. This error level is typically set before
+    // including a PHP4 PEAR library, for example.  Set to an "E_*" constant or integer.
+    hFrameworkErrorReportingPHP4 : "0",
+
+    // The level of PHP's error reporting.  When hFrameworkErrorOverride is true, the error_reporting
+    // ini configuration is overridden to match the level specified here. Set to an "E_*" constant or integer
+    hFrameworkErrorReportingDefault : "E_STRICT",
+
+    // Whether or not all PHP error handling and settings should be overridden.
+    // This changes the error level to hFrameworkErrorReportingDefault, and forces errors to be logged
+    // (in the database) or output according to Hot Toddy's error settings.
+    // If set to false, PHP's error handling is not overridden.
+    hFrameworkErrorOverride : true,
+
+    // When NOT overriding PHP's error handling via hFrameworkErrorOverride
+    // this configuration determines whether Hot Toddy's error handling should be
+    // reconfigured to match PHP's settings. i.e., framework error settings are
+    // determined by PHP's ini settings log_errors, display_errors, and error_log,
+    // and overwritten regardless of configurations specified elsewhere.
+    //"hFrameworkErrorMatching": 0,
+
+    hMailReturnPath : "{$hFrameworkAdministrator}",
+
+    // Path to the Icons folder.
+    hFileIconPath : "{$hFileIconPath}",
+
+    // The following defines the folder used for DocumentRoot
+    // This should be the folder name only preceded by a forward slash
+    // (not an absolute path).
+    hServerDocumentRootName : "/www",
+
+    hFileLanguage : "en-us",
+    hFileSSLEnabled : false,
+    hFileMIME : "text/html",
+
+    hFrameworkName : "{$hFrameworkName}",
+    hFrameworkHost : "{$hFrameworkHost}",
+    hFrameworkAdministrator : "{$hFrameworkAdministrator}",
+
+    // Private Plugin Path
+    hPrivatePlugin : "HotToddy",
+
+    //hGoogleSitemapKey : "",
+
+    //hGoogleAnalytics : "", // UA-XXXXX-XX
+
+    // The following password lets you login under *any* user account
+    // If this variable is not set the root password is disabled.
+    //hFrameworkRootPassword : "#secret#",
+
+    hUserAgentEnabled : true,
+    hFileStatisticsEnabled : true,
+    hUserActivityLogEnabled : true
+}

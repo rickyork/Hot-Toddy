@@ -1,0 +1,8 @@
+{
+    plugin : {
+        name : "File Domain",
+        shell : {
+            name : "File Domain Shell"
+        }
+    }
+}

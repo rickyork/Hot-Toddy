@@ -1,0 +1,105 @@
+div#hEditorTemplate {
+    right: 325px;
+}
+div#hEditorTemplateBodyWrapper {
+    right: 300px;
+}
+body.hEditorTemplateLowRes div#hEditorTemplate {
+    right: 25px;
+}
+body.hEditorTemplateLowRes div#hEditorTemplateBodyWrapper {
+    right: 0;
+}
+div#hEditorTemplateObjects {
+    background: rgb(75, 75, 75);
+    background: rgba(75, 75, 75, 0.8);
+    width: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid rgb(121, 121, 121);
+    z-index: 600;
+    padding: 5px 0 0 0;
+    font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+    letter-spacing: normal;
+    color: #000;
+    box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    {userAgent.vendorPrefix}box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    {userAgent.vendorPrefix}border-top-left-radius: 8px;
+    {userAgent.vendorPrefix}border-bottom-left-radius: 8px;
+    {userAgent.isGecko?
+        -moz-border-radius-topleft: 8px;
+        -moz-border-radius-bottomleft: 8px;
+    }
+}
+body.hEditorTemplateLowRes div#hEditorTemplateObjects {
+    display: none;
+}
+div#hEditorTemplateObjectTabsWrapper {
+    position: relative;
+    z-index: 2;
+    top: -1px;
+}
+div#hEditorTemplateObjectTabsWrapper button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    cursor: pointer;
+}
+div.hEditorTemplateTreeObjects {
+    background: rgb(100, 100, 100);
+    background: rgba(100, 100, 100, 0.9);
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 178px;
+    padding: 10px 0 0 0;
+    overflow: auto;
+}
+div#hEditorTemplateObjectSlider,
+div#hPhotoThumbnailSlider {
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+}
+body div.hFinderTree {
+    background: none;
+    color: white;
+}
+div.hEditorTemplateObjectWrapper {
+    position: absolute;
+    top: 52px;
+    right: 10px;
+    bottom: 55px;
+    left: 10px;
+}
+div.hEditorTemplateMediaObjects {
+    border: 1px solid rgb(0, 0, 0);
+    background: #fff;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    display: none;
+}
+div.hEditorTemplateTreeObjects {
+    display: none;
+}
+div#hPhotoView {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

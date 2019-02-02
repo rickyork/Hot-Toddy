@@ -1,0 +1,22 @@
+{
+    plugin : {
+        library : {
+            name : "Mail Library"
+        },
+        database : {
+            name : "Mail Database"
+        },
+        shell : {
+            name : "Mail Shell"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hMail",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hMail"
+        }
+    }
+}

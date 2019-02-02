@@ -1,0 +1,2 @@
+<?php
+  class hDatabaseExportShell extends hShell { private $hDatabaseExport; public function hConstructor() { $this->hDatabaseExport = $this->library('hDatabase/hDatabaseExport'); $this->hDatabaseExport->execute( $this->shellArgumentExists('-to', 'to')? $this->getShellArgumentValue('-to', 'to') : nil ); } } ?>

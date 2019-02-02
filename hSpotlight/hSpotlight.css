@@ -1,0 +1,242 @@
+ul.hSpotlightRolodex {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 20px;
+    background: url('/images/themes/aqua/backgrounds/rolodexBG.png') repeat-x;
+    border-bottom: 1px solid rgb(128, 128, 128);
+}
+ul.hSpotlightRolodex li {
+    float: left;
+    height: 20px;
+    border-right: 1px solid rgb(128, 128, 128);
+    width: 22px;
+    text-align: center;
+}
+ul.hSpotlightRolodex li span {
+    line-height: 20px;
+    vertical-align: middle;    
+}
+li.hSpotlightRoldexOver {
+    background: url('/images/themes/aqua/backgrounds/menuOverBG.png') repeat-x;
+    color: white;
+}
+div.hSpotlightSearch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 350px;
+    z-index: 2000;
+    min-height: 22px;
+    text-shadow: rgb(97, 95, 106) 1px 1px 1px;
+}
+div.hSpotlightSearch form {
+    margin: 0;
+    padding: 0;
+}
+div.hSpotlightSearchInput {
+    position: absolute;
+    z-index: 1502;
+    top: 8px;
+    right: 30px;
+    width: 162px;
+    height: 22px;
+    /*background: url('/images/themes/aqua/search/search.png') no-repeat 0 1px;*/
+}
+input.hSpotlightSearchInput {
+    font-size: 12px;
+    width: 155px;
+    left: 0;
+    /*height: 22px;*/
+    margin: 2px 0 0 0;
+    /*padding: 0 2px;
+    background: none;
+    border: none;
+    outline: none;*/
+    position: relative;
+    top: 0;
+}
+div.hSpotlightSearchBasic {
+    width: 350px;
+    height: 75px;
+    display: none;
+}
+div.hSpotlightSearchBasicOn {
+
+}
+label.hSpotlightSearchLabel {
+    position: absolute;
+    top: 2px;
+    left: 83px;
+    color: white;
+    z-index: 1502;
+    display: none;
+}
+div.hSpotlightSearchOn label.hSpotlightSearchLabel {
+    display: block;        
+}
+div.hSpotlightSearchBasicOuter,
+div.hSpotlightSearchExtendedOuter {
+    background: url('/images/themes/aqua/backgrounds/searchBG_03.png') repeat-y;
+}
+div.hSpotlightSearchBasicInner {
+    height: 43px;
+}
+div.hSpotlightSearchBasicInner,
+div.hSpotlightSearchExtendedInner {
+    background: #1a43f2;
+    margin: 0 0 0 26px;
+}
+img.hSpotlightActivity {
+    position: absolute;
+    left: 35px;
+    top: 7px;
+    visibility: hidden;
+}
+img.hSpotlightActivityOn {
+    visibility: visible;    
+}
+div.hSpotlightIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1503;
+    border: none;
+    width: 36px;
+    height: 22px;
+    cursor: pointer;
+}
+div.hSpotlightSearchOn div.hSpotlightIcon {
+}
+div.hSpotlightSearchBasicBottomOuter,
+div.hSpotlightSearchExtendedBottomOuter {
+    background: url('/images/themes/aqua/backgrounds/searchBG_04.png') no-repeat;
+    height: 32px;
+}
+div.hSpotlightSearchBasicBottomInner,
+div.hSpotlightSearchExtendedBottomInner  {
+    background: url('/images/themes/aqua/backgrounds/searchBG_05.png') repeat-x;
+    height: 32px;
+    margin: 0 0 0 26px;
+}
+div.hSpotlightSearchExtended {
+    display: none;
+}
+div.hSpotlightSearchExtendedInner {
+    padding: 30px 0 40px 0;
+    width: 324px;
+    position: relative;
+}
+div.hSpotlightSearchExtendedInner table {
+    table-layout: fixed;
+}
+div.hSpotlightSearchExtendedInner select {
+    width: 160px;    
+}
+div.hSpotlightSearchExtendedOn {
+
+}
+dov.hSpotlightSearchExtendedMiddle {
+    min-height: 200px;
+}
+div.hSpotlightSearchExtended fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+div.hSpotlightSearchExtended legend,
+div.hSpotlightSearchExtended div.hFormLegend {
+    display: none;
+}
+div.hSpotlightSearchExtended td.hFormLabel,
+div.hSpotlightSearchExtended td.hFormLabelLong {
+    text-align: right;
+    padding: 5px;
+    color: white;
+    width: 118px;
+}
+div.hSpotlightSearchExtended td.hFormLabelLong {
+    vertical-align: top;   
+}
+td.hSpotlightSearchExtendedInput {
+    text-align: left;
+}
+div.hSpotlightSearchExtended span.hSpotlightExtendedSearchColumnLabel {
+    display: block;
+    font-size: 10px;
+}
+div.hSpotlightSearchExtendedOptions {
+    position: absolute;
+    bottom: 25px;
+    left: 23px;
+    color: #fff;
+}
+div.hSpotlightSearchExtendedOptions div {
+    padding-left: 20px;
+    cursor: pointer;
+}
+div.hSpotlightSearchExtendedToggleOptions {
+    background: url('/hApplication/hApplicationUI/Pictures/Arrows/searchArrowRight.png') no-repeat center left;
+}
+div.hSpotlightSearchExtendedHideOptions {
+    background-image: url('/hApplication/hApplicationUI/Pictures/Arrows/searchArrowUp.png');
+}
+div.hSpotlightSearchExtendedMoreOptions {
+    background: url('/hApplication/hApplicationUI/Pictures/Arrows/searchArrowDown.png') no-repeat center left;
+}
+div.hSpotlightExtendedButtons {
+    position: absolute;
+    bottom: -10px;
+    right: 5px;
+    text-align: right;
+}
+div.hSpotlightExtendedTimeRange {
+    display: none;    
+}
+div.hSpotlightExtendedTimeRangeOn {
+ 
+}
+div.hSpotlightExtendedTimeOptions,
+div.hSpotlightExtendedTimeColumn,
+div.hSpotlightExtendedLocationOptions {
+    display: none;
+}
+div.hSpotlightExtendedTimeOptionsOn,
+div.hSpotlightExtendedTimeColumnOn,
+div.hSpotlightExtendedLocationOptionsOn {
+}
+form.hSpotlightSearchAdvancedDialogue {
+    width: 800px;
+    height: 300px;
+    margin: -150px 0 0 -400px;
+}
+div.hSpotlightSearchAdvancedInputs {
+    display: none;
+}
+table.hSpotlightSearchAdvanced {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+table.hSpotlightSearchAdvanced thead th {
+    padding: 3px;
+    background: rgb(128, 128, 128);
+    color: white;    
+}
+td.hSpotlightSearchAdvancedBoolean {
+    width: 75px;   
+}
+td.hSpotlightSearchAdvancedTables {
+    width: 150px;
+}
+td.hSpotlightSearchAdvancedColumns select,
+td.hSpotlightSearchAdvancedOptions select,
+td.hSpotlightSearchAdvancedQuery input {
+    width: 150px;
+}
+html body input.hSpotlightSearchExtendedButton {
+    width: auto;    
+}
+td.hSpotlightSearchAdvancedQuery {
+    width: 150px;
+}

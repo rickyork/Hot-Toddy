@@ -1,0 +1,2 @@
+<?php
+  class hDocumentationFiles_1to2 extends hPlugin { public function hConstructor() { $this->hDocumentationFiles ->addKey('hDocumentationFileTitle') ->modifyColumn('hDocumentationFileDescription', hDatabase::mediumText) ->addColumn('hDocumentationFileClosingDescription', hDatabase::mediumText, 'hDocumentationFileDescription'); } public function undo() { $this->hDocumentationFiles ->dropKey('hDocumentationFileTitle') ->modifyColumn('hDocumentationFileDescription', hDatabase::text) ->dropColumn('hDocumentationFileClosingDescription'); } } ?>

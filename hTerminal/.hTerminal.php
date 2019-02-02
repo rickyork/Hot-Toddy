@@ -1,0 +1,2 @@
+<?php
+  class hTerminal extends hPlugin { public function hConstructor() { $this->redirectIfSecureIsEnabled(); $this->plugin('hApplication/hApplicationForm'); $this->getPluginFiles(); $this->hFileDocument = $this->getTemplate( 'Terminal' ); } } ?>

@@ -1,0 +1,18 @@
+{
+    plugin : {
+        name : "Mail IMAP Inbox"
+    },
+    file : {
+        title : "Mail IMAP Inbox",
+        path : "/System/Applications/Mail/Inbox.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                groups : [
+                    ["Website Administrators", "rw"]
+                ]
+            }
+        }
+    }
+}

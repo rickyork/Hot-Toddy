@@ -1,0 +1,5 @@
+div#hFade,
+div#hFadeOn {
+    position: absolute;
+    top: expression(eval(document.documentElement.scrollTop));
+}

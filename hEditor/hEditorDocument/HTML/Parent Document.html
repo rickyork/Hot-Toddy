@@ -1,0 +1,12 @@
+<div id='hFileParentId'>
+    <div id='hFileParentIdInner'>
+    {hFileParentId?
+        <span class='hFileParentId'>{hFileParentId}</span>
+        <img src='{hFileIconPath}' class='hFileParentIcon' alt='File Icon' />
+        <span class='hFileParentTitle'>{hFileParentTitle}</span>
+        <span class='hFileParentPath'><a href='{hFileParentPath}'>{hFileParentPath}</a></span>
+    }
+    </div>
+    <input type='submit' id='hEditorChooseParentFile' value='Choose...' />
+    <input type='submit' id='hEditorRemoveParentFile' value='Remove' />
+</div>

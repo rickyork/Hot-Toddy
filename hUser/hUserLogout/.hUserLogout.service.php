@@ -1,0 +1,2 @@
+<?php
+  class hUserLogoutService extends hService { private $hUserLogout; public function hConstructor() { $this->hUserLogout = $this->library('hUser/hUserLogout'); } public function logout() { $this->hUserLogout->logout(); $this->JSON(1); } } ?>

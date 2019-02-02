@@ -1,0 +1,28 @@
+div.hApplicationStatus {
+    position: fixed;
+    z-index: 100000;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid rgb(128, 128, 128);
+    background: white;
+    color: rgb(50, 50, 50);
+    display: none;
+    width: 170px;
+    padding: 7px 3px 8px 7px;
+    min-height: 20px;
+    font-size: 12px;
+    border-radius: 3px;
+    box-shadow: 0 5px 25px rgba(100, 100, 100, 0.9);
+    {userAgent.isWebkit?
+        -webkit-border-radius: 3px;    
+        -webkit-box-shadow: 0 5px 25px rgba(100, 100, 100, 0.9);
+    }
+    {userAgent.isGecko?
+        -moz-border-radius: 3px;
+        -moz-box-shadow: 0 5px 25px rgba(100, 100, 100, 0.9);
+    }
+}
+div.hApplicationStatus span {
+    line-height: 18px;
+    vertical-align: middle;
+}

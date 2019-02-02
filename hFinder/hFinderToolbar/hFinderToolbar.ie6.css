@@ -1,0 +1,36 @@
+div#hFinderActionMenu {
+    background: #fff;
+    border: 1px solid rgb(200, 200, 200);
+}
+div.hFinderToolbarMenuTopOuter,
+div.hFinderToolbarMenuTopMiddle,
+div.hFinderToolbarMenuTopInner,
+div.hFinderToolbarMenuOuter,
+div.hFinderToolbarMenuMiddle,
+div.hFinderToolbarMenuInner,
+div.hFinderToolbarMenuBottomOuter,
+div.hFinderToolbarMenuBottomMiddle,
+div.hFinderToolbarMenuBottomInner {
+    background: none;
+}
+div.hFinderToolbarMenuInner ul li {
+    position: relative;
+    zoom: 1;
+    margin: 0;
+}
+div#hFinderActionMenu {
+    top: 27px;
+    width: 175px;
+    left: 0;
+}
+div.hFinderToolbarMenuTopInner,
+div.hFinderToolbarMenuBottomInner {
+    height: 0;
+    margin: 0;
+}
+div.hFinderToolbarMenuInner {
+    margin: 0;
+}
+div.hFinderToolbarMenuOuter ul {
+    top: 0;
+}

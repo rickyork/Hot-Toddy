@@ -1,0 +1,99 @@
+/**
+* Icons View
+*
+*/
+body.hFinderFilesIcons p.hFinderFileDescription,
+body.hFinderFilesIcons h4.hFinderFileTitle,
+body.hFinderFilesIcons span.hFinderPath {
+    display: none;
+}
+body.hFinderFilesIcons div.hFinderNode {
+    width: 150px;
+    height: 100px;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+body.hFinderFilesIcons div.hFinderNodeWrapper{
+    padding: 4px;
+    overflow: hidden;
+}
+body.hFinderFilesIcons div.hFinderCaptionWrapper {
+    padding-top: 4px;
+}
+body.hFinderFilesIcons div.hFinderIconThumbnail {
+    display: none;
+}
+body.hFinderFilesIcons div.hFinderIcon {
+    float: none;
+    margin: auto;
+    width: 48px;
+    height: 48px;
+    padding: 5px;
+}
+body.hFinderFilesIcons div.hFinderThumbnail {
+    float: none;
+    text-align: center;
+    width: 48px;
+    margin: auto;
+    padding: 5px;
+    height: 48px;
+    overflow: hidden;
+    display: block;
+}
+body.hFinderFilesIcons div.hFinderThumbnail img {
+    width: 48px;
+}
+body.hFinderFilesIcons .hFinderDragOver div.hFinderDirectoryIcon-48x48 {
+    background-image: url('/images/icons/48x48/open_folder.png');
+}
+body.hFinderFilesIcons .hFinderSelected div.hFinderServerWrapper,
+body.hFinderFilesIcons .hFinderSelected div.hFinderNodeWrapper,
+body.hFinderFilesIcons .hFinderDragOver div.hFinderServerWrapper,
+body.hFinderFilesIcons .hFinderDragOver div.hFinderNodeWrapper {
+    background: none;
+    position: relative;
+    z-index: 40;
+}
+body.hFinderFilesIcons span.hFinderDirectoryName,
+body.hFinderFilesIcons span.hFinderFileName {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 132px;
+    display: inline-block;
+    white-space: nowrap;
+}
+body.hFinderFilesIcons .hFinderSelected span.hFinderDirectoryName,
+body.hFinderFilesIcons .hFinderSelected span.hFinderFileName,
+body.hFinderFilesIcons .hFinderDragOver span.hFinderDirectoryName,
+body.hFinderFilesIcons .hFinderDragOver span.hFinderFileName {
+    background: #3470CB;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 9px;
+    {userAgent.vendorPrefix}border-radius: 4px;
+    white-space: normal;
+}
+body.hFinderFilesIcons .hFinderLabel span.hFinderFileName,
+body.hFinderFilesIcons .hFinderLabel span.hFinderDirectoryName {
+    color: black;
+    padding: 2px 5px;
+    border-radius: 9px;
+    {userAgent.vendorPrefix}border-radius: 4px;
+}
+body.hFinderFilesIcons .hFinderRenameActive span.hFinderDirectoryName,
+body.hFinderFilesIcons .hFinderRenameActive span.hFinderFileName {
+    background: none;
+}
+body.hFinderFilesIcons .hFinderSelected div.hFinderIcon,
+body.hFinderFilesIcons .hFinderSelected div.hFinderThumbnail,
+body.hFinderFilesIcons .hFinderDragOver div.hFinderIcon,
+body.hFinderFilesIcons .hFinderDragOver div.hFinderThumbnail {
+    background-color: rgb(200, 200, 200);
+    border-radius: 4px;
+    {userAgent.vendorPrefix}border-radius: 4px;
+}
+body.hFinderFilesIcons div.hFinderThumbnail div {
+    background-size: 48px auto;
+    {userAgent.vendorPrefix}background-size: 48px auto;
+}

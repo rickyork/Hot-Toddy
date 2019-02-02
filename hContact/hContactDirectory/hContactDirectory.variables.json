@@ -1,0 +1,28 @@
+{
+  hContactDirectoryPath: ".",
+  hContactDirectoryAdministratorUser: "",
+  hContactDirectoryAdministratorPassword: "",
+  hContactDirectoryEnabledFields: [
+    "hContactFirstName",
+    "hContactLastName",
+    "hContactDisplayName",
+    "hContactCompany",
+    "hContactEmailAddress",
+    "hContactTitle",
+    "hContactDepartment",
+    "hContactPhoneNumber",
+    "hContactPhoneNumberMobile",
+    "hContactPhoneNumberFax",
+    "hContactPhoneNumberPager",
+    "hContactAddressStreet",
+    "hContactAddressCity",
+    "hLocationStateId",
+    "hContactAddressPostalCode"
+  ],
+  hContactDirectoryPrependDomain: 0,
+  hContcatDirectoryDomain: "",
+  hContactDirectorySeparator: "\\",
+  hContactDirectoryEmailDomain: "localhost",
+  hContactDirectorySyncGroups: [],
+  hContactDirectoryGroupPrefix: ""
+}

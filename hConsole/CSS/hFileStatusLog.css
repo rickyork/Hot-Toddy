@@ -1,0 +1,31 @@
+th.hFileStatusLog-hUserId,
+td.hFileStatusLog-hUserId {
+    width: 65px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFileStatusLog-hFileStatusCode,
+td.hFileStatusLog-hFileStatusCode,
+th.hFileStatusLog-hFileStatusAccessCount,
+td.hFileStatusLog-hFileStatusAccessCount {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFileStatusLog-hUserName,
+td.hFileStatusLog-hUserName {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFileStatusLog-hUserFullName,
+td.hFileStatusLog-hUserFullName {
+    width: 125px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+td.hFileStatusLog-hFileStatusPath,
+td.hFileStatusLog-hFileStatusReferrerPath {
+    white-space: nowrap;
+    overflow: hidden;
+}

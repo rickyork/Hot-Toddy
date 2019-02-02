@@ -1,0 +1,28 @@
+{
+    plugin : {
+        name : "HTTP",
+        library : {
+            name : "HTTP Library"
+        },
+        shell : {
+            name : "HTTP Shell"
+        },
+        service : {
+            name : "HTTP Service",
+            methods : [
+                "getErrorMessage",
+                "getDebugTemplate",
+                "getPopupDebugTemplate"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hHTTP",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hHTTP"
+        }
+    }
+}

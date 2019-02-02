@@ -1,0 +1,2 @@
+<?php
+  class hMovieDatabase extends hPlugin { private $hCategoryDatabase; public function hConstructor() { $this->hCategoryDatabase = $this->database('hCategory'); } public function getAllMovieFiles() {         return $this->hDatabase->getResults( $this->getTemplateSQL() ); } public function addMovie($fileId, array $categories = array()) {        $this->hCategoryDatabase->addFileToCategory($fileId, '/Categories/.Movies'); if (count($categories)) { foreach ($categories as $categoryId) { $this->hCategoryDatabase->addFileToCategory( $fileId, $categoryId ); } } } } ?>

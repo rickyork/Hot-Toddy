@@ -1,0 +1,10 @@
+div#hpermissions fieldset {
+    padding: 10px;
+}
+div#hpermissions legend {
+    margin-top: -7px;
+}
+div#hpermissions {
+    height: 1px;
+    top: -20px;
+}

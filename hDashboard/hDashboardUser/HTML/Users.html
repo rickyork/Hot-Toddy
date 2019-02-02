@@ -1,0 +1,65 @@
+<div class='hDashboardUserAccountsWrapper' id='hDashboardUserAccountsEnabledWrapper'>
+    <table id='hDashboardUserAccountsEnabled' class='hDashboardUserAccounts hDashboardUserAccountsEnabled'>
+        <colgroup>
+            <col style="width: 200px;" />
+            <col style="width: 150px;" />
+            <col />
+            <col style="width: 175px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Screen Name</th>
+                <th>Email Address</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {enabled[]?
+            <tr data-userId='{userId}'>
+                <td class='hDashboardUserAccountFullName'>{name}</td>
+                <td class='hDashboardUserAccountUserName'>{userName}</td>
+                <td class='hDashboardUserAccountEmail'><a href='mailto:{email}'>{email}</a></td>
+                <td class='hDashboardUserAccountActions'>
+                    <span class='hDashboardUserAccountEdit'>Edit</span>
+                    <span class='hDashboardUserAccountDisable'>Disable</span>
+                    <span class='hDashboardUserAccountDelete'>Delete</span>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+<h4>Disabled Accounts</h4>
+<div class='hDashboardUserAccountsWrapper' id='hDashboardUserAccountsDisabledWrapper'>
+    <table id='hDashboardUserAccountsDisabled' class='hDashboardUserAccounts hDashbaordUserAccountsDisabled'>
+        <colgroup>
+            <col style="width: 200px;" />
+            <col style="width: 150px;" />
+            <col />
+            <col style="width: 175px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Screen Name</th>
+                <th>Email Address</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {disabled[]?
+            <tr data-userId='{userId}'>
+                <td class='hDashboardUserAccountFullName'>{name}</td>
+                <td class='hDashboardUserAccountUserName'>{userName}</td>
+                <td class='hDashboardUserAccountEmail'><a href='mailto:{email}'>{email}</a></td>
+                <td class='hDashboardUserAccountActions'>
+                    <span class='hDashboardUserAccountEdit'>Edit</span>
+                    <span class='hDashboardUserAccountEnable'>Enable</span>
+                    <span class='hDashboardUserAccountDelete'>Delete</span>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

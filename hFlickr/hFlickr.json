@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Flickr Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hFlickr",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hFlickr"
+        }
+    }
+}

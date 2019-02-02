@@ -1,0 +1,269 @@
+@import '/hApplication/hApplicationUI/hApplicationUIButton/CSS/Segmented+Aqua.css';
+@import '/hDialogue/CSS/Modal.css';
+{userAgent:(ie < 9)?@import '/hDialogue/CSS/Shadow.css';}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+body#hDialogueFullScreen {
+    background: rgb(240, 240, 240);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+form.hDialogue {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: left;
+    display: none;
+    width: 400px;
+    height: 400px;
+    margin: -200px 0 0 -200px;
+    overflow: visible !important;
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+    letter-spacing: normal;
+    box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    {userAgent.vendorPrefix}box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    {userAgent.vendorPrefix}border-top-left-radius: 8px;
+    {userAgent.vendorPrefix}border-top-right-radius: 8px;
+    {userAgent.isGecko?
+        -moz-border-radius-topleft: 8px;
+        -moz-border-radius-topright: 8px;
+    }
+}
+form.hDialogueShadowDisabled {
+    box-shadow: none;
+    {userAgent.vendorPrefix}box-shadow: none;
+}
+form.hDialogueFullScreen {
+    position: fixed;
+    z-index: 1000;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    box-shadow: none;
+    {userAgent.vendorPrefix}box-shadow: none;
+}
+form.hDialogueOpen {
+
+}
+form.hDialogue div.hFormDivision {
+    display: none;
+}
+form.hDialogue div.hDialoguePaneSelected {
+
+}
+form.hDialogue div.hFormDivisionLegend {
+    display: none;
+}
+/*
+form.hDialogue td.hFormLabelLong {
+    vertical-align: top;
+    padding: 15px 5px 5px 5px;
+    text-align: right;
+    color: #000;
+}
+form.hDialogue td.hFormLabel {
+    vertical-align: middle;
+    padding: 5px;
+    text-align: right;
+    color: #000;
+}
+*/
+form.hDialogue .htmlarea {
+    border: 1px solid rgb(200, 200, 200);
+}
+form.hDialogue .htmlarea .toolbar,
+form.hDialogue .htmlarea .statusBar {
+    border: none;
+    background: rgb(244, 244, 244);
+}
+form.hDialogue .htmlarea .toolbar {
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+form.hDialogue .htmlarea .statusBar {
+    border-top: 1px solid rgb(200, 200, 200);
+}
+form.hDialogue .htmlarea .toolbar a.button {
+    background: none;
+}
+form.hDialogue .htmlarea .toolbar a.button:hover {
+    background-color: rgb(244, 244, 244);
+    border: 1px solid rgb(200, 200, 200);
+}
+form.hDialogue fieldset,
+div.hDialogueFieldset {
+    border: none;
+    margin: 30px 20px;
+    position: relative;
+    border-top: 1px solid rgb(214, 214, 214);
+}
+div.hDialogueFieldset {
+    position: relative;
+    padding: 10px;
+}
+form.hDialogue div.hFormLegend {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    height: 12px;
+    font-weight: bold;
+    color: rgb(94, 94, 94);
+    font-size: 11px;
+}
+form.hDialogue legend {
+    display: none;
+}
+form.hDialogue div.hDialogueLegend {
+    position: absolute;
+    top: -14px;
+    left: 15px;
+    height: 12px;
+}
+form.hDialogue td.hFormLabel {
+    text-align: right;
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+form.hDialogue label {
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+form.hDialogue div.hDialogueButtons {
+    position: absolute;
+    bottom: 9px;
+    right: 20px;
+}
+form.hDialogue div.hDialogueButtons input {
+    margin-left: 5px;
+    float: right;
+}
+div.hDialogueButtonsLeft {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+div.hDialogueContent {
+    position: absolute;
+    top: 24px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    padding: 0;
+    border: 1px solid rgb(193, 193, 193);
+    background: rgb(240, 240, 240);
+}
+form.hDialogueTitlebarDisabled div.hDialogueContent {
+    top: 0;
+}
+form.hDialogueFullScreen div.hDialogueContent {
+    top: 0;
+    border: none;
+}
+h4.hDialogueTitlebar {
+    padding: 0;
+    margin: 0;
+    top: -25px;
+    right: -1px;
+    left: -1px;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+    position: absolute;
+    user-select: none;
+    z-index: 1;
+    border: 1px solid rgb(193, 193, 193);
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    {userAgent.vendorPrefix}border-top-left-radius: 5px;
+    {userAgent.vendorPrefix}border-top-right-radius: 5px;
+    {userAgent.isGecko?
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+    }
+}
+h4.hDialogueTitlebar div {
+    height: 22px;
+    border-top: 1px solid rgb(226, 226, 226);
+    border-bottom: 1px solid rgb(180, 180, 180);
+    {userAgent.vendorPrefix}border-top-left-radius: 5px;
+    {userAgent.vendorPrefix}border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    {userAgent.vendorPrefix}user-select: none;
+    user-select: none;
+    background: rgb(229, 229, 229);
+}
+form.hDialogueInactive h4.hDialogueIitlebar {
+    background: url('/images/themes/aqua/backgrounds/stripes.png');
+    color: rgb(106, 106, 106);
+}
+h4.hDialogueTitlebar span {
+    line-height: 22px;
+    vertical-align: middle;
+    padding: 0 5px;
+    white-space: nowrap;
+    text-shadow: rgb(201, 201, 201) 1px 1px 1px;
+}
+form.hDialogueFullScreen h4.hDialogueTitlebar,
+form.hDialogueFullScreen .hDialogueTitlebarButtons {
+    display: none;
+}
+p#hDialogueLoadingText {
+    text-align: center;
+    padding: 8px 0 0 0;
+}
+div.hDialogueTitlebarButtons {
+    position: absolute;
+    top: -20px;
+    left: 8px;
+    z-index: 20000;
+}
+div.hDialogueTitlebarButtons span {
+    margin-right: 7px;
+    float: left;
+    width: 14px;
+    height: 15px;
+    text-indent: -20000px;
+    background: url('/hApplication/hApplicationUI/Pictures/Window/Controls.png') no-repeat;
+}
+div.hDialogueTitlebarButtons:hover span.hDialogueClose,
+div.hDialogueTitlebarButtons:active span.hDialogueClose {
+    background-position: -14px 0;
+}
+span.hDialogueMinimize {
+    background-position: -28px 0;
+}
+div.hDialogueTitlebarButtons:hover span.hDialogueMinimize,
+div.hDialogueTitlebarButtons:active span.hDialogueMinimize {
+    background-position: -42px 0;
+}
+span.hDialogueZoom {
+    background-position: -56px 0;
+}
+div.hDialogueTitlebarButtons:hover span.hDialogueZoom,
+div.hDialogueTitlebarButtons:active span.hDialogueZoom {
+    background-position: -70px 0;
+}
+div.hDialogueTitlebarButtons span.hDialogueDisabled,
+div.hDialogueTitlebarButtons:hover span.hDialogueDisabled,
+div.hDialogueTitlebarButtons:active span.hDialogueDisabled {
+    background-position: -84px 0;
+}
+iframe.hDialogueFrame {
+    display: none;
+}

@@ -1,0 +1,26 @@
+{
+    plugin : {
+        library : {
+            name : "Dialogue Library"
+        },
+        service : {
+            name : "Dialogue Service",
+            methods : [
+                "getModalDialogue",
+                "getAlertDialogue",
+                "getConfirmDialogue",
+                "getLoginDialogue",
+                "getPromptDialogue"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hDialogue",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hDialogue"
+        }
+    }
+}

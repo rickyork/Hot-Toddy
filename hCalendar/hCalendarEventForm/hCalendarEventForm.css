@@ -1,0 +1,170 @@
+div#hCalendarEventForm table {
+    width: 100%;
+}
+div#hCalendarEventFormButtons {
+    position: absolute;
+    bottom: 5px;
+    right: 25px;
+    left: 0;
+    padding: 0 10px 0 0;
+    background: rgb(240, 240, 240);
+    height: 30px;
+}
+div#hCalendarEventFormButtons input {
+    float: right;
+    margin: 0 0 0 10px;
+    position: relative;
+    top: 5px;
+}
+td#hFileThumbnail img {
+    max-height: 100px;
+}
+
+input#hCalendarEventFormSave,
+input#hCalendarEventFormBack {
+    display: none;
+}
+fieldset {
+    border: none;
+}
+legend {
+    display: none;
+}
+div.hFormLegend {
+    display: none;
+}
+td.hFormLabelLong {
+    vertical-align: top;
+    text-align: right;
+    padding: 10px 5px 5px 5px;
+}
+td.hFormLabel {
+    padding: 5px;
+    text-align: right;
+    vertical-align: middle;
+}
+div#hCalendarEventFormContent td.hFormLabel,
+div#hCalendarEventFormContent td.hFormLabelLong {
+    text-align: left;
+    padding: 5px;
+}
+div#hCalendarEventFormContent,
+div#hCalendarEventFormProperties {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+select#hCalendarId,
+select#hCalendarCategoryId {
+    width: 300px;
+}
+td.hFormInput select {
+
+}
+input#hFileTitle,
+input#hFileHeadingTitle {
+    width: 80%;
+}
+input#hCalendarLink {
+    width: 98%;
+}
+img.hCalendarEventFormIcon {
+    vertical-align: -6px;
+    margin: 0 0 0 3px;
+    width: 24px;
+    height: 24px;
+}
+img.hCalendarControlAdd,
+img.hCalendarControlRemove {
+    float: left;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+span.hCalendarEventFormOptional {
+    font-style: italic;
+    font-size: 11px;
+}
+body div.hApplicationStatus {
+    z-index: 100;
+    bottom: 60px;
+    right: 310px;
+}
+div.hFormWYSIWYGWrapper iframe {
+    border: 1px solid rgb(180, 180, 180) !important;
+}
+
+div#hCalendarFileCategoryButtons {
+    padding: 5px 0 0 0;
+}
+div#hCalendarFileCategoryButtons input {
+    float: right;
+    margin: 0 0 0 5px;
+}
+div#hCalendarFileCategories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    border: 1px solid rgb(128, 128, 128);
+    margin: 5px;
+    height: 100px;
+    overflow: auto;
+}
+div#hCalendarFileCategories ul li {
+
+}
+div#hCalendarFileCategories ul div {
+    padding: 3px 3px 3px 40px;
+    height: 32px;
+    background: url('/images/icons/32x32/category_folder.png') no-repeat 3px center;
+}
+div#hCalendarFileCategories ul li span {
+    line-height: 32px;
+    vertical-align: middle;
+}
+select#hCalendarFileCategories,
+select#hCalendarTagCategories {
+    width: 80%;
+}
+li.hCalendarFileCategorySelected {
+    background: url('/images/themes/aqua/backgrounds/itemSelected.png') repeat-x top;
+    color: #fff;
+}
+span.hFileMovieId {
+    display: none;
+}
+div#hCalendarMovieFile img {
+    float: left;
+    padding: 0 3px 3px 0;
+}
+div#hCalendarMovieFile span.hFileMovieTitle,
+div#hCalendarMovieFile span.hFileMoviePath {
+    display: block;
+    margin: 0 0 0 40px;
+}
+div#hCalendarMovieFileInner {
+    overflow: auto;
+    zoom: 1;
+}
+div#hCalendarTextEditor {
+    position: relative;
+    z-index: 1000;
+    height: 300px;
+    background: #fff;
+    border: 1px solid rgb(115, 115, 115);
+}
+div.hFormTextareaWrapper {
+    float: none;
+}
+textarea#hFileDescription {
+    display: block;
+    width: 100%;
+    height: 125px;
+    font: 12px Monaco, "Courier New", monospace;
+}
+div#hCalendarFileThumbnail span {
+    display: none;
+}

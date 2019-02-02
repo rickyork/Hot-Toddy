@@ -1,0 +1,33 @@
+    <!-- Begin Finder Files -->
+    <div id='hFinderListHeader'>
+        <ul>
+            <li id='hFinderListHeaderName'><span>Name</span></li>
+            <li id='hFinderListHeaderLastModified'><span>Date Modified</span></li>
+            <li id='hFinderListHeaderSize'><span>Size</span></li>
+            <li id='hFinderListHeaderTitle'><span>Title</span></li>
+            <li id='hFinderListHeaderDescription'><span>Description</span></li>
+        </ul>
+    </div>
+    <div class='hFinderListResizeGrip' id='hFinderListResizeName'></div>
+    <div class='hFinderListResizeGrip' id='hFinderListResizeLastModified'></div>
+    <div class='hFinderListResizeGrip' id='hFinderListResizeSize'></div>
+    <div class='hFinderListResizeGrip' id='hFinderListResizeTitle'></div>
+    <div class='hFinderListResizeGrip' id='hFinderListResizeDescription'></div>
+    <div class='hFinderFiles' id='hFinderFiles{hFinderView}'>
+        {hFinderListView?
+            <div id='hFinderListFilesInner' data-file-path='{hFinderPath}'>
+        }
+        {hFinderColumnsView?
+            <div id='hFinderFilesInner'>
+                <div id='hFinderColumnsWrapper'>
+        }
+{hFinderFiles}
+        {hFinderColumnsView?
+                </div>
+            </div>
+        }
+        {hFinderListView?
+            </div>
+        }
+    </div>
+    <!-- End Finder Files -->

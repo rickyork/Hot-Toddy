@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "Database Structure Library"
+        },
+        shell : {
+            name : "Database Structure Shell"
+        }
+    }
+}

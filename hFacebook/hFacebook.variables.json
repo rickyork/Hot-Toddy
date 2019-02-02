@@ -1,0 +1,14 @@
+{
+  hFacebookAppId: "",
+  hFacebookSecret: "",
+  // Learn more about Open Graph attributes here:
+  // http://developers.facebook.com/docs/opengraph
+  hFacebookOpenGraphTitle    : "",  
+  hFacebookOpenGraphType     : "", 
+  hFacebookOpenGraphImage    : "", // At least 50x50, should be square.
+  hFacebookOpenGraphURL      : "",
+  hFacebookOpenGraphSiteName : "", // Will map to hFrameworkName, by default.
+  hFacebookOpenGraphAdmins   : "",
+  hFacebookOpenGraphAppId    : "", // This will probably map to the app Id provided in hFacebookAppId by default
+  
+}

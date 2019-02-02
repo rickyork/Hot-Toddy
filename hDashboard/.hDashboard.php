@@ -1,0 +1,2 @@
+<?php
+  class hDashboard extends hPlugin { private $hDashboard; public function hConstructor() { $this->hDashboard = $this->library('hDashboard'); $this->HotToddySideBoxHeading = "Dashboard"; $this->HotToddySideBoxContent = ''; $this->hFileDocument = $this->getTemplate('Dashboard'); } } ?>

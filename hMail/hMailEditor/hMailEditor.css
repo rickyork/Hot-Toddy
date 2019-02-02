@@ -1,0 +1,145 @@
+@import '/hApplication/hApplicationUI/hApplicationUIButton/CSS/Segmented+Aqua.css';
+
+html,
+body {
+    background: rgb(232, 232, 232);
+    padding: 0;
+    margin: 0;
+    font: 12px "Lucida Grande", Arial;
+}
+div#hMailEditor {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    bottom: 40px;
+    left: 0;
+    border-top: 1px solid rgb(180, 180, 180);
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+
+div#hMailEditorTemplateWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    overflow: hidden;
+    border-right: 1px solid rgb(190, 190, 190);
+}
+div#hMailEditorTemplateWrapper ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div#hMailEditorTemplateLabel {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    font-size: 13px;
+}
+div#hMailEditorTemplateTabs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 23px;
+    {userAgent.isWebkit?
+        background: -webkit-gradient(linear, left top, left bottom, from(rgb(253, 253, 253)), to(rgb(215, 215, 215)));
+    }
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(253, 253, 253), rgb(215, 215, 215));
+    background: linear-gradient(to bottom, rgb(253, 253, 253), rgb(215, 215, 215));
+    border-bottom: 1px solid rgb(180, 180, 180);
+    {userAgent.vendorPrefix}box-shadow: 0 3px 3px rgba(100, 100, 100, 0.7);
+    box-shadow: 0 3px 3px rgba(100, 100, 100, 0.7);
+    z-index: 2;
+    {userAgent.isTridentLTE8?
+        background: none;
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fdfdfd', endColorstr='#d7d7d7')";
+    }
+}
+ul#hMailEditorTemplates {
+    position: absolute;
+    top: 26px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    background: rgb(214, 221, 229);
+    /*background: url('/hApplication/hApplicationUI/Pictures/List Background.png');*/
+}
+ul#hMailEditorTemplates li {
+
+}
+ul#hMailEditorTemplates li div {
+    padding: 5px 5px 5px 28px;
+    height: 14px;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: url('/images/icons/16x16/mail_document.png') no-repeat 6px 3px;
+}
+/*
+ul#hMailEditorTemplates li:nth-child(odd) {
+    background: #fff;
+}
+ul#hMailEditorTemplates li:nth-child(even) {
+    background: rgb(237, 243, 254);
+}
+*/
+
+li.hMailEditorTemplateSelected {
+    background: rgb(50, 102, 184) url('/hApplication/hApplicationUI/Pictures/Selection/Generic.png') repeat-x top;
+    color: white;
+    text-shadow: rgb(97, 95, 106) 1px 1px 1px;
+}
+div#hMailHTMLWrapper {
+    position: absolute;
+    top: 325px;
+    left: 50px;
+    right: 45px;
+    bottom: 70px;
+    background: #fff;
+    border: 1px solid rgb(180, 180, 180);
+    min-height: 200px;
+    margin: 0 20px;
+    z-index: 5;
+}
+div#hMailHTMLWrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+form#hMailEditorDialogue {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 301px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    box-shadow: none;
+    {$webkit?
+      -webkit-box-shadow: none;
+    }
+    {$gecko?
+      -moz-box-shadow: none;
+    }
+}
+form#hMailEditorDialogue div.hDialogueContent {
+    border: none;
+}
+div#hMailEditorDocumentMailer {
+    min-height: 700px;
+    min-width: 700px;
+}
+form#hMailEditorDialogue div.hFormLegend {
+    display: none;
+}
+form#hMailEditorDialogue input[type="text"] {
+    width: 98%;
+}

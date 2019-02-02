@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Smarty Pants Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hSmartyPants",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hSmartyPants"
+        }
+    }
+}

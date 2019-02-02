@@ -1,0 +1,15 @@
+<div id='hMailEditor'>
+  <div id='hMailEditorTemplateWrapper'>
+    <div id='hMailEditorTemplateTabs'>
+      <div id='hMailEditorTemplateLabel'><span>Mail Templates</span></div>
+    </div>
+    <ul id='hMailEditorTemplates'>
+      {mailTemplates[]?
+        <li id='hMailTemplateId-{hMailTemplateId}'>
+          <div>{hMailTemplateDescription}{!hMailTemplateDescription?{hMailTemplateName}}</div>
+        </li>
+      }
+    </ul>
+  </div>
+  {form}
+</div>

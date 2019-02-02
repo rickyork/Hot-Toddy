@@ -1,0 +1,18 @@
+{
+    plugin : {
+        name : "Contact Form Examples"
+    }, 
+    file : {
+        title : "Contact Form Examples",
+        path : "/Hot Toddy/Documentation/Examples/Contact Form.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                groups : [
+                    ["Website Administrators", "rw"]
+                ]
+            }
+        }
+    }
+}

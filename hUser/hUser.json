@@ -1,0 +1,32 @@
+{
+    plugin : {
+        name : "User Address Book Plugin",
+        library : {
+            name : "User Library"
+        },
+        database : {
+            name : "User Database"
+        },
+        shell : {
+            name : "User Shell"
+        },
+        service : {
+            name : "User Listener",
+            methods : [
+                "getLoginInformation",
+                "addUserToGroup",
+                "getActivity",
+                "getDocumentHistory"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hUser",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hUser"
+        }
+    }
+}

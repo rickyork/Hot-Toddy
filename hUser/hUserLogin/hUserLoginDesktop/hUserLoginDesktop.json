@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "User Login Desktop"
+    },
+    file : {
+        title : "Login",
+        path : "/Applications/Users/Desktop Login.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

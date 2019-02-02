@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-us'>
+    <head>
+        <title>Drag Image Background</title>
+        <!-- 
+            This is a reduced test case for a bug in webkit.
+            When an element is made draggable within a positioned 
+            element, the draggable element's drag image retains
+            a semi-transparent white background that is 
+            impossible to change or remove.
+            
+            A work-around for the bug is to add width: 100% and 
+            height: 100% to the html, body elements, this removes
+            the white background from the drag image.
+            
+            A bug has been filed:
+            https://bugs.webkit.org/show_bug.cgi?id=79417
+         -->
+        <style type='text/css'>
+            /*
+            body,
+            html {
+                width: 100%;
+                height: 100%;
+            }
+            */
+            p {
+                -webkit-user-drag: element;
+                -webkit-user-select: none;
+                padding: 20px;
+                border: 1px solid black;
+            }
+            p:-webkit-drag {
+                background: none !important;
+            }
+            div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        <p>
+            Drag me.
+        </p>
+        </div>
+    </body>
+</html>

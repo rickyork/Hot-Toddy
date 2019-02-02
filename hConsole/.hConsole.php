@@ -1,0 +1,2 @@
+<?php
+  class hConsole extends hPlugin { private $hSearch; public function hConstructor() { $this->redirectIfSecureIsEnabled(); $this->hFileCSS = ''; $this->hFileJavaScript = ''; $this->hEditorTemplateEnabled = false; $this->hSearch = $this->library('hSearch'); $this->hSearch->getCSS(); $this->getPluginFiles(); $this->hTemplatePath = '/hConsole/hConsole.template.php'; $this->hFileDocument = $this->getTemplate('Console'); } } ?>

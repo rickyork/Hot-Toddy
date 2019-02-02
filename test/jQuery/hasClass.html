@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery hasClass Test</title>
+        <!--Begin JavaScript -->
+            <script src="/Library/jQuery/jQuery.js"></script>
+            <script>
+                var hot = {
+                    userSessionId : 'q26rtp46020dc6uv8okpj029i15ivdd0',
+                    userAgent : 'webkit',
+                    userAgentVersion : 537.75,
+                    userAgentOS : 'Mac OS X',
+                    userAgentOSVersion : '10.9.2',
+                    userInterfaceIdiom : 'Desktop',
+                    userAgentIsMobile : false,
+                    userId : 1,
+                    userName : "richard",
+                    installPath : '/',
+                    directoryId : 25,
+                    fileId : 25,
+                    filePath : '/Applications/Finder/index.html',
+                    fileWildcardPath : ''
+                };
+                var server = {
+                    host: 'www.ahni.com'
+                };
+            </script>
+            <script src="/hFramework/hFramework.template.js"></script>
+        <!-- End JavaScript -->
+        <!--
+            Hot Toddy Framework
+
+            http://www.hframework.com
+            © Copyright 2015 Richard York, All rights Reserved
+
+            Use and redistribution are subject to the terms of the license.
+            http://www.hframework.com/license
+
+            Framework Data:
+              hDatabaseInitial:      ahni
+
+              hPluginPath:           hFinder
+
+            User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/537.75.14
+        -->
+    </head>
+    <body>
+        <div id='test' class='test test1 test2'>
+
+        </div>
+        <script>
+            if (!$('div#test').hasClass('test test5 test6'))
+            {
+                alert(true);
+            }
+        </script>
+    </body>
+</html>

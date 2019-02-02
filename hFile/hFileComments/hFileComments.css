@@ -1,0 +1,180 @@
+div#hFileCommentPosted {
+    color: rgb(128, 128, 128);
+    margin-top: 5px;
+}
+
+table#hFileCommentForm {
+    width: 100%;
+}
+col#hFileCommentLabelCol {
+    width: 25%;
+}
+td.hFileCommentInput input {
+    width: 50%;
+}
+td.hFileCommentLabel {
+    text-align: right;
+    padding: 4px;
+}
+td.hFileCommentInput {
+    padding: 4px;
+}
+td.hFileCommentInput textarea {
+    width: 80%;
+}
+ul#hFileComments {
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+}
+span.hFileCommentPosted {
+    font-weight: normal;
+    float: right;
+}
+ul#hFileComments h4 {
+    margin-bottom: 2px;
+}
+li.hFileComment {
+    padding: 0 0 25px 0;
+}
+div.hFileComment {
+    margin-top: 25px;
+    padding: 3px 25px;
+    white-space: pre-wrap;
+}
+div.hFileCommentActions a{
+    padding-left: 5px;
+    font-size: 12px;
+}
+a.hFileCommentDelete {
+    color: crimson;
+}
+a.hFileCommentApprove {
+    color: #004080;
+}
+td#hFileCommentButton {
+    text-align: right;
+}
+p.hFileCommentQuestionError {
+    color: crimson;
+}
+div#hFileComments {
+    margin: 0 33% 0 0;
+}
+div#hCalendarBLogLinksInner {
+    position: relative;
+    top: -60px;
+}
+td.hFileCommentLabelLong {
+    vertical-align: top;
+    padding-top: 15px;
+}
+div.hFileCommentCodeWrapper {
+    height: 250px;
+    overflow: auto;
+    margin: 25px 0;
+    padding: 10px;
+}
+code.hFileCommentCode {
+    white-space: pre;
+}
+p.hFileCommentHTMLDisclosure {
+    font-size: 11px;
+}
+div.hFileComment ul {
+    list-style-type: disc;
+}
+p#hFileCommentModeration {
+    margin: 20px 0 0 25%;
+    font-style: italic;
+}
+li.hFileCommentApproved a.hFileCommentApprove {
+    display: none;
+}
+li.hFileCommentDenied a.hFileCommentDeny {
+    display: none;
+}
+table#hFileCommentForm {
+    width: 100%;
+}
+col#hFileCommentLabelCol,
+td.hFileCommentLabel {
+    width: 150px;
+}
+td.hFileCommentLabel {
+    padding: 0 10px 10px 0;
+    vertical-align: middle;
+    text-align: right;
+}
+td.hFileCommentLabelLong {
+    vertical-align: top;
+    padding: 10px 10px 10px 0;
+}
+td.hFileCommentInput {
+    padding: 0 0 10px 0;
+    vertical-align: middle;
+}
+td.hFileCommentLabel label span {
+    display: block;
+    font-size: 10px;
+    font-style: italic;
+}
+input#hFileCommentName,
+input#hFileCommentEmail,
+input#hFileCommentWebsite {
+    width: 90%;
+}
+textarea#hFileComment {
+    width: 98%;
+    height: 150px;
+}
+td#hFileCommentButton {
+    padding: 0 0 0 160px;
+}
+ul#hFileComments {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+span.hFileCommentPosted {
+    float: right;
+}
+li.hFileComment {
+    position: relative;
+}
+div.hFileCommentActions {
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+div.hFileCommentActions a {
+    color: crimson;
+}
+p.hFileCommentError {
+    color: crimson;
+    margin: 0;
+}
+div.hFileComment {
+    padding: 5px 0 0 0;
+}
+textarea.hFileCommentError,
+input.hFileCommentError {
+    background: crimson;
+    color: white;
+}
+textarea.hFileCommentError:focus,
+input.hFileCommentError:focus {
+    background: white;
+    color: black;
+}
+p#hFileCommentsClosed,
+p#hFileCommentsNone {
+    padding: 25px 0;
+    text-align: center;
+    opacity: 0.5;
+    {userAgent.vendorPrefix}opacity: 0.5;
+    {userAgent.isTrident?
+        filter: alpha(opacity=50);
+        -ms-filter: "alpha(opacity=50)";
+    }
+}

@@ -1,0 +1,19 @@
+{
+    plugin : {
+        name : "Finder Icons",
+        library : {
+            name : "Finder Icons Library"
+        }
+    },
+    file : {
+        title : "Finder Icons",
+        path : "/Applications/Finder/Icons.css",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

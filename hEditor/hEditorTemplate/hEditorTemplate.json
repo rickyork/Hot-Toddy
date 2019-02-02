@@ -1,0 +1,11 @@
+{
+    plugin : {
+        name : "Editor Template",
+        service : {
+            name: "Editor Template Service",
+            methods: [
+                "save"
+            ]
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "File Icon Install Library"
+        },
+        shell : {
+            name : "File Icon Install Shell"
+        }
+    }
+}

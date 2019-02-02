@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "User Directory Library"
+        },
+        shell : {
+            name : "User Directory Shell"
+        }
+    }
+}

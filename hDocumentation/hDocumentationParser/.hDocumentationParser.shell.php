@@ -1,0 +1,2 @@
+<?php
+  class hDocumentationParserShell extends hShell { private $hDocumentationParser; public function hConstructor() { $this->hDocumentationParser = $this->library('hDocumentation/hDocumentationParser'); if ($this->shellArgumentExists('help')) { $this->console($this->getTemplateTXT('Help')); } else if ($this->shellArgumentExists('tokenize')) { if ($this->shellArgumentExists('all')) { $this->hDocumentationParser->parseFiles(); } else { $this->hDocumentationParser->tokenize( $this->getShellArgumentValue('tokenize') ); } } } } ?>

@@ -1,0 +1,23 @@
+{
+    plugin : {
+        name : "Language Translator",
+        service : {
+            name : "Language Service",
+            methods : [
+                "search",
+                "save"
+            ]
+        }
+    },
+    file : {
+        title : "Language Translator",
+        path : "/System/Applications/Language/Text.html",
+        user : {
+            id : 1,
+            permissions: {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

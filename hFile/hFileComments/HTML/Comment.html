@@ -1,0 +1,12 @@
+                <li class='hFileComment{hFileCommentIsApproved? hFileCommentApproved}{!hFileCommentIsApproved? hFileCommentDenied}{hFileCommentIsAuthor? hFileCommentIsAuthor}' data-file-comment-id='{hFileCommentId}'>
+                    <h4>
+                        <span class='hFileCommentPosted'>{hFileCommentPostedFormatted}</span>
+                        {.hFileCommentsWebsiteLinkURL(true)?{hFileCommentWebsite?<a href='{hFileCommentWebsite}' rel='nofollow'>}}{hFileCommentName}{!.hFileCommentsWebsiteLinkURL(true)?{hFileCommentWebsite?<span class='hFileCommentWebsite'><span>of</span> {hFileCommentWebsite}</span>}}{.hFileCommentsWebsiteLinkURL(true)?{hFileCommentWebsite?</a>}} says:
+                    </h4>
+                    <div class='hFileCommentActions'>
+                        {hFileCommentDeletePath?<a href='{hFileCommentDeletePath}#hFileComments' class='hFileCommentDelete'>Delete</a>}
+                        {hFileCommentApprovePath?<a href='{hFileCommentApprovePath}#hFileComments' class='hFileCommentApprove'>Approve</a>}
+                        {hFileCommentDenyPath?<a href='{hFileCommentDenyPath}#hFileComments' class='hFileCommentDeny'>Deny</a>}
+                    </div>
+                    <div class='hFileComment'>{hFileComment}</div>
+                </li>

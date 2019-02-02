@@ -1,0 +1,560 @@
+@import '/Applications/Finder/Icons.css';
+
+{userAgent.isWebkit?
+    [draggable=true] {
+        -webkit-user-drag: element;
+        -khtml-user-drag: element;
+    }
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+div#hEditorTemplateBodyWrapperOuter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 1250px;
+}
+body.hEditorTemplateLowRes div#hEditorTemplateBodyWrapperOuter {
+    min-width: 900px;
+}
+div#hEditorTemplateBodyWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    left: 0;
+}
+div#hEditorTemplateBodyWrapperInner {
+    padding: 0;
+}
+
+div#hEditorTemplateOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    background: rgb(100, 100, 100);
+    background: rgba(100, 100, 100, 0.2);
+}
+
+div#hEditorTemplateClone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 501;
+    display: none;
+}
+div#hEditorTemplate {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    right: 25px;
+    padding: 5px 0 5px 0;
+    overflow: hidden;   
+    color: #000;
+    font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+    letter-spacing: normal;
+    z-index: 600;
+    white-space: nowrap;
+    background: rgb(75, 75, 75);
+    background: rgba(75, 75, 75, 0.8);
+    box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    {userAgent.vendorPrefix}box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    {userAgent.vendorPrefix}border-top-left-radius: 8px;
+    {userAgent.vendorPrefix}border-top-right-radius: 8px;
+    {userAgent.isGecko?
+        -moz-border-radius-topleft: 8px;
+        -moz-border-radius-topright: 8px;
+    }
+}
+div#hEditorTemplateTemporary {
+    display: none;
+}
+div#hEditorTemplateInner {
+    height: 30px;
+    padding: 1px;
+}
+div#hEditorTemplateSourceWrapper {
+    float: left;
+    position: relative;
+    left: 9px;
+}
+div#hEditorTemplateSourceWrapper li {
+    text-align: center;
+}
+div.hEditorTemplateSource {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+    z-index: 599;
+    border-bottom: 1px solid rgb(50, 50, 50);
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.9);
+}
+div#hEditorTemplateActionsWrapper {
+    float: right;
+    border-right: none;
+    white-space: nowrap;
+    width: 300px;
+    text-align: right;
+    overflow: hidden;
+}
+div#hEditorTemplateActionsWrapper ul.hEditorTemplateIsland {
+    float: right;
+}
+div#hEditorTemplateActionsWrapper ul.hEditorTemplateIsland li {
+    margin-left: 15px;
+}
+div.hEditorTemplateIslandWrapper {
+    margin: 5px 0 0 10px;
+    padding: 0 10px 0 0;
+    border-right: 1px solid rgb(50, 50, 50);
+    float: left;
+}
+div#hEditorTemplateFloatWrapper {
+    clear: left;
+}
+div#hEditorTemplateFloatWrapper ul.hEditorTemplateIsland li,
+div#hEditorTemplateFloatWrapper ul.hEditorTemplateIsland li button {
+    height: auto;
+}
+div#hEditorTemplateFloatWrapper ul.hEditorTemplateIsland li button  {
+    padding: 5px;
+}
+div.hEditorTemplateIslandWrapper:last-child {
+    border-right: none;
+}
+ul.hEditorTemplateIsland {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, rgb(253, 253, 253), rgb(215, 215, 215));
+    
+}
+ul.hEditorTemplateIsland li {
+    float: left;
+    text-align: center;
+    border: 1px solid rgb(50, 50, 50);
+    border-right: none;
+    background: rgb(215, 215, 215);
+    background: linear-gradient(to bottom, rgb(253, 253, 253), rgb(215, 215, 215));
+    {userAgent.isWebkit?
+        background: -webkit-gradient(linear, left top, left bottom, from(rgb(253, 253, 253)), to(rgb(215, 215, 215)));
+    }
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(253, 253, 253), rgb(215, 215, 215));
+}
+ul.hEditorTemplateIsland li button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    height: 21px;
+    padding: 0 10px;
+    text-align: center;
+}
+div#hEditorTemplateAlignWrapper li button {
+    padding: 0 5px;
+}
+ul.hEditorTemplateIsland li:first-child {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    {userAgent.vendorPrefix}border-top-left-radius: 3px;
+    {userAgent.vendorPrefix}border-bottom-left-radius: 3px;
+    {userAgent.isGecko?
+        -moz-border-radius-topleft: 3px;
+        -moz-border-radius-bottomleft: 3px;
+    }
+}
+ul.hEditorTemplateIsland li:last-child {
+    border-right: 1px solid rgb(50, 50, 50);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    {userAgent.vendorPrefix}border-top-right-radius: 3px;
+    {userAgent.vendorPrefix}border-bottom-right-radius: 3px;
+    {userAgent.isGecko?
+        -moz-border-radius-topright: 3px;
+        -moz-border-radius-bottomright: 3px;
+    }
+}
+
+ul.hEditorTemplateIsland li.hEditorTemplateButtonActive,
+ul.hEditorTemplateIsland li:active {
+    border: 1px solid rgb(0, 0, 0);
+    border-right: none;
+    background: rgb(86, 149, 224);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(146, 217, 247)), to(rgb(86, 149, 224)));
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(146, 217, 247), rgb(86, 149, 224));
+    background: linear-gradient(to bottom, rgb(146, 217, 247), rgb(86, 149, 224));
+}
+ul.hEditorTemplateIsland li.hEditorTemplateButtonActive:last-child,
+ul.hEditorTemplateIsland li:active:last-child {
+    border-right: 1px solid rgb(0, 0, 0);
+}
+ul.hEditorTemplateIsland li.hEditorTemplateButtonActive + li,
+ul.hEditorTemplateIsland li:active + li {
+    border-left: 1px solid rgb(0, 0, 0);
+}
+ul.hEditorTemplateIsland li span {
+    line-height: 21px;
+    vertical-align: middle;
+}
+ul.hEditorTemplateIsland li img {
+    vertical-align: middle;
+}
+ul#hEditorTemplateFontStyle {
+
+}
+ul#hEditorTemplateFontStyle button {
+    font: 16px "Times New Roman", Times, serif;
+}
+ul li#hEditorTemplateBold button {
+    font-style: bold;
+}
+ul li#hEditorTemplateItalic button {
+    font-style: italic;
+}
+li#hEditorTemplateSubscript button span,
+li#hEditorTemplateSuperscript button span {
+
+}
+li#hEditorTemplateSubscript button sub {
+    font-size: 8px;
+}
+li#hEditorTemplateSuperscript button sup {
+    font-size: 8px;
+}
+
+li#hEditorTemplateSubscript button 
+ul li#hEditorTemplateUnderline button {
+
+}
+ul li#hEditorTemplateStrikeThrough button {
+    text-decoration: line-through;
+}
+ul#hEditorTemplateFontStyle li#hEditorTemplateUnderline span {
+    text-decoration: underline;
+    font-family: Monoco, Arial, sans-serif;
+    vertical-align: 5px;
+}
+div#hEditorTemplateButtons {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+ul#hEditorTemplateAlign li img {
+    vertical-align: -2px;
+}
+
+li#hEditorTemplateLink,
+li#hEditorTemplatePicture {
+    padding: 0 5px;
+    font-size: 10px;
+}
+li#hEditorTemplateLink span,
+li#hEditorTemplatePicture span {
+    vertical-align: -4px;
+}
+li#hEditorTemplateLink img,
+li#hEditorTemplatePicture img {
+    vertical-align: -10px;
+    padding-right: 3px;
+    position: relative;
+    top: -1px;
+}
+li#hEditorTemplateViewSource {
+    font: 10px Monaco, monospace;
+    padding: 0 5px;
+}
+textarea.hEditorTemplateSource {
+    width: 100%;
+    font: 12px Monaco, Courier, "Courier New", monospace;
+    color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0, 0.9);
+}
+div.hEditorTemplateDisabledButtons {
+    opacity: 0.5;
+}
+.hEditorTemplateDocument img {
+    {userAgent.isWebkit?
+        -webkit-user-drag: element;
+    }
+}
+.hEditorTemplateDocument,
+.hEditorTemplateTitle {
+    min-height: 20px;
+    outline: none;
+}
+div#hEditorTemplateDocumentWrapper {
+    position: relative;
+}
+div.hEditorTemplateDocumentWrapperOn {
+}
+div.hEditorTemplateDocumentWrapperOn table {
+    border: 1px solid rgb(200, 200, 200);
+}
+div.hEditorTemplateDocumentWrapperOn table td {
+    border: 1px solid rgb(200, 200, 200);
+}
+div.hEditorTemplateTitleWrapperOn {
+}
+div.hEditorTemplateNodeWrapper {
+    display: inline-block;
+    position: relative;
+    min-width: 25px;
+    min-height: 25px;
+    padding: 2px;
+}
+div.hEditorTemplateNodeDragover {
+    padding: 30px 20px 30px 20px;
+}
+div.hEditorTemplateNodeWrapper * {
+    outline: none;
+    position: relative;
+    z-index: 2;
+}
+div.hEditorTemplatePlaceholder {
+    border: 1px dashed rgb(50, 50, 50);
+    background: plum;
+    height: 26px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    display: none;
+    opacity: 0.5;
+}
+div#hEditorTemplateClone .hEditorTemplateOtherDragover {
+    background: plum;
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper > div.hEditorTemplatePlaceholder,
+div#hEditorTemplateClone div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper .hEditorTemplateOtherDragover {
+    background: lightblue;
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper > div.hEditorTemplatePlaceholder,
+div#hEditorTemplateClone div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper .hEditorTemplateOtherDragover {
+    background: lightgreen;
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper > div.hEditorTemplatePlaceholder,
+div#hEditorTemplateClone div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper .hEditorTemplateOtherDragover {
+    background: pink;
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper > div.hEditorTemplatePlaceholder,
+div#hEditorTemplateClone div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper .hEditorTemplateOtherDragover {
+    background: red;
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper > div.hEditorTemplatePlaceholder,
+div#hEditorTemplateClone div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper .hEditorTemplateOtherDragover {
+    background: blue;
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper > div.hEditorTemplatePlaceholder
+div#hEditorTemplateClone div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper .hEditorTemplateOtherDragover {
+    background: rgb(140, 140, 140);
+}
+div.hEditorTemplatePlaceholderDragover {
+    opacity: 1;
+}
+div.hEditorTemplateNodeDragover > div.hEditorTemplatePlaceholder {
+    display: block;
+}
+div.hEditorTemplatePlaceholderPrevious {
+    top: 2px;
+}
+div.hEditorTemplatePlaceholderNext {
+    bottom: 2px;
+    top: auto;
+}
+div.hEditorTemplateNodeSelected {
+    border-radius: 5px;
+    outline: 1px solid rgba(0, 0, 0, 0.9) !important;
+    outline: 1px dashed rgba(0, 0, 0, 0.9) !important;
+    background: #fff;
+    z-index: 501;
+}
+div.hEditorTemplateNodeHandle {
+    position: absolute;
+    top: 0;
+    left: -16px;
+    height: 15px;
+    background: plum url('/hEditor/Pictures/stripe.png');
+    border: 1px solid plum;
+    border-right: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    width: 15px;
+    cursor: move;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper > div.hEditorTemplateNodeHandle {
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    border-right: none;
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper > div.hEditorTemplateNodeHandle {
+    background-color: lightgreen;
+    border: 1px solid lightgreen;
+    border-right: none;
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper > div.hEditorTemplateNodeHandle {
+    background-color: pink;
+    border: 1px solid pink;
+    border-right: none;
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper > div.hEditorTemplateNodeHandle {
+    background-color: red;
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper > div.hEditorTemplateNodeHandle {
+    background-color: blue;
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapper > div.hEditorTemplateNodeHandle {
+    background-color: rgb(140, 140, 140);
+}
+div.hEditorTemplateNodeWrapper div.hEditorTemplateNodeWrapperOn {
+}
+div.hEditorTemplateNodeWrapper img,
+div.hEditorTemplateNodeWrapper video {
+    cursor: move;
+    z-index: 1;
+}
+ul.hEditorTemplateNodeControls {
+    position: absolute;
+    top: -35px;
+    right: 0px;
+    list-style: none;
+    margin: 0 0 5px 0;
+    display: none;
+    z-index: 1;
+    white-space: nowrap;
+    z-index: 601;
+}
+ul.hEditorTemplateNodeControls li button {
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px dashed rgb(0, 0, 0);
+    font: bold 15px Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    display: block;
+    cursor: pointer;
+}
+ul.hEditorTemplateNodeControls li button:active {
+    background: white;
+}
+div.hEditorTemplateResize {
+    border: 1px solid rgb(100, 100, 100);
+    background: white;
+    font-size: 0;
+    line-height: 0;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+div.hEditorTemplateNodeSelected > div.hEditorTemplateResize,
+div.hEditorTemplateNodeSelected > ul.hEditorTemplateNodeControls {
+    display: block;
+}
+
+div.hEditorTemplateResizeNW {
+    top: -10px;
+    left: -10px;
+    cursor: nw-resize;
+}
+div.hEditorTemplateResizeN {
+    top: -10px;
+    left: 50%;
+    margin: 0 0 0 -4px;
+    cursor: n-resize;
+}
+div.hEditorTemplateResizeNE {
+    top: -10px;
+    right: -10px;
+    cursor: ne-resize;
+}
+div.hEditorTemplateResizeW {
+    left: -10px;
+    top: 50%;
+    margin: -4px 0 0 0;
+    cursor: w-resize;
+}
+div.hEditorTemplateResizeE {
+    right: -10px;
+    top: 50%;
+    margin: -4px 0 0 0;
+    cursor: e-resize;    
+}
+div.hEditorTemplateResizeSW {
+    bottom: -10px;
+    left: -10px;
+    cursor: sw-resize;
+}
+div.hEditorTemplateResizeS {
+    bottom: -10px;
+    left: 50%;
+    margin: 0 0 0 -4px;
+    cursor: s-resize;
+}
+div.hEditorTemplateResizeSE {
+    bottom: -10px;
+    right: -10px;
+    cursor: se-resize;
+}
+div.hEditorTemplate {
+    display: none;
+}
+div#hEditorTemplateDebug {
+    white-space: pre;
+}
+body div.hApplicationStatus {
+    bottom: 90px;
+    left: 20px;
+    right: auto;
+    z-index: 600;
+}
+.hEditorDroppable {
+    background: lightyellow;
+    border: 1px dashed rgb(50, 50, 50);
+    height: 30px;
+}
+div#hEditorTemplateClone a.hEditorTemplateNodeDragover {
+    background-color: lightyellow !important;
+    outline: 1px dashed rgb(50, 50, 50) !important;
+    cursor: move;
+}
+span.hEditorCaretTemplate {
+    display: none;
+}
+span.hEditorCaret {
+    width: 10px;
+    margin: 0 3px;
+    background: rgb(100, 100, 100);
+    border: 1px solid rgba(50, 50, 50);
+    text-decoration: blink;
+}
+
+

@@ -1,0 +1,18 @@
+{
+    plugin : {
+        name : "Mail Editor Document"
+    },
+    file : {
+        title : "Mail Editor",
+        path : "/Applications/Mail Editor/Document.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                groups : [
+                    ["Website Administrators", "rw"]
+                ]
+            }
+        }
+    }
+}

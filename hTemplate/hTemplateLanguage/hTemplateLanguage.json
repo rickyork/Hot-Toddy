@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "Template Language Library"
+        },
+        shell : {
+            name : "Template Language Shell"
+        }
+    }
+}

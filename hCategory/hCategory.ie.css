@@ -1,0 +1,10 @@
+div#hCategory {
+    height: 1px;
+}
+div#hCategory h2,
+div#hCategory-documents h2 {
+    position: relative;
+}
+div.category-document {
+    height: 1px;
+}

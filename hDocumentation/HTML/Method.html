@@ -1,0 +1,35 @@
+<div class='hDocumentationMethodWrapper' id='{hDocumentationMethodName}'>
+    <table class='hDocumentationMethods' id='hDocumentationMethod-{hDocumentationMethodId}'>
+        <tbody>
+            {methodSearch?
+            <tr id='hDocumentationMethodFile-{hDocumentationMethodId}' class='{isOdd?hDocumentationMethodOdd}{!$isOdd?hDocumentationMethodEven} hDocumentationMethodLocation'>
+                <td class='hDocumentationMethodLocation' colspan='6'>
+                    <h4>
+                        <a href='/System/Framework{hDocumentationFile}' target='_blank' class='hDocumentationFileSourceLink' title='{hDocumentationFileTitle} Source Code'>{hDocumentationFileTitle}</a>::{hDocumentationMethodName}(): 
+                        <a href='/Hot Toddy/Documentation?{hDocumentationFileId}#{hDocumentationMethodName}' class='code' title='{hDocumentationFile}'>{hDocumentationFile}</a>
+                    </h4>
+                </td>
+            </tr>
+            }
+            <tr id='hDocumentationMethodSignature-{hDocumentationMethodId}' class='{isOdd?hDocumentationMethodOdd}{!$isOdd?hDocumentationMethodEven}'>
+                <td class='hDocumentationMethodSignature' colspan='6'>
+                        <div class='hDocumentationMethodSignature' title="Click to view the method's full source code">{hDocumentationMethodReturnType?<span class='hDocumentationMethodReturnType'>{hDocumentationMethodReturnType}</span>} {hDocumentationMethodSignature}</div>
+                        <div class='hDocumentationMethodBody' title="Click to hide the method's full source code"><code>{hDocumentationMethodBody}</code></div>
+                </td>
+            </tr>
+            <tr id='hDocumentationMethodDescription-{hDocumentationMethodId}' class='{isOdd?hDocumentationMethodOdd}{!$isOdd?hDocumentationMethodEven}'>
+                <td class='hDocumentationMethodDescription' colspan='6'>
+                    {hDocumentationMethodDescription?{hDocumentationMethodDescription}}{!$hDocumentationMethodDescription?&nbsp;}
+                    {hDocumentationMethodReturnDescription?
+                        <h2>Return Value</h2>
+                        <div class='hDocumentationReturnDescription'>
+                            {hDocumentationMethodReturnDescription}
+                        </div>
+                    }
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class='hDocumentationMethodArguments' id='hDocumentationMethodArguments-{hDocumentationMethodId}'>
+    </div>
+</div>

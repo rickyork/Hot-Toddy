@@ -1,0 +1,59 @@
+<!-- Begin Finder -->
+{.hFinderHasSearch(true)?
+<div id='hFinderSearch'>
+    <input type='search' id='hFinderSearchTerms' size='50' />
+</div>
+}
+<div id='hFinderWrapper'>
+{hFinder}
+</div>
+{hFinderContextMenu}
+
+<div id='hFinderCopyTexareaInputWrapper'>
+    <textarea id='hFinderCopyTextareaInput'></textarea>
+</div>
+
+<div id='hFinderDnDDialogue'>
+    <div id='hFinderDnDDialogueWrapper'>
+        <h4>File Upload Queue</h4>
+        <div id='hFinderDnDUploadProgress'><span>0</span>%</div>
+        <img id='hFinderDnDUploadActivity' src='/images/themes/aqua/activity/upload.gif' alt='Upload Activity' />
+        <div id='hFinderDnDUploadProgressMeter'>
+            <div></div>
+        </div>
+        <div id='hFinderDnDDialogueHead'>
+            <table class='hApplicationUIListView'>
+                <thead>
+                    <tr>
+                        <th class='hFinderDnDFileIcon'></th>
+                        <th class='hFinderDnDFile'>File</th>
+                        <th class='hFinderDnDFileSize'>Size</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div id='hFinderDnDDialogueBody'>
+            <table class='hApplicationUIListView'>
+                <tbody>
+                    <tr class='hFinderDnDTemplate'>
+                        <td class='hFinderDnDFileIcon'></td>
+                        <td class='hFinderDnDFile'></td>
+                        <td class='hFinderDnDFileSize'></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- End Finder -->
+<!-- 
+Desktop Application Icon Paths
+src="/images/icons/128x128/hFinder.png"
+src="/images/icons/48x48/hFinder.png"
+src="/images/icons/32x32/hFinder.png"
+src="/images/icons/24x24/hFinder.png"
+src="/images/icons/16x16/hFinder.png"
+-->

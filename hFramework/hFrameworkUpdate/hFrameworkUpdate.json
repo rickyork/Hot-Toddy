@@ -1,0 +1,19 @@
+{
+    plugin : {
+        name : "Framework Update",
+        shell : {
+            name : "Framework Update Shell"
+        }
+    },
+    file : {
+        title : "Framework Update",
+        path : "/Applications/Software Update/index.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

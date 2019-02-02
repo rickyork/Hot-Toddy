@@ -1,0 +1,50 @@
+{
+    plugin : {
+        name : "Photo",
+        library : {
+            name : "Photo Library"
+        },
+        database : {
+            name : "Photo Database"
+        },
+        service : {
+            name : "Photo Service",
+            methods : [
+                "getPhotos",
+                "saveSliderPosition",
+                "crop",
+                "resize"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hPhoto",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hPhoto"
+        }
+    },
+    file : {
+        title : "Photo Editor",
+        path : "/Applications/Photo/index.html",
+        directory : {
+            properties : {
+                isApplication : 1,
+                icon : {
+                    name : "iPhoto.png",
+                    icns : "NSApplicationIcon.icns",
+                    mime : "plugins/photo"
+                }
+            }
+        },
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

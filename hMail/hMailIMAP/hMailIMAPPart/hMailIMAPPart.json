@@ -1,0 +1,18 @@
+{
+    plugin : {
+        name : "Mail IMAP Part"
+    },
+    file : {
+        title : "Mail IMAP Part",
+        path : "/System/Applications/Mail/Part.plugin",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                groups : [
+                    ["Website Administrators", "rw"]
+                ]
+            }
+        }
+    }
+}

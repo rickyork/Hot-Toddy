@@ -1,0 +1,24 @@
+<form action='javascript:void(0);' method='get' id='hDocumentationSearch'>
+    <div>
+        <label for='hDocumentationSearch'>Search:</label>
+        <input type='text' id='hDocumentationSearch' name='hDocumentationSearch' size='25' />
+
+        <select name='hDocumentationSearchOption' id='hDocumentationSearchOption'>
+            <option value=''></option>
+            <option value='methods'>Methods</option>
+        </select>
+        <input type='submit' value='Go' id='hDocumentationSearchButton' />
+    </div>
+</form>
+<p id='hDocumentationActivity'>
+    <img id='hDocumentationActivityIndicator' src='/images/themes/aqua/activity/upload.gif' alt='Search Activity' />
+</p>
+<div id='hDocumentationSearchResults'>
+    {html}
+</div>
+{pluginNavigation?
+<div id='hDocumentationBrowse'>
+    <h2>Browse Documentation</h2>
+    {pluginNavigation}
+</div>
+}

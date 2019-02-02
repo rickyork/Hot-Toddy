@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Facebook API"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hFacebook",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hFacebook"
+        }
+    }
+}

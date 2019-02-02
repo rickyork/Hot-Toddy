@@ -1,0 +1,8 @@
+@import '/hCalendar/CSS/Datepicker.css';
+
+span#hContactFormCounryLabel {
+    display: none;
+}
+td#hLocationCountryIdCell {
+    vertical-align: middle;
+}

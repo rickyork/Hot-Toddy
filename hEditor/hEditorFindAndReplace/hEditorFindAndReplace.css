@@ -1,0 +1,135 @@
+html,
+body {
+    overflow: hidden;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+input,
+textarea {
+    font: 12px Monaco, Courier, "Courier New", monospace;
+}
+
+div#hEditorFindAndReplaceButtons {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+}
+div.hEditorFindAndReplaceMatchTemplate {
+    display: none;
+}
+ul#hEditorFindAndReplaceFolderList {
+    background: #fff;
+    border: 1px solid rgb(153, 153, 153);
+    height: 156px;
+    overflow: auto;
+    padding: 0;
+    list-style: none;
+    margin: 0 0 10px 5px;
+}
+li.hEditorFindAndReplaceFolderTemplate {
+    display: none;
+}
+ul#hEditorFindAndReplaceFolderList li {
+    height: 42px;
+    padding: 5px;
+    background: #fff url('/images/icons/32x32/folder.png') 10px center no-repeat;
+}
+ul#hEditorFindAndReplaceFolderList li span {
+    display: block;
+    margin: 0 0 0 48px;
+    position: relative;
+    top: 3px;
+}
+div#hEditorFindAndReplaceFolderButtons {
+    padding: 0 0 0 5px;
+}
+div#hEditorFindAndReplaceMatches {
+    position: fixed;
+    display: none;
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    {userAgent.vendorPrefix}box-shadow: 0 7px 15px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    {userAgent.vendorPrefix}border-radius: 8px;
+}
+div#hEditorFindAndReplaceMatchesInner {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    bottom: 40px;
+    left: 10px;
+    background: #fff;
+    overflow: auto;
+    border: 1px solid rgb(200, 200, 200);
+}
+div.hEditorFindAndReplaceMatchCount {
+    position: absolute;
+    top: 3px;
+    left: 11px;
+    padding: 10px 0;
+}
+div#hEditorFindAndReplaceMatchButtons {
+    position: absolute;
+    bottom: 10px;
+    right: 11px;
+}
+div#hEditorFindAndReplaceMatchButtonsLeft {
+    position: absolute;
+    bottom: 10px;
+    left: 11px;
+}
+input#hEditorFindAndReplaceReplaceClose {
+    margin: 0 0 0 25px;
+}
+select#hEditorIncludeFileType,
+select#hEditorExcludeFileType {
+    width: 200px;
+}
+div.hEditorFindAndReplaceMatch {
+    padding: 10px;
+}
+div.hEditorFindAndReplaceMatch:nth-child(even) {
+    background: rgba(230, 230, 230, 0.9);
+}
+div.hEditorFindAndReplaceLocation {
+    padding: 0 0 5px 0;
+}
+div#hEditorFindAndReplaceMatches div.hEditorFindAndReplaceMatchSelected,
+ul#hEditorFindAndReplaceFolderList li.hEditorFindAndReplaceFolderSelected {
+    background-color: rgb(60, 134, 207);
+    color: #fff;
+}
+ul#hEditorFindAndReplaceFolderList li.hEditorFindAndReplaceFolderSelected a {
+    color: lightblue;
+}
+div#hEditorFindAndReplaceActivity {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 70px;
+    margin: -35px 0 0 -125px;
+    background: rgba(255, 255, 255, 0.95);
+    display: none;
+    box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    {userAgent.vendorPrefix}box-shadow: 0 7px 15px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    {userAgent.vendorPrefix}border-radius: 4px;
+}
+p#hEditorFindAndReplaceActivityLabel {
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+    padding: 0 0 0 20px;
+    margin: 10px 0 10px 0;
+}
+p#hEditorFindAndReplaceActivityIndicator {
+    margin: 3px 0 0 0;
+    text-align: center;
+}

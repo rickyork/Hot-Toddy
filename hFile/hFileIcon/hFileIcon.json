@@ -1,0 +1,23 @@
+{
+    plugin : {
+        name : "File Icon",
+        library : {
+            name : "File Icon Library"
+        },
+        database : {
+            name : "File Icon Database"
+        }
+    },
+    file : {
+        title : "File Icon",
+        path : "/System/Applications/File/Icon.plugin",
+        pathWildcard : "/images/icons",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

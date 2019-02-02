@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "Contact Utilities Library"
+        },
+        shell : {
+            name : "Contact Utilities Shell"
+        }
+    }
+}

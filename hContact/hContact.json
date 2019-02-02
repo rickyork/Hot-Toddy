@@ -1,0 +1,57 @@
+{
+    plugin : {
+        name : "Contacts",
+        library : {
+            name : "Contacts Library"
+        },
+        database : {
+            name : "Contacts Database"
+        },
+        service : {
+            name : "Contacts Service",
+            methods : [
+                "query",
+                "queryGroup",
+                "save",
+                "getRecord",
+                "newRecord",
+                "delete",
+                "getContactIdByUserId",
+                "deleteData",
+                "saveColumnDimensions",
+                "saveInstructionsDefault",
+                "saveWindowDimensions"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hContact",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hContact"
+        }
+    },
+    file : {
+        title : "Contacts",
+        path : "/Applications/Contacts/index.html",
+        directory : {
+            properties : {
+                isApplication : true,
+                icon : {
+                    name : "address_book.png",
+                    icns : "Contacts.icns",
+                    mime : "plugins/contacts"
+                }
+            }
+        },
+        user : {
+            id : 1,
+            permissions: {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

@@ -1,0 +1,244 @@
+div.hFinderListResizeGrip {
+    position: absolute;
+    top: 32px;
+    bottom: 23px;
+    cursor: col-resize;
+    width: 5px;
+    z-index: 100;
+    display: none;
+}
+div#hFinderListHeader {
+    height: 16px;
+    background: url("/hApplication/hApplicationUI/Pictures/List Header.png") repeat-x;
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 251px;
+    right: 0;
+    border-top: 1px solid rgb(64, 64, 64);
+}
+div#hFinderListHeader ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+div#hFinderListHeader ul li {
+    position: absolute;
+    border-right: 1px solid rgb(192, 192, 192);
+    height: 17px;
+}
+body.hFinderFilesList div.hFinderFiles {
+    padding: 0;
+    background: #fff;
+}
+div#hFinderListFilesInner {
+    background: url("/hApplication/hApplicationUI/Pictures/List Background 1x38.png");
+    width: 100%;
+    min-height: 100%;
+}
+body.hFinderFilesList div.hFinderNode,
+body.hFinderFilesList div.hFinderNodeWrapper {
+    height: 19px;
+    position: relative;
+}
+body.hFinderFilesList div.hFinderNodeWrapper {
+    width: 790px;
+    margin: 0 0 0 5px;
+}
+body.hFinderFilesList div.hFinderApplication div.hFinderDirectoryArrow {
+    display: none;
+}
+body.hFinderFilesList div.hFinderDirectoryArrow {
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    width: 9px;
+    height: 9px;
+    background: url("/hApplication/hApplicationUI/Pictures/Arrows/rightArrow.png") no-repeat center;
+}
+body.hFinderFilesList div.hFinderDirectoryHasChildrenOn {
+    background-image: url("/hApplication/hApplicationUI/Pictures/Arrows/downArrow.png");
+}
+body.hFinderFilesList .hFinderSelected div.hFinderDirectoryArrow {
+    background-image: url("/hApplication/hApplicationUI/Pictures/Arrows/rightArrowOn.png");
+}
+body.hFinderFilesList .hFinderSelected div.hFinderDirectoryHasChildrenOn {
+    background-image: url("/hApplication/hApplicationUI/Pictures/Arrows/downArrowOn.png");
+}
+body.hFinderFilesList .hFinderSelected div.hFinderServerWrapper {
+    background: none;
+}
+body.hFinderFilesList .hFinderLabel div.hFinderNodeWrapper {
+    color: black;
+    background: none;
+    border-radius: 8px;
+    {userAgent.vendorPrefix}border-radius: 8px;
+}
+body.hFinderFilesList div.hFinderListDragOver {
+    outline: 3px solid rgb(133, 174, 224);  
+    {isWebkit?
+        outline: 5px auto -webkit-focus-ring-color;
+    }
+}
+body.hFinderFilesList div.hFinderIcon {
+    position: absolute;
+    top: 1px;
+    left: 25px;
+}
+body.hFinderFilesList span.hFinderDirectoryName,
+body.hFinderFilesList span.hFinderFileName,
+li#hFinderListHeaderName {
+    position: absolute;
+    top: 2px;
+    left: 45px;
+    width: 130px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+div#hFinderListResizeName {
+    left: 175px;
+}
+li#hFinderListHeaderName {
+    top: 1px;
+    left: 50px;
+}
+body.hFinderFilesList .hFinderSelected,
+body.hFinderFilesList .hFinderDragOver,
+body.hFinderFilesList div.hFinderFiles .hFinderSelected div.hFinderNodeWrapper {
+    background: #3470CB;
+    color: white;
+}
+body.hFinderFilesList span.hFinderFileLastModified,
+li#hFinderListHeaderLastModified {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 205px;
+    width: 150px;
+}
+li#hFinderListHeaderLastModified {
+    top: 1px;
+    left: 210px;
+}
+body.hFinderFilesList span.hFinderFileSize,
+li#hFinderListHeaderSize {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 365px;
+    width: 100px;
+}
+li#hFinderListHeaderSize {
+    top: 1px;
+    left: 370px;
+}
+body.hFinderFilesList div.hFinderFiles h4,
+li#hFinderListHeaderTitle {
+    position: absolute;
+    top: 2px;
+    left: 475px;
+    width: 150px;
+    margin: 0;
+    font-weight: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+li#hFinderListHeaderTitle {
+    top: 1px;
+    left: 480px;
+}
+body.hFinderFilesList div.hFinderFiles p,
+li#hFinderListHeaderDescription {
+    position: absolute;
+    top: 2px;
+    left: 635px;
+    width: 150px;
+    margin: 0;
+    font-weight: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+li#hFinderListHeaderDescription {
+    top: 1px;
+    left: 640px;
+}
+body.hFinderFilesList span.hFinderFileLastModifiedLabel,
+body.hFinderFilesList span.hFinderFileLastModifiedTimestamp {
+    display: none;
+}
+div.hFinderListOff {
+    display: none;
+}
+body.hFinderFilesIcons .hFinderLabelRed span.hFinderFileName,
+body.hFinderFilesIcons .hFinderLabelRed span.hFinderDirectoryName,
+body.hFinderFilesColumns .hFinderLabelRed span.hFinderFileName,
+body.hFinderFilesColumns .hFinderLabelRed span.hFinderDirectoryName,
+body.hFinderFilesList .hFinderLabelRed div.hFinderNodeWrapper {
+    background: rgb(254, 180, 172);
+    {isWebkit?background: -webkit-gradient(linear, left top, left bottom, from(rgb(254, 180, 172)), to(rgb(254, 122, 108)));}
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(254, 180, 172), rgb(254, 122, 108));
+    background: linear-gradient(to bottom, rgb(254, 180, 172), rgb(254, 122, 108));
+}
+body.hFinderFilesIcons .hFinderLabelOrange span.hFinderFileName,
+body.hFinderFilesIcons .hFinderLabelOrange span.hFinderDirectoryName,
+body.hFinderFilesColumns .hFinderLabelOrange span.hFinderFileName,
+body.hFinderFilesColumns .hFinderLabelOrange span.hFinderDirectoryName,
+body.hFinderFilesList .hFinderLabelOrange div.hFinderNodeWrapper {
+    background: rgb(252, 215, 161);
+    {isWebkit?background: -webkit-gradient(linear, left top, left bottom, from(rgb(252, 215, 161)), to(rgb(249, 183, 83)));}
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(252, 215, 161), rgb(249, 183, 83));
+    background: linear-gradient(to bottom, rgb(252, 215, 161), rgb(249, 183, 83));
+}
+body.hFinderFilesIcons .hFinderLabelYellow span.hFinderFileName,
+body.hFinderFilesIcons .hFinderLabelYellow span.hFinderDirectoryName,
+body.hFinderFilesColumns .hFinderLabelYellow span.hFinderFileName,
+body.hFinderFilesColumns .hFinderLabelYellow span.hFinderDirectoryName,
+body.hFinderFilesList .hFinderLabelYellow div.hFinderNodeWrapper {
+    background: rgb(252, 215, 161);
+    {isWebkit?background: -webkit-gradient(linear, left top, left bottom, from(rgb(251, 243, 169)), to(rgb(243, 223, 87)));}
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(251, 243, 169), rgb(243, 223, 87));
+    background: linear-gradient(to bottom, rgb(251, 243, 169), rgb(243, 223, 87));
+}
+body.hFinderFilesIcons .hFinderLabelGreen span.hFinderFileName,
+body.hFinderFilesIcons .hFinderLabelGreen span.hFinderDirectoryName,
+body.hFinderFilesColumns .hFinderLabelGreen span.hFinderFileName,
+body.hFinderFilesColumns .hFinderLabelGreen span.hFinderDirectoryName,
+body.hFinderFilesList .hFinderLabelGreen div.hFinderNodeWrapper {
+    background: rgb(221, 236, 169);
+    {isWebkit?background: -webkit-gradient(linear, left top, left bottom, from(rgb(221, 236, 169)), to(rgb(192, 219, 86)));}
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(221, 236, 169), rgb(192, 219, 86));
+    background: linear-gradient(to bottom, rgb(221, 236, 169), rgb(192, 219, 86));
+}
+body.hFinderFilesIcons .hFinderLabelBlue span.hFinderFileName,
+body.hFinderFilesIcons .hFinderLabelBlue span.hFinderDirectoryName,
+body.hFinderFilesColumns .hFinderLabelBlue span.hFinderFileName,
+body.hFinderFilesColumns .hFinderLabelBlue span.hFinderDirectoryName,
+body.hFinderFilesList .hFinderLabelBlue div.hFinderNodeWrapper {
+    background: rgb(182, 219, 255);
+    {isWebkit?background: -webkit-gradient(linear, left top, left bottom, from(rgb(182, 219, 255)), to(rgb(105, 179, 255)));}
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(182, 219, 255), rgb(105, 179, 255));
+    background: linear-gradient(to bottom, rgb(182, 219, 255), rgb(105, 179, 255));
+}
+body.hFinderFilesIcons .hFinderLabelPurple span.hFinderFileName,
+body.hFinderFilesIcons .hFinderLabelPurple span.hFinderDirectoryName,
+body.hFinderFilesColumns .hFinderLabelPurple span.hFinderFileName,
+body.hFinderFilesColumns .hFinderLabelPurple span.hFinderDirectoryName,
+body.hFinderFilesList .hFinderLabelPurple div.hFinderNodeWrapper {
+    background: rgb(232, 205, 239);
+    {isWebkit?background: -webkit-gradient(linear, left top, left bottom, from(rgb(232, 205, 239)), to(rgb(204, 162, 224)));}
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(232, 205, 239), rgb(204, 162, 224));
+    background: linear-gradient(to bottom, rgb(232, 205, 239), rgb(204, 162, 224));
+}
+body.hFinderFilesIcons .hFinderLabelGray span.hFinderFileName,
+body.hFinderFilesIcons .hFinderLabelGray span.hFinderDirectoryName,
+body.hFinderFilesColumns .hFinderLabelGray span.hFinderFileName,
+body.hFinderFilesColumns .hFinderLabelGray span.hFinderDirectoryName,
+body.hFinderFilesList .hFinderLabelGray div.hFinderNodeWrapper {
+    background: rgb(215, 215, 215);
+    {isWebkit?background: -webkit-gradient(linear, left top, left bottom, from(rgb(215, 215, 215)), to(rgb(183, 183, 183)));}
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(215, 215, 215), rgb(183, 183, 183));
+    background: linear-gradient(to bottom, rgb(215, 215, 215), rgb(183, 183, 183));
+}

@@ -1,0 +1,114 @@
+<div id='hFinderSideColumnResizeGrip'></div>
+<div id='hFinderSideColumn'>
+    <script type='text/javascript'>
+        finder.sideColumn.width = {sideColumnWidth};
+    </script>
+
+    {hFinderSideColumnPlaces?
+    <h4>
+        <span class='hFinderTreeHasChildren hFinderTreeBranchIsOpen'>
+            <img src='{!hDesktopApplicationStyle?/}hApplication/hApplicationUI/Pictures/Arrows/rightArrow.png'
+                 class='hFinderTreeHasChildren'
+                 alt='+'
+                 title='Click to expand.' />
+        </span>
+        <span class='hFinderSideColumnItemLabel'>Places</span>
+    </h4>
+    <ul class="hFinderSideColumnOptions">
+      {hFinderSideColumnPlaceServer?
+      <!-- <li class='hFinderSideColumnFolder hFinderSideColumnPlaceServer hFinderSideColumnOption' data-file-path='{hFinderServerPath}'>
+        <div>
+          <span>{hFinderServerName}</span>
+        </div>
+      </li> -->
+      }
+      <li class='hFinderSideColumnFolder hFinderSideColumnRoot hFinderSideColumnOption' data-file-path='{hFinderDefaultPath}'>
+        <div>
+          <span>{hFinderDiskName}</span>
+        </div>
+      </li>
+      <li class='hFinderSideColumnFolder hFinderSideColumnApplications hFinderSideColumnOption' data-file-path='/Applications'>
+        <div>
+          <span>Applications</span>
+        </div>
+      </li>
+      {homeExists?
+      <li class='hFinderSideColumnFolder hFinderSideColumnHome hFinderSideColumnOption' data-file-path='/Users/{hUserName}'>
+        <div>
+          <span>{hUserName}</span>
+        </div>
+      </li>
+      }
+    </ul>
+    }
+    <h4 class='hFinderSideColumnHeading hFinderSideColumnWebsite hFinderSideColumnFolders' data-file-path='{hFinderDefaultPath}'>
+        <span class='hFinderTreeHasChildren hFinderTreeBranchIsOpen'>
+            <img src='{!hDesktopApplicationStyle?/}hApplication/hApplicationUI/Pictures/Arrows/rightArrow.png'
+                 class='hFinderTreeHasChildren'
+                 alt='+'
+                 title='Click to expand.' />
+        </span>
+        <span class='hFinderSideColumnItemLabel'>{hFinderDiskName}</span>
+    </h4>
+    {hFinderTree}
+
+    {#hFinderServerTree?
+    <h4 class='hFinderSideColumnHeading hFinderSideColumnServer' title='{hFinderServerPath}'>
+        <span class='hFinderTreeHasChildren hFinderTreeBranchIsOpen'>
+            <img src='{!hDesktopApplicationStyle?/}hApplication/hApplicationUI/Pictures/Arrows/rightArrow.png'
+                 class='hFinderTreeHasChildren'
+                 alt='+'
+                 title='Click to expand.' />
+        </span>
+        <span class='hFinderSideColumnItemLabel'>{hFinderServerName}</span>
+    </h4>
+    {hFinderServerTree}
+    }
+
+    {hFinderCategoryTree?
+      <h4 class='hFinderSideColumnHeading hFinderSideColumnWebsite hFinderSideColumnCategories' data-file-path='{hFinderCategoryPath}'>
+        <span class='hFinderTreeHasChildren hFinderTreeBranchIsOpen'>
+            <img src='{!hDesktopApplicationStyle?/}hApplication/hApplicationUI/Pictures/Arrows/rightArrow.png'
+                 class='hFinderTreeHasChildren'
+                 alt='+'
+                 title='Click to expand.' />
+        </span>
+        <span class='hFinderSideColumnItemLabel'>Categories</span>
+       </h4>
+      {hFinderCategoryTree}
+    }
+    {hFinderSideColumnSmartFolders?
+    <h4 class='hFinderSideColumnHeading'>
+        <span class='hFinderTreeHasChildren hFinderTreeBranchIsOpen'>
+            <img src='{!hDesktopApplicationStyle?/}hApplication/hApplicationUI/Pictures/Arrows/rightArrow.png'
+                 class='hFinderTreeHasChildren'
+                 alt='+'
+                 title='Click to expand.' />
+        </span>
+        <span class='hFinderSideColumnItemLabel'>Search For</span>
+    </h4>
+    <ul class="hFinderSideColumnOptions">
+      <li class='hFinderSearchTime hFinderSideColumnOption'>
+        <div><span>Today</span></div>
+      </li>
+      <li class='hFinderSearchTime hFinderSideColumnOption'>
+        <div><span>Yesterday</span></div>
+      </li>
+      <li class='hFinderSearchTime hFinderSideColumnOption'>
+        <div><span>Past Week</span></div>
+      </li>
+      <li class='hFinderSearchType hFinderSideColumnOption'>
+        <div><span>All Images</span></div>
+      </li>
+      <li class='hFinderSearchType hFinderSideColumnOption'>
+        <div><span>All Movies</span></div>
+      </li>
+      <li class='hFinderSearchType hFinderSideColumnOption'>
+        <div><span>All Documents</span></div>
+      </li>
+      <!--<li class='hFinderSearchType hFinderSideColumnOption'>
+        <div><span>More Options</span></div>
+      </li>-->
+    </ul>
+    }
+</div>

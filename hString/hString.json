@@ -1,0 +1,14 @@
+{
+    plugin : {
+        name : "String"
+    },
+    source : {
+        destination : "/Hot Toddy/hString",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hString"
+        }
+    }
+}

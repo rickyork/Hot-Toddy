@@ -1,0 +1,7 @@
+        <tr>
+            {weekdays[]?<td class='hCalendarDay{dayClass}' id='{dayId}-{uniqueId}-{dayTimestamp}' data-day='{day}'>
+                <span class='hCalendarDay'>{calendarDay}</span>
+                {dayHasEvents?<div class='hCalendarEvents'></div>}
+            </td>
+            }
+        </tr>

@@ -1,0 +1,9 @@
+div#hFinderDialogueChooseActions {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+div#hFinderDialogueChooseActions input {
+    float: left;
+    margin-right: 10px;
+}

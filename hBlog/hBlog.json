@@ -1,0 +1,31 @@
+{
+    plugin : {
+        name : "Blog",
+        library : {
+            name : "Blog Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hBlog",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hBlog"
+        }
+    },
+    files : [
+        {
+            title : "Blog Test",
+            headingTitle : "Blog Test",
+            path : "/System/Applications/Blog/Test.html",
+            user : {
+                id : 1,
+                permissions : {
+                    owner : "rw",
+                    world : ""
+                }
+            }
+        }
+    ]
+}

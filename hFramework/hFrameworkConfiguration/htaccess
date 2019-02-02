@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+  # Use this .htaccess file, if you are unable to directly configure httpd.conf for Hot Toddy
+  RewriteEngine On
+
+  # If the REQUEST_FILENAME does not exist as a file or directory
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*) /index.php
+</IfModule>

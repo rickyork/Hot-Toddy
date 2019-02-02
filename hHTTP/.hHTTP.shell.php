@@ -1,0 +1,2 @@
+<?php
+  class hHTTPShell extends hShell { private $hHTTP; public function hConstructor() { $this->hHTTP = $this->library('hHTTP'); $uri = parse_url('https://app.e2ma.net/app/view:RemoteSignup'); var_dump($uri); } } ?>

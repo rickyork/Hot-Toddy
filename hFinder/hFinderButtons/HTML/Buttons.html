@@ -1,0 +1,21 @@
+<!-- Begin Finder Buttons -->
+<div id='hFinderButtonsLeft'>
+  <input type='submit' name='hFinderButtonNewFolder' id='hFinderButtonNewFolder' value='New Folder' />
+  {hFinderButtonUpload?
+    <input type='submit' name='hFinderButtonUpload' id='hFinderButtonUpload' value='Upload File' />
+  }
+</div>
+{hFinderButtonsRight?
+  <div id='hFinderButtonsRight'>
+    {hFinderButtonEditFile?
+      <input type='submit' name='hFinderButtonEditFile' id='hFinderButtonEditFile' disabled='disabled' value='Edit File' />
+    }
+    {hFinderButtonEditProperties?
+      <input type='submit' name='hFinderButtonEditProperties' id='hFinderButtonEditProperties' disabled='disabled' value='Edit Properties' />
+    }
+    {hFinderButtonDelete?
+      <input type='submit' name='hFinderButtonDelete' id='hFinderButtonDelete' value='Delete' disabled='disabled' />
+    }
+  </div>
+}
+<!-- End Finder Buttons -->

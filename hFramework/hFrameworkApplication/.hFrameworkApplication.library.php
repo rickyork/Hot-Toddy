@@ -1,0 +1,2 @@
+<?php
+  class hFrameworkApplicationLibrary extends hPlugin { public function &prepareApplication($arguments) {                                                     $this->hFileCSS = ''; $this->hFileRSS = ''; $this->hFileJavaScript = ''; $this->hFileTitlePrepend = ''; $this->hFileTitleAppend = ''; $this->hFileDocument = ''; if (isset($arguments['title'])) { $this->hFileTitle = $arguments['title']; } if (!empty($arguments['formTemplate'])) { $this->plugin('hApplication/hApplicationForm'); } $this->hFileDisableCache = true; $this->hFileEnableCache = false; return $this; } } ?>

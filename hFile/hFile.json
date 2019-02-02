@@ -1,0 +1,51 @@
+{
+    plugin : {
+        library : {
+            name : "File Library"
+        },
+        database : {
+            name : "File Database"
+        },
+        shell : {
+            name : "File Shell"
+        },
+        service : {
+            name : "File Listener",
+            methods : [
+                "rename",
+                "delete",
+                "getDirectory",
+                "newDirectory",
+                "symbolicLink",
+                "getCopy",
+                "getFileInformation",
+                "getFileInformationJSON",
+                "getFileInformationXML",
+                "getFilePath",
+                "upload",
+                "getProperties",
+                "saveFinderProperties",
+                "saveProperties",
+                "move",
+                "blank",
+                "setLabel",
+                "getLabel",
+                "duplicate",
+                "touch",
+                "removeFileFromCategory",
+                "exists",
+                "unzip",
+                "activity"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hFile",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hFile"
+        }
+    }
+}

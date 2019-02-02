@@ -1,0 +1,2 @@
+<?php
+  class hFileDomainShell extends hShell { private $hFile; private $hFileIcon; public function hConstructor() {   if ($this->shellArgumentExists('install', '--install')) { $domain = $this->getShellArgumentValue('install', '--install'); $as = ''; if ($this->shellArgumentExists('as', '--as')) { $as = $this->getShellArgumentValue('as', '--as'); } if (!empty($domain)) { } } } } ?>

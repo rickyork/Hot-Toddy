@@ -1,0 +1,50 @@
+
+<div id='header'>
+    <h1>Inbox</h1>
+</div>
+<div id='inboxbody'>
+    <div id='msgcount'>
+            {folder}: ({messageCount}) messages total.
+    </div>
+    <table class='msg'>
+        <thead>
+            <tr>
+                <th>subject</th>
+                <th>from</th>
+                <th>received</th>
+            </tr>
+        </thead>
+        <tbody>
+{headers[]?
+            {!subject?
+                {subject = <span style='font-style: italic;'>no subject provided</a>}
+            }
+            <tr>
+                <td class='msgitem'><a href='/System/Applications/Mail/Message.html?mid={mid}&pid={pid}'>{subject}</a></td>
+                <td class='msgitem'><span title="{from}">{fromName}</span> {from}</td>
+                <td class='msgitem'>{date}</td>
+            </tr>
+            <tr>
+                <td colspan='3' class='msgattach'>
+                {inlineAttachments[]?
+                    Inline part: <a href='/System/Applications/Mail/Part.plugin?mid={mid}&pid={pid}' target='_blank'>{fileName} {fileType} {fileSize}</a><br />
+                }
+                {attachments[]?
+                    Attachment: <a href='/System/Applications/Mail/Part.plugin?mid={mid}&pid={pid}' target='_blank'>{fileName} {fileType} {fileSize}</a><br />
+                }
+                </td>
+            </tr>
+}
+{!headers?
+            <tr>
+                <td colspan='3' style='font-size: 30pt; text-align: center; padding: 50px 0;'>No Messages</td>
+            </tr>
+}
+        </tbody>
+    </table>
+    <div id='quota'>
+        mailbox: {user}<br />
+        {quota?Quota: {usage} used of {limit} total}
+    </div>
+</div>
+     

@@ -1,0 +1,2 @@
+<?php
+  class hPreferences extends hPlugin { private $hFileIcon; private $hPanel; public function hConstructor() { $this->hFileTitleAppend = ''; $this->hFileTitlePrepend = ''; $this->plugin('hApplication/hApplicationForm'); $hPanels = array(); $this->hFileIcon = $this->library('hFile/hFileIcon'); $this->loadConfigurationFile(dirname(__FILE__).'/JSON/Preferences'); $this->plugin('hPanel'); } } ?>

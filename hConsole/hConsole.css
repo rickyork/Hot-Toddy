@@ -1,0 +1,187 @@
+@import '/hConsole/CSS/hFrameworkErrors.css';
+@import '/hConsole/CSS/hFileStatusLog.css';
+@import '/hConsole/CSS/hUserActivity.css';
+@import '/hConsole/CSS/hFileUserStatistics.css';
+@import '/hConsole/CSS/hUserLog.css';
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+    text-align: left;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+}
+ul.hSearchNavigation {
+    position: relative;
+    top: 15px;
+}
+ul#hConsoleLogs,
+ul#hConsoleLogs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul#hConsoleLogs {
+    background: rgb(222, 228, 234);
+    width: 200px;
+    border-right: 1px solid rgb(180, 180, 180);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div#hConsoleResizeGrip {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 199px;
+    width: 3px;
+    z-index: 2;
+    cursor: col-resize;
+}
+ul#hConsoleLogs h4 {
+    font-size: 11px;
+    font-weight: bold;
+    color: rgb(117, 129, 146);
+    text-transform: uppercase;
+    margin: 5px;
+    white-space: nowrap;
+}
+ul#hConsoleLogs ul li {
+    padding: 1px 0 1px 15px;
+    height: 18px;
+}
+ul#hConsoleLogs ul li span {
+    line-height: 20px;
+    vertical-align: middle;
+}
+li.hConsoleLogSelected {
+    background: #3470CB url("/hApplication/hApplicationUI/Pictures/Selection/Generic.png") repeat-x;
+    color: white;
+    text-shadow: rgb(97, 95, 106) 1px 1px 1px;
+}
+div#hConsoleToolbar {
+    position: absolute;
+    top: 0;
+    left: 201px;
+    right: 0;
+    height: 45px;
+    background: rgb(244, 244, 244);
+    z-index: 1;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+span#hConsoleRefresh {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url("/hApplication/hApplicationUI/Pictures/Sprites/Refresh.png") no-repeat;
+    width: 28px;
+    height: 23px;
+}
+div#hConsoleRecordCountWrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+div#hConsoleRecordCountWrapper input {
+    width: 25px;
+}
+span#hConsoleRefresh:active {
+    background-position: 0 -23px;
+}
+div#hConsoleItems {
+    position: absolute;
+    top: 40px;
+    left: 201px;
+    right: 0;
+    bottom: 50px;
+    overflow: auto;
+    z-index: 1;
+}
+div#hConsoleControls {
+    position: absolute;
+    left: 201px;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    background: rgb(237, 237, 237);
+    border-top: 1px solid rgb(180, 180, 180);
+    z-index: 1;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div#hConsoleItems table thead tr {
+    background: url("/hApplication/hApplicationUI/Pictures/List Header.png") repeat-x;
+}
+div#hConsoleItems table thead th {
+    white-space: nowrap;
+    height: 15px;
+    vertical-align: middle;
+    border: 1px solid rgb(179, 179, 179);
+    padding: 0 5px;
+}
+div#hConsoleItems table thead th:first-child {
+    border-left: none;
+}
+div#hConsoleItems table thead th:last-child {
+    border-right: none;
+}
+div#hConsoleItems table tbody td {
+    border-right: 1px solid rgb(221, 221, 221);
+    padding: 5px;
+    vertical-align: top;
+    height: 14px;
+    line-height: 14px;
+}
+div#hConsoleItems table tbody td:last-child {
+    border-right: none;
+}
+div#hConsoleItems table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+div#hConsoleLogContainer {
+    position: absolute;
+    top: 17px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    background: url("/hApplication/hApplicationUI/Pictures/List Background.png");
+}
+div#hConsoleLogContainer table {
+    height: 100%;
+}
+div#hConsoleLogContainer table tbody tr:nth-child(even) {
+    background: rgb(237, 243, 254);
+}
+div#hConsoleLogContainer table tbody tr:nth-child(odd) {
+    background: #fff;
+}
+div#hConsoleLogContainer table tbody tr.hConsoleLogRecordSelected {
+    background: rgb(49, 72, 234);
+    color: #fff;
+}
+div#hConsoleLogContainer table tbody tr.hConsoleLogRecordSelected a {
+    color: lightblue;
+}
+div#hConsoleLogContainer table tbody tr.hConsoleLogRecordSelected td {
+    border-right: 1px solid rgb(49, 72, 234);
+}
+div#hConsoleLogContainer table tbody tr.hConsoleLogRecordSelected td:last-child {
+    border-right: none;
+}

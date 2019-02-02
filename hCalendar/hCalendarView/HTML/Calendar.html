@@ -1,0 +1,22 @@
+<!-- Begin Hot Toddy Calendar -->
+<table class='{class}' id='{uniqueId}-{date}' data-year='{year}' data-month='{month}'>
+    <caption title='{offset}'></caption>
+    <thead>
+        <tr>
+            <th class='hCalendarMonth' colspan='7'>
+                <span class='hCalendarMonth'>{formattedMonth}</span>
+                <span class='hCalendarYear'>{formattedYear}</span>
+            </th>
+        </tr>
+        <tr>
+            {weekdays[]?<th class='hCalendarWeekday'>{weekday}</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        {weeks}
+        {fiveWeeks?<tr><td colspan='7' class='hCalendarEmptyWeek'></td></tr>
+        }
+    </tbody>
+</table>
+<!-- End Hot Toddy Calendar -->

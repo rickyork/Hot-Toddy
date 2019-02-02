@@ -1,0 +1,18 @@
+{
+    plugin : {
+        name : "Plugin Template",
+        library : {
+            name : "Plugin Template Library"
+        }
+    },
+    file : {
+        title : "Plugin Template",
+        path : "/System/Applications/Plugin/Template.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw"
+            }
+        }
+    }
+}

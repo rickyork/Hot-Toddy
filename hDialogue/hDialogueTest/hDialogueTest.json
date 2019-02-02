@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Dialogue Test Plugin"
+    },
+    file : {
+        title : "Dialogue Test",
+        path : "/System/Applications/Dialogue/Test.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : ""
+            }
+        }
+    }
+}

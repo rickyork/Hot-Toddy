@@ -1,0 +1,17 @@
+div.hFrameworkDebug {
+    top: 0;
+    display: block;
+    white-space: pre;
+    font: 12px Courier, monospace;
+    margin: 0;
+    border: 1px solid black;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1500;
+    overflow: auto;
+    text-align: left;
+    background: white;
+}

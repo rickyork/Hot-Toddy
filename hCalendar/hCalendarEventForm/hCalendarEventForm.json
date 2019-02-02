@@ -1,0 +1,19 @@
+{
+    plugin : {
+        library : {
+            name : "Calendar Event Form Library"
+        },
+        database : {
+            name : "Calendar Event Form Database"
+        },
+        service : {
+            name : "Calendar Event Form Service",
+            methods : [
+                "save",
+                "getEvent",
+                "getAttachedDocument",
+                "getImportedDocument"
+            ]
+        }
+    }
+}

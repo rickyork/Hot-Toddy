@@ -1,0 +1,6 @@
+<select class='hLocationState'>
+  <option></option>
+  {hLocationStates[]?
+    <option value='{hLocationStateId}:{hLocationStateCode}'{hLocationStateIsSelected? selected='selected'}>{hLocationStateName}</option>
+  }
+</select>

@@ -1,0 +1,67 @@
+    <body>
+        {.HotToddyPrependBody(null)}
+        <div id='HotToddy'>
+            <div id='HotToddyInner'>
+                <div id='HotToddyHeader'>
+                    {?.HotToddyLogo(null)?
+                    <h1><a href='/Hot Toddy/Dashboard'>Hot Toddy</a></h1>
+                    <p>
+                        A web framework.
+                    </p>
+                    }
+                    {?.HotToddyAccount(null)?
+                    <span id='HotToddyUSFlag'></span>
+                    <ul>
+                        <li><a href='/Hot Toddy/Dashboard/Account.html'><span>Your Account</span></a></li>
+                        {!.isLoggedIn()?<li><a href='#' class='HotToddyLoginLogout' id='HotToddyLogin'>Login</a></li>}
+                        {.isLoggedIn()?<li><a href='#' class='HotToddyLoginLogout' id='HotToddyLogout'>Logout</a></li>}
+                    </ul>
+                    }
+                </div>
+                {?.HotToddyNavigation(null)?
+                <ul id='HotToddyNavigation'>
+<!--
+                    <li><a href='/Forum.html'><span>Forum</span></a></li>
+                    <li><a href='/Blog.html'><span>Blog</span></a></li>
+-->
+                    <li>
+                        <a href='/Hot Toddy/Dashboard'><span>Dashboard</span></a>
+                        <ul class='HotToddyNavigationMenu'>
+                            <li><a href='/Hot Toddy/Dashboard/User.html'><span>User Account Management</span></a></li>
+                            <li><a href='/Hot Toddy/Dashboard/Blog.html'><span>Blog Management</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href='/Hot Toddy/Preferences'><span>Preferences</span></a></li>
+                    <li><a href='/Hot Toddy/User Guides'><span>Help</span></a></li>
+                    <li><a href='/Hot Toddy/Documentation'><span>Documentation</span></a></li>
+                </ul>
+                }
+                <!-- Begin Body -->
+                <div id='HotToddyBody'>
+                    <div id='HotToddyBreadcrumbs'>
+
+                    </div>
+                    <h2>{.hFileHeadingTitle({hFileTitle})}</h2>
+                    <!-- Begin Document -->
+                    <div id='HotToddyDocument'>{hFileDocument}</div>
+                    <!-- End Document -->
+                </div>
+                <!-- End Body -->
+                <!-- Begin Side Column -->
+                <div class='HotToddySide'>
+                    <h4 class='HotToddySideHeader'><span>{HotToddySideBoxHeading}</span></h4>
+                    <div class='HotToddySideBoxContentOuter'>
+                        <div class='HotToddySideBoxContent'>
+                            {HotToddySideBoxContent}
+                        </div>
+                    </div>
+                </div>
+                <!-- End Side Column -->
+                <div id='HotToddyFooter'>
+                    <p>
+                        &copy; Copyright {php.date('Y')} Hot Toddy, All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+        {.HotToddyAppendBody(null)}

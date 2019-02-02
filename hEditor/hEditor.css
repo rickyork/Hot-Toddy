@@ -1,0 +1,561 @@
+@import '/hFinder/hFinderContextMenu/hFinderContextMenu.css';
+@import '/hEditor/CSS/WYSIWYG/Editor.css';
+
+body {
+    background: rgb(98, 99, 99);
+    font: 12px "Lucida Grande", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+div#hEditorTemplateActionsWrapper ul.hEditorTemplateIsland {
+    background: none;
+}
+div#hEditorModes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 19px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    box-shadow: inset 0px -4px 15px rgba(0, 0, 0, 0.3);
+    background: rgb(200, 200, 200);
+}
+div#hEditorModes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+div#hEditorModes ul li {
+    height: 19px;
+    color: rgb(224, 224, 224);
+    background: rgb(98, 99, 99);
+    float: left;
+    width: 100px;
+    padding: 0 0 0 10px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 0 1px 0 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: inset 0px -5px 14px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+div#hEditorModes ul li.hEditorModeActive {
+    box-shadow: none;
+    background: rgb(98, 99, 99);
+    color: white;
+    border-bottom: rgb(98, 99, 99);
+}
+div#hEditorModes ul li span {
+    position: relative;
+    top: 2px;
+}
+div#hEditorActions {
+    position: absolute;
+    top: 21px;
+    left: 287px;
+    right: 0;
+    height: 56px;
+    user-select: none;
+    border-left: none;
+    border-right: 1px solid rgb(0, 0, 0);
+    {userAgent.vendorPrefix}user-select: none;
+    background: rgb(98, 99, 99);
+}
+div#hEditorActionsWYSIWYG {
+    position: relative;
+    top: 5px;
+    left: -10px;
+}
+span#hEditorContentSelected {
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    width: 25px;
+    height: 15px;
+    background: white;
+}
+span#hEditorContentSelectedLabel {
+    position: absolute;
+    left: 50px;
+    top: 13px;
+    width: 500px;
+    text-align: left;
+    color: rgb(244, 244, 244);
+    font-size: 12px;
+}
+div#hEditorTemplateFormatWrapper > div {
+    float: left;
+}
+div#hEditorTemplateFloatWrapper {
+    float: left;
+    clear: none;
+}
+/*
+div#hEditorActions ul li:active div.hEditorActionOverlay {
+    display: block;
+}
+*/
+div.hEditorActionOverlay {
+    display: none;
+    background: #000;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+li.hEditorActionSelected {
+    background-image:
+        url("/hEditor/Pictures/activeLeft.png"),
+        url("/hEditor/Pictures/activeright.png"),
+        url("/hEditor/Pictures/activeBackground.png");
+    background-position:
+        left,
+        right,
+        center;
+    background-repeat:
+        no-repeat,
+        no-repeat,
+        repeat-x;
+}
+div#hEditorTabs {
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(229, 229, 229) 1px 1px 1px;
+}
+div#hEditorTabs,
+div#hEditorTabsLeft {
+    height: 20px;
+    position: absolute;
+    z-index: 2;
+    top: 114px;
+    left: 288px;
+    right: 0;
+    border-top: 1px solid rgb(81, 81, 81);
+    border-bottom: 1px solid rgb(170, 170, 170);
+    background: rgb(210, 210, 210);
+    {userAgent.isWebkit?
+        background: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(rgb(237, 237, 237)),
+            to(rgb(210, 210, 210))
+        );
+    }
+    background: {userAgent.vendorPrefix}linear-gradient(
+        top,
+        rgb(237, 237, 237),
+        rgb(210, 210, 210)
+    );
+    background: linear-gradient(
+        to bottom,
+        rgb(237, 237, 237),
+        rgb(210, 210, 210)
+    );
+}
+div#hEditorTabs {
+    white-space: nowrap;
+    overflow: hidden;
+}
+div#hEditorTabsInner {
+    width: 10000px;
+}
+div#hEditorTabsLeft {
+    left: 0;
+    width: 287px;
+    border-top: none;
+    border-right: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    background: rgb(98, 99, 99);
+    z-index: 3;
+}
+div#hEditorTabsLeft ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+div#hEditorTabsLeft ul li {
+    float: left;
+    padding: 3px 8px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 0 1px 0 0;
+    position: relative;
+    top: -2px;
+    box-shadow: inset 0px -4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: rgb(75, 75, 75);
+    cursor: pointer;
+}
+div#hEditorTabsLeft ul li.hEditorTabFileSelected {
+    box-shadow: none;
+    border-bottom: 1px solid rgb(75, 75, 75);
+}
+div#hEditorFind,
+div#hEditorFindLeft {
+    height: 36px;
+    position: absolute;
+    left: 288px;
+    z-index: 2;
+    top: 78px;
+    right: 0;
+    border-bottom: 1px solid rgb(170, 170, 170);
+    background: rgb(226, 226, 226);
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgb(246, 246, 246)),
+        to(rgb(226, 226, 226))
+    );
+    background: {userAgent.vendorPrefix}linear-gradient(
+        top,
+        rgb(246, 246, 246),
+        rgb(226, 226, 226)
+    );
+    background: linear-gradient(
+        to bottom,
+        rgb(246, 246, 246),
+        rgb(226, 226, 226)
+    );
+}
+div#hEditorFindLeft {
+    left: 0;
+    width: 287px;
+    border-right: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    background: rgb(98, 99, 99);
+}
+div#hEditorButtons {
+    position: absolute;
+    right: 10px;
+    z-index: 2;
+    top: 17px;
+}
+div#hEditorFindInner {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    right: 10px;
+    z-index: 3;
+    white-space: nowrap;
+    overflow: hidden;
+}
+div#hEditorFindInner table {
+    width: 100%;
+}
+input#hEditorFindString,
+input#hEditorReplaceString {
+    width: 98%;
+}
+div#hEditorFindInner * {
+    vertical-align: middle;
+}
+a#hEditorFindOptions {
+    background: url('/hEditor/Pictures/options.png') no-repeat;
+    width: 35px;
+    height: 18px;
+    display: block;
+}
+a#hEditorFindOptions:active,
+div#hEditorFindInner a.hEditorFindOptionsOn {
+    background-image: url('/hEditor/Pictures/optionsOver.png');
+}
+div#hEditorFindReplaceContextMenu {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+div#hEditorButtons {
+    text-align: right;
+}
+div#hEditorButtonsInner {
+
+}
+ul.hEditorTabs {
+    height: 23px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+}
+ul.hEditorTabs li {
+    float: left;
+    height: 20px;
+    border-right: 1px solid rgb(170, 170, 170);
+    padding: 0 10px 0 30px;
+    width: 136px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    {userAgent.vendorPrefix}user-select: none;
+}
+ul#hEditorButtons li {
+    width: auto;
+    padding: 0 10px;
+    float: right;
+    border-right: none;
+    border-left: 1px solid rgb(170, 170, 170);
+}
+span.hEditorDocumentTabClose {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    width: 11px;
+    height: 12px;
+    background: url("/hEditor/Pictures/tabClose.png") no-repeat top left;
+}
+span.hEditorDocumentTabClose:hover {
+    background-image: url("/hEditor/Pictures/tabCloseRollover.png");
+}
+span.hEditorDocumentTabClose:active {
+    background-image: url("/hEditor/Pictures/tabClosePressed.png");
+}
+li#hEditorNewDocument {
+    padding: 0 8px;
+    color: rgb(89, 89, 89);
+    font-weight: bold;
+    font-size: 16px;
+    width: auto;
+}
+li#hEditorNewDocument span {
+    vertical-align: 5px;
+}
+ul#hEditorButtons span {
+    vertical-align: -3px;
+}
+ul.hEditorTabs li span.hEditorDocumentName {
+    line-height: 20px;
+    vertical-align: middle;
+}
+div#hEditorContent {
+    position: absolute;
+    top: 136px;
+    left: 0;
+    right: 0;
+    bottom: 41px;
+}
+div#hEditorDocument {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 287px;
+    border-left: 1px solid rgb(0, 0, 0);
+    z-index: 2;
+}
+div#hEditorDocumentTitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    text-align: left;
+    z-index: 1;
+}
+div#hEditorDocumentName {
+    font-size: 16px;
+    padding: 3px;
+}
+div#hEditorDocumentPath {
+    font-size: 14px;
+    padding: 3px;
+}
+div#hEditorDocument div.hEditorDocument {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+}
+div#hEditorDocument div.hEditorSelectedDocument {
+    display: block;
+}
+div#hEditorDocument iframe,
+div#hEditorFinder iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 5;
+}
+iframe.hEditorDocumentPreviewFrame,
+iframe.hEditorDocumentWYSIWYGFrame {
+    background: white;
+}
+ul#hEditorDocuments {
+    font-size: 12px;
+}
+ul#hEditorLanguage {
+    left: 0;
+}
+ul#hEditorDocuments {
+    right: 0;
+}
+ul#hEditorButtons li:hover,
+li.hEditorTabOn {
+    background: rgb(188, 188, 188);
+    {userAgent.isWebkit?
+        background: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(rgb(215, 215, 215)),
+            to(rgb(188, 188, 188))
+        );
+    }
+    background: {userAgent.vendorPrefix}linear-gradient(
+        top,
+        rgb(215, 215, 215),
+        rgb(188, 188, 188)
+    );
+    background: linear-gradient(
+        to bottom,
+        rgb(215, 215, 215),
+        rgb(188, 188, 188)
+    );
+}
+ul#hEditorButtons li:active,
+li.hEditorSelectedDocumentTab,
+li.hEditorSelectedLanguage {
+    background: rgb(237, 237, 237);
+    {userAgent.isWebkit?
+        background: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(rgb(210, 210, 210)),
+            to(rgb(237, 237, 237))
+        );
+    }
+    background: {userAgent.vendorPrefix}linear-gradient(
+        top,
+        rgb(210, 210, 210),
+        rgb(237, 237, 237)
+    );
+    background: linear-gradient(
+        to bottom,
+        rgb(210, 210, 210),
+        rgb(237, 237, 237)
+    );
+}
+body#hFinderTreeTemplate div#hEditor div.hFinderTree,
+body#hFinderTreeTemplate div#hEditor ul#hEditorTemplates {
+    position: absolute;
+    top: -22px;
+    bottom: 0;
+    left: 0;
+    width: 287px;
+    padding: 5px 0;
+    background: rgb(75, 75, 75);
+    color: #fff;
+    overflow: auto;
+    z-index: 2;
+}
+body#hFinderTreeTemplate div#hEditor ul#hEditorTemplates {
+    list-style: none;
+    padding: 2px;
+    overflow: auto;
+    user-select: none;
+    display: block;
+    z-index: 3;
+    -webkit-user-select: none;
+    min-height: 0;
+    max-height: none;
+    margin: 0;
+    height: auto;
+    top: -1px;
+    bottom: 1px;
+}
+
+body#hFinderTreeTemplate div#hEditor div.hFinderTree span.hFinderTreeHasChildren,
+div#hEditor div.hFinderTreeRoot span.hFinderTreeHasChildren {
+    /*border-left-color: rgb(202, 202, 202);*/
+}
+div#hEditorResizeGrip {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 285px;
+    width: 5px;
+    cursor: col-resize;
+    z-index: 3;
+}
+div#hEditor div.hFinderTreeRoot {
+    color: rgb(224, 224, 224);
+    text-transform: uppercase;
+    margin: 0 0 5px 5px;
+    font-size: 11px;
+    background: none;
+    padding: 0 0 0 5px;
+    font-weight: bold;
+    height: auto;
+}
+
+div#hEditorBottom {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 41px;
+    border-top: 1px solid rgb(0, 0, 0);
+    background: rgb(98, 99, 99);
+}
+div#hEditorBottom div.hEditorTemplateIslandWrapper {
+    position: relative;
+    top: 3px;
+    left: -3px;
+}
+body div.hApplicationStatus {
+    left: 3px;
+    bottom: 3px;
+    background: rgb(50, 50, 50);
+    color: white;
+    right: auto;
+    z-index: 1200;
+}
+li.hListFile {
+    clear: both;
+    padding: 5px;
+}
+span.hListFileId {
+    display: none;
+}
+img.hListFileIcon {
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 32px;
+    height: 32px;
+}
+span.hListFileTitle {
+    display: block;
+    margin: 0 0 0 37px;
+}
+span.hListFilePath {
+    display: block;
+    margin: 0 0 0 37px;
+}
+li.hListFileSelected {
+    background: url('/images/themes/aqua/backgrounds/itemSelected.png') repeat-x top;
+    border-bottom: 1px solid rgb(11, 47, 202);
+    color: white;
+}
+li.hListFileSelected a {
+    color: lightblue;
+}

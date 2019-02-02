@@ -1,0 +1,24 @@
+{hFiles[]?
+<li{isOdd? class="hCalendarEventOdd"} id='hCalendarEvent-{hFileId}'>
+  <div class='hCalendarEventDateAndCategory'>
+    <span class='hCalendarEventDate'>{hCalendarDateFormatted}</span>
+    <span class='hCalendarEventCategory'>{hCalendarCategoryName}</span>
+  </div>
+  <div class='hCalendarEventModify'>[edit]</div>
+  <h5>{hFileTitle}</h5>
+  <div>
+
+  </div>
+</li>
+}
+<li class="hCalendarEventTemplate" id='hCalendarEvent-0'>
+  <div class='hCalendarEventDateAndCategory'>
+    <span class='hCalendarEventDate'></span>
+    <span class='hCalendarEventCategory'></span>
+  </div>
+  <h5></h5>
+  <div class='hCalendarEventModify'>[edit]</div>
+  <div>
+  </div>
+</li>
+{hCalendarRecentEvents?<li id='hCalendarRecentEvents'></li>}

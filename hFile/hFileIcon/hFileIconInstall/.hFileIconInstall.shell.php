@@ -1,0 +1,2 @@
+<?php
+  class hFileIconInstallShell extends hShell { private $hFileIconInstall; public function hConstructor() { $this->hFileIconInstall = $this->library('hFile/hFileIcon/hFileIconInstall'); switch (true) { case $this->shellArgumentExists('icns', '--icns'): case $this->shellArgumentExists('icons', '--icons'): { $this->hFileIconInstall->copyIcns(); break; } } } } ?>

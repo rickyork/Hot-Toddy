@@ -1,0 +1,13 @@
+<div class='hContactDataModule hContactAddressWrapper'>
+  <h4>Addresses</h4>
+  <ul class='hContactAddresses'>
+    {hContactAddresses}
+    <li class='hContactNoData{$hContactAddresses? hContactNoDataOff}'>No addresses entered.</li>
+    {hContactAddressTemplate}
+  </ul>
+  {hContactSummaryEdit?
+  <div class='hContactControls hContactAddressControls hContactControlsOff'>
+    <img src='/images/themes/aqua/icons/misc/add.png' alt='Add' class='hContactAddressAdd hContactAdd' />
+  </div>
+  }
+</div>

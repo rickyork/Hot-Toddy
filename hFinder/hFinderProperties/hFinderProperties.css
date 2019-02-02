@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 12px "Lucida Grande", Arial, sans-serif;
+    color: black;
+}
+div.hFormDivisionLegend {
+    display: none;
+}
+div#hFinderPropertiesGeneral {
+    display: block;
+}
+a,
+a:visited {
+    color: blue;
+}

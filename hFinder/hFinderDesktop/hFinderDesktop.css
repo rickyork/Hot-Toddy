@@ -1,0 +1,7 @@
+body#hFinderTemplate,
+html {
+    background: none !important;
+}
+body div#hFinderWrapper {
+    background: none !important;
+}

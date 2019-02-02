@@ -1,0 +1,8 @@
+{
+    plugin : {
+        name : "Framework Event",
+        library : {
+            name : "Framework Event Library"
+        }
+    }
+}

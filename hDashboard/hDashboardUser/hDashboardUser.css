@@ -1,0 +1,128 @@
+ul#hDashboardUserAccountGroups {
+    margin: 0 0 43px 0;
+    max-height: 500px;
+    overflow: auto;
+}
+ul#hDashboardUserAccountGroups li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+ul#hDashboardUserAccountGroups li.hDashboardUserAccountGroupSelected {
+    background: rgb(91, 111, 141);
+    color: white;
+    cursor: pointer;
+}
+tr.hDashboardUserSelected {
+    background: rgb(91, 111, 141);
+    color: #fff;
+    text-shadow: rgb(0, 0, 0) 1px 1px 1px;
+}
+tr.hDashboardUserSelected a {
+    color: lightblue;
+}
+ul#hDashboardUserRolodex {
+    overflow: auto;
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 3px;
+    {userAgent.vendorPrefix}user-select: none;
+    user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(253, 253, 253)), to(rgb(215, 215, 215)));
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(253, 253, 253), rgb(215, 215, 215));
+    background: linear-gradient(to bottom, rgb(253, 253, 253), rgb(215, 215, 215));
+    {userAgent.isTridentLT9?
+        background: none;
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fdfdfd', endColorstr='#d7d7d7')";
+    }
+}
+ul#hDashboardUserRolodex li {
+    float: left;
+    padding: 5px 0;
+    width: 23px;
+    text-align: center;
+    border-right: 1px solid rgb(200, 200, 200);
+    cursor: pointer;
+}
+ul#hDashboardUserRolodex li:active {
+    {userAgent.vendorPrefix}box-shadow: inset 0px 1px 4px rgb(0, 0, 0);
+    box-shadow: inset 0px -1px 4px rgb(0, 0, 0);
+}
+div.hDashboardUserAccountsWrapper {
+    background: rgb(244, 244, 244);
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 4px;    
+    padding: 4px;
+    margin: 15px 0;
+}
+table.hDashboardUserAccounts {
+    width: 100%;
+    border-collapse: collapse;
+    {userAgent.vendorPrefix}user-select: none;
+    user-select: none;
+}
+table.hDashboardUserAccounts th {
+    text-align: left;
+}
+table.hDashboardUserAccounts th,
+table.hDashboardUserAccounts td {
+    padding: 5px;
+}
+td.hDashboardUserAccountEmail {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+td.hDashboardUserAccountActions {
+    white-space: nowrap;
+}
+td.hDashboardUserAccountActions span {
+    margin: 0 3px 0 0;
+    padding: 5px;
+}
+td.hDashboardUserAccountActions span:hover {
+    background: rgb(150, 150, 150);
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+}
+td.hDashboardUserAccountActions span.hDashboardUserAccountDelete:hover {
+    background: crimson;
+}
+div#hDashboardUserGroupNew {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+div#HotToddyAdminUserAccount div.hFormRadioInput {
+    display: inline-block;
+    padding: 0 10px 0 0;
+}
+form#HotToddyAdminUserDialogue {
+    width: 600px;
+    height: 600px;
+    margin: -300px 0 0 -300px;
+}
+form#HotToddyAdminGroupDialogue {
+    width: 600px;
+    height: 250px;
+    margin: -125px 0 0 -300px;
+}
+div#HotToddyAdminUserDiv,
+div#HotToddyAdminGroupDiv {
+    display: block;
+}
+fieldset#HotToddyAdminUserGroupsFieldset td.hFormLabel {
+    text-align: left;
+}
+select#hUserGroups,
+select#hUserGroupsSource {
+    width: 100%;
+}
+input#hUserGroupsAdd {
+    float: right;
+}

@@ -1,0 +1,19 @@
+{
+    plugin : {
+        name : "Finder Tree",
+        library : {
+            name : "Finder Tree Library"
+        }
+    },
+    file : {
+        title : "Finder Tree",
+        path : "/Applications/Finder/Tree.html",
+        user : {
+            id: 1,
+            permissions: {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

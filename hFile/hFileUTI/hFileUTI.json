@@ -1,0 +1,8 @@
+{
+    plugin : {
+        name : "File UTI",
+        shell : {
+            name : "File UTI Shell"
+        }
+    }
+}

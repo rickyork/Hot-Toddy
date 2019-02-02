@@ -1,0 +1,60 @@
+INSERT INTO `hContactFields` (
+    `hContactFieldId`,
+    `hFrameworkResourceId`,
+    `hContactField`,
+    `hContactFieldSortIndex`,
+    `hContactFieldName`
+) VALUES
+    # Addresses
+    (1,     8,      'Home',                         0,      'Home'),
+    (2,     8,      'Work',                         1,      'Work'),
+    (3,     8,      'Other',                        2,      'Other'),
+
+    # Phone Numbers
+    (4,     11,     'Home',                         0,      'Home'),
+    (5,     11,     'Mobile',                       1,      'Mobile'),
+    (6,     11,     'Work',                         2,      'Work'),
+    (7,     11,     'Extension',                    3,      'Extension'),
+    (8,     11,     'Company',                      4,      'Company'),
+    (9,     11,     'Fax',                          5,      'Fax'),
+    (10,    11,     'Pager',                        6,      'Pager'),
+    (22,    11,     'Main',                         7,      'Main'),
+    (23,    11,     'Toll-Free',                    8,      'TollFree'),
+    (24,    11,     'Appointments',                 9,      'Appointment'),
+    (47,    11,     'Scheduling',                   10,     'Scheduling'),
+    (25,    11,     'iPhone',                       11,     'iPhone'),
+    (26,    11,     'Home Fax',                     12,     'HomeFax'),
+    (27,    11,     'Work Fax',                     13,     'WorkFax'),
+    (28,    11,     'Other Fax',                    14,     'OtherFax'),
+    (11,    11,     'Other',                        15,     'Other'),
+
+    # Internet Accounts
+    (30,    10,     'Apple Id',                     0,      'AppleId'),
+    (31,    10,     'iMessages',                    1,      'iMessages'),
+    (32,    10,     'iCloud',                       2,      'iCloud'),
+    (33,    10,     'Game Center',                  3,      'GameCenter'),
+    (34,    10,     'iTunes',                       4,      'iTunes'),
+    (35,    10,     'Mac App Store',                5,      'MacAppStore'),
+    (29,    10,     'Facebook',                     6,      'Facebook'),
+    (36,    10,     'Windows Live',                 7,      'WindowsLive'),
+    (42,    10,     'Google',                       8,      'Google'),
+    (12,    10,     'Aol.',                         9,      'Aol'),
+    (45,    10,     'Playstation Network',          10,     'PSN'),
+    (46,    10,     'Xbox Live',                    11,     'Xbox'),
+    (13,    10,     'Yahoo!',                       12,     'Yahoo'),
+    (15,    10,     'ICQ',                          14,     'ICQ'),
+    (16,    10,     'iChat',                        15,     'iChat'),
+    (17,    10,     'Jabber',                       16,     'Jabber'),
+    (18,    10,     'Other',                        17,     'Other'),
+
+    # E-mail Addresses
+    (19,    9,      'Personal',                     0,      'Personal'),
+    (20,    9,      'Work',                         1,      'Work'),
+    (37,    9,      'Facebook',                     2,      'Facebook'),
+    (38,    9,      'Gmail',                        3,      'Gmail'),
+    (39,    9,      'Microsoft Hotmail',            4,      'MicrosoftHotmail'),
+    (40,    9,      'Windows Live',                 5,      'WindowsLive'),
+    (41,    9,      'iCloud',                       6,      'iCloud'),
+    (43,    9,      'Microsoft Exchange',           7,      'MicrosoftExchange'),
+    (44,    9,      'Aol.',                         8,      'Aol'),
+    (21,    9,      'Other',                        9,      'Other');

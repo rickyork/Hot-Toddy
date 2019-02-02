@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "Framework Cache Library"
+        },
+        shell : {
+            name : "Framework Cache Shell"
+        }
+    }
+}

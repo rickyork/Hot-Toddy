@@ -1,0 +1,76 @@
+
+Hot Toddy File Shell Commands
+
+copy, --copy
+
+  Copy a file (folder not supported)
+  Example: ./hot -p hFile copy /www.example.com/Example.txt
+  
+    Creates: /Sites/Example Copy.txt
+
+  Copy a file from source to destination.
+  Example: ./hot -p hFile copy /www.example.com/Example.txt to /www.example.com/Events/Destination.txt
+
+move, --move
+
+  Move a file or folder from source to destination.
+  Example: ./hot -p hFile move /www.example.com/Example.txt to /Sites/Events
+  
+  This results in "Example.txt" residing at /www.example.com/Events/Example.txt
+  
+  Force Move
+  Example: ./hot -p hFile force move /www.example.com/Example.txt to /www.example.com/Events
+  
+  This deletes "Example.txt" if it already resides at /www.example.com/Events, and copies
+  Example.txt from /www.example.com to /www.example.com/Events
+  
+rename, --rename
+
+  Rename a file or folder.
+  Example: ./hot -p hFile rename /www.example.com/Example.txt to Example2.txt
+
+  This results in "Example.txt" receiving a new name, "Example2.txt"
+  
+  Force Rename
+  Example: ./hot -p hFile force rename /www.example.com/Example.txt to Example2.txt
+
+  This deletes "Example2.txt", if it already exists, and renames "Example.txt" to 
+  "Example2.txt".
+  
+delete, --delete
+
+  Delete a file or folder.
+  Example: ./hot -p hFile delete /www.example.com/Example.txt
+
+mkdir, --mkdir
+
+  Create a folder.
+  Example: ./hot -p hFile mkdir /www.example.com/New\ Folder
+
+chmod, --chmod
+ 
+  Set permissions on a file or folder.
+  Example: ./hot -p hFile chmod /www.example.com/Example.txt owner r world rw
+  
+chown, --chown
+
+  Change the owner of a folder or file.
+  Example: ./hot -p hFile chown /www.example.com/Example.txt to Administrator
+  
+  The owner must be a Hot Toddy hUserName.
+  
+permissions, --permissions
+
+  Output the permissions associated with a file or folder.
+  Example: ./hot -p hFile permissions /www.example.com/Example.txt
+
+touch, --touch
+
+  Create a new file.
+  Example: ./hot -p hFile touch /www.example.com/Example.txt
+
+ls, --ls
+
+  Output the contents of an HtFS folder.
+  Example: ./hot -p hFile ls /www.example.com
+

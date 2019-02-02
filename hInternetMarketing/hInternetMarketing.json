@@ -1,0 +1,14 @@
+{
+    plugin : {
+        name : "Internet Marketing"
+    },
+    source : {
+        destination : "/Hot Toddy/hInternetMarketing",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hInternetMarketing"
+        }
+    }
+}

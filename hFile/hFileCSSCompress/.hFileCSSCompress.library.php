@@ -1,0 +1,2 @@
+<?php
+  class hFileCSSCompressLibrary extends hPlugin { public function get($path) { $file = $this->getTemplate($path); if ($this->hFrameworkCompressCSS(true) && !isset($_GET['noCompression'])) { if (!isset($_GET['compression'])) {  $file = preg_replace('/\s{2,}|\n|\r/', '', $file); } if (!isset($_GET['comments'])) {  $file = preg_replace('/\/\*.*\*\//Ums', '', $file); } }  return $this->parseDocument($file); } } ?>

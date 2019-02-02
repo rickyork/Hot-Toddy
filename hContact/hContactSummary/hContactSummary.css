@@ -1,0 +1,308 @@
+body form#hContactSummaryDialogue {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 552px;
+    width: auto;
+    min-width: 300px;
+    height: auto;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    box-shadow: none;
+    {userAgent.vendorPrefix}box-shadow: none;
+}
+fieldset#hContactFieldset {
+    margin: 20px 0 0 0;
+    border-top: none;
+}
+fieldset#hContactFieldset div.hFormLegend {
+    top: -8px;
+    left: 30px;
+}
+a,
+a:visited {
+    color: blue;
+}
+body.hContactAddressBookNoGroups form#hContactSummaryDialogue {
+    left: 301px;
+}
+form#hContactSummaryDialogue div.hDialogueContent {
+    border: none;
+    top: 0;
+    background: rgb(244, 244, 244);
+    bottom: -1px;
+}
+div.hContact {
+    overflow: auto;
+    position: relative;
+}
+img.hContactProfile {
+    float: left;
+    position: relative;
+    top: 30px;
+    left: 50px;
+    width: 48px;
+    height: auto;
+}
+div.hContactAddressBookId,
+div.hUserId {
+    display: none;
+}
+div.hContactWrapper {
+    border-top: 1px solid rgb(214, 214, 214);
+    margin: 0 10px;
+    min-height: 100px;
+}
+ul.hContacts {
+    margin: 25px 0 0 132px;
+    padding: 0;
+    list-style: none;
+}
+div.hContactsFollow {
+    clear: both;
+}
+span.hContactFirstName,
+span.hContactLastName {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+span.hContactFirstName input,
+span.hContactLastName input {
+    font-size: 14px;
+}
+div.hContactSummaryIsGroup li.hContactCompany,
+div.hContactSummaryIsGroup li.hContactCompany input {
+    font-size: 14px;
+}
+li.hContactTitle {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+li.hContactCompany {
+    font-size: 12px;
+    margin: 3px 0 0 0;
+    text-transform: capitalize;
+}
+div.hContactDataModuleWrapper {
+
+}
+div.hContactDataModule  {
+    padding: 5px;
+    font-size: 12px;
+    position: relative;
+    white-space: nowrap;
+
+}
+div.hContactDataModule h4 {
+    font-weight: bold;
+    margin: 5px;
+    padding: 0 0 2px 7px;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    color: rgb(94, 94, 94);
+    font-size: 11px;
+}
+div.hContactDataModule ul {
+    list-style: none;
+    margin: 0 0 0 20px;
+    padding: 0 0 0 5px;
+}
+div.hContactEmailAddressWrapper li,
+div.hContactPhoneNumberWrapper li,
+div.hContactAddressWrapper li li {
+    padding: 5px;
+}
+li.hContactNoData {
+    padding: 5px;
+    color: rgb(128, 128, 128);
+    font-style: italic;
+}
+li.hContactNoDataOff {
+    display: none;
+}
+img.hContactAddressCountryFlag {
+    float: left;
+    margin: 5px 0 0 0;
+}
+ul.hContactAddresses ul {
+    margin: 5px 0 5px 60px;
+}
+ul.hContactAddresses span.hContactField,
+ul.hContactAddresses select.hContactField {
+    display: block;
+    padding: 0;
+    font-size: 12px;
+    margin: 0 0 0 52px;
+    float: none;
+    width: auto;
+    text-align: left;
+}
+ul.hContactAddresses select.hContactSelectEdit {
+    margin-left: 0;
+}
+ul.hContactData {
+    padding: 5px;
+    border: 1px solid rgb(244, 244, 244);
+}
+ul.hContactDataOn {
+    background: rgb(233, 233, 233);
+    border: 1px solid rgb(222, 222, 222);
+}
+span.hContactField {
+    float:left;
+    width: 150px;
+    text-align: right;
+    padding: 0 5px 0 0 ;
+}
+select.hContactField {
+    margin: 0;
+}
+/*
+div#hContactSummary {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+}
+*/
+div#hContactControls {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+}
+div#hContactControls input {
+    margin: 0 5px 0 0;
+}
+div.hContactControls {
+    position: absolute;
+    top: 34px;
+    right: 10px;
+}
+li.hContactDataTemplate,
+span.hContactDataEdit,
+select.hContactTitle,
+select.hContactField,
+select.hLocationState,
+select.hLocationCountry,
+ul.hContactAddresses select.hContactField,
+ul.hContactAddresses span.hContactDataEdit {
+    display: none;
+}
+select.hContactSelectEdit,
+ul.hContactAddresses select.hContactSelectEdit {
+    display: inline;
+}
+select.hLocationState {
+    width: 100px;
+}
+.hContactData input {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+.hContactData span i {
+    color: rgb(150, 150, 150);
+}
+li.hContactEmailAddress,
+li.hContactPhoneNumber,
+li.hContactAddress {
+    position: relative;
+    padding: 5px 0 5px 5px !important;
+    border: 1px solid transparent;
+}
+span.hContactFirstName input,
+span.hContactLastName input {
+    width: 100px;
+}
+
+li.hContactTitle input,
+li.hContactDepartment input,
+li.hContactCompany input,
+li.hContactWebsite input {
+    width: 175px;
+}
+span.hContactAddressStreet span {
+    display: block;
+    white-space: pre;
+}
+
+span.hContactAddressStreet input,
+span.hContactAddressStreet textarea {
+    width: 300px;
+}
+span.hContactAddressCity input {
+    width: 100px;
+}
+span.hContactAddressPostalCode input {
+    width: 75px;
+}
+span.hContactEmailAddress input,
+span.hContactPhoneNumber input {
+    width: 200px;
+    position: relative;
+    top: -3px;
+}
+
+li.hContactEmailAddress div,
+li.hContactPhoneNumber div {
+    position: relative;
+}
+li.hContactEmailAddress .hContactDataDelete,
+li.hContactPhoneNumber .hContactDataDelete,
+li.hContactAddress .hContactDataDelete {
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+li.hContactAddress .hContactDataDelete {
+    top: 10px;
+    left: -20px;
+}
+.hContactDataDeleteOff,
+.hContactControlsOff {
+    display: none;
+}
+li.hContactDataOver,
+li.hContactAddressDataOver {
+
+}
+li.hContactDataOn,
+li.hContactAddressDataOn {
+    background: url('/images/themes/aqua/backgrounds/itemSelected.png') repeat-x top;
+    border-bottom: 1px solid rgb(11, 47, 202);
+    color: white;
+}
+input.hContactDataEditLabel {
+    color: rgb(200, 200, 200);
+    font-style: italic;
+}
+.hContactData input {
+    background: rgb(255, 255, 255);
+    margin: 2px;
+    padding: 1px;
+}
+.hContactData input.hContactDataEditOn {
+
+}
+input.hContactEditOn {
+    color: green;
+}
+form#hContactSummaryDialogue li.hDialogueTab {
+    display: none;
+}
+fieldset.hContactEditOff input[type=text] {
+    background: none;
+    border: none;
+}
+body#hSpotlightTemplate form.hDialogue td.hFormLabel div.hFormLabelWrapper {
+    position: relative;
+    top: -5px;
+}
+body#hSpotlightTemplate form.hDialogue fieldset#hUserAccountActivity td.hFormLabel div.hFormLabelWrapper {
+    top: 0;
+}

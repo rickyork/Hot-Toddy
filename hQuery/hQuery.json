@@ -1,0 +1,14 @@
+{
+    plugin : {
+        name : "Query"
+    },
+    source : {
+        destination : "/Hot Toddy/hQuery",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hQuery"
+        }
+    }
+}

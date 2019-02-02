@@ -1,0 +1,50 @@
+th.hUserLog-hUserId,
+td.hUserLog-hUserId {
+    width: 65px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hUserLog-hUserName,
+td.hUserLog-hUserName,
+th.hUserLog-hUserLastModifiedBy,
+td.hUserLog-hUserLastModifiedBy {
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hUserLog-hUserFullName,
+td.hUserLog-hUserFullName {
+    width: 125px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hUserLog-hUserActivityIP,
+td.hUserLog-hUserActivityIP {
+    width: 125px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hUserLog-hUserCreated,
+td.hUserLog-hUserCreated,
+th.hUserLog-hUserLastLogin,
+td.hUserLog-hUserLastLogin,
+th.hUserLog-hUserLastFailedLogin,
+td.hUserLog-hUserLastFailedLogin,
+th.hUserLog-hUserLastModified,
+td.hUserLog-hUserLastModified {
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hUserLog-hUserLoginCount,
+td.hUserLog-hUserLoginCount {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hUserLog-hUserFailedLoginCount,
+td.hUserLog-hUserFailedLoginCount {
+    width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+}

@@ -1,0 +1,6 @@
+Hello! Your activation code for {hFrameworkNickName} is {hUserConfirmation}
+
+Click here to activate your {hFrameworkNickName} account now:
+http://{hServerHost}{hFilePath}?hUserName={hUserName}&hUserConfirmation={hUserConfirmation}
+
+If you need additional help, please contact: {hFrameworkAdministrator}

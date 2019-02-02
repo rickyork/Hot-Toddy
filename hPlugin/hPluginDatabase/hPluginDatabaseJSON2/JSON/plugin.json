@@ -1,0 +1,19 @@
+{
+    plugin : {
+        name : "My Plugin"
+    },
+    source : {
+        path : "",
+        destination : "MyPlugin",
+        repository : {
+            user : "",
+            checkout : true, // true or false if true readonly is false
+            readonly : false, // true or false if false checkout is true
+            revision : 0,
+            password : "",
+            software : "",  // svn, git, cvs
+            baseURI : "",
+            path : ""
+        }
+    }
+}

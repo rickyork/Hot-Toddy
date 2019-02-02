@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "Documentation Parser"
+        },
+        shell : {
+            name : "Documentation Parser Shell"
+        }
+    }
+}

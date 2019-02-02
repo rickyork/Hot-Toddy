@@ -1,0 +1,9 @@
+body {
+    background-image: none;
+}
+div#hCalendarView {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: none;
+}

@@ -1,0 +1,8 @@
+{
+    plugin : {
+        name : "Contact Summary",
+        library : {
+            name : "Contact Summary Library"
+        }
+    }
+}

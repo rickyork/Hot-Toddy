@@ -1,0 +1,2 @@
+<?php
+  class hFileIcons_2to3 extends hPlugin { public function hConstructor() { $this->hFileIcons->insert( array( 'hFileIconId' => 0, 'hFileMIME' => 'directory/volumes', 'hFileName' => 'sharepoint.png', 'hFileICNS' => 'GenericSharepoint.icns', 'hFileExtension' => '' ), array( 'hFileIconId' => 0, 'hFileMIME' => 'directory/sharepoint', 'hFileName' => 'file_server.png', 'hFileICNS' => 'GenericFileServerIcon.icns', 'hFileExtension' => '' ) ); } } ?>

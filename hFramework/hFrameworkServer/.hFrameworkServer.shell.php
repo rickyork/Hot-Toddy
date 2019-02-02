@@ -1,0 +1,2 @@
+<?php
+  class hFrameworkServerShell extends hShell { private $hFrameworkServer; public function hConstructor() { $arguments = array(); if ($this->shellArgumentExists('address', '--address')) { $arguments['address'] = $this->getShellArgumentValue('address', '--address'); } if ($this->shellArgumentExists('port', '--port')) { $arguments['port'] = $this->getShellArgumentValue('port', '--port'); } $this->hFrameworkServer = $this->plugin('hFramework/hFrameworkServer', $arguments); $this->hFrameworkServer->run(); } } ?>

@@ -1,0 +1,40 @@
+<div class='hContact' id='hContact-{hContactId}'>
+  <div class='hContactAddressBookId'>{hContactAddressBookId}</div>
+  <div class='hUserId'>{hUserId}</div>
+  <div class='hContactWrapper'>
+    <img src='/System/Applications/Profile.plugin?hUserName={$hUserName}&i=1' alt='User' class='hContactProfile' />
+    <ul class='hContacts'>
+      <li>
+        <span class='hContactData hContactFirstName' title='First'>
+          <span>{hContactFirstName}{!hContactFirstName?<i>First</i>}</span>
+        </span>
+        <span class='hContactData hContactLastName' title='Last'>
+          <span>{hContactLastName}{!hContactLastName?<i>Last</i>}</span>
+        </span>
+      </li>
+      <li class='hContactData hContactTitle' title='Title'>
+         <span>{hContactTitle}{!hContactTitle?<i>Title</i>}</span>
+         {hContactTitleSelect}
+      </li>
+      <li class='hContactData hContactDepartment' title='Department'>
+        <span>{hContactDepartment}{!hContactDepartment?<i>Department</i>}</span>
+      </li>
+      <li class='hContactData hContactCompany' title='Company'>
+        <span>{hContactCompany}{!hContactCompany?<i>Company</i>}</span>
+      </li>
+      <li class='hContactData hContactWebsite' title='Website'>
+        <span>{hContactWebsite?<a href='{hContactWebsite}'>{hContactWebsite}</a>}{!hContactWebsite?<i>Website</i>}</span>
+      </li>
+    </ul>
+  </div>
+  <div class='hContactsFollow'></div>
+  <div class='hContactDataModuleWrapper'>
+   {hContactEmailAddresses}
+  </div>
+  <div class='hContactDataModuleWrapper'>
+   {hContactPhoneNumbers}
+  </div>
+  <div class='hContactDataModuleWrapper'>
+   {hContactAddresses}
+  </div>
+</div>

@@ -1,0 +1,2 @@
+<?php
+  class hCalendarView extends hPlugin { private $hCalendarView; public function hConstructor() {                  $this->plugin('hApplication/hApplicationForm'); $this->getPluginCSS('hCalendar'); $this->getPluginCSS(); $this->hCalendarView = $this->library('hCalendar/hCalendarView'); $this->hFileDocument = $this->getTemplate( 'Solo Calendar', array( 'calendar' => $this->hCalendarView->get(null, 'hCalendar', isset($_GET['calendarOffset'])? (int) $_GET['calendarOffset'] : 0) ) ); } } ?>

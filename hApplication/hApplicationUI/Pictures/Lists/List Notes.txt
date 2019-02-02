@@ -1,0 +1,17 @@
+List Header:
+  Side Border:
+    Gradient Top: rgb(134, 134, 134);
+    Gradient Bottom: rgb(200, 200, 200);
+  Outside Top: rgb(112, 112, 112);
+  Inside Top Border: rgb(206, 206, 206);
+  Bottom Border: rgb(200, 200, 200);
+  Left Border: rgb(254, 254, 254)  
+
+List Header Selected:
+  Top Border: rgb(142, 156, 176);
+  Right Border: rgb(112, 145, 201);
+  Left Border: rgb(189, 202, 220);
+
+List Header Selected Active:
+  Right Border: rgb(114, 152, 207);
+  Left Border: rgb(186, 199, 219);

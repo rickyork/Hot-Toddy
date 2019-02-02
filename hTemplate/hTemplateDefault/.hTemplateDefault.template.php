@@ -1,0 +1,2 @@
+<?php
+  $this->hFileFavicon = '/hTemplate/hTemplateDefault/Pictures/Hot Toddy.ico'; if (!$this->HotToddySideBoxHeading(null)) { $this->HotToddySideBoxHeading = ''; } if (!$this->HotToddySideBoxContent(null)) { $this->HotToddySideBoxContent = ''; } $html .= $this->getTemplate( dirname(__FILE__).'/HTML/Hot Toddy.html' ); ?>

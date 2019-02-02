@@ -1,0 +1,11 @@
+        <li class='hCalendarBlogArchiveYear'>
+            <span>{hCalendarBlogArchiveYear}</span>
+            <ul class='hCalendarBlogArchiveMonths'>
+            {hCalendarBlogArchiveMonths[]?
+                <li class='hCalendarBlogArchiveMonth'>
+                    <a href='{hFilePath}?hCalendarMonth={hCalendarMonth}'>{hCalendarMonthLabel}</a>
+                    <span class='hCalendarBlogArchiveEventCount'>{hCalendarMonthCount}</span>
+                </li>
+            }
+            </ul>
+        </li>

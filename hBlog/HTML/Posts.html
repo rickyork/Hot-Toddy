@@ -1,0 +1,31 @@
+{pagination}
+<div id='hBlogPosts'>    
+{files[]?
+    <div class='hBlogPost'>
+        <div class='hBlogPostHeader'>
+            <h3><a href='{hFilePath}{linkArguments}'>{hFileHeadingTitle}</a></h3>
+            <div class='hBlogPostDetails'>
+                <span class='hBlogPostDate'>{hCalendarDateFormatted}</span>
+                {author?<span class='hBlogPostAuthor'> by {author}</span>}
+            </div>
+        </div>
+        <div class='hBlogPostSummary'>
+            {hFileDescription}
+            <p class='hBlogPostMore'>
+                <a href='{hFilePath}{linkArguments}'>More</a>
+            </p>
+            {.hFileCommentsEnabled(true, {hFileId})?
+            <div class='hBlogPostComments'>
+                <span class='hBlogPostCommentCount'>
+                    <a href='{hFilePath}{hBlogPostLinkArguments}#hFileComments'>({hFileCommentCount}) Comments</a>
+                </span> | 
+                <span class='hBlogPostCommentLink'>
+                    <a href='{hFilePath}{hBlogPostLinkArguments}#hFileCommentsForm'>Leave a Comment</a>
+                </span>
+            </div>
+            }
+        </div>
+    </div>
+}
+</div>
+{pagination}

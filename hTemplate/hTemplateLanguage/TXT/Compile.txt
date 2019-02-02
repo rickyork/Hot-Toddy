@@ -1,0 +1,23 @@
+Compile JavaScript Tests:
+
+    {compile.js:{ 
+        "name" : "hFramework.js",
+        "files" : [
+            "/JS/hot.js",
+            "/JS/event.js",
+            "/JS/focus.js",
+            "/JS/select.js",
+            "/JS/keyBinding.js"
+        ]
+    }}
+
+Compile CSS Tests:
+
+    {compile.css:{
+        "name" : "hFinder.css",
+        "files" : [
+            "/hFinder/hFinderViews.css",
+            "/hFinder/hFinderDialogue/hFinderDialogue.css",
+            "/hFinder/hFinderViews.css"
+        ]
+    }}

@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "User Account Login Information"
+    },
+    file : {
+        title : "Account Login Information",
+        path : "/Applications/Users/Login Information.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

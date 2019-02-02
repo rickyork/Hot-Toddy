@@ -1,0 +1,25 @@
+<table class='hDocumentationMethodArguments'>
+  <thead>
+    <tr>
+      <th class='hDocumentationMethodArgumentName'>Argument</th>
+      <th class='hDocumentationMethodArgumentType'>Type</th>
+      <th class='hDocumentationMethodArgumentOptional'>Optional</th>
+      <th class='hDocumentationMethodArgumentDefault'>Default</th>
+      <th class='hDocumentationMethodArgumentByReference'>By Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+{arguments[]?
+    <tr id='hDocumentationMethodArgument-{hDocumentationMethodArgumentId}'>
+      <td class='hDocumentationMethodArgumentName'>{hDocumentationMethodArgumentName}</td>
+      <td class='hDocumentationMethodArgumentType'>{hDocumentationMethodArgumentType}</td>
+      <td class='hDocumentationMethodArgumentOptional'>{hDocumentationMethodArgumentOptional?Y}{!hDocumentationMethodArgumentOptional?N}</td>
+      <td class='hDocumentationMethodArgumentDefault'>{hDocumentationMethodArgumentDefault}</td>
+      <td class='hDocumentationMethodArgumentByReference'>{hDocumentationMethodArgumentByReference?Y}{!hDocumentationMethodArgumentByReference?N}</td>
+    </tr>
+    <tr>
+      <td colspan='5' class='hDocumentationMethodArgumentDescription' id='hDocumentationMethodArgumentDescription-{hDocumentationMethodArgumentId}'>{!hDocumentationMethodArgumentDescription?&nbsp;}{hDocumentationMethodArgumentDescription}</td>
+    </tr>
+}
+  </tbody>
+</table>

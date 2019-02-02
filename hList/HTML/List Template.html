@@ -1,0 +1,26 @@
+<!-- Begin List -->
+<div class='{prefix}List' id='{hListId}'>
+  <div class='{prefix}ListHeadingOuter'>
+    <div class='{prefix}ListHeadingMiddle'>
+      <div class='{prefix}ListHeadingInner'>
+      </div>
+    </div>
+  </div>
+  <div class='{prefix}ListOuter'>
+    <div class='{prefix}ListListMiddle'>
+      <div class='{prefix}ListInner'>
+        {hListName?<h4>{hListName}</h4>}
+        {hListUL?<ul class='{prefix}List'>}
+{hListFiles}
+        {hListUL?</ul>}
+      </div>
+    </div>
+  </div>
+  <div class='{prefix}ListFooterOuter'>
+    <div class='{prefix}ListFooterMiddle'>
+      <div class='{prefix}ListFooterInner'>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End List -->

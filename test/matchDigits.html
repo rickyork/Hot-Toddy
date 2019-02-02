@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-us'>
+ <head>
+   <meta http-equiv='pics-label' content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen TRUE for "http://ahni.hframework.com" r ( nz 0 vz 0 lz 0 oz 0 ca 1))' />
+   <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+   <meta http-equiv='content-language' content='en' />
+   <meta http-equiv='content-script-type' content='text/javascript' />
+   <meta http-equiv='X-UA-Compatible' content='chrome=1' />
+   <title>matchDigits</title>
+   <script type='text/javascript' src='/Library/jQuery/jQuery.js' charset='utf-8'></script>
+   <script type='text/javascript'>
+     $(document).ready(
+       function() {
+         // Matching digits in a JavaScript regular expression.
+         
+         // Usually you do something like this:
+         var matches = ('something123').match(/\d/g);
+         alert(matches.join(''));
+       
+         // Hot Toddy requires regular expressions to be specified in strings to prevent them from getting
+         // mangled in the JavaScript compressor, which is a PHP version of Dean Edwards's packer.
+
+         // No delimiters, backslash must be escaped.  Modifiers are placed in the second argument
+         var exp = new RegExp('\\d', 'g'); 
+         var matches = ('something123').match(exp);
+
+         alert(matches.join(''));
+
+         // In fact, it's probably best to avoid the backslash all-together, as I've noticed the compressor 
+         // seems to mangle those as well. This does the same thing.
+         var exp = new RegExp('[0-9]', 'g'); 
+         var matches = ('something123').match(exp);
+         
+         // Results are returned in an array, so they must be joined back together.
+         alert(matches.join(''));
+         
+       }
+     );
+   </script>
+  </head>
+  <body>
+  </body>
+</html>

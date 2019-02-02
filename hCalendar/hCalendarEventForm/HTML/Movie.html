@@ -1,0 +1,12 @@
+<div id='hCalendarMovieFile'>
+    <div id='hCalendarMovieFileInner'>
+    {hFileMovieId?
+        <span class='hFileMovieId'>{hFileMovieId}</span>
+        <img src='{hFileIconPath}' class='hFileMovieIcon' alt='File Icon' />
+        <span class='hFileMovieTitle'>{hFileMovieTitle}</span>
+        <span class='hFileMoviePath'><a href='{hFileMoviePath}'>{hFileMoviePath}</a></span>
+    }
+    </div>
+    <input type='submit' id='hCalendarChooseMovieFile' value='Choose...' />
+    <input type='submit' id='hCalendarRemoveMovieFile' value='Remove' />
+</div>

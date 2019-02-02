@@ -1,0 +1,31 @@
+<div id='HotToddyAccount'>
+    <h3>Login Information:</h3>
+    <ul class='HotToddyAccountPanel' id='HotToddyLoginPanel'>
+        <li class='HotToddyAccountLabel'>Screen Name:</li>
+        <li class='HotToddyAccountData'>{user.getUserName()}</li>
+        <li class='HotToddyAccountLabel'>Email Address:</li>
+        <li class='HotToddyAccountData'>{user.getUserEmail()}</li>
+        <li class='HotToddyAccountLabel'>Password:</li>
+        <li class='HotToddyAccountData'>&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;</li>
+        <li class='HotToddyAccountAction'>
+            <span id='HotToddyAccountEditLogin'>Edit Login</span>
+        </li>
+    </ul>
+    <h3>Contact Information:</h3>
+    <ul class='HotToddyAccountPanel' id='HotToddyContactPanel'>
+        <li class='HotToddyAccountLabel'>Name:</li>
+        <li class='HotToddyAccountData'>{contact.hContactDisplayName}</li>
+        {contact.hContactTitle?<li class='HotToddyAccountLabel'>Title:</li>
+        <li class='HotToddyAccountData'>{contact.hContactTitle}</li>}
+        {contact.hContactDepartment?<li class='HotToddyAccountLabel'>Department:</li>
+        <li class='HotToddyAccountData'>{contact.hContactDepartment}</li>}
+        {contact.hContactCompany?<li class='HotToddyAccountLabel'>Company:</li>
+        <li class='HotToddyAccountData'>{contact.hContactCompany}</li>}
+        {contact.hContactDateOfBirth?<li class='HotToddyAccountLabel'>Date of Birth:</li>
+        <li class='HotToddyAccountData'>{contact.hContactDateOfBirthFormatted}</li>}
+        
+        <li class='HotToddyAccountAction'>
+            <span id='HotToddyAccountEditLogin'>Edit Contact Information</span>
+        </li>
+    </ul>
+</div>

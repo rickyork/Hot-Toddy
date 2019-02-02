@@ -1,0 +1,283 @@
+p#hDocumentationActivity {
+    padding: 50px 0;
+    text-align: center;
+    display: none;
+}
+
+form#hDocumentationSearch {
+    background: rgb(34, 66, 114);
+    color: #fff;
+    padding: 10px 0 10px 20px;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+ul#hDocumentationSearchPluginResults {
+    list-style: none;
+    padding: 0 10px 0 10px;
+    margin: 0;
+}
+li.hDocumentationFile {
+    border: 1px solid transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+li.hDocumentationFile h4 {
+    margin: 0 0 5px 0;
+}
+h4.hDocumentationFileSourceHeading {
+    cursor: pointer;
+}
+iframe.hDocumentationFileSource {
+    display: block;
+    width: 100%;
+    height: 500px;
+    border: 1px solid rgb(179, 179, 179);
+    margin: 0 0 15px 0;
+    
+}
+li.hDocumentationFile h4.hDocumentationFileTitle:hover {
+    text-decoration: underline;
+}
+div.hDocumentationFileDescription {
+    min-height: 25px;
+    margin: 0 0 10px 0;
+    display: none;
+}
+div.hDocumentationFileDescription p {
+    line-height: 1.5em;
+}
+div.hDocumentationFileDescription > ul {
+    list-style: disc;
+    margin: 15px 15px;
+}
+div.hDocumentationFileDescription > ul li {
+    margin: 4px 0;   
+    line-height: 1.5em;
+}
+div.hDocumentationMethodWrapper {
+    border: 1px solid rgb(233, 233, 233);
+    margin: 10px 0;
+    background: #fff;
+}
+div.hDocumentationMethodWrapper:nth-child(even) {
+    background: rgb(237, 243, 254);
+}
+table.hDocumentationMethods,
+table.hDocumentationMethodArguments {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+table.hDocumentationMethods thead tr,
+table.hDocumentationMethodArguments thead tr {
+    background: url("/hApplication/hApplicationUI/Pictures/List Header.png") repeat-x;
+}
+table.hDocumentationMethods thead th,
+table.hDocumentationMethodArguments thead th {
+    white-space: nowrap;
+    height: 15px;
+    vertical-align: middle;
+    border-right: 1px solid rgb(179, 179, 179);
+    padding: 0 5px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+table.hDocumentationMethods thead th:last-child,
+table.hDocumentationMethodArguments thead th:last-child,
+table.hDocumentationMethods td:last-child,
+table.hDocumentationMethodArguments td:last-child {
+    border-right: none;
+}
+table.hDocumentationMethods th,
+table.hDocumentationMethods td,
+table.hDocumentationMethodArguments th,
+table.hDocumentationMethodArguments td {
+    padding: 5px;
+    border-right: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+table.hDocumentationMethods tr.hDocumentationMethodLocation h4 {
+    margin: 5px 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+table.hDocumentationMethods tr.hDocumentationMethodLocation h4 a.hDocumentationFileSourceLink {
+    color: rgb(34, 66, 114);
+    font-size: 13px;
+    text-decoration: underline;
+}
+table.hDocumentationMethods tr.hDocumentationMethodLocation h4 a.hDocumentationFileSourceLink:hover {
+    text-decoration: none;
+}
+table.hDocumentationMethods td.hDocumentationMethodSignature {
+    padding: 10px 5px;
+    font: 12px Monaco, "Courier New", monospace;
+    color: black;
+}
+table.hDocumentationMethods td.hDocumentationMethodDescription {
+    padding-bottom: 25px;
+    overflow: hidden;
+}
+td.hDocumentationMethodDescription h2 {
+    font-size: 16px;
+}
+td.hDocumentationMethodDescription h3 {
+    font-size: 14px;
+}
+td.hDocumentationMethodDescription h4 {
+    font-size: 13px;
+}
+td.hDocumentationMethodDescription h2,
+td.hDocumentationMethodDescription h3,
+td.hDocumentationMethodDescription h4,
+td.hDocumentationMethodDescription p {
+    margin: 10px;
+}
+td.hDocumentationMethodDescription h2 {
+    margin-left: 15px;
+}
+td.hDocumentationMethodDescription h3 {
+    margin-left: 20px;
+}
+td.hDocumentationMethodDescription h4 {
+    margin-left: 25px;
+}
+td.hDocumentationMethodDescription p {
+    padding: 0 0 0 20px;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
+td.hDocumentationMethodDescription ul {
+    list-style-type: disc;
+    margin: 15px 10px 15px 30px;
+}
+td.hDocumentationMethodDescription ol {
+    margin: 15px 10px 15px 30px;
+}
+td.hDocumentationMethodDescription ul li,
+td.hDocumentationMethodDescription ol li {
+    margin: 10px 0;
+}
+td.hDocumentationMethodDescription table,
+div.hDocumentationFileDescription table {
+    border: 1px solid rgb(233, 233, 233);
+    border-collapse: collapse;
+    margin: 10px 20px 20px 40px;
+    background: white;
+}
+td.hDocumentationMethodDescription table tbody tr:nth-child(even),
+div.hDocumentationFileDescription table tbody tr:nth-child(even) {
+    background: rgb(233, 233, 233);
+}
+td.hDocumentationMethodDescription table tbody tr.hDocumentationTableHeading,
+div.hDocumentationFileDescription table tbody tr.hDocumentationTableHeading {
+    background: rgb(200, 200, 200);   
+}
+td.hDocumentationMethodDescription table tbody td,
+div.hDocumentationFileDescription table tbody td {
+    vertical-align: top;
+    padding: 5px;
+}
+td.hDocumentationMethodDescription code,
+div.hDocumentationFileDescription code {
+    display: block;
+    white-space: pre;
+    margin: 10px 10px 10px 30px;
+    padding: 10px 10px;
+    border: 1px dashed rgb(233, 233, 233);
+    overflow: auto;
+    background: rgba(250, 250, 250, 0.5);
+    
+}
+table.hDocumentationMethods td,
+div.hDocumentationFileDescription td {
+    min-height: 15px;
+}
+td.hDocumentationMethodName {
+    font-weight: bold;
+}
+tr.hDocumentationMethodArguments {
+    display: none;
+}
+ul#hDocumentationSearchPluginResults table.hDocumentationMethods tr.hDocumentationMethodArguments td {
+    padding: 0;
+}
+table.hDocumentationMethods tr.hDocumentationMethodArguments table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+td.hDocumentationMethodSignature {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+ul#hDocumentationSearchPluginResults table.hDocumentationMethods tr.hDocumentationMethodArguments table td {
+    padding: 5px;
+}
+
+table td.hDocumentationMethodArgumentDescription {
+    padding-bottom: 25px;
+}
+div.hDocumentationMethodBody {
+    display: none;
+}
+div.hDocumentationMethodBody code {
+    display: block;
+    overflow: auto;
+    white-space: pre;
+    font: 12px Monaco, "Courier New", monospace;
+}
+span.hDocumentationCaretTemplate {
+    display: none;
+}
+span.hDocumentationCaret {
+    width: 1px;
+    margin: 0 3px;
+    background: rgb(100, 100, 100);
+    border: 1px solid rgba(50, 50, 50);
+    text-decoration: blink;
+    display: inline-block;
+}
+code {
+    font: 12px Monaco, "Courier New", monospace;
+    white-space: pre;
+}
+.code,
+var {
+    font: 11px Monaco, "Courier New", monospace;
+    white-space: pre;
+}
+var {
+    background: lightyellow;
+    
+}
+.nowrap {
+    white-space: nowrap;
+}
+ul.hDocumentationMethodList {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0;    
+}
+ul.hDocumentationMethodList li {
+    margin: 3px 0;
+}
+ul#hDocumentationPluginNavigation,
+ul#hDocumentationPluginNavigation ul {
+    list-style: none;
+}
+ul#hDocumentationPluginNavigation ul li {
+    padding: 3px;
+    cursor: pointer;
+}
+ul#hDocumentationPluginNavigation ul li:hover {
+    background: rgb(91, 111, 141);
+    color: #fff;
+}
+ul#hDocumentationPluginNavigation ul li:hover a {
+    color: #fff;
+    text-decoration: none;
+}

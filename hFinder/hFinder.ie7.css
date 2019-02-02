@@ -1,0 +1,10 @@
+div.hFinderFiles {
+    overflow: visible;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 22px;
+}
+body.hFinderFilesList div.hFinderNode {
+    float: left;
+    width: 200px;
+}

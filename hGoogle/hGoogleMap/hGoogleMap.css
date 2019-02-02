@@ -1,0 +1,7 @@
+div#hGoogleMaps {
+    height: 400px;
+    border: 1px solid rgb(200, 200, 200);
+    margin: 0 10px;
+    position: relative;
+    zoom: 1;
+}

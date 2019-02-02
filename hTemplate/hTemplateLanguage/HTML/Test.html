@@ -1,0 +1,151 @@
+
+Replacing a single variable:
+
+  {$singleVariable} or {singleVariable}
+
+Accessing an index in an associative array:
+
+  {$associative.index} or {associative.index}
+
+Accessing a numeric index in an associative array:
+
+  {$numeric.0} or {numeric.0}
+  
+Accessing $_POST:
+
+  {post.test}
+  
+Accessing $_GET:
+
+  {get.test}
+  
+Accessing $_SERVER:
+
+  {server.test}
+  
+Accessing $_ENV:
+
+  {env.test}
+  
+Accessing $_COOKIE:
+
+  {cookie.test}
+  
+Accessing $_SESSION:
+
+  {session.test}
+  
+Access $GLOBALS:
+
+  {global.test} {globals.test}
+
+
+Operator Tests
+
+  If variable is not set or empty (not operator)
+  
+    {!$notsetVariable? Include this}
+
+  If isset, expand variable, if not include alternate content (at operator)
+  
+    {@issetVariable?But not this}
+
+    {@notsetVariable?Include this}
+        
+  If not empty, expand variable, if empty, include alternate content (question mark operator)
+
+    {?notEmptyVariable?But not this}
+    
+    {?emptyVariable?Include this}
+    
+Comparison/Expression Tests:
+
+  {{compare1} == {compare2}? Include content}
+  
+  {{compare2} != {compare3}? Include content}
+  
+  This should also work, in theory:
+
+  {{compare4} && ({$compare5} || {$compare6})? Include content}
+
+  {compare == This is a statement to compare to?Then include this.}
+  {compare==}
+
+
+
+
+Iteration Tests:
+  
+  The old way:
+
+    {iteration[]?
+      {arrayTest}
+    }
+    
+  New syntax for the old way:
+    {for.each in array?
+      {arrayTest}
+    }
+
+  {counter = 1}
+
+  {for.while({condition})?
+
+  }
+  
+  {for.each array as |key, value|?
+    {key} : {value} {counter}
+    {{counter} % 2? Odd}
+    {!{counter} % 2? Even}
+    
+    {counter++}
+  }
+
+  {for.list anotherArray as |item1, item2, item3, item4|?
+  
+  }
+  
+Comments:
+  {#   }   This block should not be printed.
+
+Escape Character:
+  {\   }   This block should be printed as-is without the backslash character.
+
+Include Tests:
+
+  {include:/Hot Toddy/default.php}
+  {include:encodehtml:/Hot Toddy/default.php}
+  {include:fileId:1}
+  {include:encode:fileId:1}
+
+Function calls:
+
+  Call phpversion()
+  {php.version()}
+
+  Call PHP substr
+  {php.substr()}
+
+  Call PHP empty
+  {php.empty({emptyVariable})? Put this in}
+
+  Call framework method
+  {.getFilePathByFileId(1)}
+  
+  Call hUser method
+  {user.getUserName(1)}
+  
+  Call String method
+  {string.encodeHTML("<b>Bugger</b>")}
+
+Ternary Expression: 
+
+  {hFrameworkVariable?include this{?or include this}}
+  
+FileId to Path Shortcut:
+
+  hFileId:1
+  {hFileId:1}
+  
+  fileId:1
+  {fileId:1}

@@ -1,0 +1,2 @@
+<?php
+  class hUserMacOSXLibrary extends hPlugin { private $hUserMacOSX; public function hConstructor() { $this->hUserMacOSX = $this->library('hUser/hUserMacOSX'); if ($this->shellArgumentExists('create', '--create')) {   } } } ?>

@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Twitter Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hTwitter",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hTwitter"
+        }
+    }
+}

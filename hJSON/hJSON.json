@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Hot Toddy JSON-variant Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hJSON",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hJSON"
+        }
+    }
+}

@@ -1,0 +1,520 @@
+@import '/hApplication/hApplicationUI/hApplicationUIButton/CSS/Segmented+Aqua.css';
+@import '/hCalendar/CSS/Datepicker.css';
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font: 12px "Helvetica Neue", Arial, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(232, 232, 232);
+    overflow: hidden;
+}
+div#hCalendar {
+    background: rgb(240, 240, 240);
+    position: absolute;
+    top: 0;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    bottom: 168px;
+    left: 0;
+    width: 173px;
+    overflow: auto;
+    font-size: 10px;
+    z-index: 1;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div#hCalendarsResizeGrip {
+    position: absolute;
+    top: 0;
+    bottom: 32px;
+    left: 172px;
+    width: 3px;
+    cursor: col-resize;
+    z-index: 4;
+}
+div#hCalendar h4,
+div#hCalendarEvents h4 {
+    font-size: 11px;
+    font-weight: bold;
+    color: rgb(94, 94, 94);
+    padding: 0 0 0 10px;
+    margin: 5px 0;
+}
+div#hCalendarEvents h4 {
+    margin: 15px 0 0 0;
+}
+div#hCalendar div.hCalendarOption {
+    height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    padding: 0 20px 0 23px;
+}
+div#hCalendar div.hCalendarEventsCheckboxHidden {
+    display: none;
+}
+div.hCalendarOptionTemplate {
+    display: none;
+}
+div#hCalendar div.on {
+    background: rgb(209, 217, 214);
+}
+img#hCalendarHeading {
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+img#hCalendarSharedHeading {
+    margin-top: 15px;
+    border-top: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+div#hCalendarMini {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    border: 1px solid rgb(204, 204, 204);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    height: 170px;
+    width: 173px;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div#hCalendarMini table.hCalendarMini {
+    border-spacing: 0 2px;
+    table-layout: fixed;
+    width: 100%;
+}
+div#hCalendarMini table.hCalendarMini thead th {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+div#hCalendarMini table.hCalendarMini thead th.hCalendarMonth {
+    text-transform: capitalize;
+}
+div#hCalendarMini table.hCalendarMini td {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 11px;
+    padding: 2px 0;
+}
+div#hCalendarMini table.hCalendarMini td.hCalendarLastMonth,
+div#hCalendarMini table.hCalendarMini td.hCalendarNextMonth {
+    background: rgb(230, 230, 230);
+    color: rgb(230, 230, 230);
+}
+div#hCalendarMini table.hCalendarMini td.hCalendarThisMonth {
+    background: rgb(158, 158, 158);
+    color: #fff;
+}
+div#hCalendarMiniInner {
+    padding: 0 5px;
+}
+div#hCalendarMiniControls {
+    white-space: nowrap;
+    overflow: hidden;
+}
+div#hCalendarMiniControls table {
+    border-collapse: collapse;
+    width: 100%;
+}
+div#hCalendarMiniControls table td {
+    width: 1px;
+    padding: 0;
+    text-align: center;
+    background: url('/hCalendar/Pictures/calendarMiniControlsBackground.png') repeat-x 0 2px;
+}
+div#hCalendarMiniControls img {
+
+}
+div#hCalendarMiniControls span {
+    display: block;
+    clear: left;
+}
+div#hCalendarView {
+    position: absolute;
+    top: 0;
+    right: 350px;
+    bottom: 0;
+    left: 173px;
+    background: #fff;
+    z-index: 1;
+    border: 1px solid rgb(204, 204, 204);
+    border-bottom: none;
+    border-top: none;
+    overflow: hidden;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div#hCalendarViewInner {
+    width: 100%;
+    height: 100%;
+}
+ul#hCalendarNavigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 15px;
+    right: 370px;
+    z-index: 2;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+ul#hCalendarNavigation li {
+    float: left;
+    border: 1px solid rgb(186, 186, 186);
+    border-radius: 3px;
+    padding: 3px 10px;
+}
+div#hCalendarEvent {
+    position: absolute;
+    top: 0;
+    right: 350px;
+    bottom: 0;
+    left: 173px;
+    display: none;
+    overflow: hidden;
+    border: 1px solid rgb(180, 180, 180);
+    border-bottom: none;
+    border-top: none;
+    z-index: 2;
+}
+/*
+ul#hCalendarEventTabs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 30px;
+    background: url('/images/themes/aqua/tabs/sideBarTab.png') repeat-x top;
+    z-index: 5;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul#hCalendarEventTabs li {
+    float: left;
+    border-right: 1px solid rgb(190, 190, 190);
+    padding: 0 8px;
+    height: 23px;
+    {userAgent.vendorPrefix}user-select: none;
+    cursor: pointer;
+}
+ul#hCalendarEventTabs li.hCalendarEventTabSelected {
+    background: url('/images/themes/aqua/tabs/sideBarTabOn.png') repeat-x top;
+    color: white;
+}
+ul#hCalendarEventTabs li span {
+    line-height: 23px;
+    vertical-align: middle;
+}
+*/
+div#hCalendarEventBackground {
+    background: rgb(240, 240, 240);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+div.hApplicationUIButtonSegmentedAquaContentWrapper {
+    margin: 0 15px;
+}
+div#hCalendarEventFormProperties {
+    padding: 20px 0 0 0;
+}
+iframe#hCalendarEventFrame {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    background: #fff;
+    border: 1px solid rgb(128, 128, 128);
+    width: 300px;
+    height: 150px;
+    display: none;
+}
+div#hCalendarEvents {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 350px;
+    background: rgb(240, 240, 240);
+    border-bottom: none;
+    z-index: 1;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div#hCalendarEventsResizeGrip {
+    position: absolute;
+    top: 0;
+    right: 349px;
+    bottom: 32px;
+    width: 3px;
+    cursor: col-resize;
+    z-index: 4;
+}
+div#hCalendarEventButtons {
+    height: 23px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    background: rgb(253, 253, 253);
+}
+div#hCalendarEventButtons ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div#hCalendarEventButtons ul li {
+    float: left;
+    border-right: 1px solid rgb(190, 190, 190);
+    padding: 0 8px;
+    height: 23px;
+}
+div#hCalendarEventButtons ul li:active {
+    border: 1px solid rgb(100, 100, 100);
+    box-shadow: inset 0px 1px 4px rgb(0, 0, 0);
+    {userAgent.vendorPrefix}box-shadow: inset 0px 1px 4px rgb(0, 0, 0);
+}
+div#hCalendarEventButtons ul li span {
+    line-height: 23px;
+    vertical-align: middle;
+}
+div#hCalendarEventButtons ul li:last-child {
+
+}
+div#hCalendarEventButtons img {
+    float: left;
+}
+ul#hCalendarEventsList {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 35px;
+    overflow: auto;
+}
+div#hCalendarEventNavigation {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 35px;
+    width: 350px;
+    overflow: hidden;
+}
+div#hCalendarEventNavigation ul.hSearchNavigation li.hSearchPages {
+    width: 180px;
+    margin: 0 0 0 -90px;
+}
+div#hCalendarEventNavigation ul.hSearchNavigation a {
+    color: rgb(100, 100, 100);
+}
+div#hCalendarEventNavigation li.hSearchPageLabelBefore {
+    display: none;
+}
+
+
+ul#hCalendarEventsList li {
+    padding: 5px 5px 5px 10px;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+div.hCalendarEventModify {
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    cursor: pointer;
+}
+ul#hCalendarEventsList li h5 {
+    margin: 0 30px 0 0;
+    font-weight: normal;
+    font-size: 12px;
+}
+div.hCalendarEventDateAndCategory {
+    color: rgb(128, 128, 128);
+    font-size: 11px;
+    padding: 0 0 3px 0;
+    height: 13px;
+}
+span.hCalendarEventDate {
+    float: left;
+}
+span.hCalendarEventCategory {
+    font-style: italic;
+    float: right;
+    margin: 0 30px 0 0;
+}
+li.hCalendarEventTemplate,
+li#hCalendarRecentEvents {
+    display: none;
+}
+div#hCalendarEvents ul#hCalendarEventsList li.hCalendarEventSelected {
+    background: rgb(209, 217, 214);
+}
+div#hCalendarEvents ul li.hCalendarEventSelected span.hCalendarEventDate,
+div#hCalendarEvents ul li.hCalendarEventSelected span.hCalendarEventCategory {
+    color: rgb(100, 100, 100);
+}
+div#hCalendarView table.hCalendar {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+}
+div#hCalendarView table.hCalendar caption {
+    display: none;
+}
+div#hCalendarView table.hCalendar th {
+    overflow: hidden;
+}
+div#hCalendarView table.hCalendar tbody td {
+    overflow: hidden;
+    border: 1px solid rgb(204, 204, 204);
+    font-size: 14px;
+    height: 15%;
+}
+div.hCalendarEvent {
+    margin: 0 0 2px 0;
+    padding: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    background: #1f4ee6;
+    color: #fff;
+    border-radius: 3px;
+    {userAgent.vendorPrefix}border-radius: 3px;
+}
+div.hCalendarEventTitle {
+    text-align: left;
+    font-size: 10px;
+    text-overflow: ellipsis;
+}
+div.hCalendarEventTemplate {
+    display: none;
+}
+div.hCalendarEventData {
+    display: none;
+}
+div#hCalendarView table.hCalendar td.hCalendarDay {
+    vertical-align: top;
+    padding: 5px;
+    text-align: right;
+    font-size: 11px;
+}
+div#hCalendarView table.hCalendar td.hCalendarDaySelected {
+    background: rgb(234, 234, 234);
+    color: black;
+}
+div#hCalendarView table.hCalendar td.hCalendarToday {
+    background: rgb(230, 239, 248);
+}
+div#hCalendarView table.hCalendar td.hCalendarLastMonth {
+    border-left: 1px solid rgb(244, 244, 244);
+    border-right: 1px solid rgb(244, 244, 244);
+}
+div#hCalendarView table.hCalendar td.hCalendarLastMonthLastDay {
+    border-right: 1px solid rgb(204, 204, 204);
+}
+div#hCalendarView table.hCalendar td.hCalendarNextMonth,
+div#hCalendarView table.hCalendar td.hCalendarEmptyWeek {
+    border: 1px solid rgb(244, 244, 244);
+}
+div#hCalendarView table.hCalendar td.hCalendarLastMonth,
+div#hCalendarView table.hCalendar td.hCalendarNextMonth,
+div#hCalendarView table.hCalendar td.hCalendarEmptyWeek {
+    opacity: 0.5;
+    background: rgb(244, 244, 244);
+}
+div#hCalendarView table.hCalendar th.hCalendarMonth {
+    height: 25px;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(80, 80, 80);
+    text-align: left;
+    padding: 15px;
+}
+div#hCalendarView table.hCalendar th.hCalendarMonth span.hCalendarYear {
+    font-weight: normal;
+}
+div#hCalendarView table.hCalendar th.hCalendarWeekday {
+    height: 16px;
+    font-weight: normal;
+    font-size: 11px;
+    color: rgb(135, 135, 135);
+}
+div#hCalendarView table.hCalendar td.hCalendarDateDroppable {
+    background: rgb(196, 234, 250);
+}
+div#hCalendarView table.hCalendar tbody tr td:first-child {
+    border-left: none;
+}
+div#hCalendarView table.hCalendar tbody tr td:last-child {
+    border-right: none;
+}
+div#hCalendarView table.hCalendar tbody tr:last-child td {
+    border-bottom: none;
+}
+div#hCalendarOwner *,
+div#hCalendarShared * {
+    vertical-align: middle;
+}
+div#hCalendarOwner,
+div#hCalendarShared {
+    overflow: hidden;
+}
+div.hCalendarOptionPermissions {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    background: url('/images/icons/16x16/user.png') no-repeat;
+    opacity: 0;
+    cursor: pointer;
+}
+div.hCalendarOption:hover div.hCalendarOptionPermissions {
+    opacity: 1;
+}
+.on {
+    background: rgb(10, 107, 211);
+}
+form#hCalendarSelectCategoryDialogue {
+    width: 400px;
+    height: 300px;
+    margin: -151px 0 0 -201px;
+}
+h4#hCalendarSelectCategoryHeading {
+    margin: 10px;
+}
+ul#hCalendarSelectCategoryId {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    height: 192px;
+    overflow: auto;
+    border: 1px solid rgb(179, 179, 179);
+    background: url('/hApplication/hApplicationUI/Pictures/List Background.png');
+}
+ul#hCalendarSelectCategoryId li {
+    padding: 5px;
+    height: 14px;
+    line-height: 14px;
+}
+ul#hCalendarSelectCategoryId li:nth-child(even) {
+    background: rgb(245, 245, 245);
+}
+form#hCalendarSelectCategoryDialogue ul#hCalendarSelectCategoryId li.hCalendarCategoryIdSelected {
+    background: rgb(10, 107, 211);
+    color: #fff;
+}

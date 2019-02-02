@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Plugin Install Test"
+    },
+    file : {
+        title : "Plugin Install Test",
+        path : "/System/Applications/Plugin/Test.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : ""
+            }
+        }
+    }
+}

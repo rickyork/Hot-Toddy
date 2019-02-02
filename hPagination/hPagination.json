@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Pagination Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hPagination",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hPagination"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+ul#hFinderToolbar div#hFinderLocationMenu li {
+    float: none;
+    width: auto;
+}
+ul#hFinderToolbar div#hFinderLocationMenu li span {
+    background: url('/images/icons/16x16/folder.png') no-repeat left;
+    background-size: 16px 16px;
+    padding: 0 0 0 20px;
+}
+ul#hFinderToolbar div#hFinderLocationMenu li:last-child span {
+    background-image: url('/images/icons/16x16/website.png');
+    background-size: 16px 16px;
+}
+li#hFinder-Path {
+    background: url('/hApplication/hApplicationUI/Pictures/Sprites/Hierarchy.png') no-repeat;
+    width: 44px;
+    height: 23px;
+    position: relative;
+}
+li#hFinder-Path div.hFinderContextMenu {
+    top: 23px;
+    left: 0;
+    right: auto;
+    left: auto;
+    width: 300px;
+}
+ul#hFinderToolbar li#hFinder-Path:active,
+ul#hFinderToolbar li.hFinderPathOn {
+    background-position: 0 -23px;
+}

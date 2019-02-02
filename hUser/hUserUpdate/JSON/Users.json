@@ -1,0 +1,121 @@
+{
+    users : [
+        {
+            id : 0,
+            name : "richard",
+            email : "richard@deadmarshes.com",
+            password : "[myPassword]",          // Optional, will be auto-generated if left blank
+            confirmation : "",                  // Optional
+            securityQuestionId : 0,             // Optional
+            securityAnswer : "",                // Optional
+            isActivated : true,                 // Optional, defaults to true
+            unix : {                            // Optional, default is not to create an entry for Unix user data
+                uid : 0,                        // Unix UID
+                gid : 0,                        // Unix GID
+                home : '',                      // Unix path to home folder
+                shell : ''                      // Unix default shell
+            },
+            isGroup : true,                     // Optional, whether or not the user is a group, defaults to false
+            group : {                           // Optional
+                owner : 1,                      // Optional, if not provided the root user automatically becomes the owner of the group (userId = 1)
+                isElevated : false,             // Optional, whether or not the group is elevated, defaults to false.
+                password : '',                  // Optional, group password is auto-generated if it hasn't been specified.
+                                                // This password is used to join the group.  Group login password is user.password
+                loginEnabled : false            // Optional, whether or not people can login using the group's credentials, defaults to false.
+            },
+            variables : {                       // Optional, user variables
+                name : 'value'                  // User variables are specified in key, value pairs
+            },
+            groups : [                          // Optional, the groups that are members of this group.
+                "Website Administrators",       // Groups can be provided as a list of userNames, userIds, or userEmails
+                "root"
+            ],
+            users : [                           // Optional, the users that are members of the group.
+                "richard"                       // Users can be provided as a list of userNames, userIds, or userEmails
+            ],
+            contact : {                         // The user's contact record
+                addressBook : "",
+                addressBookId : 1,              // Optional, the address book the contact record will be created in, if not
+                                                // specified, the default value is 1, which is the address book for Website Registrations
+                                                // The address book can be provided as a numeric contactAddressId, or the name of the address book.
+                                                // If the address book name does not exist, it will be automatically created.
+                id : 0,                         // Optional, the contactId, if not specified the contactId is automatically assigned from
+                                                // MySQL auto_increment
+                userId : 0,                     // Optional, the userId that owns the contact record.  If not specified, this defaults to user.id
+
+                firstName : '',                 // Optional, the user's first name
+                lastName : '',                  // Optional, the user's surname
+                displayName : '',               // Optional, the display name.  If a first and last name are provided, this field is automatically
+                                                // populated with the concation of the user's first and last names
+                nickName : '',                  // Optional, the user's nick name.
+                website : '',                   // Optional, the user's website
+                company : '',                   // Optional, the user's company, or the company name representing the group, if this is a group
+                title : '',                     // Optional, the user's title
+                department : '',                // Optional, the user's department
+                gender : -1,                    // Optional, the user's gender -1 = No Response/Unknown, 0 = Female, 1 = Male
+                dateOfBirth : ''                // Optional, the user's date of birth.  This can be any string that can be parsed by strtotime, or a unix timestamp
+                addresses : [                   // Optional, one or more addresses associated with this user
+                    {
+                        id : 0,                 // Optional, the contactAddressId, if not specified this is automatically assigned via auto_increment
+                        fieldId : 2,            // Optional, the contactFieldId describing what kind of address this is.
+                                                // If this is not provided the default value is 2, which indicates a 'Work' address.
+                        street : "",            // Optional, This can be an array where each value is a line of the address, or a string.
+                        city : "",              // Optional, the city field of the address
+                        state : "",             // Optional, This can be a string representing the name of the state, the two letter state code, or the numeric locationStateId
+                        postalCode : 0,         // Optional, the address's postal code.  This can be a number or string.
+                        countyId : 0,           // Optional, the locationCountyId of the county the address resides within.
+                                                // This can be automatically determined from  the address via Google Maps API.
+                        countryId : 223,        // Optional, the country name, numeric locationCountryId, 2-letter ISO2 country code, or 3-letter ISO3 country code.
+                                                // If the country is not provided, the United States (223) becomes the country, by default.
+                                                // The assigned country also determines which address template should be used to format the address.
+                        latitude : 0,           // Optional, the latitude representing the physical location of the address as a floating point number.
+                                                // This can be automatically determined from the address via Google Maps API.
+                        longitude : 0,          // Optional, the longitude representing the physical location of the address as a floating point number.
+                                                // This can be automatically determined from the address via Google Maps API.
+                        fileId : 0,             //
+                        operatingHours : "",    // A string describing the hours a business is open at this address
+                        isDefault : false       // When there is more than one address assigned to a contact, this field indicates which
+                                                // of the addresses should be used as the default address.
+                    }
+                ],
+                emailAddresses : [              // Optional, one or more email addresses to associate with the contact
+                    {
+                        id : 0,                 // Optional, the contactEmailAddressId, if this is not specified, or left as zero,
+                                                // the contactEmailAddressId will be automatically assigned via auto_increment
+                        fieldId : 20,           // Optional, the contactFieldId describing what kind of email address has been provided.
+                                                // If this is not provided the default value is 20, which indicates a 'Work' email.
+                        emailAddress : "richard@deadmarshes.com"  // The email address
+                    }
+
+                ],
+                internetAccounts : [
+                    {
+                        id : 0,                 // Optional, the contactInternetAccountId.  If this is not specified, or left as zero,
+                                                // the contactInternetAccountId will be automatically assigned via auto_increment.
+                        fieldId : 0,            // Optional, the contactFieldId describes what kind of internet account has been provided.
+                        internetAccount : ""            // The internet account data.
+
+                    }
+                ],
+                phoneNumbers : [
+                    {
+                        id : 0,                 // Optional, the contactPhoneNumberId.  If this is not specified, or left as zero,
+                                                // the contactPhoneNumberId will be automatically assigned via auto_increment.
+                        fieldId : 0,            // Optional, the contactFieldId describes what kind of phone number has been provided.
+                        phoneNumber : "",       // The phone number.
+                        template : ""           // Optional, a template to use to format the phone number
+                    }
+                ],
+                files : [
+                    {
+                        id : 0,                            // The fileId of the file
+                        path : "/path/to/file",            // A HtFS path to the file
+                        categoryId : 1,                    // What contactFileCategoryId the file falls under (1 = profile photo)
+                        isProfilePhoto : true,             // Indicates whether or not the file is a profile photo
+                        isDefaultProfilePhoto : true       // Indicates whether or not the file is the default profile photo
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "Framework Clean-up"
+        },
+        shell : {
+            name : "Framework Shell"
+        }
+    }
+}

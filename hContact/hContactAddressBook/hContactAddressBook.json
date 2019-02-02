@@ -1,0 +1,8 @@
+{
+    plugin : {
+        name : "Contact Address Book",
+        library : {
+            name : "Contact Address Book Library"
+        }
+    }
+}

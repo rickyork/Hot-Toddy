@@ -1,0 +1,2 @@
+<?php
+  class hYahooAdvertising extends hPlugin { public function hConstructor() { if ($this->hYahooAdvertisingAccountId) { $this->hFileDocument .= $this->getTemplate( 'Conversion', array( 'hYahooAdvertisingAccountId' => $this->hYahooAdvertisingAccountId ) ); } } } ?>

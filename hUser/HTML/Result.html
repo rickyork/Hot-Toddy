@@ -1,0 +1,14 @@
+<div class='hContactRecord{hContactRecordTemplate? hContactRecordTemplate}' id='hContactRecordId-{hContactId}'>
+    <span class='hContactRecordId'>{hContactId}</span>
+    <span class='hContactRecordUserId'>{hUserId}</span>
+    <ul>
+        <li class='hContactRecordDisplayName'>
+            <span class='hContactRecordFirstName'>{hContactFirstName}</span>
+            <span class='hContactRecordLastName'>{hContactLastName}</span>
+        </li>
+        <li class='hContactRecordTitle'>{hContactTitle}</li>
+        <li class='hContactRecordCompany'>{hContactCompany}</li>
+        {hContactResultEmailAddressEnabled?<li class='hContactRecordEmail'><a href='mailto:{hUserEmail}'>{hUserEmail}</a></li>}
+        {hContactResultUserNameEnabled?<li class='hContactRecordUserName' title='Screen Name'>{hUserName}</li>}
+    </ul>
+</div>

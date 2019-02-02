@@ -1,0 +1,2 @@
+<?php
+  class hUserLogoutLibrary extends hPlugin { public function logout() { $this->hUserSessions->delete( array( 'hUserSessionId' => session_id() ) ); $this->setCookie( session_name(), session_id(), time() - 1000, '/', $this->hServerHost ); session_destroy(); $_SESSION = array(); } } ?>

@@ -1,0 +1,76 @@
+div#hErrorLogControls {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 160px;
+}
+td.hErrorLog-hErrorDate {
+    white-space: nowrap;
+}
+th.hErrorLog-hErrorText,
+td.hErrorLog-hErrorText {
+    width: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+th.hErrorLog-hErrorPath,
+td.hErrorLog-hErrorPath {
+    width: 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hErrorLog-hUserId,
+td.hErrorLog-hUserId {
+    width: 65px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hErrorLog-hUserName,
+td.hErrorLog-hUserName {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hErrorLog-hUserFullName,
+td.hErrorLog-hUserFullName {
+    width: 125px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hErrorLog-hErrorDate,
+td.hErrorLog-hErrorDate {
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hErrorLog-hErrorRemoteIP,
+td.hErrorLog-hErrorRemoteIP {
+    width: 125px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hErrorLog-hErrorUserAgent,
+td.hErrorLog-hErrorUserAgent {
+    overflow: hidden;
+    width: 300px;
+    white-space: nowrap;
+}
+div.hErrorUserAgentDialogue,
+div.hErrorTextDialogue {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    bottom: 50px;
+    left: 50px;
+    padding: 10px;
+    border: 1px solid rgb(128, 128, 128);
+    background: rgba(240, 240, 240, 0.95);
+    font: 12px Monaco, Courier, "Courier New", monospace;
+    white-space: pre;
+    overflow: auto;
+    box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    {userAgent.vendorPrefix}box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    {userAgent.vendorPrefix}border-radius: 5px;
+}

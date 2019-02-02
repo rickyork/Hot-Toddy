@@ -1,0 +1,83 @@
+div.hFinderContextMenu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 200px;
+    font-size: 14px;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgb(150, 150, 150);
+    border: 1px solid rgba(150, 150, 150, 0.95);
+    padding: 4px 0;
+    box-shadow: 0 5px 25px rgba(100, 100, 100, 0.9);
+    {userAgent.vendorPrefix}box-shadow: 0 5px 25px rgba(100, 100, 100, 0.9);
+    border-radius: 5px;
+    {userAgent.vendorPrefix}border-radius: 5px;
+    color: #000;
+    {userAgent:(ie < 9)?
+        background: white;
+        border: 1px solid rgb(150, 150, 150);
+        filter: progid:DXImageTransform.Microsoft.Shadow(color='#777777', Direction= 135, Strength=8);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color='#777777', Direction= 135, Strength=8)";
+    }
+}
+div.hFinderContextMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div.hFinderContextMenuDirectory li.hFinderContextMenuFileItem {
+    display: none;
+}
+div.hFinderContextMenu ul li {
+    padding: 2px 0 2px 21px;
+    margin: 0;
+    height: 15px;
+    overflow: hidden;
+}
+div.hFinderContextMenu ul li.hFinderContextMenuBoolean span {
+    position: relative;
+    left: -21px;
+    padding: 0 0 0 21px;
+}
+div.hFinderContextMenu ul li.hFinderContextMenuItemChecked span {
+    background: url('/hFinder/Pictures/checkmark.png') no-repeat 5px 5px;
+}
+div.hFinderContextMenu ul li.hFinderContextMenuItemOn.hFinderContextMenuItemChecked span {
+    background-image: url('/hFinder/Pictures/checkmarkOn.png');
+}
+div.hFinderContextMenu ul li span {
+    position: relative;
+    top: -2px;
+}
+div.hFinderContextMenu ul li.hFinderContextMenuLabels {
+    height: auto;
+}
+div.hFinderContextMenu ul li.hFinderContextMenuSeparator {
+    padding: 5px 0 8px 0;
+    font-size: 0;
+    line-height: 0;
+    height: auto;
+}
+li.hFinderContextMenuSeparator div {
+    font-size: 0;
+    line-height: 0;
+    padding-top: 1px;
+    background: rgb(200, 200, 200);
+    margin: 0 1px;
+}
+body div.hFinderContextMenu ul li.hFinderContextMenuItemOn {
+    background: rgb(10, 107, 211);
+    color: white;
+}
+div#hFinderLabels {
+    padding: 5px 0 10px 0;
+}
+li.hFinderContextMenuItemDisabled {
+    opacity: 0.5;
+    {userAgent:(ie < 9)?
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    }
+}

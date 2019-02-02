@@ -1,0 +1,29 @@
+div#hEditorImageWrapper {
+    overflow: hidden;
+}
+div#hEditorImageWrapper label {
+    float: left;
+    width: 100px;
+    text-align: right;
+    padding: 17px 5px 0 0;
+}
+div#hEditorTemplateImageActionsWrapper {
+    position: absolute;
+    bottom: 12px;
+    right: 5px;
+}
+div#hEditorTemplateImageRemoveWrapper {
+    position: absolute;
+    bottom: 12px;
+    left: 5px;
+    border-right: none;
+}
+div#hEditorTemplateImage div#hEditorTemplateImageServerWrapper {
+    display: inline-block;
+    float: none;
+    position: relative;
+    top: 6px;
+}
+div#hEditorImageTargetWrapper {
+    padding: 15px 0 15px 120px;
+}

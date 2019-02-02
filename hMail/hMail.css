@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font: 12px sans-serif;
+    background: url('/images/themes/aqua/calendar/stripes.png');
+}
+div#hmail-buttons {
+    height: 40px;
+    padding: 5px 10px;
+}
+form#hmail-fields {
+    margin: 0;
+    padding: 5px;
+    min-height: 100px;
+}
+form#hmail-fields table.form {
+    width: 100%;
+}
+col#hmail-labels {
+    width: 100px;
+}
+col#hmail-fields {
+}
+form#hmail-fields td.form-label {
+    vertical-align: middle;
+    font-size: 16px;
+}
+form#hmail-fields td.form-label img {
+    float: left;
+    vertical-align: middle;
+}
+form#hmail-fields td.form-label label {
+    float: right;
+    line-height: 32px;
+    vertical-align: middle;
+}
+form#hmail-fields td.form-input input {
+    width: 98%;
+}
+div.hmail-button {
+    float: left;
+    padding: 0 10px;
+    text-align: center;
+}
+div.hmail-buttom img {
+    display: block;
+    text-align: center;
+}
+div.hmail-button span.label {
+    text-align: center;
+    display: block;
+    font: 10px sans-serif;
+}
+div#hmail-buttons-follow {
+    clear: both;
+}
+div.hmail-popup-dialogue {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 500px;
+    margin: -250px 0 0 -300px;
+    border: 3px solid rgb(128, 128, 128);
+    background: url('/images/themes/aqua/calendar/brushed_metal.png');
+    display: none;
+}
+div.hmail-popup-dialogue fieldset {
+    background: url('/images/themes/aqua/calendar/stripes.png');
+    border: 1px solid rgb(128, 128, 128);
+    margin: 30px;
+}
+div.hmail-popup-dialogue legend {
+    line-height: 14px;
+    font-size: 14px;
+    height: 14px;
+    margin-top: -14px;
+    border-bottom: 1px solid rgb(128, 128, 128);
+}
+div.hmail-popup-dialogue h1 {
+    margin: 2px 2px 40px 2px;
+    padding: 5px;
+    background: rgb(128, 128, 128);
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+}
+div#hmail-message-body {
+    text-align: center;
+}
+input[type='text'] {
+    border: 1px solid rgb(200, 200, 200);
+}
+div.hmail-popup-buttons {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+div#ab-entry-buttons {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}

@@ -1,0 +1,133 @@
+div.hForumThread {
+    margin: 0 0 15px 0;
+}
+table.hForumThread {
+    border-collapse: collapse;
+    width: 100%;
+    min-height: 500px;
+    table-layout: fixed;
+    border: 1px solid rgb(179, 179, 179);
+    color: #000;
+}
+table.hForumThread th {
+    height: 22px;
+    padding: 0 0 0 5px;
+    text-align: left;
+    vertical-align: middle;
+    background: url('/hApplication/hApplicationUI/Pictures/List Header.png') repeat-x;
+    height: 15px;
+    border: 1px solid rgb(179, 179, 179);
+    font-weight: normal;
+}
+td.hForumOdd {
+    background: rgb(237, 243, 254);
+}
+th.hForumPostAuthor div {
+    height: 26px;
+}
+col#hForumPostAuthor {
+    width: 150px;
+}
+td.hForumPostAuthor {
+    width: 200px;
+    vertical-align: top;
+    padding: 15px 5px 25px 10px;
+}
+td.hForumPostAuthorInfo {
+    vertical-align: top;
+    padding: 0 0 0 8px;
+}
+td.hForumPostAuthorName {
+    vertical-align: top;
+}
+div.hForumPostAuthor {
+    font-size: 16px;
+    padding: 8px 0 0 8px;
+    overflow: hidden;
+}
+div.hForumPostAuthorTitle {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+td.hForumPost {
+    padding: 0 10px 25px 10px;
+    vertical-align: top;
+}
+td.hForumPostDate,
+td.hForumPostSubject {
+
+}
+div.hForumOperations {
+    padding: 4px;
+    text-align: right;    
+}
+div.hForumOperations img,
+div.hForumOperations span {
+    margin: 0 5px;
+}
+td.hForumPostSubject {
+
+}
+td.hForumPostSubject h4 {
+    margin: 5px 0;
+    padding: 3px;
+    font-weight: normal;
+    font-size: 16px;
+}
+ul.hForumLinks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+ul.hForumLinks li {
+    display: inline;
+}
+div.hForumPostDate {
+    float: right;
+    font-size: 10px;
+    padding: 3px 5px 3px 0;
+}
+div#hForumCompanyLogo {
+    margin: 30px 0 5px 0;
+}
+div.hForumThread blockquote {
+    font-size: 0.9em;
+    font-style: italic;
+    opacity: 0.9;
+}
+div.hForumThread blockquote i:first-child {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+div.hForumThread td.hForumPost p {
+    margin-top: 0;
+    text-indent: 15px;
+}
+div.hForumOperations a {
+    float: right;
+    text-align: left;
+    text-indent: -20000px;
+    margin: 0 0 0 15px;
+    position: relative;
+    top: -10px;
+}
+a.hForumPostEdit {
+    width: 29px;
+    height: 20px;
+    background: url('/hForum/Pictures/edit.png') no-repeat;
+}
+a.hForumPostReplyWithQuote {
+    float: right;
+    width: 27px;
+    height: 23px;
+    background: url('/hForum/Pictures/quote.png') no-repeat;
+}
+a.hForumPostReply {
+    float: right;
+    width: 29px;
+    height: 20px;
+    background: url('/hForum/Pictures/reply.png') no-repeat;
+}
+
+

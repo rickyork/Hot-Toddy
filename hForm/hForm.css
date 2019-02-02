@@ -1,0 +1,44 @@
+span.hFormRequiredIndicator {
+    color: crimson;
+    padding: 0 0 0 5px;
+}
+div.hFormTextareaWrapper {
+    float: left;
+}
+td.hFormLabel {
+    text-align: right;
+    vertical-align: middle;
+    padding: 5px 5px 5px 0;
+}
+td.hFormInput {
+    padding: 5px;
+    vertical-align: middle;
+}
+div.hFormGenericInputWrapper {
+
+}
+td.hFormLabelLong {
+    text-align: right;
+    vertical-align: top;
+    padding: 8px 5px 0 0;
+}
+fieldset {
+    border: none;
+}
+fieldset legend {
+    display: none;
+}
+div.hFormHasErrors,
+p.hFormRequired,
+p.hFormError {
+    color: crimson;
+    clear: both;
+}
+div.hFormWYSIWYGWrapper {
+    position: relative;
+}
+legend,
+div.hFormLegend {
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}

@@ -1,0 +1,19 @@
+<div class='hEditorTemplatePanel' id='{hEditorTemplatePanelId}'>
+    <h1 class='hEditorTemplatePanelTitle'>
+        {hEditorTemplatePanelName}
+        <span id='hEditorContentSelected'></span>
+        <span id='hEditorContentSelectedLabel'>Selected: <span>Nothing</span></span>
+    </h1>
+    <div class='hEditorTemplatePanelBody'>
+        <ul class='hEditorTemplatePanelTabs' data-name='{hEditorTemplatePanelNameAsId}'>
+        {hEditorTemplatePanelTabs[]?
+            <li id='hEditorTemplatePanel{hEditorTemplatePanelNameAsId}Tab-{hEditorTemplatePanelTabId}'><span>{hEditorTemplatePanelTabLabel}</span></li>
+        }
+        </ul>
+        {hEditorTemplatePanelPanes[]?
+            <div class='hEditorTemplatePanelPane' id='hEditorTemplatePanel{hEditorTemplatePanelNameAsId}{hEditorTemplatePanelPaneId}'>
+    {hEditorTemplatePanelPane}
+            </div>
+        }
+    </div>
+</div>

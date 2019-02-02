@@ -1,0 +1,2 @@
+<?php
+  class hMovieService extends hService { private $hMovie; public function hConstructor() { $this->hMovie = $this->library('hMovie'); } public function getMovies() { if (!isset($_GET['path'])) { $this->JSON('-5'); return; } $path = $_GET['path']; if ($path == '/Categories/.Movies/Movies') { $path = '/Categories/.Movies'; } $this->HTML($this->hMovie->getMovies($path)); } } ?>

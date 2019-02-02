@@ -1,0 +1,46 @@
+<div id='hEditorTemplateLink' class='hEditorTemplateModalDialogue'>
+    <h4><img src='/images/icons/24x24/sites.png' alt='sites' /><span>Link</span></h4>
+    <fieldset>
+        <div id='hEditorLinkWrapper' class='hEditorTemplateModalInput'>
+            <label for='hEditorLink'>URL/Path:</label>
+            <input type='text' id='hEditorLink' size='50' />
+            <div id='hEditorTemplateLinkServerWrapper' class='hEditorTemplateIslandWrapper'>
+                <ul id='hEditorTemplateLinkServer' class='hEditorTemplateIsland'>
+                    <!-- <button> element is required for preservation of the user's selection -->
+                    <li id='hEditorTemplateLinkBrowse'>
+                        <button value='browse'><span>Browse...</span></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id='hEditorLinkLabelWrapper' class='hEditorTemplateModalInput'>
+            <label for='hEditorLinkLabel'>Label:</label>
+            <textarea id='hEditorLinkLabel' rows='4' cols='50' wrap='hard'></textarea>
+        </div>
+        <div id='hEditorLinkTargetWrapper'>
+            <input type='checkbox' value='1' id='hEditorLinkTarget' />
+            <label for='hEditorLinkTarget'>Open link in a new window</label>
+        </div>
+    </fieldset>
+    <div id='hEditorTemplateLinkRemoveWrapper' class='hEditorTemplateIslandWrapper hEditorTemplateDisabledButtons'>
+        <ul id='hEditorTemplateLinkRemoveUL' class='hEditorTemplateIsland'>
+            <!-- <button> element is required for preservation of the user's selection -->
+            <li id='hEditorTemplateLinkRemove'>
+                <button value='removeLink'><span>Remove Link</span></button>
+            </li>
+        </ul>
+    </div>
+    <div class='hEditorTemplateIslandWrapper hEditorTemplateModalActionsWrapper'>
+        <ul class='hEditorTemplateIsland'>
+            <li id='hEditorTemplateLinkSave'>
+                <button value='save'><span>Apply</span></button>
+            </li>
+        </ul>
+        <ul class='hEditorTemplateIsland'>
+            <!-- <button> element is required for preservation of the user's selection -->
+            <li id='hEditorTemplateLinkCancel'>
+                <button value='cancel'><span>Cancel</span></button>
+            </li>
+        </ul>      
+    </div>
+</div>

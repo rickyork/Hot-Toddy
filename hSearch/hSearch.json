@@ -1,0 +1,40 @@
+{
+    plugin : {
+        name : "Search",
+        library : {
+            name : "Search Library"
+        },
+        database : {
+            name : "Search Database"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hSearch",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hSearch"
+        }
+    },
+    file : {
+        title : "Search",
+        path : "/Applications/Search/index.html",
+        directory : {
+            properties : {
+                isApplication : 1,
+                icon : {
+                    name : "search.png",
+                    mime : "plugins/search"
+                }
+            }
+        },
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

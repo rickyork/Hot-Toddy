@@ -1,0 +1,58 @@
+{
+    plugin : {
+        name : "Dashboard User Guides"
+    },
+    files : [
+        {
+            title : "User Guides",
+            path : "/Hot Toddy/User Guides/index.html",
+            user : {
+                id : 1,
+                permissions : {
+                    owner : "rw",
+                    world : "r"
+                }
+            }
+        }, {
+            title : "Managing Documents with Finder",
+            path : "/Hot Toddy/User Guides/Finder.html",
+            user : {
+                id : 1,
+                permissions : {
+                    owner : "rw",
+                    world : "r"
+                }
+            }
+        }, {
+            title : "Managing Contacts with the Address Book",
+            path : "/Hot Toddy/User Guides/Address Book.html",
+            user : {
+                id : 1,
+                permissions : {
+                    owner : "rw",
+                    world : "r"
+                }
+            }
+        }, {
+            title : "Managing Documents with the Calendar",
+            path : "/Hot Toddy/User Guides/Calendar.html",
+            user : {
+                id : 1,
+                permissions : {
+                    owner : "rw",
+                    world : "r"
+                }
+            }
+        }, {
+            title : "Controlling Access to Documents, Folders, Categories, and Other Items",
+            path : "/Hot Toddy/User Guides/Permissions.html",
+            user : {
+                id : 1,
+                permissions : {
+                    owner : "rw",
+                    world : "r"
+                }
+            }
+        }
+    ]
+}

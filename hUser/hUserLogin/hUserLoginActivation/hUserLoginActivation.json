@@ -1,0 +1,8 @@
+{
+    plugin : {
+        name "User Login Activation",
+        library : {
+            name : "User Login Activation Library"
+        }
+    }
+}

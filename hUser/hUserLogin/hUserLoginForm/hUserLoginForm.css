@@ -1,0 +1,52 @@
+form#hUserLoginForm {
+    padding: 0 10px;
+    clear: both;
+}
+div#hUserLoginOptions {
+    padding: 0 0 0 15px;
+}
+div#hUserLoginExists {
+    padding: 0 0 0 50px;
+}
+div#hUserLoginMessage {
+    font-size: 16px;
+    margin: 10px 5px;
+    font-weight: bold;
+}
+div.hUserLoginLabel {
+    font-size: 16px;
+    padding: 5px;
+}
+div.hUserLoginInput {
+    padding: 5px 5px 5px 10px;
+}
+div#hUserLoginScreenName {
+    font-style: italic;
+    font-size: 10px;
+    padding: 5px 5px 5px 10px;
+}
+div#hUserLoginButton {
+    padding: 5px 5px 5px 350px;
+}
+ul#hUserLoginHelp {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul#hUserLoginHelp li {
+    margin: 10px 0;
+}
+ul#hUserLoginHelp li a {
+    font-size: 14px;
+}
+div.hUserLoginLabel {
+   clear: left;
+}
+p.hUserLoginFailed {
+    color: crimson;
+    font-weight: bold;
+}
+input#hUserLoginName,
+input#hUserLoginPassword {
+    width: 200px;
+}

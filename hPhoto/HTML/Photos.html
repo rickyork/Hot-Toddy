@@ -1,0 +1,11 @@
+{hFiles[]?
+    <li class='hPhoto' data-file-path='{hFilePath}' title='{hPhotoCaption}'>
+        <div class='hPhotoThumbnail'>
+          <img src='{thumbnailGenerator}?path={hFilePathEncoded}&hFileLastModified={hFileLastModified}' />
+          <div class='hPhotoThumbnailHack'></div>
+        </div>
+        <div class='hPhotoCaption'>
+           <span>{hPhotoCaption}</span>
+        </div>
+    </li>
+}

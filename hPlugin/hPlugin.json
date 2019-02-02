@@ -1,0 +1,23 @@
+{
+    plugin : {
+        name : "Plugin",
+        shell : {
+            name : "Plugin Shell"
+        },
+        database : {
+            name : "Plugin Database"
+        },
+        library : {
+            name : "Plugin Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hPlugin",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hPlugin"
+        }
+    }
+}

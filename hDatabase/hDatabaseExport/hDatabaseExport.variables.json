@@ -1,0 +1,3 @@
+{
+    hDatabaseExportPathToMySQLDump : "/usr/bin/mysqldump"
+}

@@ -1,0 +1,11 @@
+div.hUserRegisterButtons {
+    text-align: right;
+    padding: 0 20px;
+}
+p.hUserRegisterLoginError {
+    color: crimson;
+}
+p.hFormRequired,
+div#hUserRegisterMessage {
+    padding: 0 20px;
+}

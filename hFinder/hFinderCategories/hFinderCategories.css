@@ -1,0 +1,151 @@
+div.hFinderCategories {
+    position: absolute;
+    bottom: 23px;
+    height: 200px;
+    background: rgb(110, 142, 185);
+    border-top: 1px solid rgb(64, 64, 64);
+    border-bottom: 1px solid rgb(64, 64, 64);
+    left: 251px;
+    right: 0;
+    z-index: 2;
+    padding: 5px;
+    display: none;
+}
+div.hFinderCategoriesOn {
+   
+}
+body div.hFinderFilesCategoriesOn {
+
+}
+div.hFinderCategoriesIcon {
+    float: left;
+    width: 200px;
+    height: 133px;
+}
+div.hFinderCategoriesSorting {
+    margin-left: 210px;    
+}
+div.hFinderCategoriesIcon div.hFinderBottomBoxInner,
+div.hFinderCategoriesSorting div.hFinderBottomBoxInner {
+    height: 133px;
+}
+div.hFinderCategories {
+    background: rgb(123, 188, 116);    
+}
+div.hFinderCategories div.hFinderBottomBoxTopOuter {
+    background-image: url('/images/themes/aqua/finder/BottomCategoryBox_01.png');
+}
+div.hFinderCategories div.hFinderBottomBoxTopMiddle {
+    background-image: url('/images/themes/aqua/finder/BottomCategoryBox_04.png');    
+}
+div.hFinderCategories div.hFinderBottomBoxTopInner {
+    background-image: url('/images/themes/aqua/finder/BottomCategoryBox_02.png');
+}
+div.hFinderCategories div.hFinderBottomBoxOuter {
+    background-image: url('/images/themes/aqua/finder/BottomCategoryBox_05.png');
+}
+div.hFinderCategories div.hFinderBottomBoxMiddle {
+    background-image: url('/images/themes/aqua/finder/BottomCategoryBox_07.png');
+}
+div.hFinderCategories div.hFinderBottomBoxBottomOuter {
+    background-image: url('/images/themes/aqua/finder/BottomCategoryBox_10.png');
+}
+div.hFinderCategories div.hFinderBottomBoxBottomMiddle {
+    background-image: url('/images/themes/aqua/finder/BottomCategoryBox_13.png');
+}
+div.hFinderCategories div.hFinderBottomBoxBottomInner {
+    background-image: url('/images/themes/aqua/finder/BottomCategoryBox_11.png');
+}
+div#hFinderCategoryFiles {
+    overflow: auto;
+    height: 140px;
+}
+div#hFinderCategoryIconOuter {
+    height: 140px;
+    position: relative;
+}
+div#hFinderCategoryFilesOuter {
+    height: 140px;
+    position: relative;
+}
+div#hFinderCategoryIconButton {
+    position: absolute;
+    bottom: -35px;
+    right: -15px;
+}
+div#hFinderCategoryFileButtons {
+    position: absolute;
+    bottom: -35px;
+    right: -15px;    
+}
+span#hFinderCategoryIconId,
+span.hFinderCategoryFileId {
+    display: none;
+}
+img.hFinderCategoryFileIcon {
+    float: left;
+}
+div.hFinderCategoryFile {
+    clear: left;
+    height: 40px;
+    overflow: hidden;
+    padding: 5px;
+}
+span.hFinderCategoryFileTitle,
+span.hFinderCategoryFilePath {
+    display: block;
+    margin: 0 0 0 40px;
+}
+div#hFinderCategoryIcon {
+    text-align: center;
+}
+div.hFinderCategoryFileSelected {
+    background:  url('/images/themes/aqua/backgrounds/itemSelected.png') repeat-x;
+    outline-bottom: 1px solid rgb(11, 47, 202);
+    color: #fff;
+}
+div.hFinderCategoryFileSelected a,
+div.hFinderCategoryFileSelected a:visited {
+    color: lightblue;
+}
+body.hFinderCategories input#hFinderButtonUpload,
+body.hFinderCategories input#hFinderButtonEditFile {
+    display: none;
+}
+[data-file-path='/Categories'] div.hFinderDirectoryIcon-16x16,
+[data-file-path^='/Categories/'] div.hFinderDirectoryIcon-16x16,
+ul#hFinderToolbar div#hFinderLocationMenu li[data-file-path='/Categories'] span,
+ul#hFinderToolbar div#hFinderLocationMenu li[data-file-path^='/Categories/'] span  {
+    background-image: url('/images/icons/16x16/category_folder.png');
+    background-size: 16px 16px;
+}
+[data-file-path='/Categories'] div.hFinderDirectoryIcon-24x24,
+[data-file-path^='/Categories/'] div.hFinderDirectoryIcon-24x24 {
+    background-image: url('/images/icons/24x24/category_folder.png');
+    background-size: 24px 24px;
+}
+[data-file-path='/Categories'] div.hFinderDirectoryIcon-32x32,
+[data-file-path^='/Categories/'] div.hFinderDirectoryIcon-32x32 {
+    background-image: url('/images/icons/32x32/category_folder.png');
+    background-size: 32px 32px;
+}
+[data-file-path='/Categories'] div.hFinderDirectoryIcon-48x48,
+[data-file-path^='/Categories/'] div.hFinderDirectoryIcon-48x48 {
+    background-image: url('/images/icons/48x48/category_folder.png');
+    background-size: 48px 48px;
+}
+/*
+body.hFinderCategories div.hFinderTree,
+body.hFinderCategories div#hFinderSideColumn {
+    background: rgb(220, 232, 224);
+}
+*/
+html body.hFinderCategories .hFinderSelected span.hFinderDirectoryName,
+html body.hFinderCategories .hFinderSelected span.hFinderFileName,
+html body.hFinderCategories .hFinderDragOver span.hFinderDirectoryName,
+html body.hFinderCategories .hFinderDragOver span.hFinderFileName,
+body.hFinderCategories.hFinderFilesList .hFinderSelected,
+body.hFinderCategories.hFinderFilesList .hFinderDragOver,
+body.hFinderCategories.hFinderFilesList div.hFinderFiles .hFinderSelected div.hFinderNodeWrapper {
+    background: rgb(43, 92, 42);
+}

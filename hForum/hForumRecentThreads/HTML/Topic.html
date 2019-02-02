@@ -1,0 +1,64 @@
+<h3>{hForumTopic}</h3>
+<div class='hForumTopic' id='hForumTopic-{hForumTopicId}'>
+  <div id='hForumPostsOuter'>
+    <div id='hForumPostsMiddle'>
+      <div id='hForumPostsInner'>
+        <table class='hForumPosts'>
+          <colgroup>
+            <col class='hForumPostSubject' />
+            <col class='hForumPostAuthor' />
+            <col class='hForumPostReplyCount' />
+            <!-- <col class='hForumPostReadCount' /> -->
+            <col class='hForumLastPostDate' />
+            <col class='hForumPostOperations' />
+          </colgroup>
+          <thead>
+            <tr>
+              <th class='hForumPostSubject'>Topic</th>
+              <th class='hForumPostAuthor'>Author</th>
+              <th class='hForumPostReplyCount'>Replies</th>
+              <!-- <th class='hForumPostReadCount'>Read</th> -->
+              <th class='hForumLastPostDate'>Last Post</th>
+              <th class='hForumPostOperations'></th>
+            </tr>
+          </thead>
+          <tbody>
+{hForumPosts[]?
+            <tr id='hForumPost-{hForumPostId}'>
+              <td class='hForumPostSubject'>
+                <span class='hForumPostSubjectSticky{hForumPostIsSticky? hForumPostSubjectStickyOn}'>Sticky</span>
+                <span class='hForumPostSubjectLock{hForumPostIsLocked? hForumPostSubjectLockOn}'>Locked</span>
+                <a href='{hForumPostLink}'>{hForumPostSubject?{hForumPostSubject}}{!hForumPostSubject?<i>No Title</i>}</a>
+              </td>
+              <td class='hForumPostAuthor'>{hForumPostAuthor}</td>
+              <td class='hForumPostReplyCount'>{hForumPostReplyCount}</td>
+              <!-- <td class='hForumPostReadCount'>{hForumPostReadCount}</td> -->
+              <td class='hForumLastPostDate'>{hForumLastPostDate}</td>
+              <td class='hForumPostOperations' id='hForumPostId-{hForumPostId}'>
+                {hForumIsAdministrator?
+                  <a href='/hForum/togglePostStickiness?hForumPostId={hForumPostId}&html=1' target='_blank' class='hForumPostSticky{hForumPostIsSticky? hForumPostUnsticky}'>Toggle sticky</a>
+                }
+                {hForumPostHasEdit?
+                  <a href='{hForumPostEditLink}' class='hForumPostEdit'>Edit post</a>
+                  <a href='/hForum/deletePost?hForumPostId={hForumPostId}&html=1' target='_blank' class='hForumPostDelete'>Delete Post</a>
+                }
+                <a href='{hForumPostReplyLink}' class='hForumPostReply{hForumPostIsLocked? hForumPostReplyLocked}'>Post Reply</a>
+                {hForumIsAdministrator?
+                  <a href='/hForum/togglePostLock?hForumPostId={hForumPostId}&html=1' target='_blank' class='hForumPostLock{hForumPostIsLocked? hForumPostUnlock}'>Toggle Lock</a>
+                }
+              </td>
+            </tr>
+}
+{!hForumPosts?
+            <tr>
+              <td class='hForumNoPosts' colspan='5'>
+                <div>There are no posts to this forum.</div>
+              </td>
+            </tr>
+}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

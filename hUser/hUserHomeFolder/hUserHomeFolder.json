@@ -1,0 +1,7 @@
+{
+    plugin : {
+        library : {
+            name : "User Home Folder Library"
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    plugin : {
+        name : "Console",
+        database : {
+            name : "Console Database"
+        },
+        service : {
+            name : "Console Service",
+            methods : [
+                "get",
+                "truncateErrorLog",
+                "saveWindowDimensions",
+                "saveColumnDimensions"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hConsole",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hConsole"
+        }
+    },
+    file : {
+        title : "Console",
+        path : "/Applications/Console/index.html",
+        directory : {
+            properties : {
+                isApplication : true,
+                icon : {
+                    name : "Console.png",
+                    icns : "Console.icns",
+                    mime : "plugins/console"
+                }
+            }
+        },
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "",
+                groups : [
+                    ["Website Administrators", "rw"]
+                ]
+            }
+        }
+    }
+}

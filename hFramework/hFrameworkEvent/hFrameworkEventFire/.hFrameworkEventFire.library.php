@@ -1,0 +1,2 @@
+<?php
+  class hFrameworkEventFireLibrary extends hPlugin { private $hFrameworkEvent; public function hConstructor() { $this->hFrameworkEvent = $this->library('hFramework/hFrameworkEvent'); } public function __call($method, $arguments) { return $this->hFrameworkEvent->fire( $method, $arguments ); } } ?>

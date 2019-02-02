@@ -1,0 +1,38 @@
+<ul class='hPaginationNavigation'>
+    <li class='hPaginationPreviousPage{!previousPagePath? hPaginationPreviousPageDisabled hPaginationDisabled}' title='{previousPageTooltip}'>
+        {previousPagePath?<a href='{previousPagePath}{navigationAnchor}'>}<span>{previousPageLabel}</span>{previousPagePath?</a>}
+    </li>
+    <li class='hPaginationPages'>
+        <ul>
+            <li class='hPaginationPageLabel hPaginationPageLabelBefore'><span>Page:</span></li>
+        {firstPagePath?
+            <li class='hPaginationFirstPage' title='First Page'><a href='{firstPagePath}{navigationAnchor}'><span>1</span></a></li>
+            <li class='hPaginationPageLabel hPaginationPageLabelMiddle'><span>...</span></li>
+        }
+        {chapterLowerPath?
+            <li class='hPaginationPreviousChapter' title='Previous {pagesPerChapter} pages'>
+                <a href='{chapterLowerPath}{navigationAnchor}'><span>{chapterLower}</span></a>
+            </li>
+        }
+        {pages[]?
+            <li class='hPaginationPage{({page} == {pageHere})? hPaginationYouAreHere}{pageFirst? hPaginationPageFirst}{pageLast? hPaginationPageLast}'>
+                <a href='{pagePath}{navigationAnchor}'><span>{page}</span></a>
+            </li>
+        }
+        {chapterUpperPath?
+            <li class='hPaginationNextChapter' title='Next {pagesPerChapter} pages'>
+                <a href='{chapterUpperPath}{navigationAnchor}'><span>{chapterUpperLabel}</span></a>
+            </li> 
+        }
+        {lastPagePath?
+            <li class='hPaginationPageLabel hPaginationPageLabelMiddle'><span>of</span></li>
+            <li class='hPaginationLastPage' title='Last Page'>
+                <a href='{lastPagePath}{navigationAnchor}'><span>{pageCount}</span></a>
+            </li>
+        }
+        </ul>
+    </li>
+    <li class='hPaginationNextPage{!nextPagePath? hPaginationNextPageDisabled hPaginationDisabled}' title='{nextPageTooltip}'>
+        {nextPagePath?<a href='{nextPagePath}{navigationAnchor}'>}<span>{nextPageLabel}</span>{nextPagePath?</a>}
+    </li>
+</ul>

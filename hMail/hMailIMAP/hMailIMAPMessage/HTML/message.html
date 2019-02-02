@@ -1,0 +1,41 @@
+<table id='headerviewer'>
+    <tbody>
+        <tr>
+            <td class='header'>Subject:</td>
+            <td>{subject}</td>
+        </tr>
+        <tr>
+            <td class='header'>To:</td>
+            <td>{to}</td>
+        </tr>
+        <tr>
+            <td class='header'>Cc:</td>
+            <td>{cc}</td>
+        </tr>
+        <tr>
+            <td class='header'>From:</td>
+            <td>{from}</td>
+        </tr>
+        <tr>
+            <td class='header'>Received:</td>
+            <td>{received}</td>
+        </tr>
+        <tr>
+            <td class='header'>Inline Parts:</td>
+            <td>
+                {inlineAttachments[]?
+                    Inline part: <a href='/System/Applications/Mail/Part.plugin?mid={mid}&pid={pid}' target='_blank'>{fileName} {fileType} {fileSize}</a><br />
+                }
+            </td>
+        </tr>
+        <tr>
+            <td class='header'> Attachments: </td>
+            <td>
+                {attachments[]?
+                    Attachment: <a href='/System/Applications/Mail/Part.plugin?mid={mid}&pid={pid}' target='_blank'>{fileName} {fileType} {fileSize}</a><br />
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>
+<iframe src='/System/Applications/Mail/Part.plugin?mid={$mid}&pid={$pid}'></iframe>

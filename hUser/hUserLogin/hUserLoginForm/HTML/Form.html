@@ -1,0 +1,87 @@
+<!-- Begin Login Form -->
+{hUserLoginFormTags?<form method='post' action='{hUserLoginFormAction}' id='hUserLoginForm'>}
+    <div id='hUserLoginMessage'>
+    {hUserLoginMessage?
+        {hUserLoginMessage}
+    } 
+    {!hUserLoginMessage?
+        <p>
+            In order to access this document, you&rsquo;ll need to sign-in...
+        </p>
+    }
+    </div>
+    <div id='hUserLoginOptions'>
+        {hUserLoginFormRegistrationOption?
+        <p id='hUserLoginExistsOption'>
+            <input type='radio' name='hUserLoginExists' value='1' id='hUserLoginExistsYes' checked='checked' />
+            <label>I have an account</label>
+        </p>
+        }
+        {!hUserLoginFormRegistrationOption?<input type='hidden' name='hUserLoginExists' value='1' />}
+        <div id='hUserLoginExists'>
+            <div class='hUserLoginLabel'>
+                <label for='hUserLoginName'>{hUserLoginUserNameLabel}</label>
+            </div>
+            <div class='hUserLoginInput'>
+                <input type='text' name='username' id='hUserLoginName' autocapitalize='off' autocorrect='off' autofocus='autofocus' />
+            </div>
+            <div class='hUserLoginLabel'>
+                <label for='hUserLoginPassword'>{hUserLoginPasswordLabel}</label>
+            </div>
+            <div class='hUserLoginInput'>
+                <input type='password' name='password' id='hUserLoginPassword' />
+            </div>
+            <div class='hUserLoginInput'>
+                <input type='checkbox' name='hUserLoginCookie' id='hUserLoginCookie' value='1' />
+                <label for='hUserLoginCookie'>Remember this login on this computer?</label>
+            </div>
+            <ul id='hUserLoginHelp'>
+                <li id='hUserLoginForgottenPassword'>
+                    <a href='{hUserLoginForgottenPasswordPath}'>Forgot your password?</a>
+                </li>
+            </ul>
+            {hUserLoginInvalidAccount?
+            <p class='hUserLoginFailed'>
+                Login Failed: The user name or email address you provided does not exist.
+            </p>
+            }
+            {hUserLoginInvalidPassword?
+            <p class='hUserLoginFailed'>
+                Login Failed: The password you provided was incorrect.
+            </p>
+            }
+            {hUserLoginNotActivated?
+            <p class='hUserLoginFailed'>
+                Login Failed: Your account has not been activated. Please activate your account 
+                to complete the registration process.
+            </p>
+            }
+            {hUserLoginDisabled?
+            <p class='hUserLoginFailed'>
+                Login Failed: Your account has been disabled by an administrator.
+            </p>
+            }
+            {hUserLoginTooManyFailedAttempts?
+            <p class='hUserLoginFailed'>
+                Login Failed: There have been too many failed login attempts for this account.  
+                For security reasons, you are only allowed {hUserLoginMaximumFailedAttempts} 
+                failed login attempts within a {hUserLoginFailedAttemptResetThreshold} minute 
+                time frame.  Please try again in {hUserLoginFailedAttemptResetThreshold} minutes.
+            </p>
+            }
+        </div>
+        {hUserLoginFormRegistrationOption?
+        <div id='hUserLoginDoesNotExist'>
+            <p>
+                <input type='radio' name='hUserLoginExists' value='0' id='hUserLoginExistsNo' />
+                <label>I want to register for a new account</label>
+            </p>
+        </div>
+        }
+        <div id='hUserLoginButton' class='hUserLoginButtons{hUserLoginFormTags? hUserLoginButton}'>
+            <input type='submit' id='hUserLoginButtonSignIn' value='{hUserLoginButtonSignInLabel}' />
+            {!hUserLoginFormTags?<input type='submit' id='hUserLoginButtonCancel' value='Cancel' />}
+        </div>
+    </div>
+{hUserLoginFormTags?</form>}
+<!-- End Login Form -->

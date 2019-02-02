@@ -1,0 +1,46 @@
+<!-- Begin Hot Toddy Calendar Events -->
+{!singleFile?
+<div id='hCalendarView'>
+    {hCalendar}
+    <div id='hCalendarControls'>
+        {!hCalendarEventPost?
+        <div id='hCalendarControlPrevious'>
+            <a href="{hFilePath}?hCalendarDate={hCalendarPreviousDate}">&laquo;&laquo;</a>
+        </div>
+        <span><a href='{hFilePath}'>Current Events</a></span>
+        <div id='hCalendarControlNext'>
+            <a href="{hFilePath}?hCalendarDate={hCalendarNextDate}">&raquo;&raquo;</a>
+        </div>
+        }
+        {hCalendarEventPost?<span><a href='{hCalendarEventsPath}'>All Events</a></span>}
+    </div>
+</div>
+}
+{singleFile?
+<p id='hCalendarEventsBack'>
+    <span><a href='{hCalendarEventsPath}'>Back to Calendar of Events</a></span>
+</p>
+}
+{upcomingEvents?{!singleFile?<h3>All Upcoming Events</h3>}}
+<div id='hCalendarEvents'{!singleFile? class='hCalendarAllEvents'}>
+    {hCalendarEvents[]?
+    <div class='hCalendarEvent'>
+        <h3>{!singleFile?<a href='{?hCalendarLink?{hFilePath}{hCalendarEventPostLinkArguments}}'>}{.hFileHeadingTitle({hFileTitle})}{!singleFile?</a>}</h3>
+        <div class='hCalendarDate'>
+            {hCalendarBeginTimeFormatted} - {hCalendarEndTimeFormatted}
+        </div>
+        <div class='hCalendarEventContent'>
+            {hFileDocument}
+        </div>
+        <div class='hCalendarLink'>
+            {hCalendarLink?<a href='{hCalendarLink}' target='_blank'>More Information &raquo;</a>}
+        </div>
+    </div>
+    }
+    {(!{hCalendarEvents} && {hCalendarEventPosts})?
+    <div class='hCalendarNoEvents'>
+        There are no events in {hCalendarMonth}.
+    </div>
+    }
+</div>
+<!-- End Hot Toddy Calendar Events -->

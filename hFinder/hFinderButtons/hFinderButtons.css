@@ -1,0 +1,49 @@
+body,
+div#hFinderWrapper {
+    background: rgb(232, 232, 232);
+}
+body.hFinderButtons div.hFinderFiles,
+body.hFinderButtons div#hFinderSideColumn {
+    margin-top: 42px;
+    margin-bottom: 42px;
+    border-top: 1px solid rgb(153, 153, 153);
+    border-bottom: 1px solid rgb(153, 153, 153);
+}
+body.hFinderButtons div.hFinderFilesListHeader {
+    margin-top: 59px;
+    border-top: none;
+}
+body.hFinderButtons div#hFinderListHeader {
+    border-top: 1px solid rgb(153, 153, 153);
+    margin-top: 10px;
+}
+body.hFinderButtons div.hFinderUpload,
+body.hFinderButtons div.hFinderEditFile {
+    bottom: 42px;
+    border-bottom: 1px solid rgb(153, 153, 153);
+    border-top: 1px solid rgb(153, 153, 153);
+}
+body.hFinderButtons ul#hFinderToolbar {
+    position: relative;
+    top: 5px;
+}
+body.hFinderButtons div#hFinderSearch {
+    top: 10px;
+}
+div#hFinderButtonsLeft {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+div#hFinderButtonsRight {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;    
+}
+div#hFinderPropertiesDiv {
+    display: block;
+}
+form#hFinderPropertiesDialogue {
+    height: 350px;
+    margin-top: -175px;
+}

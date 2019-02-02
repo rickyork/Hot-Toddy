@@ -1,0 +1,22 @@
+input#hForumPostSubject {
+    width: 85%;
+}
+div.hFormWYSIWYGWrapper {
+    float: left;
+    width: 95%;
+    border: 1px solid rgb(179, 179, 179);
+}
+body .htmlarea {
+    border: 1px solid rgb(200, 200, 200);
+}
+p#hForumPostLockedMessage{
+    padding: 50px 0;
+    margin: 10px 20px;
+    border: 1px solid rgb(200, 200, 200);
+    color: rgb(128, 128, 128);
+    text-align: center;
+}
+td.hFormButton {
+    text-align: right;
+    padding: 5px 30px 25px 0;
+}

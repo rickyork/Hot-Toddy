@@ -1,0 +1,30 @@
+<table>
+    <thead>
+        <tr>
+            <th class='hFileUserStatistics-hUserId'>User Id</th>
+            <th class='hFileUserStatistics-hUserName'>User Name</th>
+            <th class='hFileUserStatistics-hUserFullName'>Full Name</th>
+            <th class='hFileUserStatistics-hFileId'>File Id</th>
+            <th class='hFileUserStatistics-hFilePath'>File Path</th>
+            <th class='hFileUserStatistics-hFileAccessCount'>Access Count</th>
+            <th class='hFileUserStatistics-hFileLastAccessed'>Last Accessed</th>
+        </tr>
+    </thead>
+</table>
+<div id='hConsoleLogContainer'>
+    <table>
+        <tbody>
+            {log[]?
+                <tr>
+                    <td class='hFileUserStatistics-hUserId'>{hUserId}</td>
+                    <td class='hFileUserStatistics-hUserName'>{hUserId_hUserName}</td>
+                    <td class='hFileUserStatistics-hUserFullName'>{hUserId_hUserFullName}</td>
+                    <td class='hFileUserStatistics-hFileId'>{hFileId}</td>
+                    <td class='hFileUserStatistics-hFilePath'><a href='{hFilePath}' target='_blank'>{hFilePath}</a></td>
+                    <td class='hFileUserStatistics-hFileAccessCount'>{hFileAccessCount}</td>
+                    <td class='hFileUserStatistics-hFileLastAccessed'>{hFileLastAccessed}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

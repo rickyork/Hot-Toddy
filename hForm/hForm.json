@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Form Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hForm",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hForm"
+        }
+    }
+}

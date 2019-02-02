@@ -1,0 +1,2 @@
+<?php
+  class hServerDNSShell extends hShell { private $hServerDNS; public function hConstructor() { $this->hServerDNS = $this->library('hServer/hServerDNS'); $this->hServerDNS->parseZoneFile('/Shared Items/Zones/deadmarshes.com.dns'); } } ?>

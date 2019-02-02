@@ -1,0 +1,21 @@
+    <div class='hBlogPost hBlogSinglePost'>
+        <div class='hBlogPostHeader'>
+            <h3>{title}</h3>
+            <div class='hBlogPostDetails'>
+                <span class='hBlogPostDate'>{date}</span>
+                {author?<span class='hBlogPostAuthor'>by {author}</span>}
+            </div>
+            {.hBlogEnableFacebookLikeButton(false)?
+            <p class='hBlogFacebookLike'>
+                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+                <fb:like href="http://{hServerHost}{hFilePath}" layout="button_count" show_faces="true" width="450" font=""></fb:like>
+            </p>
+            }
+        </div>
+        <div class='hBlogPostDocument'>
+            <div class='hBlogPostDocumentInner'>
+                {blogPost}
+            </div>
+            {comments}
+        </div>
+    </div>

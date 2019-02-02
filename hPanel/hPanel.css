@@ -1,0 +1,69 @@
+@import '/hApplication/hApplicationUI/hApplicationUIButton/CSS/Gradient.css';
+
+html,
+body {
+    background: rgb(237, 237, 237);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+div#hPanelControls {
+    padding: 8px 0 0 10px;
+    height: 27px;
+    border-bottom: 1px solid rgb(81, 81, 81);
+    {userAgent.isWebkit?
+        background: -webkit-gradient(linear, left top, left bottom, from(rgb(195, 195, 195)), to(rgb(167, 167, 167)));
+    }
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(195, 195, 195),rgb(167, 167, 167));
+    background: linear-gradient(to bottom, rgb(195, 195, 195), rgb(167, 167, 167));
+}
+ul#hPanel {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul#hPanel > li {
+    padding: 4px 15px;
+}
+ul#hPanel > li h4 {
+    margin: 0 0 13px 0;
+}
+ul#hPanel > li:nth-child(odd) {
+    background: rgb(237, 237, 237);
+}
+ul#hPanel > li:nth-child(even) {
+    background: rgb(230, 230, 230);
+    border-top: 1px solid rgb(216, 216, 216);
+    border-bottom: 1px solid rgb(216, 216, 216);
+    padding: 2px 15px;
+}
+ul#hPanel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+ul#hPanel ul li {
+    float: left;
+    width: 80px;
+    text-align: center;
+}
+div.hPanelCaption {
+    padding: 5px 0 0 0;
+    height: 27px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 11px;
+}
+div#hPanelApplicationWrapper {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+iframe#hPanelApplication {
+    width: 100%;
+    height: 100%;
+}

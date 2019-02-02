@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "User Export Library"
+        },
+        shell : {
+            name : "User Export Shell"
+        }
+    }
+}

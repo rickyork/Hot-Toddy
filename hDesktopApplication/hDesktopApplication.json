@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Desktop Application Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hDesktopApplication",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hDesktopApplication"
+        }
+    }
+}

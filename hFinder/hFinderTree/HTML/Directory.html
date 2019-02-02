@@ -1,0 +1,21 @@
+<li class='hFinderTreeDirectoryBranch{isHidden? hFinderTreeHidden}{isServer? hFinderTreeServer}{isApplication? hFinderTreeApplication}'>
+    <div class='hFinderTreeDirectory'
+         id='hFinderTreeDirectory-{hDirectoryId}'
+         title='{hDirectoryPath}'
+         data-file-path='{hDirectoryPath}'
+         data-interface-object-id='{hFileInterfaceObjectId}'
+         data-file-mime='{hFileMIME}'>
+        <div class='hFinderTreeIcon{hFinderTreeIconClassName}'></div>
+        <span>{hFileName}</span>
+    </div>
+{hasChildren?
+    <span class='hFinderTreeHasChildren'>
+        <img src='{!hDesktopApplicationStyle?/}hApplication/hApplicationUI/Pictures/Arrows/rightArrow.png'
+             class='hFinderTreeHasChildren'
+             id='hFinderTreeIcon-{hDirectoryId}'
+             alt='+'
+             title='Click to expand.' />
+    </span>
+    <div class='hFinderTreeBranchWrapper'></div>
+}
+</li>

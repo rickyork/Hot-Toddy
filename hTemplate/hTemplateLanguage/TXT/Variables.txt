@@ -1,0 +1,40 @@
+Replacing a single variable:
+
+  {$singleVariable} or {singleVariable}
+
+Accessing an index in an associative array:
+
+  {$associative.index} or {associative.index}
+
+Accessing a numeric index in an associative array:
+
+  {$numeric.0} or {numeric.0}
+  
+Accessing $_POST:
+
+  {post.test}
+  
+Accessing $_GET:
+
+  {get.test}
+  
+Accessing $_SERVER:
+
+  {server.SHELL}
+  
+Accessing $_ENV:
+
+  {env.USER}
+  
+Accessing $_COOKIE:
+
+  {cookie.test}
+  
+Accessing $_SESSION:
+
+  {session.test}
+  
+Access $GLOBALS:
+
+  {global.test} {globals.test}
+

@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+    <head>
+        <meta http-equiv='content-type' content='application/xhtml+xml; charset=utf-8' />
+        <meta http-equiv='content-language' content='en-us' />
+        <title>Datepicker Plugin</title>
+        <link href='Datepicker.css' rel='stylesheet' />
+    </head>
+    <body>
+        <div id="ui-datepicker-div"
+             class="ui-datepicker
+                    ui-widget
+                    ui-widget-content
+                    ui-helper-clearfix
+                    ui-corner-all">
+            <div class="ui-datepicker-header
+                        ui-widget-header
+                        ui-helper-clearfix
+                        ui-corner-all">
+                <a class="ui-datepicker-prev
+                          ui-corner-all"
+                   title="Prev">
+                    <span class="ui-icon
+                                 ui-icon-circle-triangle-w">Prev</span>
+                </a>
+                <a class="ui-datepicker-next
+                          ui-corner-all"
+                   title="Next">
+                    <span class="ui-icon
+                                 ui-icon-circle-triangle-e">Next</span>
+                </a>
+                <div class="ui-datepicker-title">
+                    <select class="ui-datepicker-month">
+                        <option value="0">Jan</option>
+                        <option value="1">Feb</option>
+                        <option value="2">Mar</option>
+                        <option value="3" selected="selected">Apr</option>
+                        <option value="4">May</option>
+                        <option value="5">Jun</option>
+                        <option value="6">Jul</option>
+                        <option value="7">Aug</option>
+                        <option value="8">Sep</option>
+                        <option value="9">Oct</option>
+                        <option value="10">Nov</option>
+                        <option value="11">Dec</option>
+                    </select>
+                    <select class="ui-datepicker-year">
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014" selected="selected">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+            </div>
+            <table class="ui-datepicker-calendar">
+                <thead>
+                    <tr>
+                        <th class="ui-datepicker-week-end">
+                            <span title="Sunday">S</span>
+                        </th>
+                        <th>
+                            <span title="Monday">M</span>
+                        </th>
+                        <th>
+                            <span title="Tuesday">T</span>
+                        </th>
+                        <th>
+                            <span title="Wednesday">W</span>
+                        </th>
+                        <th>
+                            <span title="Thursday">T</span>
+                        </th>
+                        <th>
+                            <span title="Friday">F</span>
+                        </th>
+                        <th class="ui-datepicker-week-end">
+                            <span title="Saturday">S</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ui-datepicker-week-end
+                                   ui-datepicker-other-month
+                                   ui-datepicker-unselectable
+                                   ui-state-disabled">&nbsp;</td>
+                        <td class="ui-datepicker-other-month
+                                   ui-datepicker-unselectable
+                                   ui-state-disabled">&nbsp;</td>
+                        <td>
+                            <a class="ui-state-default" href="#">1</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">2</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">3</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">4</a>
+                        </td>
+                        <td class="ui-datepicker-week-end">
+                            <a class="ui-state-default" href="#">5</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ui-datepicker-week-end">
+                            <a class="ui-state-default" href="#">6</a>
+                        </td>
+                        <td class="ui-datepicker-days-cell-over
+                                   ui-datepicker-today">
+                            <a class="ui-state-default
+                                      ui-state-highlight
+                                      ui-state-hover" href="#">7</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">8</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">9</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">10</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">11</a>
+                        </td>
+                        <td class="ui-datepicker-week-end">
+                            <a class="ui-state-default" href="#">12</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ui-datepicker-week-end">
+                            <a class="ui-state-default" href="#">13</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">14</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">15</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">16</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">17</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">18</a>
+                        </td>
+                        <td class="ui-datepicker-week-end">
+                            <a class="ui-state-default" href="#">19</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ui-datepicker-week-end">
+                            <a class="ui-state-default" href="#">20</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">21</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">22</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">23</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">24</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">25</a>
+                        </td>
+                        <td class="ui-datepicker-week-end">
+                            <a class="ui-state-default" href="#">26</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ui-datepicker-week-end">
+                            <a class="ui-state-default" href="#">27</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">28</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">29</a>
+                        </td>
+                        <td>
+                            <a class="ui-state-default" href="#">30</a>
+                        </td>
+                        <td class="ui-datepicker-other-month
+                                   ui-datepicker-unselectable
+                                   ui-state-disabled">&nbsp;</td>
+                        <td class="ui-datepicker-other-month
+                                   ui-datepicker-unselectable
+                                   ui-state-disabled">&nbsp;</td>
+                        <td class="ui-datepicker-week-end
+                                   ui-datepicker-other-month
+                                   ui-datepicker-unselectable
+                                   ui-state-disabled">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

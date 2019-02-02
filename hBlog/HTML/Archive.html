@@ -1,0 +1,22 @@
+<h4>{archiveHeading}</h4>
+<div id='hBlogArchive'>
+    <ul class='hBlogArchiveYears'>
+        <li class='hBlogArchivePresent'>
+            <a href='{filePath}'>{archivePresent}</a>
+        </li>
+        {years[]?
+        <li class='hBlogArchiveYear'>
+            <span>{year}</span>
+            <ul class='hBlogArchiveMonths'>
+            {months[]?
+                <li class='hBlogArchiveMonth'>
+                    <a href='{hFilePath}?hCalendarMonth={hCalendarMonth}'>{hCalendarMonthLabel}</a>
+                    <span class='hBlogArchiveEventCount'>{hCalendarMonthCount}</span>
+                </li>
+            }
+            </ul>
+        </li>
+        }
+    </ul>
+</div>
+<div id='hBlogArchiveFollow'></div>

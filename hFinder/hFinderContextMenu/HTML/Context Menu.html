@@ -1,0 +1,59 @@
+    <!-- Begin Context Menus -->
+    <div class='hFinderContextMenu' id='hFinderFileContextMenu'>
+         <ul>
+             <li class='hFinderContextMenuNewFolder hFinderToolbarActionMenuItem'>New Folder</li>
+             <li class='hFinderContextMenuUploadFile hFinderToolbarActionMenuItem'>Upload File</li>
+             <li class='hFinderContextMenuNewFile hFinderToolbarActionMenuItem'>New File</li>
+             <li class='hFinderContextMenuSeparator hFinderToolbarActionMenuItem'><div></div></li>
+             <li id='hFinderContextOpen' class='hFinderContextMenuItem'><span>Open</span></li>
+             <li class='hFinderContextMenuFileItem hFinderContextMenuItem' id='hFinderContextEdit'><span>Open With "Editor"</span></li>
+             <li class='hFinderContextMenuFileItem hFinderContextMenuItem' id='hFinderContextUnzip'><span>Unzip</span></li>
+             <li class='hFinderContextMenuSeparator'><div></div></li>
+             
+             <li id='hFinderContextDelete' class='hFinderContextMenuItem'><span>Delete</span></li>
+             <li class='hFinderContextMenuSeparator'><div></div></li>
+             <li class='hFinderContextGetInfo hFinderContextMenuItem'><span>Get Info</span></li>
+             <li class='hFinderContextMenuFileItem hFinderContextMenuItem' id='hFinderContextReplaceFile'><span>Replace File</span></li>
+             {hFilePasswordsEnabled?<li class='hFinderContextMenuFileItem hFinderContextMenuItem' id='hFinderContextPassword'><span>Passwords</span></li>}
+             <li class='hFinderContextMenuFileItem hFinderContextMenuItem' id='hFinderContextEmail'><span>Email Link</span></li>
+             <li class='hFinderContextMenuFileItem hFinderContextMenuItem' id='hFinderContextDuplicate'><span>Duplicate</span></li>
+             <li class='hFinderContextMenuItem' id='hFinderContextRename'><span>Rename</span></li>
+             <li class='hFinderContextMenuItem' id='hFinderContextPermissions'><span>Permissions</span></li>
+             {isRoot?<li class='hFinderContextMenuItem' id='hFinderContextProperties'><span>Framework Properties</span></li>}
+             <li class='hFinderContextMenuSeparator'><div></div></li>
+             <li class='hFinderContextMenuLabels hFinderContextMenuItem'>
+                 <span>Label:</span>
+                 {hFinderLabels}
+             </li>
+         </ul>
+    </div>
+    <div class='hFinderContextMenu' id='hFinderFolderContextMenu'>
+        <ul>
+            <li class='hFinderContextMenuNewFolder'><span>New Folder</span></li>
+            <li class='hFinderContextMenuUploadFile'><span>Upload File</span></li>
+            <li class='hFinderContextMenuNewFile'><span>New File</span></li>
+            <li class='hFinderContextMenuSeparator'><div></div></li>
+            <li id='hFinderFolderContextMenuGetInfo' class='hFinderContextGetInfo'><span>Get Info</span></li>
+            <li class='hFinderContextMenuSeparator'><div></div></li>
+            <li><span>View</span></li>
+            <li class='hFinderContextMenuArrangeBy'>
+                <span>Keep Arranged By</span>
+                <div class='hFinderContextMenu' id='hFinderArrangeContextMenu'>
+                    <ul>
+                        <li class='hFinderContextMenuArrange' data-arrange-by='name'><span>Name</span></li>
+                        <li class='hFinderContextMenuArrange' data-arrange-by='kind'><span>Kind</span></li>
+                        <li class='hFinderContextMenuArrange' data-arrange-by='application'><span>Application</span></li>
+                        <li class='hFinderContextMenuArrange' data-arrange-by='accessed'><span>Date Last Opened</span></li>
+                        <li class='hFinderContextMenuArrange' data-arrange-by='added'><span>Date Added</span></li>
+                        <li class='hFinderContextMenuArrange' data-arrange-by='modified'><span>Date Modified</span></li>
+                        <li class='hFinderContextMenuArrange' data-arrange-by='created'><span>Date Created</span></li>
+                        <li class='hFinderContextMenuArrange' data-arrange-by='size'><span>Size</span></li>
+                        <li class='hFinderContextMenuArrange' data-arrange-by='label'><span>Label</span></li>
+                        <li class='hFinderContextMenuSeparator'><div></div></li>
+                        <li class='hFinderContextMenuArrange' data-arrange-by='none'><span>None</span></li>
+                    </ul>
+                </div>    
+            </li>
+        </ul>
+    </div>
+    <!-- End Context Menus -->

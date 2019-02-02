@@ -1,0 +1,30 @@
+<table>
+    <thead>
+        <tr>
+            <th class='hUserActivityLog-hUserId'>User Id</th>
+            <th class='hUserActivityLog-hUserName'>User Name</th>
+            <th class='hUserActivityLog-hUserFullName'>Full Name</th>
+            <th class='hUserActivityLog-hUserActivity'>Activity</th>
+            <th class='hUserActivityLog-hUserActivityTime'>Date</th>
+            <th class='hUserActivityLog-hUserActivityIP'>IP Address</th>
+        </tr>
+    </thead>
+</table>
+<div id='hConsoleLogContainer'>
+    <table>
+        <tbody>
+            {log[]?
+                <tr>
+                    <td class='hUserActivityLog-hUserId'>{hUserId}</td>
+                    <td class='hUserActivityLog-hUserName'>{hUserId_hUserName}</td>
+                    <td class='hUserActivityLog-hUserFullName'>{hUserId_hUserFullName}</td>
+                    <td class='hUserActivityLog-hUserActivity'>
+                        <div class='hUserActivity'>{hUserActivity}</div>
+                    </td>
+                    <td class='hUserActivityLog-hUserActivityTime'>{hUserActivityTime}</td>
+                    <td class='hUserActivityLog-hUserActivityIP'>{hUserActivityIP}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

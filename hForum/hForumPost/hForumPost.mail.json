@@ -1,0 +1,8 @@
+{
+    templateDescription : "Forum Mailer",
+    subject : "[{hForumPostSubjectFilter}] {hForumPostReplySubject}",
+    to : "{hContactDisplayName} <{hUserEmail}>",
+    from : "{hFrameworkName} <{hFrameworkAdministrator}>",
+    replyTo : "donotreply@{hServerHost}",
+    html : "Post Mailer"
+}

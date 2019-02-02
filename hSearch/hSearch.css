@@ -1,0 +1,141 @@
+ul.hSearchNavigation {
+    height: 30px;
+    clear: both;
+    overflow: hidden;
+    position: relative;
+}
+ul.hSearchNavigation,
+ul.hSearchNavigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li.hSearchPreviousPage {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+li.hSearchNextPage {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+li.hSearchPreviousPage,
+li.hSearchNextPage {
+    width: 80px;
+    text-align: center;
+}
+ul.hSearchNavigation li.hSearchPreviousPage a,
+ul.hSearchNavigation li.hSearchNextPage a {
+    font-size: 12px;
+}
+ul.hSearchNavigation li.hSearchPages {
+    width: 390px;
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -195px;
+}
+ul.hSearchNavigation li.hSearchPages li {
+    float: left;
+    width: 25px;
+    text-align: center;
+    margin: 0;
+}
+ul.hSearchNavigation li.hSearchPages ul li.hSearchPageLabel {
+    padding: 0 5px;
+    width: 30px;
+}
+ul.hSearchNavigation li.hSearchPages ul li.hSearchPageLabelMiddle {
+    width: 20px;
+}
+ul.hSearchNavigation li.hSearchPages ul li.hSearchPageLabel span {
+    font-size: 12px;
+}
+ul.hSearchNavigation a:active,
+ul.hSearchNavigation li li.hSearchYouAreHere a,
+ul.hSearchNavigation li li.hSearchYouAreHere a:visited {
+    opacity: 0.2;
+}
+ul.hSearchNavigation li.hSearchDisabled {
+    opacity: 0.2;
+    font-size: 12px;
+}
+div.hSearchResults {
+    padding: 1px 0 1px 0;
+    clear: both;
+    position: relative;
+}
+div.hSearchResultWrapper {
+    margin: 0 0 0 50px;
+}
+div.hSearchResults {
+    padding-bottom: 20px;
+}
+div.hSearchResult {
+    padding: 0;
+    position: relative;
+    margin: 10px 5px;
+    min-height: 60px;
+}
+div.hSearchResultLast {
+    border-bottom: none;
+}
+div.hSearchResult img.hSearchIcon,
+div.hSearchResult span.hSearchIcon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+div.hSearchResult h4,
+div.hSearchResult p {
+    margin: 0;
+}
+span.hSearchRelevance {
+    float: right;
+    display: none;
+}
+div.hSearchResult h4 a {
+    text-decoration: none;
+}
+div.hSearchResult h4 {
+    padding: 0 0 4px 0;
+}
+div.hSearchResult p {
+    padding: 5px;
+}
+span.hSearchTerms {
+    font-weight: bold;
+    background: rgb(181, 213, 255);
+    padding: 2px;
+}
+div.hSearchResultsInner {
+    min-height: 250px;
+}
+div.hSearchResultsInner h4 {
+    font-weight: normal;
+}
+p.hSearchResultStatement {
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+p#hSearchNoResults {
+    padding: 25px 0;
+    text-align: center;
+}
+form.hSearchForm {
+    text-align: center;
+    padding: 20px 0;
+}
+fieldset {
+    border: none;
+}
+fieldset legend {
+    display: none;
+}
+p.hFileLastModified {
+    display: none;
+}
+span.hFileLastModified,
+span.hFileLastModifiedBy {
+    opacity: 0.9;
+}

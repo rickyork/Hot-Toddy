@@ -1,0 +1,16 @@
+Assignment Tests:
+
+  {countVariable = 1}
+  {countVariable}
+
+  {countVariable++}
+  {countVariable}
+
+  {countVariable--}
+  {countVariable}
+
+  {stringVariable = This is a statement that includes quotes " within it}
+  {stringVariable}
+
+  {stringVariable = This is a statement that includes 'quotes' within it}
+  {stringVariable}

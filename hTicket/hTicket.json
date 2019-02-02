@@ -1,0 +1,45 @@
+{
+    plugin : {
+        name : "Ticket Plugin",
+        database : {
+            name : "Ticket Database"
+        },
+        service : {
+            name : "Ticket Service",
+            methods : [
+                "getTicket",
+                "saveTicket"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hTicket",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hTicket"
+        }
+    },
+    file : {
+        title : "Ticket",
+        path : "/Applications/Tickets/index.html",
+        directory : {
+            properties : {
+                isApplication : true,
+                icon : {
+                    name : "feedback_assistant.png",
+                    icns : "AppIcon.icns",
+                    mime : "plugins/tickets"
+                }
+            }
+        },
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

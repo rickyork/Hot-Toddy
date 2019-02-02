@@ -1,0 +1,2 @@
+<?php
+  class hFinderDesktopLogin extends hPlugin { public function hConstructor() { $this->getPluginJavaScript(); $this->plugin('hApplication/hApplicationForm'); $this->getPluginFiles('hFinder/hFinderDesktop'); } } ?>

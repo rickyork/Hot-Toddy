@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "Database Import Library"
+        },
+        shell : {
+            name : "Database Import Shell"
+        }
+    }
+}

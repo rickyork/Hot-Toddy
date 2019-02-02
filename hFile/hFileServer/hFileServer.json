@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "File Server"
+    },
+    file: {
+        title : "File Server",
+        path : "/System/Applications/File/Server.plugin",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

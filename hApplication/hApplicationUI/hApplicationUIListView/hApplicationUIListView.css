@@ -1,0 +1,77 @@
+div.hApplicationUIListHead {
+    border: 1px solid rgb(179, 179, 179);
+    border-bottom: none;
+    user-select: none;
+    {userAgent.isWebkit?
+        -webkit-user-select: none;
+    }
+    {userAgent.isGecko?
+        -moz-user-select: none;
+    }
+    {userAgent.isTrident?
+        -ms-user-select: none;
+    }
+}
+div.hApplicationUIListBody {
+    border: 1px solid rgb(179, 179, 179);
+    overflow: auto;
+    background: url('/hApplication/hApplicationUI/Pictures/List Background.png');
+}
+div.hApplicationUIListBody table {
+}
+table.hApplicationUIListView {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 0;
+}
+table.hApplicationUIListView thead tr {
+    background: #fff; /* url("/hApplication/hApplicationUI/Pictures/List Header.png") repeat-x; */
+}
+table.hApplicationUIListView thead th {
+    white-space: nowrap;
+    height: 15px;
+    vertical-align: middle;
+    border-right: 1px solid rgb(179, 179, 179);
+    padding: 0 5px;
+    text-align: left;
+}
+table.hApplicationUIListView thead th:last-child {
+    border-right: none;
+}
+table.hApplicationUIListView tbody td {
+    border-right: 1px solid rgb(221, 221, 221);
+    padding: 5px;
+    vertical-align: top;
+    height: 14px;
+    line-height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+table.hApplicationUIListView tbody td:last-child {
+    border-right: none;
+}
+table.hApplicationUIListView tbody tr {
+    background: #fff;
+}
+table.hApplicationUIListView tbody tr:nth-child(odd) {
+    background: #fff;
+}
+table.hApplicationUIListView tbody tr:nth-child(even) {
+    background: rgb(245, 245, 245);
+}
+/*
+table.hApplicationUIListView tbody tr.hConsoleLogRecordSelected {
+    background: rgb(49, 72, 234);
+    color: #fff;
+}
+table.hApplicationUIListView tbody tr.hConsoleLogRecordSelected a {
+    color: lightblue;
+}
+table.hApplicationUIListView tbody tr.hConsoleLogRecordSelected td {
+    border-right: 1px solid rgb(49, 72, 234);
+}
+table.hApplicationUIListView tbody tr.hConsoleLogRecordSelected td:last-child {
+    border-right: none;
+}
+*/

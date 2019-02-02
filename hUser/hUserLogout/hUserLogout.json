@@ -1,0 +1,25 @@
+{
+    plugin : {
+        name : "User Logout",
+        library : {
+            name : "User Logout Library"
+        },
+        service : {
+            name : "User Logout Service",
+            methods : [
+                "logout"
+            ]
+        }
+    },
+    file : {
+        title : "Logout",
+        path : "/Applications/Users/Logout.html",
+        user: {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

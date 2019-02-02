@@ -1,0 +1,94 @@
+<ul class='hForumLinks'>
+  <li class='hForumHomeLink'>
+    <a href='{hFilePath}?hForum={hFileId}'><span>Forums</span></a>
+  </li>
+  <li class='hForumThreadsLink'>
+    <a href='{hFilePath}?hForum={hFileId}/{hForumId}/{hForumTopicId}'><span>Posts</span></a>
+  </li>
+  <li class='hForumPostLink'>
+    <a href='{hFilePath}?hForum={hFileId}/{hForumId}/{hForumTopicId}&hForumPostId=0'><span>New Post</span></a>
+  </li>
+  {!hForumPostIsLocked?
+    <li class='hForumReplyLink'>
+      <a href='{hFilePath}?hForum={hFileId}/{hForumId}/{hForumTopicId}/{hForumPostId}&hForumReply=1&hForumPostId={hForumPostId}'><span>Reply</span></a>
+    </li>
+  }
+  {isLoggedIn?
+    <li class='hForumThreadSubscriptionButton'>
+      <a href='/hForum/toggleThreadSubscription?hForumPostId={hForumPostId}&html=1' 
+         target='_blank' 
+         class='hForumThread{hForumSubscriptionLabel}'><span>{hForumSubscriptionLabel}</span></a>
+    </li>
+  }
+</ul>
+<h2 class='hForumPostSubject'>{hFileTitle}</h2>
+{hForumSearchNavigation}
+<div id='hForumThread-{hForumPostId}' class='hForumThread'>
+  <div id='hForumThreadOuter'>
+    <div id='hForumThreadMiddle'>
+      <div id='hForumThreadInner'>
+        <table class='hForumThread'>
+          <colgroup>
+            <col id='hForumPostAuthor' />
+            <col id='hForumPost' />
+          </colgroup>
+          <thead>
+            <tr>
+              <th class='hForumPostAuthor'>Author</th>
+              <th class='hForumPost'>Topic</th>
+            </tr>
+          </thead>
+          <tbody>
+{hForumPosts[]?
+           <tr id='hForumPost-{hForumPostId}'>
+             <td class='hForumPostAuthorName{hForumPostOdd? hForumOdd}'>
+               <div class='hForumPostAuthor'>
+                 {hForumPostDisplayName? {hContactDisplayName}}
+                 {!hForumPostDisplayName? {hUserName}}
+               </div>
+             </td>
+             <td class='hForumPostSubject{hForumPostOdd? hForumOdd}'>
+               <div class='hForumPostDate'>Posted: {hForumPostDate}</div>
+               <h4>{hForumPostSubject}</h4>
+               <div class='hForumOperations'>
+                 {hForumPostHasEdit?
+                   <a href='{hForumPostEditLink}' class='hForumPostEdit'><span>Edit</span></a>
+                 }
+                 {!hForumPostIsLocked?
+                   <a href='{hForumPostReplyWithQuoteLink}' class='hForumPostReplyWithQuote'><span>Reply with Quote</span></a>
+                   <a href='{hForumPostReplyLink}' class='hForumPostReply'><span>Reply</span></a>
+                 }
+               </div>
+             </td>
+           </tr>
+           <tr>
+             <td class='hForumPostAuthorInfo{hForumPostOdd? hForumOdd}'>
+               <div class='hForumPostAuthorRank'>
+                 {hForumPostAuthorRank}
+               </div>
+               <div class='hForumPostAuthorLocation'>
+               </div>
+               <div class='hForumPostAuthorTitle'>
+                 <p>
+                   {hForumPostDisplayTitle? {hContactTitle}}
+                 </p>
+                 <p>
+                   {hForumPostAuthorTitle}
+                 </p>
+               </div>
+               <div class='hForumPostAuthorCount'>
+                 <span>{hForumPostCount}</span> Posts
+               </div>
+             </td>
+             <td class='hForumPost{hForumPostOdd? hForumOdd}'>
+               {hForumPost}
+             </td>
+           </tr>
+}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{hForumSearchNavigation}

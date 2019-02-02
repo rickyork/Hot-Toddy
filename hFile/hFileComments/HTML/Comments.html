@@ -1,0 +1,129 @@
+<div id='hFileCommentWrapper'>
+    {hFilePosted?<div id='hFileCommentPosted'>{hFilePosted}</div>}
+    {hFileDocument}
+        <div id='hFileComments'>
+            <h4>Comments</h4>
+            {.hFileCommentsEnabled(true)?
+            {commentPagation}
+            <ul id='hFileComments'>
+            {comments}
+            </ul>
+            <p id='hFileCommentsNone'>
+                There are no comments posted at this time.
+            </p>
+            {commentPagation}
+            }
+    {.hFileCommentsEnabled(true)?
+            <form action='{commentFormAction}' method='post' id='hFileCommentsForm'>
+                <h4>Leave a Comment</h4>
+                {!commentQuestionAnswer?
+                    <p class='hFileCommentQuestionError'>
+                        I'm sorry, you did not answer the question, <i>{commentQuestion}</i> correctly, please try again.
+                    </p>
+                }
+                <table id='hFileCommentForm'>
+                    <colgroup>
+                        <col id='hFileCommentLabelCol' />
+                        <col id='hFileCommentInputCol' />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td class='hFileCommentLabel'>
+                                <label for='hFileCommentName'>Name:<span>Required</span></label>
+                            </td>
+                            <td class='hFileCommentInput'>
+                                <input type='text' id='hFileCommentName'{commentNameError? class='hFileCommentError'} name='hFileCommentName' size='20' value='{name}' />
+                                {commentNameError?
+                                    <p class='hFileCommentError'>
+                                        You did not provide your name.
+                                    </p>
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class='hFileCommentLabel'>
+                                <label for='hFileCommentEmail'>Email:<span>Required, but won't be published with your comment.</span></label>
+                            </td>
+                            <td class='hFileCommentInput'>
+                                <input type='email' id='hFileCommentEmail'{commentEmailError? class='hFileCommentError'} name='hFileCommentEmail' size='20' value='{email}' />
+                                {commentEmailError?
+                                    <p class='hFileCommentError'>
+                                        You did not provide an email address.
+                                    </p>
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class='hFileCommentLabel'>
+                                <label for='hFileCommentWebsite'>{commentWebsiteLabel}:<span>Not Required</span></label>
+                            </td>
+                            <td class='hFileCommentInput'>
+                                <input type='url' id='hFileCommentWebsite' name='hFileCommentWebsite' size='20' value='{website}' />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class='hFileCommentLabel hFileCommentLabelLong'>
+                                <label for='hFileComment'>Comment:</label>
+                            </td>
+                            <td class='hFileCommentInput'>
+                                <textarea rows='15' cols='25' id='hFileComment'{commentError? class='hFileCommentError'} name='hFileComment'>{comment}</textarea>
+                                {.hFileCommentHTMLDisclosure(false)?
+                                    <p class='hFileCommentHTMLDisclosure'>
+                                        Simple HTML is allowed: &lt;code&gt;, &lt;b&gt;, &lt;i&gt;, &lt;u&gt;, &lt;var&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;blockquote&gt;,
+                                        &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, &lt;p&gt; (no attributes).    All spacing and line breaks in your comment will be preserved.
+                                    </p>
+                                }
+                                {commentError?
+                                    <p class='hFileCommentError'>
+                                        You did not provide a comment.
+                                    </p>
+                                }
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class='hFileCommentLabel'>
+                                <label for='hFileCommentQuestion'>{commentQuestion}</label>
+                            </td>
+                            <td class='hFileCommentInput'>
+                                <input type='text' size='25' id='hFileCommentQuestion'{commentQuestionError? class='hFileCommentError'} name='hFileCommentQuestion' />
+                                {commentQuestionError?
+                                    <p class='hFileCommentError'>
+                                        You did not answer the question.
+                                    </p>
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class='hFileCommentLabel'>
+                                <label for='hFileCommentRemember'>Remember My Information:</label>
+                            </td>
+                            <td class='hFileCommentInput'>
+                                <input type='checkbox' id='hFileCommentRemember' name='hFileCommentRemember' value='1'{commentRememberMe? checked='checked'} />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan='2' id='hFileCommentButton'>
+                                <input type='submit' name='hFileCommentSubmit' id='hFileCommentSubmit' value='Post Comment' />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            {hFileCommentModeration?
+                <p id='hFileCommentModeration'>
+                        * All comments are moderated and are subject to approval.<br />
+                        Your comment will appear once it has been approved.<br />
+                        Posting multiple times will not expedite the approval process.
+                </p>
+            }
+        }
+        {!hFileCommentsEnabled?
+            {.hFileCommentsClosedMessage(true)?
+                <p id='hFileCommentsClosed'>
+                    Comments are closed at this time.
+                </p>
+            }
+        }
+        </div>
+</div>

@@ -1,0 +1,17 @@
+{
+    plugin : {
+        name : "Real and True OOP PHP",
+        shell : {
+            name : "Real and True OOP PHP Shell"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hPHP",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hPHP"
+        }
+    }
+}

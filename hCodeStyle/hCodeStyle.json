@@ -1,0 +1,25 @@
+{
+    plugin : {
+        name : "Indenter for Markup &amp; Code"
+    },
+    source : {
+        destination : "/Hot Toddy/hCodeStyle",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hCodeStyle"
+        }
+    },
+    file : {
+        path : "/System/Applications/Code Style/Test.html",
+        title : "Code Style",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "w"
+            }
+        }
+    }
+}

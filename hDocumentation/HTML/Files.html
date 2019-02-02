@@ -1,0 +1,33 @@
+{search?<h3>Files Matching <i>{search}</i></h3>}
+<ul id='hDocumentationSearchPluginResults'>
+{files?
+{files[]?
+    <li class='hDocumentationFile' id='hDocumentationFile-{hDocumentationFileId}' data-file-path='{hDocumentationFile}'>
+        <h4 class='hDocumentationFileTitle'>{php.basename({hDocumentationFile})}</h4>
+        <div class='hDocumentationFileDescription'>
+            {hDocumentationFileDescription}
+        </div>
+        <div class='hDocumentationFileMethods'>
+            
+        </div>
+        <div class='hDocumentationFileDescription'>
+            {hDocumentationFileClosingDescription}
+        </div>
+    </li>
+}
+}
+{file?
+    <li class='hDocumentationFile' id='hDocumentationFile-{hDocumentationFileId}' data-file-path='{hDocumentationFile}'>
+        <h4 class='hDocumentationFileTitle'><a href='/System/Framework{hDocumentationFile}' target='_blank'>{php.basename({hDocumentationFile})}</a></h4>
+        <div class='hDocumentationFileDescription' style='display: block;'>
+            {hDocumentationFileDescription}
+        </div>
+        <div class='hDocumentationFileMethods'>
+            {methods}
+        </div>
+        <div class='hDocumentationFileDescription' style='display: block;'>
+            {hDocumentationFileClosingDescription}
+        </div>
+    </li>
+}
+</ul>

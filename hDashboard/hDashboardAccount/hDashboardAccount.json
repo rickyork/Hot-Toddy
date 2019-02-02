@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Hot Toddy Dashboard Account"
+    },
+    file : {
+        path : "/Hot Toddy/Dashboard/Account.html",
+        title : "Account Details",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

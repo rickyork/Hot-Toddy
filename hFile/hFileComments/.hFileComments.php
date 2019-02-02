@@ -1,0 +1,2 @@
+<?php
+  class hFileComments extends hPlugin { private $hFileCommentsDatabase; private $hFileComments; private $hCalendarDatabase; public function hConstructor() { $this->getPluginFiles(); $this->hCalendarBlogArchiveEnabled = false; $this->hFileComments = $this->library('hFile/hFileComments'); $this->hFileCommentsDatabase = $this->database('hFile/hFileComments'); $this->hCalendarDatabase = $this->database('hCalendar');  $this->hFileDocument = $this->hFileComments->getCommentsAndDocument(); } } ?>

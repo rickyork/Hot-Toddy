@@ -1,0 +1,32 @@
+Function calls:
+
+  Call phpversion()
+  {php.version()}
+
+  Call PHP substr
+  {php.substr({singleVariable}, -8)}
+
+  Call PHP empty
+  {php.empty({emptyVariable})? Put this in}
+
+  Call framework method
+  {.getFilePathByFileId(1)}
+
+  Call hUser method
+  {user.getUserName(1)}
+
+  Call String method
+  {string.encodeHTML("<b>Bugger</b>")}
+
+  If the result of the function call is empty:
+  {?.hFrameworkDummy(null)? Put this in}
+
+  If the result of the function call is not empty:
+  {?.hFrameworkName(null)? Or put this in}
+
+  Put in the result of the function AND the conditional text, if the result is not empty.
+  An empty result:
+  {&.hFrameworkDummy(null)? Don't put this in}
+  
+  A non-empty result:
+  {&.hDatabaseHost(null)?: This is the database host}

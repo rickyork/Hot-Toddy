@@ -1,0 +1,14 @@
+<ul id='hDocumentationPluginNavigation'>
+{paths[]?
+    <li>
+        <h4><a href='/Hot Toddy/Documentation?{baseName}'>{baseName}</a></h4>
+        <ul>
+        {paths[]?
+            <li>
+                <a href='/Hot Toddy/Documentation?{basePath}'>{name} : {basePath}</a>
+            </li>
+        }
+        </ul>
+    </li>
+}
+</ul>

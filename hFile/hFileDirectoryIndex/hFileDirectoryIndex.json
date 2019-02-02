@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "File Directory Index"
+    },
+    file : {
+        title : "Directory Index",
+        path : "/System/Applications/File/Directory Index.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

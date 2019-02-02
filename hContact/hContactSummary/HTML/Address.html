@@ -1,0 +1,15 @@
+<li class='hContactAddress{!hContactAddressId? hContactDataTemplate}' id='hContactAddress-{hContactAddressId}'>
+  {hContactSummaryEdit?
+    <img src='/images/themes/aqua/icons/misc/delete_16x16.png' alt='delete' class='hContactDataDelete hContactDataDeleteOff' title='Delete' />
+  }
+  <img src='/images/icons/48x48/flags/{hLocationCountryISO2}.png' alt='{hLocationCountryISO2}' class='hContactAddressCountryFlag' />
+  <span class='hContactData hContactField' id='hContactAddressField-{hContactAddressId}-{hContactFieldId}'>
+    <span>{hContactFieldLabel}:</span>
+    {hContactFieldSelect}
+  </span>
+  <ul>
+    <li>
+{hContactAddress}
+    <li>
+  </ul>
+</li>

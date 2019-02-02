@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Finder Info"
+    },
+    file : {
+        title : "Finder Info",
+        path : "/Applications/Finder/Info.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

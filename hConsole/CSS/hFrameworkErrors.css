@@ -1,0 +1,77 @@
+div#hFrameworkErrorsControls {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 160px;
+}
+td.hFrameworkErrors-hFramworkErrorDate {
+    white-space: nowrap;
+}
+th.hFrameworkErrors-hFrameworkError,
+td.hFrameworkErrors-hFrameworkError {
+    width: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+th.hFrameworkErrors-hFilePath,
+td.hFrameworkErrors-hFilePath {
+    width: 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFrameworkErrors-hUserId,
+td.hFrameworkErrors-hUserId {
+    width: 65px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFrameworkErrors-hUserName,
+td.hFrameworkErrors-hUserName {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFrameworkErrors-hUserFullName,
+td.hFrameworkErrors-hUserFullName {
+    width: 125px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFrameworkErrors-hFramworkErrorDate,
+td.hFrameworkErrors-hFramworkErrorDate {
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFrameworkErrors-hUserRemoteIP,
+td.hFrameworkErrors-hUserRemoteIP {
+    width: 125px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFrameworkErrors-hUserAgent,
+td.hFrameworkErrors-hUserAgent {
+    overflow: hidden;
+    width: 300px;
+    white-space: nowrap;
+}
+div.hErrorUserAgentDialogue,
+div.hFrameworkErrorDialogue {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    bottom: 50px;
+    left: 50px;
+    padding: 10px;
+    border: 1px solid rgb(128, 128, 128);
+    background: rgba(240, 240, 240, 0.95);
+    font: 12px Monaco, Courier, "Courier New", monospace;
+    white-space: pre-wrap;
+    overflow: auto;
+    box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    {userAgent.vendorPrefix}box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    {userAgent.vendorPrefix}border-radius: 5px;
+    z-index: 1000;
+}

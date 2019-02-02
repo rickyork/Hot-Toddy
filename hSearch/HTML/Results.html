@@ -1,0 +1,69 @@
+<!-- Begin Hot Toddy Search -->
+{.hSearchIncludeForm(true)?
+    {hSearchForm}
+}
+{hSearchResultCount?
+  {hSearchNavigation}
+  <div class='hSearchResults'>
+    <div class='hSearchResultsOuter'>
+      <div class='hSearchResultsMiddle'>
+        <div class='hSearchResultsInner'>
+          <p class='hSearchResultStatement'>
+            Found <b>{hSearchResultCount}</b> documents {hSearchTerms?matching <b>{hSearchTerms}</b>}
+          </p>
+          {hFiles[]?
+            <div class='hSearchResult'>
+              <img src='{hFileIconPath}' class='hSearchIcon' alt='icon' />
+              <div class='hSearchResultWrapper'>
+                <h4 class='hSearchResultTitle'>
+                  {hSearchRelevance?
+                    <span class='hSearchRelevance'>{hSearchRelevance}</span>
+                  }
+                  <a href='{hFilePath}'>{hFileHeadingTitle}</a>
+                </h4>
+                <div class='hSearchMetaDataWrapper'>
+                {hFileAccessCount?
+                  <p class='hFileAccessCount'>
+                    <span class='hFileAccessCount'>Accessed {hFileAccessCount} times</span>
+                  </p>
+                }
+                {hFileCreated?
+                  <p class='hFileCreated'>
+                    <span class='hFileCreated'>Created: {hFileCreated}</span>
+                    {hFileCreatedBy?
+                      <span class='hFileCreated'>by {hFileCreatedBy}</span>
+                    }
+                  </p>
+                }
+                {hFileLastModified?
+                  <p class='hFileLastModified'>
+                    <span class='hFileLastModified'>Last Modified: {hFileLastModified}</span>
+                    {hFileLastModifiedBy?
+                      <span class='hFileLastModifiedBy'>by {hFileLastModifiedBy}</span>
+                    }
+                  </p>
+                }
+                </div>
+                <div class='hSearchResultDescription'>
+                  {hSearchDescription}
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  {hSearchResultCount?
+    {hSearchNavigation}
+    {hSearchRepeatForm?
+      {hSearchForm}
+    }
+  }
+}
+{!hSearchResultCount?
+  <p id='hSearchNoResults'>
+    There are no documents matching your search.
+  </p>
+}
+<!-- End Hot Toddy Search -->

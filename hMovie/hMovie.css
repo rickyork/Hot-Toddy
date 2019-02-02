@@ -1,0 +1,69 @@
+div#hMovieTree div.hFinderTreeRoot {
+    background-image: url('/images/icons/16x16/movies.png');
+    background-position: 10px 0;
+    padding: 0 0 5px 35px;
+    height: 14px;
+}
+div#hMovieTree div.hFinderDirectoryIcon-16x16 {
+    background-image: url('/images/icons/16x16/movie_folder.png');
+    width: 16px;
+}
+div#hMovieView ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+div#hMovieView ul li {
+    float: left;
+    padding: 0 0 10px 0;
+    text-align: center;
+    width: 130px;
+    height: 100px;
+}
+div#hMovieView ul li button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    display: block;
+}
+div.hMovieThumbnail {
+    position: relative;
+}
+div.hMovieThumbnailHack {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+div.hMovieThumbnail img {
+    max-width: 100px;
+    max-height: 62px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    {userAgent.vendorPrefix}box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+li.hMovieSelected div.hMovieThumbnail img {
+    box-shadow: none;
+    {userAgent.vendorPrefix}box-shadow: none;
+    outline: 3px solid rgb(133, 174, 224);      
+    outline: 5px auto -webkit-focus-ring-color;
+}
+div.hMovieCaption {
+    padding: 10px 0 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+li.hMovie {
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+    {userAgent.isWebkit?
+        -webkit-user-drag: element;
+    }
+}
+{userAgent.isWebkit?
+    li.hMovie:-webkit-drag {
+        opacity: 0.5;
+    }
+}

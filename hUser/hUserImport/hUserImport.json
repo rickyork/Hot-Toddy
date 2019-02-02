@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "User Import Library"
+        },
+        shell : {
+            name : "User Import Shell"
+        }
+    }
+}

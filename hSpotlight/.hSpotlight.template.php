@@ -1,0 +1,2 @@
+<?php
+  $html .= $this->getTemplate( dirname(__FILE__).'/HTML/Template.html', array( 'hFileDocument' => $this->hFileDocument, 'hSpotlightBodyId' => $this->hSpotlightBodyId('hSpotlightTemplate'), 'hFileDocumentBodyClassName' => $this->hFileDocumentBodyClassName(null) ) ); ?>

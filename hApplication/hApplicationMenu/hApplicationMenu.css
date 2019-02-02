@@ -1,0 +1,100 @@
+div.hApplicationMenuWrapper {
+    position: relative;
+    z-index: 1500;
+}
+ul.hApplicationMenu {
+    height: 21px;
+    background: url('/images/themes/aqua/backgrounds/menuBG.png') repeat-x;
+    margin: 0;
+    padding: 0 0 0 40px;
+    list-style: none;
+    font: 14px "Lucida Grande", Arial;
+    border-bottom: 1px solid rgb(100, 100, 100);
+}
+ul.hApplicationMenu li.hApplicationMenu {
+    float: left;
+    position: relative;
+}
+li.hApplicationMenuOpen,
+li.hApplicationMenuItemOn {
+    background: url('/images/themes/aqua/backgrounds/menuOverBG.png') repeat-x;
+    color: white;
+}
+li.hApplicationMenuItemOn span {
+    color: #fff;
+}
+li.hApplicationMenuOpen li {
+    color: black;
+}
+ul.hApplicationMenu div.hApplicationMenuSeparator {
+    background: rgb(233, 233, 233);
+    font-size: 0;
+    line-height: 0;
+    height: 1px;
+    min-width: 243px;
+}
+li.hApplicationMenuSeparator {
+    font-size: 0;
+    line-height: 0;
+    padding: 3px 0 0 0;
+    height: 4px;
+}
+ul.hApplicationMenu ul {
+    list-style: none;
+    margin: 0 -24px 0 -22px;
+    padding: 3px 1px 1px 1px;
+    position: relative;
+    top: 18px;
+    z-index: 2;
+    min-width: 200px;
+}
+li.hApplicationMenuItem {
+    float: none;
+    padding: 0 0 0 10px;
+}
+li.hApplicationMenuItem span {
+    line-height: 18px;        
+}
+div.hApplicationSubMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -46px;
+    text-align: left;
+    margin-top: -18px;
+    opacity: 0.95;
+    z-index: -1;
+}
+div.hApplicationSubMenuOpen {
+    display: block;
+}
+span.hApplicationMenuItem {
+    line-height: 21px;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+span.hApplicationName {
+    font-weight: bold;
+}
+div.hApplicationSubMenuOuter {
+    background: url('/images/themes/aqua/backgrounds/applicationMenuBG_01.png') repeat-y left;
+}
+div.hApplicationSubMenuMiddle {
+    background: url('/images/themes/aqua/backgrounds/applicationMenuBG_03.png') repeat-y right;
+}
+div.hApplicationSubMenuInner {
+    margin: 0 69px 0 67px;
+    background: white;
+}
+div.hApplicationSubMenuBottomOuter {
+    background: url('/images/themes/aqua/backgrounds/applicationMenuBG_04.png') no-repeat left;
+}
+div.hApplicationSubMenuBottomMiddle {
+    background: url('/images/themes/aqua/backgrounds/applicationMenuBG_06.png') no-repeat right;
+}
+div.hApplicationSubMenuBottomInner {
+    background: url('/images/themes/aqua/backgrounds/applicationMenuBG_05.png') repeat-x bottom;
+    height: 67px;
+    margin: 0 69px 0 67px;
+    min-width: 200px;
+}

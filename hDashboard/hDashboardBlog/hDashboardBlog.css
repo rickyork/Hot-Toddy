@@ -1,0 +1,40 @@
+@import '/hCalendar/CSS/Datepicker.css';
+
+div#hDashboardBlogTop {
+    height: 25px;   
+}
+ul.hDashboardBlog {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+form#hDashboardBlogDialogue {
+    width: 800px;
+    height: 700px;
+    margin: -350px 0 0 -400px;
+    z-index: 5000;
+}
+div#hDashboardBlogDiv {
+    display: block;
+}
+div.hFormWYSIWYGWrapper {
+    border: 1px solid rgb(128, 128, 128);
+}
+input#hCalendarDate {
+    vertical-align: 6px;  
+}
+ul.hPaginationNavigation {
+    top: 12px;
+}
+div.HotToddySideBoxInner {
+    position: relative;
+}
+ul.hDashboardBlog li {
+    padding: 1px 5px;
+    border: 1px solid transparent;
+    position: relative;
+}
+ul.hDashboardBlog li:hover {
+    background: rgb(244, 244, 244);
+    border: 1px dashed rgb(200, 200, 200);
+}

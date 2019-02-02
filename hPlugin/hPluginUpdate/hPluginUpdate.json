@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "Plugin Update Library"
+        },
+        shell : {
+            name : "Plugin Update Shell"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{hSearchNavigation}
+<div id='hCalendarBlogPosts'>    
+{hFiles[]?
+    <div class='hCalendarBlogPost'>
+        <div class='hCalendarBlogPostHeader'>
+            <h3><a href='{!hCalendarLink?{hFilePath}{hCalendarBlogPostLinkArguments}}{hCalendarLink}'>{hFileHeadingTitle}</a></h3>
+            <div class='hCalendarBlogPostDetails'>
+                <span class='hCalendarBlogPostDate'>{hCalendarDateFormatted}</span>
+                {hCalendarBlogPostAuthor?
+                    <span class='hCalendarBlogPostAuthor'> by 
+                    {hCalendarBlogFullName?{hContactDisplayName}}
+                    {hCalendarBlogFirstName?{hContactFirstName}}
+                    {hCalendarBlogUserName?{hUserName}}
+                    </span>
+                }
+            </div>
+        </div>
+        <div class='hCalendarBlogPostSummary'>
+            {hFileDescription}
+            <p class='hCalendarBlogPostMore'>
+                <a href='{!hCalendarLink?{hFilePath}{hCalendarBlogPostLinkArguments}}{hCalendarLink}'>More</a>
+            </p>
+            {hFileCommentsEnabled?
+            <div class='hCalendarBlogPostComments'>
+                <span class='hCalendarBlogPostCommentCount'>
+                    <a href='{hFilePath}{hCalendarBlogPostLinkArguments}#hFileComments'>({hFileCommentCount}) Comments</a>
+                </span> | 
+                <span class='hCalendarBlogPostCommentLink'>
+                    <a href='{hFilePath}{hCalendarBlogPostLinkArguments}#hFileCommentsForm'>Leave a Comment</a>
+                </span>
+            </div>
+            }
+        </div>
+    </div>
+}
+</div>
+{hSearchNavigation}

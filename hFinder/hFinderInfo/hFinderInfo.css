@@ -1,0 +1,292 @@
+@import '/hFinder/hFinderContextMenu/hFinderContextMenu.css';
+
+body {
+    font: 11px "Lucida Grande", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+div#hFinderInfoWrapper {
+    padding: 0 0 8px 0;
+}
+div#hFinderInfoSize {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+}
+div#hFinderInfoTop {
+    padding: 10px 0;
+}
+ul#hFinderInfo {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font: 11px "Lucida Grande", Arial, sans-serif;
+}
+img#hFinderInfoIcon {
+    float: left;
+    margin: 0 10px;
+}
+div#hFinderInfoName {
+    font-weight: bold;
+    margin: 3px 65px 10px 0;
+}
+div#hFinderInfoLastModified {
+    color: rgb(69, 69, 69);
+    margin: 0 0 0 5px;
+}
+ul#hFinderInfo h4 {
+    font-weight: normal;
+    margin: 0;
+    padding: 4px 0 4px 24px;
+    position: relative;
+}
+ul#hFinderInfo h4 span.hFinderInfoArrow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 8px;
+    top: 6px;
+    background: url('/hFinder/hFinderInfo/Pictures/downArrow.png') no-repeat 0;
+}
+ul#hFinderInfo h4 span.hFinderInfoArrowOff {
+    background-image: url('/hFinder/hFinderInfo/Pictures/rightArrow.png');   
+}
+ul#hFinderInfo h4 span.hFinderInfoArrow:active {
+    background-image: url('/hFinder/hFinderInfo/Pictures/activeArrow.png');   
+}
+ul#hFinderInfo li {
+    border-bottom: 1px solid rgb(137, 137, 137);
+}
+ul#hFinderInfo li:last-child {
+    border-bottom: none;
+}
+ul#hFinderInfo li#hFinderInfoPermissions {
+    border-bottom: none;
+}
+table#hFinderInfoGeneral,
+table#hFinderInfoMore {
+    border-collapse: collapse;
+}
+table#hFinderInfoMore {
+    margin-bottom: 10px;
+}
+col#hFinderInfoGeneralLabel {
+    width: 85px;
+}
+col#hFinderInfoMoreLabel {
+    width: 95px;
+}
+td.hFinderInfoGeneralLabel,
+td.hFinderInfoMoreLabel {
+    text-align: right;
+    width: 65px;
+    vertical-align: top;
+}
+td.hFinderInfoMoreLabel {
+    width: 95px;
+}
+td.hFinderInfoGeneralData,
+td.hFinderInfoMoreData {
+    padding: 0 0 0 4px;
+}
+td.hFinderInfoLabels {
+    vertical-align: top;
+}
+td.hFinderInfoLabelsLabel,
+td.hFinderInfoLabels {
+    padding-bottom: 0;
+}
+td.hFinderInfoLocked {
+    padding-bottom: 7px;
+}
+div#hFinderInfoFileNameWrapper {
+    text-align: center;
+    padding: 5px 0 10px 0;
+}
+input#hFinderInfoFileName {
+    width: 90%;
+}
+li#hFinderInfoSpotlightComments {
+    padding: 0 4px 3px 4px;
+}
+li#hFinderInfoSpotlightComments h4 {
+    border-top: 1px solid rgb(0, 118, 234);
+    border-left: 1px solid rgb(0, 118, 234);
+    border-right: 1px solid rgb(0, 118, 234);
+    background: url("/hFinder/hFinderInfo/Pictures/spotlightComments.png") repeat-x;
+    height: 16px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+span.hFinderInfoCommentsArrow {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: url("/hFinder/hFinderInfo/Pictures/spotlightCommentsArrow.png") no-repeat;
+    width: 9px;
+    height: 9px;
+}
+span.hFinderInfoCommentsArrow:active {
+    background-image: url("/hFinder/hFinderInfo/Pictures/spotlightCommentsArrowActive.png");
+}
+span.hFinderInfoCommentsArrowOff {
+    background-image: url("/hFinder/hFinderInfo/Pictures/spotlightCommentsArrowRight.png");
+}
+li#hFinderInfoSpotlightComments h4 div {
+    padding: 0 0 0 18px;
+}
+div#hFileComments {
+    height: 44px;
+    appearance: textarea;
+    {userAgent.vendorPrefix}appearance: textarea;
+    background: white;
+    overflow: auto;
+    padding: 0 4px;
+}
+div#hFinderInfoPreview {
+    text-align: center;
+    padding: 10px 0;
+}
+img#hFinderInfoPreviewImage {
+    max-width: 275px;
+    max-height: 275px;
+}
+div#hFinderInfoPermissions table {
+    border-collapse: collapse;
+    border: 1px solid rgb(204, 204, 204);
+    width: 100%;
+    table-layout: fixed;
+}
+div#hFinderInfoPermissions table th {
+    background: url("/hFinder/hFinderInfo/Pictures/permissionsHeader.png") repeat-x;
+    height: 14px;
+    font-weight: normal;
+}
+th#hFinderInfoPermissionsNameLabel {
+    padding-left: 33px;
+}
+div#hFinderInfoPermissions table tbody tr td:first-child {
+    padding-left: 33px;
+}
+div#hFinderInfoPermissions table th:last-child,
+div#hFinderInfoPermissions table tbody tr td:last-child {
+    padding-left: 13px;
+}
+div#hFinderInfoPermissions table th,
+div#hFinderInfoPermissions table td {
+    border: 1px solid rgb(204, 204, 204);
+}
+div#hFinderInfoPermissions table td {
+    height: 16px;
+    border-top: none;
+    border-bottom: none;
+    overflow: hidden;
+}
+td.hFinderInfoPermissions {
+    background: url("/hFinder/hFinderInfo/Pictures/doubleArrow.png") no-repeat 3px 3px;
+}
+div#hFinderInfoPermissions table tbody tr:nth-child(odd) {
+    background: #fff;
+}
+div#hFinderInfoPermissions table tbody tr:nth-child(even) {
+    background: rgb(237, 243, 254);
+}
+div#hFinderInfoPermissions table tbody tr.hFinderInfoPermissionsSelected {
+    background: #3470CB;
+    color: #fff;
+}
+div#hFinderInfoPermissions table tbody tr.hFinderInfoPermissionsSelected td.hFinderInfoPermissions {
+    background-image: url("/hFinder/hFinderInfo/Pictures/doubleArrowWhite.png");
+}
+div#hFinderInfoPermissions {
+    padding: 0 10px;
+}
+div#hFinderInfoPermissions table tbody tr td.hFinderInfoPermissionsLabel {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+div#hFinderInfoPermissions table tbody td#hFrameworkResourceOwnerLabel {
+    background: url('/images/icons/16x16/user.png') no-repeat 10px 0;
+    background-size: 16px 16px;
+}
+div#hFinderInfoPermissions table tbody td#hFrameworkResourceWorldLabel {
+    background: url('/images/icons/16x16/everyone.png') no-repeat 10px 0;
+    background-size: 16px 16px;
+}
+div#hFinderInfoPermissions table tbody td.hFrameworkResourceGroupLabel {
+    background: url('/images/icons/16x16/group.png') no-repeat 10px 0;
+    background-size: 16px 16px;
+}
+div#hFinderInfoPermissions table tbody td.hFrameworkResourceUserLabel {
+    background: url('/images/icons/16x16/user.png') no-repeat 10px 0;
+    background-size: 16px 16px;
+}
+button#hFinderInfoAddGroup {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: url("/hFinder/Pictures/Buttons/Add Remove.png") no-repeat;
+    width: 18px;
+    height: 16px;
+    float: left;
+}
+button#hFinderInfoAddGroup:active {
+    background-position: 0 -32px;
+}
+button#hFinderInfoRemoveGroup {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: url("/hFinder/Pictures/Buttons/Add Remove.png") no-repeat -18px -16px;
+    height: 16px;
+    width: 17px;
+    float: left;
+}
+button#hFinderInfoRemoveGroup.hFinderInfoRemoveGroupEnabled {
+    background-position: -18px 0;
+}
+button#hFinderInfoRemoveGroup.hFinderInfoRemoveGroupEnabled:active {
+    background-position: -18px -32px;
+}
+
+button#hFinderInfoOptions {
+    border: none;
+    padding: 0;
+    margin: 0 0 0 8px;
+    background: url("/hFinder/hFinderInfo/Pictures/options.png") no-repeat;
+    height: 16px;
+    width: 33px;
+    float: left;
+}
+button#hFinderInfoOptions:active {
+    background-image: url("/hFinder/hFinderInfo/Pictures/optionsOn.png");
+}
+div#hFinderInfoPermissionsButtons {
+    overflow: auto;
+    zoom: 1;
+    padding: 3px 0 0 0;
+}
+div.hFinderInfoPermissionsMenu {
+    width: 140px;
+    font-size: 12px;
+}
+div.hFinderInfoPermissionsMenu ul li {
+    padding-left: 0;
+}
+div.hFinderInfoPermissionsMenu ul li span {
+    top: 1px;
+    padding: 0 0 0 21px;
+}
+li.hFinderInfoPermissionsMenuSelected span {
+    background: url("/hFinder/hFinderInfo/Pictures/checkmark.png") no-repeat 6px 2px;
+}
+li.hFinderContextMenuItemOn.hFinderInfoPermissionsMenuSelected span {
+    background-image: url("/hFinder/hFinderInfo/Pictures/checkmarkOn.png");
+}
+body div#hFinderLabels {
+    padding: 0;
+}

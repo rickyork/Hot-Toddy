@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>User Login Activation Mailer</title>    
+    </head>
+    <body>
+        <p>
+            Hello! Your activation code for {hFrameworkNickName} is <b>{hUserConfirmation}</b>
+        </p>
+        <p>
+            <a href="{hFileActivationURL}hUserName={hUserName}&hUserConfirmation={hUserConfirmation}" style="font-weight: bold;">Click here to activate your {hFrameworkNickName} account now.</a>
+        </p>
+        <p>
+            If you need additional help, please contact: <a href="mailto:{hFrameworkAdministrator}">{hFrameworkAdministrator}</a>
+        </p>
+        <table></table> <!--  empty table for Entourage bug fix -->
+    </body>
+</html>

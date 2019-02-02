@@ -1,0 +1,24 @@
+<p class='hUserPermissionsDenied'>
+    <b>Permission Denied:</b> Only the owner of the resource, or a user
+    with elevated privileges may alter permissions on this resource.
+</p>
+<p class='hUserPermissionsDenied'>
+    The owner of this resource is <em>{hFrameworkResourceOwner}</em>.
+</p>
+<p class='hUserPermissionsDenied'>
+    This program will exit in <b id='hUserPermissionsCounter'>15</b> seconds.
+</p>
+<script type='text/javascript'>
+    window.setTimeout('self.close();', 15000);
+
+    var i = 15;
+
+    function errorTimer()
+    {
+        $('b#hUserPermissionsCounter').html(i);
+        window.setTimeout('errorTimer();', 1000);
+        i--;
+    }
+
+    errorTimer();
+</script>

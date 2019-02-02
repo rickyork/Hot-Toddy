@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Framework Listener"
+    },
+    file : {
+        title : "Framework Listener",
+        path : "/System/Applications/Framework/Listener.plugin",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

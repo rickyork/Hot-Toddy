@@ -1,0 +1,37 @@
+{
+    plugin : {
+        name : "Hot Toddy Dashboard",
+        library : {
+            name : "Hot Toddy Dashboard Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hDashboard",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hDashboard"
+        }
+    },
+    file : {
+        title : "Dashboard",
+        path : "/Hot Toddy/Dashboard/index.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        },
+        aliases : [
+            {
+                path : "/admin",
+                isRedirect: 1
+            }, {
+                path : "/Hot Toddy",
+                isRedirect: 1
+            }
+        ]
+    }
+}

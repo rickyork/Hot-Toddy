@@ -1,0 +1,40 @@
+<div class='hContactDataModule hContact{hContactDataTable}Wrapper'>
+  <h4>{hContactModuleHeading}</h4>
+  <ul class='hContact{hContactDataTable}{hContactDataPlural}'>
+    {hContactData[]?
+      <li id='hContact{hContactDataTable}-{hContactDataId}' class='hContact{hContactDataTable}'>
+        <div>
+          {hContactSummaryEdit?
+            <img src='/images/themes/aqua/icons/misc/delete_16x16.png' alt='delete' class='hContactDataDelete hContactDataDeleteOff' title='Delete' /> 
+          }
+          <span class='hContactData hContactField' id='hContact{hContactDataTable}Field-{hContactDataId}-{hContactFieldId}' title='{hContactFieldLabel}'>
+            <span>{hContactFieldLabel}:</span>
+            {hContactSummaryEdit?
+              {hContactFieldSelect}
+            }
+          </span>
+          <span class='hContactData hContact{hContactDataTable}'><span>{hContactData}{!hContactData?<i>{hContactFieldLabel}</i>}</span></span>
+        </div>
+      </li>
+    }
+    <li class='hContactNoData{hContactData? hContactNoDataOff}'>{hContactNoData}</li>           
+    {hContactSummaryEdit?
+      <li id='hContact{hContactDataTable}-0' class='hContact{hContactDataTable} hContactDataTemplate'>
+        <div>
+          <img src='/images/themes/aqua/icons/misc/delete_16x16.png' alt='delete' class='hContactDataDelete hContactDataDeleteOff' title='Delete' />
+          <span class='hContactData hContactField' id='hContact{hContactDataTable}Field-0-{hContactFieldId}' title='{hContactFieldLabel}'>
+          <span>{hContactFieldLabel}:</span>
+            {hContactFieldSelect}
+          </span>
+          <span class='hContactData hContact{hContactDataTable}'><span><i>{hContactFieldLabel}</i></span></span>
+        </div>
+      </li>
+    }
+  </ul>
+  {hContactSummaryEdit?
+    <div class='hContactControls hContact{hContactDataTable}Controls hContactControlsOff'>
+      <img src='/images/themes/aqua/icons/misc/add.png' alt='Add' class='hContact{hContactDataTable}Add hContactAdd' />
+    </div>
+  }
+</div>
+<div class='hContactsFollow'></div>

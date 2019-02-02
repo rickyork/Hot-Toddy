@@ -1,0 +1,7 @@
+{
+    plugin : {
+        shell : {
+            name : "File Install Shell"
+        }
+    }
+}

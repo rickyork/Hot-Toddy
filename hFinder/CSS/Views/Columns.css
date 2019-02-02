@@ -1,0 +1,148 @@
+/**
+* Columns View
+*
+*/
+body.hFinderFilesColumns {
+
+}
+div.hFinderColumns {
+    position: relative;
+}
+div#hFinderColumnsWrapper {
+    height: 100%;
+}
+body.hFinderFilesColumns div.hFinderFiles {
+    background: #fff;
+}
+body.hFinderFilesColumns div#hFinderFilesInner {
+
+}
+body.hFinderFilesColumns div.hFinderColumnsInner {
+    position: relative;
+    padding-top: 2px;
+}
+div.hFinderColumnGrip {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    bottom: 0;
+    width: 3px;
+    cursor: col-resize;
+    z-index: 100;
+}
+body.hFinderFilesColumns div.hFinderFiles {
+    padding: 0;
+}
+body.hFinderFilesColumns div.hFinderColumns {
+    float: left;
+    height: 100%;
+    width: 204px;
+    border-right: 1px solid rgb(224, 224, 224);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+body.hFinderFilesColumns div.hFinderNodeWrapper {
+    overflow: hidden;
+    zoom: 1;
+    height: 18px;
+    position: relative;
+}
+body.hFinderFilesColumns div.hFinderIcon  {
+    float: left;
+    padding: 0 8px 0 5px;
+}
+body.hFinderFilesColumns div.hFinderThumbnail {
+    float: left;
+    padding: 0 8px 0 5px;
+}
+body.hFinderFilesColumns p.hFinderFileDescription,
+body.hFinderFilesColumns h4.hFinderFileTitle,
+body.hFinderFilesColumns span.hFinderPath {
+    display: none;
+}
+body.hFinderFilesColumns span.hFinderDirectoryName,
+body.hFinderFilesColumns span.hFinderFileName {
+    position: absolute;
+    left: 30px;
+    top: 1px;
+    max-width: 140px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+body.hFinderFilesColumns div.hFinderDirectoryHasChildren {
+    background: url("/images/themes/aqua/finder/columnsArrow.png") no-repeat center right;
+}
+body.hFinderFilesColumns .hFinderDirectoryMarker div.hFinderDirectoryHasChildren {
+    background: rgb(212, 212, 212) url("/images/themes/aqua/finder/columnsArrowInactive.png") no-repeat center right;
+}
+body.hFinderFilesColumns .hFinderSelected div.hFinderNodeWrapper,
+body.hFinderFilesColumns .hFinderDragOver div.hFinderNodeWrapper {
+    background: #3470CB;
+    color: #fff;
+}
+body.hFinderFilesColumns .hFinderDragOver {
+    width: 205px;
+}
+div.hFinderColumnsDragOver {
+    outline: 3px solid rgb(133, 174, 224);
+    {isWebkit?
+        outline: 5px auto -webkit-focus-ring-color;
+    }
+}
+body.hFinderFilesColumns .hFinderSelected div.hFinderDirectoryHasChildren {
+    background: #3470CB url("/images/themes/aqua/finder/columnsArrowOn.png") no-repeat center right;
+}
+body.hFinderFilesColumns div.hFinderApplication div.hFinderDirectoryHasChildren {
+    background-image: none;
+}
+body.hFinderFilesColumns .hFinderLabel span.hFinderFileName,
+body.hFinderFilesColumns .hFinderLabel span.hFinderDirectoryName {
+    color: black;
+    padding: 1px 5px;
+    border-radius: 8px;
+    {userAgent.vendorPrefix}border-radius: 8px;
+}
+div.hFinderColumnDragOver {
+    outline: 1px solid blue;
+}
+div.hFinderColumnsFilePropertiesPreviewLabel {
+    padding: 3px 0 8px 5px;
+    color: rgb(94, 94, 94);
+    font-size: 11px;
+    font-weight: bold;
+}
+div.hFinderColumnsFilePropertiesPreview {
+    text-align: center;
+    padding: 0 0 5px 0;
+}
+div.hFinderColumnsFilePropertiesPreview img {
+    max-width: 180px;
+}
+div.hFinderColumnsFileProperties ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 185px;
+}
+div.hFinderColumnsFileProperties ul li span {
+    float: left;
+    width: 75px;
+    text-align: right;
+    color: rgb(94, 94, 94);
+    font-weight: bold;
+    padding: 0 3px 0 0;
+}
+div.hFinderColumnsFileProperties ul li div {
+    margin: 0 0 0 78px;
+    text-overflow: ellipsis;
+}
+div.hFinderColumnsFileProperties ul li {
+    overflow: hidden;
+    font-size: 11px;
+    padding: 3px 0;
+}
+div.hFinderColumnsFilePropertiesInfo {
+    text-align: center;
+    padding: 15px 0 0 0;
+}

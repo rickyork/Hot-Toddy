@@ -1,0 +1,17 @@
+{
+    plugin : {
+        name : "File Library"
+    },
+    file : {
+        title : "File Library",
+        path : "/System/Applications/Library.plugin",
+        pathWildcard : "/Library",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

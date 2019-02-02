@@ -1,0 +1,8 @@
+{
+    plugin : {
+        name : "Framework Server",
+        shell : {
+            name : "Framework Server Shell"
+        }
+    }
+}

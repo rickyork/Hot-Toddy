@@ -1,0 +1,44 @@
+{
+    plugin : {
+        name : "Preferences",
+        library : {
+            name : "Preferences Library"
+        },
+        service : {
+            name : "Preferences Service",
+            methods : [
+                "save",
+                "get"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hPreferences",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hPreferences"
+        }
+    },
+    file : {
+        title : "Hot Toddy Preferences",
+        path : "/Applications/Preferences/index.html",
+        directory : {
+            properties: {
+                isApplication: 1,
+                icon : {
+                    name : "Preferences.png",
+                    icns : "PrefApp.icns",
+                    mime : "plugins/preferences"
+                }
+            }
+        },
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw"
+            }
+        }
+    }
+}

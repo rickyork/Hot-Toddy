@@ -1,0 +1,222 @@
+<script type='text/javascript'>
+    finder.info.resourceId = {hFrameworkResourceId};
+    finder.info.resourceKey = {hFrameworkResourceKey};
+</script>
+<div id='hFinderInfoWrapper'>
+<div id='hFinderInfoTop' title='{hFilePath}'>
+    <img src='{hFileIconPath}' alt='File Icon' id='hFinderInfoIcon' />
+    <div id='hFinderInfoName'>{hFileName}</div>
+    <div id='hFinderInfoLastModified'>Modified: {hFileShortLastModifiedDate}</div>
+    <div id='hFinderInfoSize'>{hFileSize}</div>
+</div>
+<ul id='hFinderInfo'>
+    <li id='hFinderInfoSpotlightComments'>
+        <h4>
+            <span class='hFinderInfoCommentsArrow'></span>
+            <div>
+                <span>Spotlight Comments:</span>
+            </div>
+        </h4>
+        <div id='hFileComments' name='hFileComments'>{hFileComments}</div>
+    </li>
+    <li>
+        <h4>
+            <span class='hFinderInfoArrow'></span>
+            <span class='hFinderInfoLabel'>General:</span>
+        </h4>
+        <table id='hFinderInfoGeneral'>
+            <colgroup>
+                <col id='hFinderInfoGeneralLabel' />
+                <col />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td class='hFinderInfoGeneralLabel'>Kind:</td>
+                    <td class='hFinderInfoGeneralData'>{hFileKind}</td>
+                </tr>
+                <tr>
+                    <td class='hFinderInfoGeneralLabel'>Size:</td>
+                    <td class='hFinderInfoGeneralData'>{hFileSize}</td>
+                </tr>
+                {isFile?
+                <tr>
+                    <td class='hFinderInfoGeneralLabel'>Accessed:</td>
+                    <td class='hFinderInfoGeneralData'>{hFileAccessCount?{hFileAccessCount} times}{!hFileAccessCount?Never}</td>
+                </tr>
+                }
+                <tr>
+                    <td class='hFinderInfoGeneralLabel'>Where:</td>
+                    <td class='hFinderInfoGeneralData'>{hFileBasePath}</td>
+                </tr>
+                <tr>
+                    <td class='hFinderInfoGeneralLabel'>Created:</td>
+                    <td class='hFinderInfoGeneralData'>{hFileCreatedDate}</td>
+                </tr>
+                <tr>
+                    <td class='hFinderInfoGeneralLabel'>Modified:</td>
+                    <td class='hFinderInfoGeneralData'>{hFileLastModifiedDate}</td>
+                </tr>
+                <tr>
+                    <td class='hFinderInfoGeneralLabel hFinderInfoLabelsLabel'>Label:</td>
+                    <td class='hFinderInfoLabels'>
+                        {hFinderLabels}
+                    </td>
+                </tr>
+            {isDirectory?
+                <tr>
+                    <td class='hFinderInfoGeneralLabel'><input type='checkbox' id='hFinderInfoShared' name='hFinderInfoShared' value='1' /></td>
+                    <td class='hFinderInfoGeneralData'><label for='hFinderInfoShared'>Shared Folder</label></td>
+                </tr>
+            }
+                <tr>
+                    <td class='hFinderInfoGeneralLabel hFinderInfoLocked'><input type='checkbox' id='hFinderInfoLocked' name='hFinderInfoLocked' value='1' /></td>
+                    <td class='hFinderInfoGeneralData hFinderInfoLocked'><label for='hFinderInfoLocked'>Locked</label></td>
+                </tr>
+            </tbody>
+        </table>
+    </li>
+    <li>
+        <h4>
+            <span class='hFinderInfoArrow'></span>
+            <span class='hFinderInfoLabel'>More Info:</span>
+        </h4>
+        <table id='hFinderInfoMore'>
+            <colgroup>
+                <col id='hFinderInfoMoreLabel' />
+                <col />
+            </colgroup>
+            <tbody>
+            {hFileDimensions?
+                <tr>
+                    <td class='hFinderInfoMoreLabel'>Dimensions:</td>
+                    <td class='hFinderInfoMoreData'>{hFileDimensions}</td>
+                </tr>
+            }
+            {hFileColorSpace?
+                <tr>
+                    <td class='hFinderInfoMoreLabel'>Color space:</td>
+                    <td class='hFinderInfoMoreData'>{hFileColorSpace}</td>
+                </tr>
+            }
+            {hFileColorProfile?
+                <tr>
+                    <td class='hFinderInfoMoreLabel'>Color profile:</td>
+                    <td class='hFinderInfoMoreData'>{hFileColorProfile}</td>
+                </tr>
+            }
+            {hFileAlphaChannel?
+                <tr>
+                    <td class='hFinderInfoMoreLabel'>Alpha channel:</td>
+                    <td class='hFinderInfoMoreData'>{hFileAlphaChannel}</td>
+                </tr>
+            }
+            {hFileLastAccessedDate?
+                <tr>
+                    <td class='hFinderInfoMoreLabel'>Last opened:</td>
+                    <td class='hFinderInfoMoreData'>{hFileLastAccessedDate}</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </li>
+    <li>
+        <h4>
+            <span class='hFinderInfoArrow'></span>
+            <span class='hFinderInfoLabel'>Name &amp; Extension:</span>
+        </h4>
+        <div id='hFinderInfoFileNameWrapper'>
+            <input type='text' id='hFinderInfoFileName' name='hFinderInfoFileName' value='{hFileName}' />
+        </div>
+    </li>
+    <li>
+        <h4>
+            <span class='hFinderInfoArrow'></span>
+            <span class='hFinderInfoLabel'>Preview:</span>
+        </h4>
+        <div id='hFinderInfoPreview'>
+            <img src='{hFilePreviewPath}' alt='File Preview' id='hFinderInfoPreviewImage' />
+        </div>
+    </li>
+    <li>
+        <h4>
+            <span class='hFinderInfoArrow'></span>
+            <span class='hFinderInfoLabel'>Sharing &amp; Permissions:</span>
+        </h4>
+        <div id='hFinderInfoPermissions'>
+            <p>
+                {hFinderInfoPermissionsStatement}
+            </p>
+            <table>
+                <colgroup>
+                    <col width="50%" />
+                    <col width="50%" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th id='hFinderInfoPermissionsNameLabel'>Name</th>
+                        <th id='hFinderInfoPermissionsPrivilegeLabel'>Privilege</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-permissions-type='owner'>
+                        <td class='hFinderInfoPermissionsLabel' id='hFrameworkResourceOwnerLabel'><span>{hFrameworkResourceOwner} {hFrameworkIsResourceOwner?(Me)}</span></td>
+                        <td class='hFinderInfoPermissions' id='hUserPermissionsOwner'>
+                            <span>{hUserPermissionsOwner}</span>
+                        </td>
+                    </tr>
+                    {hUserPermissionsGroups[]?
+                        <tr data-permissions-type='group' class='{isGroup?hFrameworkResourceGroup}{!isGroup?hFrameworkResourceUser}'>
+                            <td class='hFinderInfoPermissionsLabel {isGroup?hFrameworkResourceGroupLabel}{!isGroup?hFrameworkResourceUserLabel}'><span>{hUserName}</span></td>
+                            <td class='hFinderInfoPermissions' id='hUserPermissionsGroup-{hUserId}'>
+                                <span>{hUserPermissionsGroup}</span>
+                            </td>
+                        </tr>
+                    }
+                    <tr data-permissions-type='world'>
+                        <td class='hFinderInfoPermissionsLabel' id='hFrameworkResourceWorldLabel'><span>everyone</span></td>
+                        <td class='hFinderInfoPermissions' id='hUserPermissionsWorld'>
+                            <span>{hUserPermissionsWorld}</span>
+                        </td>
+                    </tr>
+                    {!hUserPermissionsGroups?
+                        <tr class='hFinderInfoPermissionsEmpty'>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class='hFinderInfoPermissionsEmpty'>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class='hFinderInfoPermissionsEmpty'>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class='hFinderInfoPermissionsEmpty'>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    }
+                    {hUserPermissionEmpties[]?
+                        <tr class='hFinderInfoPermissionsEmpty'>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div id='hFinderInfoPermissionsButtons'>
+                <button id='hFinderInfoAddGroup'></button>
+                <button id='hFinderInfoRemoveGroup'></button>
+                <button id='hFinderInfoOptions'></button>
+            </div>
+        </div>
+    </li>
+</ul> 
+</div>
+<div class='hFinderContextMenu hFinderInfoPermissionsMenu'>
+    <ul>
+        <li class='hFinderInfoPermissionsReadWrite'><span>Read &amp; Write</span></li>
+        <li class='hFinderInfoPermissionsRead'><span>Read only</span></li>
+        <li class='hFinderInfoPermissionsNoAccess'><span>No Access</span></li>
+    </ul>
+</div>

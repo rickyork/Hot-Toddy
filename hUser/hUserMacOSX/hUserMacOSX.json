@@ -1,0 +1,10 @@
+{
+    plugin : {
+        library : {
+            name : "User Mac OS X Library"
+        },
+        shell : {
+            name : "User Mac OS X Shell"
+        }
+    }
+}

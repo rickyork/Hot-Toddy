@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Core Metrics CDF"
+    },
+    file : {
+        title : "Core Metrics Category Definition File",
+        path : "/Applications/Core Metrics/CDV.csv",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+<ul class='hSearchNavigation'>
+{hSearchPreviousPagePath?
+    <li class='hSearchPreviousPage' title='{hSearchPreviousPageTooltip}'><a href='{hSearchPreviousPagePath}{hSearchNavigationAnchor}'><span>{hSearchPreviousPageLabel}</span></a></li>
+}
+{!hSearchPreviousPagePath?
+    <li class='hSearchPreviousPage hSearchPreviousPageDisabled hSearchDisabled'><span>{hSearchPreviousPageLabel}</span></li>
+}
+    <li class='hSearchPages'>
+        <ul>
+            <li class='hSearchPageLabel hSearchPageLabelBefore'><span>Page:</span></li>
+        {hSearchFirstPagePath?
+            <li class='hSearchFirstPage' title='First Page'><a href='{hSearchFirstPagePath}{hSearchNavigationAnchor}'><span>1</span></a></li>
+            <li class='hSearchPageLabel hSearchPageLabelMiddle'><span>...</span></li>
+        }
+        {hSearchChapterLowerPath?
+            <li class='hSearchPreviousChapter' title='Previous {hSearchPagesPerChapter} pages'><a href='{hSearchChapterLowerPath}{hSearchNavigationAnchor}'><span>{hSearchChapterLower}</span></a></li>
+        }
+        {hSearchPages[]?
+            <li class='hSearchPage{({hSearchPage} == {hSearchPageHere})? hSearchYouAreHere}{hSearchPageFirst? hSearchPageFirst}{hSearchPageLast? hSearchPageLast}'><a href='{hSearchPagePath}{hSearchNavigationAnchor}'><span>{hSearchPage}</span></a></li>
+        }
+        {hSearchChapterUpperPath?
+            <li class='hSearchNextChapter' title='Next {hSearchPagesPerChapter} pages'><a href='{hSearchChapterUpperPath}{hSearchNavigationAnchor}'><span>{hSearchChapterUpperLabel}</span></a></li> 
+        }
+        {hSearchLastPagePath?
+            <li class='hSearchPageLabel hSearchPageLabelMiddle'><span>of</span></li>
+            <li class='hSearchLastPage' title='Last Page'><a href='{hSearchLastPagePath}{hSearchNavigationAnchor}'><span>{hSearchPageCount}</span></a></li>
+        }
+        </ul>
+    </li>
+{hSearchNextPagePath?
+    <li class='hSearchNextPage' title='{hSearchNextPageTooltip}'><a href='{hSearchNextPagePath}{hSearchNavigationAnchor}'><span>{hSearchNextPageLabel}</span></a></li>
+}
+{!hSearchNextPagePath?
+    <li class='hSearchNextPage hSearchNextPageDisabled hSearchDisabled'><span>{hSearchNextPageLabel}</span></li>
+}
+</ul>

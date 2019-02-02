@@ -1,0 +1,2 @@
+<?php
+  class hFinderLabelLibrary extends hPlugin { public function hConstructor() { $this->getPluginFiles(); } public function get(Array $hFileLabels = array()) { return $this->getTemplate('Labels', $hFileLabels); } } ?>

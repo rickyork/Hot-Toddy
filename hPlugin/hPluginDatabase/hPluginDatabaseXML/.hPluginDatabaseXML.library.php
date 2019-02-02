@@ -1,0 +1,2 @@
+<?php
+  class hPluginDatabaseXMLLibrary extends hPlugin { public function register($xmlPath, $isPrivate, $plugin, $pluginName = null, $pluginPath = null) { $this->console( "Unable to install plugin: The configuration file for {$xmlPath} must be updated to use the Hot Toddy JSON2 configuration file." ); } } ?>

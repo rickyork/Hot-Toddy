@@ -1,0 +1,7 @@
+Iteration Test:
+
+  {navigation:each|key, item|?
+    {item.link}
+    {item.label}
+    {item.id}
+  }

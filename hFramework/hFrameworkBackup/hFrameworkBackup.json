@@ -1,0 +1,10 @@
+{
+    plugin : {
+        shell : {
+            name : "Framework Backup Shell"
+        },
+        library : {
+            name : "Framework Backup Library"
+        }
+    }
+}

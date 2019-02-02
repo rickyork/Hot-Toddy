@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Editor Properties"
+    },
+    file: {
+        title : "Document Properties",
+        path : "/Applications/Editor/Properties.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

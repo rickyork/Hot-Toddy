@@ -1,0 +1,30 @@
+<!-- File Properties for Columns View -->
+<div class='hFinderColumns' title='{hFilePath}'>
+    <div class='hFinderColumnsInner'>
+        <div class='hFinderColumnsFileProperties'>
+            <div class='hFinderColumnsFilePropertiesPreviewLabel'>
+                Preview:
+            </div>
+            <div class='hFinderColumnsFilePropertiesPreview'>
+                <img src='{hFilePreviewPath}' alt='Document Preview' />
+            </div>
+            <ul>
+                <li><span>Name</span> <div>{hFileName}</div></li>
+                <li><span>Kind</span> <div>{hFileKind}</div></li>
+                <li><span>Accessed</span> <div>{hFileAccessCount?{hFileAccessCount} times}{!hFileAccessCount?Never}</div></li>
+                <li><span>Size</span> <div>{hFileSize}</div></li>
+                <li><span>Created</span> <div>{hFileCreatedDate}</div></li>
+                <li><span>Modified</span> <div>{hFileLastModifiedDate}</div></li>
+                {hFileLastAccessedDate?
+                    <li><span>Last opened</span> <div>{hFileLastAccessedDate}</div></li>
+                }
+                {hFileDimensions?
+                    <li><span>Dimensions</span> <div>{hFileDimensions}</div></li>
+                }
+            </ul>
+            <div class='hFinderColumnsFilePropertiesInfo'>
+                <input type='submit' value='More Info...' class='hFinderColumnsFilePropertiesInfo' />
+            </div>
+        </div>
+    </div>
+</div>

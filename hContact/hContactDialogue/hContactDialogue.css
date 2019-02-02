@@ -1,0 +1,227 @@
+html {
+    background: rgb(238, 238, 238);
+}
+body {
+    background: rgb(238, 238, 238);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div#hContactDialogueToggle {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    background: white;
+    border: 1px solid rgb(128, 128, 128);
+    overflow: hidden;
+    z-index: 10;
+    height: 25px;
+    border-radius: 5px;
+}
+div#hContactDialogueToggle.hContactDialogueToggleActive {
+    overflow: visible;
+    height: auto;
+}
+div#hContactDialogueToggle ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+div#hContactDialogueToggle ul li {
+    padding: 5px;
+    height: 15px;
+    cursor: pointer;
+}
+div#hContactDialogueToggle ul li span,
+div#hContactDialogueToggle ul li img {
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+div#hContactDialogueToggle ul li:hover {
+    background-color: rgb(50, 102, 184); /*url('/hApplication/hApplicationUI/Pictures/Selection/Generic.png') repeat-x top;*/
+    color: white;
+    text-shadow: rgb(97, 95, 106) 1px 1px 1px;
+}
+div#hContactDialogueSearch {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+div#hContactRolodex {
+    position: absolute;
+    top: 41px;
+    height: 20px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgb(180, 180, 180);
+    z-index: 2;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(253, 253, 253)), to(rgb(215, 215, 215)));
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(253, 253, 253), rgb(215, 215, 215));
+    background: linear-gradient(to bottom, rgb(253, 253, 253), rgb(215, 215, 215));
+    {userAgent.vendorPrefix}user-select: none;
+    user-select: none;
+    {userAgent:(ie < 9)?
+        background: none;
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fdfdfd', endColorstr='#d7d7d7')";
+    }
+}
+div#hContactRolodex ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 950px;
+}
+div#hContactRolodex ul li {
+    float: left;
+    padding: 0 3px;
+    width: 25px;
+    text-align: center;
+    border-right: 1px solid rgb(180, 180, 180);
+    height: 20px;
+    cursor: pointer;
+}
+div#hContactRolodex ul li:active {
+    box-shadow: inset 0px -1px 4px rgb(0, 0, 0);
+    {userAgent.vendorPrefix}box-shadow: inset 0px 1px 4px rgb(0, 0, 0);
+}
+div#hContactRolodex ul li span {
+    line-height: 20px;
+    vertical-align: middle;
+}
+div#hContactDialogueInner {
+    position: absolute;
+    top: 62px;
+    right: 0;
+    bottom: 51px;
+    left: 0;
+    background: white;
+    border-top: 1px solid rgb(137, 137, 137);
+    border-bottom: 1px solid rgb(138, 138, 138);
+}
+div#hContactDialogueGroups {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-right: 1px solid rgb(180, 180, 180);
+    width: 214px;
+}
+div#hContactDialogueGroups > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+div#hContactDialogueGroups ul li {
+    padding: 3px;
+}
+div#hContactDialogueGroups ul li.hUserGroupSelected {
+    background: rgb(50, 102, 184) url('/hApplication/hApplicationUI/Pictures/Selection/Generic.png') repeat-x top;
+    color: white;
+    text-shadow: rgb(97, 95, 106) 1px 1px 1px;
+}
+div#hContactDialogueGroups ul li div {
+    background: url('/images/icons/16x16/group.png') no-repeat 0 0;
+    padding: 0 0 0 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div#hContactDialogueGroups ul li div span {
+    
+}
+div#hContactDialogueGroups ul ul {
+    list-style: none;
+    padding: 0;
+    margin: 3px 0 0 20px;
+    display: none;
+}
+div#hContactDialogueGroups ul li.hUserGroupSelected  ul {
+    display: block;   
+}
+div#hContactDialogueGroups ul li.hUserGroupSelected  ul.hUserGroupAddressNone {
+    display: none;
+}
+div#hContactDialogueGroups ul ul li {
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div#hContactDialogueUsers {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 215px;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #fff;
+}
+div#hContactDialogueUsers > ul {
+    background: url('/hContact/Pictures/Backgrounds/Stripe.png');
+}
+div#hContactDialogueButtons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 51px;
+}
+div#hContactDialogueButtonsRight {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+div#hContactDialogueButtons div#hContactDialogueButtonsRight input {
+    float: right;
+    margin: 0 0 0 12px;
+}
+span.hContactRecordId,
+span.hContactRecordUserId,
+div.hContactBenchmark {
+    display: none;
+}
+div.hContactRecord {
+    background: #fff url('/images/icons/24x24/user.png') no-repeat 5px 5px;
+    padding: 5px 5px 5px 35px;
+}
+div#hContactDialogueUsers div.hContactRecordSelected,
+li.hContactDialogueToggleSelected {
+    background-color: rgb(50, 102, 184); /*url('/hApplication/hApplicationUI/Pictures/Selection/Generic.png') repeat-x top;*/
+    color: white;
+    text-shadow: rgb(97, 95, 106) 1px 1px 1px;
+}
+div#hContactDialogueUsers div.hContactRecordSelected a {
+    color: lightblue;
+}
+div.hContactRecord:nth-child(even) {
+    background-color: rgb(243, 246, 250);
+}
+div.hContactRecord ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div#hContactDialogueUsers div.hContactRecord ul {
+    background: none;
+}
+div.hContactNoResults {
+    padding: 25px 0;
+    text-align: center;
+}

@@ -1,0 +1,55 @@
+div#hCategory,
+div#hCategoryDocuments {
+    padding: 10px;
+    margin-top: 10px;
+}
+div#hCategory h2,
+div#hCategoryDocuments h2 {
+    margin: -10px -10px 0 -10px;
+    padding: 3px;
+    font-weight: normal;
+    font-size: 12px;
+}
+div#hCategory table {
+    width: 100%;
+}
+div#hCategory table td {
+    padding: 10px 0;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+}
+div#hCategory a span {
+    padding: 3px;
+}
+p#hCategoryNoDocuments {
+    padding: 25px 0;
+    margin: 0;
+    text-align: center;
+    color: rgb(180, 180, 180);
+}
+div.hCategory {
+    float: left;
+    width: 128px;
+    height: 128px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+div#hCategoryFollow {
+    clear: both;
+}
+div.hCategoryDocument {
+    clear: both;
+    min-height: 40px;
+}
+div.hCategoryDocument .hCategoryDocumentIcon {
+    float: left;
+    margin: 3px;
+}
+div.hCategoryDocument h4 {
+    margin: 15px 0 0 40px;
+}
+div.hCategoryDocument p {
+    margin: 0 0 15px 40px;
+}

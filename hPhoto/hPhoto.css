@@ -1,0 +1,93 @@
+html,
+body {
+    background: rgb(38, 38, 38);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+div#hPhotoTree {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 240px;
+}
+div.hFinderTree {
+    position: absolute;
+    top: -1px;
+    right: 10px;
+    bottom: -1px;
+    left: -1px;
+    overflow: auto;
+    background: rgb(96, 97, 98);
+    color: #fff;
+    border: 1px solid #000;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+ul.hFinderTree {
+    margin: 10px 0 0 0;
+}
+div#hPhotoThumbnailSlider {
+    position: absolute;
+    left: 0;
+    width: 230px;
+    text-align: center;
+    bottom: 15px;
+    z-index: 2;
+}
+div#hPhotoViewOuter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom : 0;
+    left: 250px;
+    overflow: auto;
+    color: #fff;
+}
+div#hPhotoLightbox {
+    position: absolute;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+}
+div#hPhotoLightboxImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    z-index: 1;
+    text-align: center;
+    display: inline-block;
+    margin: 50px;
+    padding: 100px;
+}
+div#hPhotoLightboxImage img {
+    border: 1px solid rgb(200, 200, 200);
+}
+div#hPhotoLightboxButtons {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 2;
+}
+div#hPhotoLightboxButtons input {
+    float: right;
+    margin: 0 0 0 15px;
+}
+div#hPhotoLightboxControls {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    z-index: 2;
+}

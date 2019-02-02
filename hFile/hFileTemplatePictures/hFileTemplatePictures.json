@@ -1,0 +1,17 @@
+{
+    plugin : {
+        name : "Template Pictures"
+    },
+    file : {
+        title : "Template Pictures",
+        path : "/System/Applications/File/Template Pictures.plugin",
+        pathWildcard : "/Template/Pictures",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

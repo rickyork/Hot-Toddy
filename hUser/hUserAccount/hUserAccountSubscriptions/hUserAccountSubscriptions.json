@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "User Account Subscriptions"
+    },
+    file : {
+        title : "Account Subscriptions",
+        path : "/Applications/Users/Subscriptions.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

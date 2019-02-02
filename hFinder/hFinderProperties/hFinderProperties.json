@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Finder Properties"
+    },
+    file : {
+        title : "Finder Properties",
+        path : "/Applications/Finder/Properties.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

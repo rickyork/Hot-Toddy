@@ -1,0 +1,25 @@
+{
+    plugin : {
+        name : "Editor Document",
+        library : {
+            name : "Editor Document Library"
+        },
+        service : {
+            name : "Editor Document Listener",
+            methods : [
+                "save"
+            ]
+        }
+    },
+    file : {
+        title : "Editor Document",
+        path : "/Applications/Editor/Document.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

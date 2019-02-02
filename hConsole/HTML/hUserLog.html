@@ -1,0 +1,36 @@
+<table>
+    <thead>
+        <tr>
+            <th class='hUserLog-hUserId'>User Id</th>
+            <th class='hUserLog-hUserName'>User Name</th>
+            <th class='hUserLog-hUserFullName'>Full Name</th>
+            <th class='hUserLog-hUserLoginCount'>Login Count</th>
+            <th class='hUserLog-hUserFailedLoginCount'>Failed Login Count</th>
+            <th class='hUserLog-hUserCreated'>Account Created</th>
+            <th class='hUserLog-hUserLastLogin'>Last Login</th>
+            <th class='hUserLog-hUserLastFailedLogin'>Last Failed Login</th>
+            <th class='hUserLog-hUserLastModified'>Account Last Modified</th>
+            <th class='hUserLog-hUserLastModifiedBy'>Last Modified By</th>
+        </tr>
+    </thead>
+</table>
+<div id='hConsoleLogContainer'>
+    <table>
+        <tbody>
+            {log[]?
+                <tr>
+                    <td class='hUserLog-hUserId'>{hUserId}</td>
+                    <td class='hUserLog-hUserName'>{hUserId_hUserName}</td>
+                    <td class='hUserLog-hUserFullName'>{hUserId_hUserFullName}</td>
+                    <td class='hUserLog-hUserLoginCount'>{hUserLoginCount}</td>
+                    <td class='hUserLog-hUserFailedLoginCount'>{hUserFailedLoginCount}</td>
+                    <td class='hUserLog-hUserCreated'>{hUserCreated}</td>
+                    <td class='hUserLog-hUserLastLogin'>{hUserLastLogin}</td>
+                    <td class='hUserLog-hUserLastFailedLogin'>{hUserLastFailedLogin}</td>
+                    <td class='hUserLog-hUserLastModified'>{hUserLastModified}</td>
+                    <td class='hUserLog-hUserLastModifiedBy'>{hUserLastModifiedBy_hUserName}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

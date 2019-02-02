@@ -1,0 +1,554 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    /*background: rgb(150, 150, 150) url('/images/themes/aqua/finder/BackgroundBottom.png') repeat-x bottom;*/
+    background: rgb(244, 244, 244);
+    font: 12px "Helvetica Neue", Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    min-width: 900px;
+}
+div#hContactRolodex {
+    position: absolute;
+    top: 39px;
+    height: 20px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgb(180, 180, 180);
+    z-index: 2;
+    background: rgb(233, 233, 233);
+/*    background: -webkit-gradient(linear, left top, left bottom, from(rgb(253, 253, 253)), to(rgb(215, 215, 215)));
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(253, 253, 253), rgb(215, 215, 215));
+    background: linear-gradient(to bottom, rgb(253, 253, 253), rgb(215, 215, 215));*/
+    user-select: none;
+    {userAgent:(ie < 9)?
+        background: none;
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fdfdfd', endColorstr='#d7d7d7')";
+    }
+}
+div#hContactRolodex ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 950px;
+}
+div#hContactRolodex ul li {
+    float: left;
+    padding: 0;
+    width: 25px;
+    text-align: center;
+    border-right: 1px solid rgb(180, 180, 180);
+    height: 20px;
+    cursor: pointer;
+}
+div#hContactRolodex ul li:active {
+    {userAgent.vendorPrefix}box-shadow: inset 0px 1px 4px rgb(0, 0, 0);
+    box-shadow: inset 0px -1px 4px rgb(0, 0, 0);
+}
+div#hContactRolodex ul li span {
+    line-height: 20px;
+    vertical-align: middle;
+}
+div#hContacts {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    border-top: 1px solid rgb(180, 180, 180);
+    border-bottom: 1px solid rgb(180, 180, 180);
+    background: #fff;
+}
+div#hContactSearch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 300px;
+    height: 40px;
+}
+div#hContactGroupWrapper {
+    background: rgb(240, 240, 241);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0 0 0;
+    width: 250px;
+    border-right: 1px solid rgb(180, 180, 180);
+    overflow: hidden;
+    z-index: 1;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div#hContactGroupResizeGrip {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 250px;
+    width: 3px;
+    z-index: 2;
+    cursor: col-resize;
+}
+div#hContactDefault {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+div#hContactDefaultBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.8;
+}
+div#hContactDefaultContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+div#hContactDefaultIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -256px 0 0 -256px;
+    opacity: 0.5;
+}
+div#hContactDefaultIntro {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+}
+div#hContactLocation {
+    background: rgb(214, 221, 229);
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+    width: 250px;
+    height: 159px;
+    border-top: 1px solid rgb(180, 180, 180);
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+div#hContactLocation h4 {
+    height: 30px;
+    background: url('/images/themes/aqua/tabs/sideBarTab.png') repeat-x top;
+    font-weight: normal;
+    padding: 0 7px;
+    margin: 0;
+}
+div#hContactLocation h4 span {
+    line-height: 23px;
+    vertical-align: middle;
+}
+div#hContactLocation legend,
+div#hContactLocation div.hFormLegend {
+    display: none;
+}
+div#hContactLocation fieldset,
+div#hContactLocation div.hFormFieldsetWrapper {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+div#hContactLocation td.hFormLabel {
+    text-align: right;
+    padding: 0 5px 0 0;
+}
+div#hContactLocation select {
+    width: 140px;
+}
+div#hContactLocation td.hFormButton {
+    text-align: right;
+}
+div#hContactGroupTabs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 23px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    z-index: 2;
+    background: rgb(253, 253, 253);
+    /*background: -webkit-gradient(linear, left top, left bottom, from(rgb(253, 253, 253)), to(rgb(215, 215, 215)));
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(253, 253, 253), rgb(215, 215, 215));
+    background: linear-gradient(to bottom, rgb(253, 253, 253), rgb(215, 215, 215));
+    {userAgent.vendorPrefix}box-shadow: 0 3px 3px rgba(100, 100, 100, 0.7);
+    box-shadow: 0 3px 3px rgba(100, 100, 100, 0.7);
+    {userAgent:(ie < 9)?
+        background: none;
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fdfdfd', endColorstr='#d7d7d7')";
+    }
+    */
+}
+div#hContactGroupTabs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div#hContactGroupTabs li {
+    float: left;
+    border-right: 1px solid rgb(190, 190, 190);
+    padding: 0 8px;
+    height: 23px;
+}
+body#hSpotlightTemplate .hContactTabSelected {
+    background: rgb(185, 185, 185);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(185, 185, 185)), to(rgb(156, 156, 156)));
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(185, 185, 185), rgb(156, 156, 156));
+    background: linear-gradient(to bottom, rgb(185, 185, 185), rgb(156, 156, 156));
+    {userAgent:(ie < 9)?
+      background: none;
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#b9b9b9', endColorstr='#9c9c9c')";
+    }
+}
+ul.hContactGroupPane {
+    position: absolute;
+    top: 23px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.hContactGroupPaneSelected {
+    display: block;
+}
+div#hContactGroupTabs span {
+    line-height: 23px;
+    vertical-align: middle;
+}
+ul#hContactGroups {
+    position: absolute;
+    top: 23px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0 0 0;
+    font: 11px "Helvetica Neue", Arial, sans-serif;
+    overflow: auto;
+}
+ul#hContactGroups li {
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+ul#hContactGroups div {
+    background: url('/images/icons/16x16/group.png') no-repeat 5px 2px;
+    padding: 4px 0 4px 28px;
+}
+li.hContactGroupTemplate {
+    display: none;
+}
+ul.hContactGroupAddress {
+    display: none;
+    padding: 5px 0 10px 28px;
+}
+li.hContactGroupSelected ul.hContactGroupAddress {
+    display: block;
+}
+li.hContactGroupSelected ul.hContactNoGroupAddress {
+    display: none;
+}
+li.hContactGroupSelected,
+li.hContactGroupDragover {
+    background: rgb(224, 225, 218); /*url('/hApplication/hApplicationUI/Pictures/Selection/Generic.png') repeat-x top;
+    color: white;
+    text-shadow: rgb(97, 95, 106) 1px 1px 1px;*/
+}
+div#hContactSort {
+    position: relative;
+    z-index: 2;
+    height: 23px;
+    margin: 0 -1px;
+    font: 12px "Helvetica Neue", Arial, sans-serif;
+    border-right: 1px solid rgb(180, 180, 180);
+    border-bottom: 1px solid rgb(180, 180, 180);
+    {userAgent.vendorPrefix}user-select: none;
+    user-select: none;
+    background: rgb(253, 253, 253);
+}
+div#hContactSortButton {
+    position: absolute;
+    top: 0;
+    left: 490px;
+    z-index: 5;
+}
+body.hContactAddressBookNoGroups div#hContactSortButton {
+    left: 237px;
+}
+div#hContactSortButtonInner {
+    background: url('/hApplication/hApplicationUI/Pictures/Arrows/dropArrow.png') no-repeat right;
+    height: 24px;
+    border: 1px solid rgb(180, 180, 180);
+    border-bottom: none;
+    margin: -1px;
+    padding: 0 32px 0 7px;
+}
+.hContactTabSelected div#hContactSortButtonInner {
+    border: 1px solid rgb(100, 100, 100);
+    background-image: url('/hApplication/hApplicationUI/Pictures/Arrows/dropArrowBlack.png');
+    box-shadow: inset 0px -1px 4px rgb(0, 0, 0);
+    {userAgent.vendorPrefix}box-shadow: inset 0px 1px 4px rgb(0, 0, 0);
+}
+div#hContactSortButton span {
+    line-height: 23px;
+    vertical-align: middle;
+}
+ul#hContactSortColumns {
+    position: absolute;
+    z-index: 1000;
+    top: 30px;
+    left: 350px;
+    width: 200px;
+    font-size: 14px;
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgb(150, 150, 150);
+    border: 1px solid rgba(150, 150, 150, 0.95);
+    margin: 0;
+    list-style: none;
+    padding: 4px 0;
+    display: none;
+    {userAgent.vendorPrefix}box-shadow: 0 5px 25px rgba(100, 100, 100, 0.9);
+    box-shadow: 0 5px 25px rgba(100, 100, 100, 0.9);
+    {userAgent.vendorPrefix}border-radius: 5px;
+    border-radius: 5px;
+    {userAgent.vendorPrefix}user-select: none;
+    user-select: none;
+    {userAgent:(ie < 9)?
+        border: 1px solid rgb(100, 100, 100);
+    }
+}
+body.hContactAddressBookNoGroups ul#hContactSortColumns {
+    left: 99px;
+}
+body#hSpotlightTemplate ul.hContactSortColumnsOn {
+    display: block;
+}
+ul#hContactSortColumns li {
+    padding: 2px 0 2px 16px;
+}
+span.hContactSortColumn {
+    display: none;
+}
+span.hContactSortLabel {
+    display: block;
+}
+li.hContactSortItemOn {
+    background: rgb(10, 107, 211);
+    color: white;
+}
+li.hContactSortASC span.hContactSortLabel {
+    background: url('/images/themes/aqua/icons/misc/drop-arrow.png') no-repeat center right;
+}
+li.hContactSortDESC span.hContactSortLabel {
+    background: url('/images/themes/aqua/icons/misc/up-arrow.png') no-repeat center right;
+}
+li.hContactSortItemOn.hContactSortASC span.hContactSortLabel {
+    background: url('/images/themes/aqua/icons/misc/drop-arrow-white.png') no-repeat center right;
+}
+li.hContactSortItemOn.hContactSortDESC span.hContactSortLabel {
+    background: url('/images/themes/aqua/icons/misc/up-arrow-white.png') no-repeat center right;
+}
+div#hContactResultsWrapper {
+    position: absolute;
+    top: 0;
+    border-right: 1px solid rgb(180, 180, 180);
+    bottom: 0;
+    left: 251px;
+    width: 300px;
+    padding: 0 0 0 0;
+    background: white;
+    overflow: hidden;
+    z-index: 1;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div#hContactResultsResizeGrip {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 551px;
+    width: 3px;
+    cursor: col-resize;
+    z-index: 2;
+}
+body.hContactAddressBookNoGroups div#hContactResultsWrapper {
+    left: 0;
+}
+div#hContactResults {
+    position: absolute;
+    top: 23px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    overflow-x: hidden;
+}
+div#hContactResultsLabel {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    font-size: 13px;
+}
+div#hContactResultsButtons {
+    position: absolute;
+    top: 3px;
+    right: 70px;
+}
+div.ui-draggable {
+    width: 280px;
+}
+body.hContactDialogueSelect div#hContactResults {
+    bottom: 200px;
+}
+div#hContactGroupLabel {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 13px;
+}
+div#hContactGroupButtons {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+}
+div#hContactButtons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+div#hContactSelected {
+    position: absolute;
+    bottom: 24px;
+    height: 175px;
+    background: rgb(224, 225, 218);
+    width: 300px;
+    border-right: 1px solid rgb(180, 180, 180);
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+div#hContactSelected h4 {
+    margin: 5px;
+    font: 14px "Helvetica Neue", Arial, sans-serif;
+    color: rgb(120, 120, 120);
+}
+body.hContactAddressBookNoGroups div#hContactResults {
+    left: 0;
+}
+div#hContactResults div.hContactRecord {
+    width: auto !important;
+}
+div.hContactRecord {
+    padding: 10px;
+}
+div.hContactRecordTemplate {
+    display: none;
+}
+div.hContactRecord ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+span.hContactRecordId {
+    float: right;
+    background: pink;
+    color: crimson;
+    padding: 3px;
+    margin: 3px;
+    display: none;
+}
+li.hContactRecordDisplayName {
+    font-weight: bold;
+}
+li.hContactRecordDisplayName,
+li.hContactRecordTitle,
+li.hContactRecordCompany {
+    text-transform: lowercase;
+    text-transform: capitalize;
+}
+div.hContactRecord {
+    background: rgb(245, 245, 245);
+}
+div.hContactRecord:nth-child(odd) {
+    background: #fff;
+}
+div#hContactResults div.hContactSelected {
+    background: rgb(224, 225, 218); /*rgb(50, 102, 184) url('/hApplication/hApplicationUI/Pictures/Selection/Generic.png') repeat-x top;
+    color: white;
+    text-shadow: rgb(97, 95, 106) 1px 1px 1px;*/
+}
+div.hContactSelected a,
+div.hContactSelected a:visited {
+    color: rgb(100, 100, 100);
+}
+div.hContactBenchmark {
+    text-align: right;
+    font-style: italic;
+    color: rgb(200, 200, 200);
+    font-size: 10px;
+    padding: 10px;
+    display: none;
+}
+div.hContactNoResults {
+    text-align: center;
+    padding: 50px 0;
+    color: rgb(180, 180, 180);
+    margin: 5px;
+}
+form#hContactAddressesDialogue {
+    width: 500px;
+    height: 350px;
+    margin: -175px 0 0 -250px;
+}
+form#hContactAddressesDialogue div#hContactAddresses {
+    display: block;
+}
+form#hContactAddressesDialogue div.hFormLegend {
+    display: none;
+}
+form#hContactAddressesDialogue div.hDialogueContent {
+    background: rgb(232, 232, 232);
+}
+form#hContactAddressesDialogue div.hFormFieldsetWrapper {
+    width: 500px;
+}
+body div.hApplicationStatus {
+    bottom: 57px;
+    right: 20px;
+    z-index: 900;
+}
+div#hContactInstructions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2000;
+    width: 400px;
+    height: 280px;
+    margin: -140px 0 0 -200px;
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.9);
+    {userAgent.vendorPrefix}box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    {userAgent.vendorPrefix}border-radius: 8px;
+    border-radius: 8px;
+}
+div#hContactInstructionsInner {
+    padding: 0 20px;
+}

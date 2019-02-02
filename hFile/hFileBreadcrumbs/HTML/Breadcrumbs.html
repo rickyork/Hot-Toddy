@@ -1,0 +1,20 @@
+  <!-- Begin Breadcrumbs -->
+  <li><a href='{hFileBreadcrumbHomePath}'>{hFileBreadcrumbHomeLabel}</a></li>
+  {hFileBreadcrumbs[]?
+  <li>
+    <span class='{hFileBreadcrumbSeparatorClass}'>{hFileBreadcrumbSeparator}</span>
+    <a href='{hFilePath}'>{hFileTitle}</a>
+  </li>
+  }
+  {linkToFile?
+  <li>
+    <span class='{hFileBreadcrumbSeparatorClass}'>{hFileBreadcrumbSeparator}</span>
+    <a href='{hFileBreadcrumbPath}'>{hFileBreadcrumbTitle}</a>
+  </li>
+  }
+  {hFileBreadcrumbAppend}
+  <li{hFileBreadcrumbHereClass? class='{hFileBreadcrumbHereClass}'}>
+    <span class='{hFileBreadcrumbSeparatorClass}'>{hFileBreadcrumbSeparator}</span>
+    <a{linkToSelf? href='{hFilePath}'}>{.hFileBreadcrumbTitle({hFileTitle})}</a>
+  </li>
+  <!-- End Breadcrumbs -->

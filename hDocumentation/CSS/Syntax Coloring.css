@@ -1,0 +1,62 @@
+
+span.hDocumentationMethodReturnType,
+span.hDocumentationTokenKeyword,
+a.hDocumentationTokenKeyword,
+a.hDocumentationTokenFunction {
+    color: rgb(151, 25, 99);
+}
+span.hDocumentationMethodReturnType {
+    font-style: italic;
+    margin-right: 5px;
+}
+a.hDocumentationTokenStatic,
+a.hDocumentationTokenVisibility {
+    color: rgb(151, 25, 99);
+}
+a.hDocumentationTokenPHPFunction,
+span.hDocumentationTokenObjectMethod {
+    color: rgb(22, 66, 124);
+}
+span.hDocumentationTokenParenthesis {
+    color: rgb(75, 75, 75);
+}
+span.hDocumentationTokenCurlyBrace {
+    color: rgb(50, 50, 50);
+}
+span.hDocumentationTokenComment {
+    color: rgb(128, 128, 128);
+}
+span.hDocumentationTokenString {
+    color: rgb(49, 32, 180);
+}
+span.hDocumentationTokenVariable {
+    color: rgb(145, 109, 11);
+}
+span.hDocumentationTokenUserDefined {
+    color: rgb(113, 140, 177);
+}
+td.hDocumentationMethodDescription p.hDocumentationNote,
+td.hDocumentationMethodDescription div.hDocumentationNote {
+    padding: 10px 15px;
+    border-radius: 7px;
+    border: 1px solid rgb(177, 160, 49);
+    {userAgent.vendorPrefix}border-radius: 7px;
+    {userAgent.isWebkit?
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(246, 240, 139, 0.7)), to(rgba(251, 222, 134, 0.7)));
+    }
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgba(246, 240, 139, 0.7), rgba(251, 222, 134, 0.7));
+    background: linear-gradient(to bottom, rgba(246, 240, 139, 0.7), rgba(251, 222, 134, 0.7));
+}
+td.hDocumentationMethodDescription p.hDocumentationWarning,
+td.hDocumentationMethodDescription div.hDocumentationWarning {
+    color: #000;
+    padding: 10px 15px;
+    border: 1px solid rgb(209, 134, 134);
+    {userAgent.vendorPrefix}border-radius: 7px;
+    border-radius: 7px;
+    {userAgent.isWebkit?
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 200, 180, 0.5)), to(rgba(193, 128, 117, 0.5)));
+    }
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgba(240, 200, 180, 0.5), rgba(193, 128, 117, 0.5));   
+    background: linear-gradient(to bottom, rgba(240, 200, 180, 0.5), rgba(193, 128, 117, 0.5));
+}

@@ -1,0 +1,68 @@
+{hFileXMLProlog}{.hFileDoctype('<!DOCTYPE HTML>')}
+<html lang='{fileLanguage}'{hFileHTMLClass? class='{hFileHTMLClass}'}>
+    <head>
+        <meta charset='{fileCharset}' />{.hFileMetaHTTP(null)}
+        <title>{hFileTitlePrepend}{php.strip_tags({fileTitle})}{hFileTitleAppend}</title>{#.translate({php.strip_tags({hFileTitle})})}
+        {hFileViewport?<meta name='viewport' content='{hFileViewport}' />}{!hFileViewport?<meta name='viewport' content='width=1024' />}{hFileDescription?
+        <meta name='description' content="{fileDescription}" />}{hFileKeywords?
+        <meta name='keywords' content="{hFileKeywords}" />}{hGoogleSitemapKey?
+        <meta name='verify-v1' content='{hGoogleSitemapKey}' />}
+        <meta name='generator' content='Hot Toddy Framework {.hFrameworkVersion('1.0.0')}, http://www.hframework.com' />{hFacebookThumbnail?
+        <meta property='og:image' content='{hFacebookThumbnail}' />}{hFileLastModified?
+        <meta name='date' content='{php.date('c', {hFileLastModified})}' />}{.hFileMeta(null)}{hFileFavicon?
+        <link rel='shortcut icon' href='{hFileFavicon}' type='image/x-icon' />}
+        <link rel='search' title='{hFrameworkName}' type='application/opensearchdescription+xml' href='/Applications/Search/open.xml' />{hFileRSS?
+        <!-- Begin RSS -->
+            {php.trim({hFileRSS})}
+        <!-- End RSS -->}{hFileCSS?
+        <!-- Begin CSS -->
+            {php.trim({hFileCSS})}
+            {hFileMediaElement?<link rel='stylesheet' href='{hFrameworkLibraryRoot}/MediaElement/build/mediaelementplayer.css' />
+            <link rel='stylesheet' href='/hFramework/CSS/Video.css' />}
+        <!-- End CSS -->}
+        <!--Begin JavaScript -->
+            {jQueryPath?<script src='{jQueryPath}'></script>}
+            {.hFrameworkEnableJavaScript(true)?<script>
+                var hot = {
+                    userSessionId : '{php.session_id()}',
+                    userAgent : '{userAgent.browser}',
+                    userAgentVersion : {userAgent.browserVersion},
+                    userAgentOS : '{userAgent.os}',
+                    userAgentOSVersion : '{userAgent.osVersion}',
+                    userInterfaceIdiom : '{userAgent.interfaceIdiom}',
+                    userAgentIsMobile : {userAgent.isMobile?true}{!userAgent.isMobile?false},
+                    {session.hUserId?userId : {session.hUserId},
+                    userName : "{session.hUserName}",
+                    }installPath : '{.hPath("/")}',
+                    directoryId : {hDirectoryId},
+                    fileId : {hFileId},
+                    filePath : '{hFilePath}',
+                    fileWildcardPath : '{hFileWildcardPath}'{.hFileActivityEnabled(false)?,
+                    fileActivityId: {hFileActivityId},
+                    fileAccessedGMT: {.getGMTTime()}}
+                };
+                var server = {
+                    host: '{server.HTTP_HOST}'
+                };
+            </script>
+            {hFileMediaElement?<script src='{hFrameworkLibraryRoot}/MediaElement/build/mediaelement-and-player.min.js'></script>}
+            <script src='/hFramework/hFramework.template.js'></script>
+            {php.trim({hFileJavaScript})}}
+        <!-- End JavaScript -->
+        <!--
+            Hot Toddy Framework
+
+            http://www.hframework.com
+            © Copyright {php.date('Y')} Richard York, All rights Reserved
+
+            Use and redistribution are subject to the terms of the license.
+            http://www.hframework.com/license
+
+            Framework Data:
+              hDatabaseInitial:      {hDatabaseInitial}
+              {hFileSymbolicLinkId?hFileSymbolicLinkId:   {hFileSymbolicLinkId}}
+              {hPlugin?hPluginPath:           {hPlugin}}
+
+            User Agent: {server.HTTP_USER_AGENT}
+        -->
+    </head>

@@ -1,0 +1,21 @@
+{
+    plugin : {  
+        name : "User Login",
+        library : {
+            name : "User Login Library"
+        },
+        service : {
+            name : "User Login Listener",
+            methods : [
+                "isActivated",
+                "activateUser",
+                "resendActivation",
+                "updateEmailAddress",
+                "login",
+                "getUserName",
+                "getEmailAddress",
+                "getSecurityQuestion"
+            ]
+        }
+    }
+}

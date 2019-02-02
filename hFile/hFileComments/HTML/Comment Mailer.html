@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>File Comment</title>    
+    </head>
+    <body>
+        <h4>New Comment Posted To: <a href='{hFilePath}'>{hFileTitle}</a></h4>
+        <ul style="list-style: none;">
+            <li><b>Name:</b> {hFileCommentName}</li>
+            <li><b>Email:</b> <a href='mailto:{hFileCommentEmail}'>{hFileCommentEmail}</a></li>
+            <li><b>Website:</b> <a href='{hFileCommentWebsite}'>{hFileCommentWebsite}</a></li>
+        </ul>
+        <h4>Comment:</h4>
+        <div>
+            {hFileComments}
+        </div>
+        <h4>Respond to Comment:</h4>
+        <p>
+            <a href='{hFilePath}#hFileCommentsForm'>{hFilePath}#hFileCommentsForm</a>
+        </p>
+    {hFileCommentModeration?
+        <h4>Comment Moderation is Activated:</h4>
+        <p>
+            This comment is not publicly accessible.
+        </p>
+        <p>
+            <a href='{hFilePath}?commentApprove&fileCommentId={hFileCommentId}'>Approve This Comment</a>
+        </p>
+        <p>
+            <a href='{hFilePath}?commentDelete&fileCommentId={hFileCommentId}'>Delete This Comment</a>
+        </p>
+    }
+    {!hFileCommentModeration?
+        <h4>Comment Moderation is Disabled:</h4>
+        <p>
+            This comment is publicly accessible.
+        </p>
+        <p>
+            <a href='{hFilePath}?commentDelete&fileCommentId={hFileCommentId}'>Delete This Comment</a>
+        </p>
+    }        
+        <table></table> <!--  empty table for Entourage bug fix -->
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<div class='hSpotlightSearch' id='hSpotlightSearch-{hSpotlightId}'>
+  <form action='{hSpotlightAction}' method='get'>
+    <div class='hSpotlightIcon'></div>
+    <img src='/images/themes/aqua/activity/spotlight.gif' alt='Activity Indicator' class='hSpotlightActivity' />
+    <!-- <label for='hSpotlightSearch-{hSpotlightId}' class='hSpotlightSearchLabel'>Search for:</label> -->
+    <div class='hSpotlightSearchBasic'>
+      <div class='hSpotlightSearchBasicOptions'>
+        <span>Search Options</span>
+      </div>
+      <div class='hSpotlightSearchBasicOuter'>
+        <div class='hSpotlightSearchBasicMiddle'>
+          <div class='hSpotlightSearchBasicInner'>
+          </div>
+        </div>
+      </div>
+      <div class='hSpotlightSearchBasicBottomOuter'>
+        <div class='hSpotlightSearchBasicBottomMiddle'>
+          <div class='hSpotlightSearchBasicBottomInner'>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='hSpotlightSearchExtended'>
+      <div class='hSpotlightSearchExtendedOuter'>
+        <div class='hSpotlightSearchExtendedMiddle'>
+          <div class='hSpotlightSearchExtendedInner'>
+            <div class='hSpotlightSearchExtendedWrapper'>
+{hSpotlightSearchExtended}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='hSpotlightSearchExtendedBottomOuter'>
+        <div class='hSpotlightSearchExtendedBottomMiddle'>
+          <div class='hSpotlightSearchExtendedBottomInner'>
+          </div>
+        </div>
+      </div>
+      <div class='hSpotlightSearchExtendedOptions'>
+        <div class='hSpotlightSearchExtendedToggleOptions'>
+          <span>Show Options</span>
+         </div>
+         {hSpotlightAdvancedSearch?
+           <div class='hSpotlightSearchExtendedMoreOptions'>
+             <span>More Options</span>
+           </div>
+         }
+      </div>
+    </div>
+    <div class='hSpotlightSearchInput'>
+      <input type='search' class='hSpotlightSearchInput' placeholder='{.hSpotlightSearchPlaceholder("Search")}' name='hSpotlightSearchInput-{hSpotlightId}' id='hSpotlightSearchInput-{hSpotlightId}' />
+    </div>
+  </form>
+</div>

@@ -1,0 +1,2 @@
+<?php
+  class hFinderToolbar extends hPlugin { private $hFinderLocation; public function hConstructor() { $this->hFinderLocation = $this->plugin('hFinder/hFinderLocation'); $this->hFileDocument .= $this->getTemplate( 'Toolbar', array( 'hFinderActionsMenu' => $this->hFinderActionsMenu(true) || $this->inGroup('root'), 'hFinderLocation' => $this->hFinderLocation->getLocationTemplate() ) ); $this->getPluginFiles(); $this->getPluginCSS('ie6'); $this->getPluginCSS('ie7'); } } ?>

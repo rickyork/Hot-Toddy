@@ -1,0 +1,48 @@
+body form.hDialogueModal {
+    min-height: 180px;
+}
+body form.hDialogueModal legend,
+body form.hDialogueModal div.hFormLegend {
+    display: none;
+}
+body form.hDialogueModal fieldset, 
+body form.hDialogueModal div.hDialogueFieldset {
+    border-top: none;
+}
+body form.hDialogueModal span.hDialogueClose,
+body form.hDialogueModal span.hDialogueMinimize,
+body form.hDialogueModal span.hDialogueZoom {
+    display: none;
+}
+body form.hDialogueModal p {
+    margin: 0 0 10px 0;
+}
+body div.hFrameworkModalText,
+body div#hFrameworkLoginDiv {
+    position: relative;
+    top: -15px;
+    overflow: hidden;
+}
+input#hFrameworkPromptResponse {
+    position: relative;
+    top: -15px;
+    width: 100%;
+}
+form#hFrameworkLoginDialogue {
+    width: 600px;
+    margin-left: -300px;
+}
+form#hFrameworkLoginDialogue input#hFrameworkLoginUserName,
+form#hFrameworkLoginDialogue input#hFrameworkLoginPassword {
+    width: 200px;
+}
+body form#hFrameworkLoginDialogue td.hFormLabel {
+    white-space: nowrap;
+}
+div#hFrameworkLoginMessage {
+    display: none;
+    margin: 20px 50px 0 50px;
+    padding: 10px;
+    border: 1px dashed crimson;
+    color: crimson;
+}

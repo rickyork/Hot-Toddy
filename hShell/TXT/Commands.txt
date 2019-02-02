@@ -1,0 +1,161 @@
+Possible commands are:
+
+    backup
+    
+        Create a backup of the entire framework installation by exporting the 
+        database and then creating a zip archive of the installation.
+        
+        If a framework website lives at /Websites/www.example.com
+        
+        The backup is created at /Websites/www.example.com.zip
+        
+        Subsequent execution of the backup utility will update the existing 
+        zip archive, rather than recreating the entire archive from scratch.
+        
+    truncate cache
+    
+        Truncates the hFileCache database table, which contains a variety of 
+        cached data that is safe to completely expunge from time to time.
+
+    cache
+
+        Creates a copy of every publicly-accessible, static document in 
+        document root, making Hot Toddy much more efficient by reducing 
+        database and CPU load.  If used, this should be called every time
+        Hot Toddy, or any static, publicly-accessible document is updated, 
+        with the exception of user-uploaded content through hFinder, 
+        which is automatically updated.
+        
+    cache php by force
+    
+        Updates cached PHP code.
+        
+    cleanup
+
+        Runs: hFramework/hFrameworkCleanup(.shell.php).  This plugin gets 
+        rid of orphaned database records as well as bad database records.
+        
+    db
+    
+        db update
+        db update <tableName>
+        
+            Run update scripts in Database folders.
+            
+        db install
+        db install <tableName>
+        
+            Install database tables in Database folders.
+            
+        db versions
+
+            Create version numbers based on version files in the 
+            hDatabaseStructure table
+            
+        db revert
+        db revert <tableName>
+            
+            Revert database to last version.
+
+        db export 
+        db export to <filePath>
+        
+            Export database to {hFrameworkPath}/SQL/dbName.sql
+
+        db import
+        db import from <filePath>
+
+            Import and overwrite database using SQL file located
+            in: {hFrameworkPath}/SQL/dbName.sql
+
+    export
+    
+        Exports framework data in JSON format.
+        
+        Example: ./hot export to /somewhere/framework.json
+        
+        If 'to' is not specified, framework data will be exported to 
+        www.example.com/Temporary/hFrameworkExport.json
+        
+        Runs: hFramework/hFrameworkExport (.shell.php)
+
+    help
+    
+        Displays this help text.  Also, any invalid command will display
+        this help text.
+
+    import
+    
+        Imports framework data from a JSON-formatted file.
+        
+        Example: ./hot import from /somewhere/framework.json
+        
+        The 'from' argument is required.
+
+        Runs: hFramework/hFrameworkImport (.shell.php)
+
+    install
+    
+        Install a plugin.
+        
+        Example: ./hot install hFinder
+        
+        Installs the hFinder plugin by analyzing the hFinder.json file 
+        found at /hFinder/hFinder.json
+        
+    install icons
+    install icns
+    
+        Copies all .icns files from the host Mac OS to /Icons/Source
+        The .icns files copied to /Icons/Source are used to create all 
+        application icons used throughout Hot Toddy using the hFileIcon
+        API
+        
+    mail
+    
+        Load the mail shell hMail (.shell.php)
+
+    plugin
+
+        Run a framework shell plugin.
+
+        Example: ./hot plugin hFile
+
+        Runs: hFile (.shell.php)
+        
+        This file is located at /hFile/hFile.shell.php.  If a plugin does not 
+        have a '.shell.php' variant, the command will fail.
+        
+        Each plugin may require additional arguments.
+        
+        The command '--plugin' is a legacy command and provides the same functionality.
+        
+    sandbox
+
+        Enter into sandbox mode. Sandbox mode allows you to execute Hot Toddy
+        commands in the contect of a Hot Toddy shell plugin.  You can include 
+        plugins and execute standard framework API calls.
+        
+    templateLanguage
+    
+        A test utility for template language syntax.
+        
+        Runs: hTemplate/hTemplateLanguage (.shell.php)
+        
+    toRuby
+    
+        A utility for converting the framework's PHP source files into ruby 
+        source files.  Experimental.
+        
+    update
+
+        Updates Hot Toddy from Subversion, updates database tables,
+        if applicable.  Updates Hot Toddy via update scripts, if applicable.
+        
+    update icons
+    update icns
+    
+        Copies all .icns files from the host Mac OS to /Icons/Source
+        The .icns files copied to /Icons/Source are used to create all 
+        application icons used throughout Hot Toddy using the hFileIcon
+        API        

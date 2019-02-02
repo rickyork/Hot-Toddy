@@ -1,0 +1,9 @@
+div.hSearchResult {
+    height: 60px;
+}
+div.hSearchResults,
+div.hSearchResultsOuter,
+div.hSearchResultsMiddle,
+div.div.hSearchResultsInner {
+    zoom: 1;
+}

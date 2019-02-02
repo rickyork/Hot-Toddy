@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Hot Toddy Preferences"
+    },
+    file : {
+        title : "Preferences",
+        path : "/Hot Toddy/Preferences/index.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

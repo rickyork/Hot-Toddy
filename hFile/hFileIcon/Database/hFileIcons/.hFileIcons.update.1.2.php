@@ -1,0 +1,2 @@
+<?php
+  class hFileIcons_1to2 extends hPlugin { public function hConstructor() { $this->hFileIcons->addColumn('hFileICNS', hDatabase::varCharTemplate(100), 'hFileName'); } public function undo() { $this->hFileIcons->dropColumn('hFileICNS'); } } ?>

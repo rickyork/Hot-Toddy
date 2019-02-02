@@ -1,0 +1,19 @@
+div#hEditorTemplateLink {
+    height: 315px;
+}
+
+div#hEditorTemplateLinkRemoveWrapper {
+    position: absolute;
+    bottom: 12px;
+    left: 5px;
+    border-right: none;
+}
+div#hEditorTemplateLink div#hEditorTemplateLinkServerWrapper {
+    display: inline-block;
+    float: none;
+    position: relative;
+    top: 6px;
+}
+div#hEditorLinkTargetWrapper {
+    padding: 15px 0 15px 120px;
+}

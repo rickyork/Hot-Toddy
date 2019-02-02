@@ -1,0 +1,2 @@
+<?php
+  class hDashboardAccount extends hPlugin { private $hDashboard; public function hConstructor() { $this->hDashboard = $this->library('hDashboard'); if ($this->isLoggedIn()) { $this->getPluginFiles(); $contact = $this->contact->getFlatRecord(); $this->hFileDocument = $this->getTemplate( 'Account', array( 'contact' => $contact ) ); } else { $this->notLoggedIn(); } } } ?>

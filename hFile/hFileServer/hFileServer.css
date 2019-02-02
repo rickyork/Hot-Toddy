@@ -1,0 +1,32 @@
+body {
+    background: rgb(244, 244, 244) !important;
+    padding: 5px;
+    color: black;
+    font: 12px Helvetica, Arial, sans-serif;
+}
+h1.hFileServerPath {
+    font: 12px sans-serif;
+    text-align: left;
+    margin: 10px 10px 0 10px;
+    padding: 3px;
+}
+p.hFileServerDownload {
+    text-align: left;
+    position: fixed;
+    background: white;
+    border: 1px solid #000;
+    padding: 3px 5px 4px 5px;
+    margin: 10px;
+    top: 0;
+    right: 9px;
+}
+div#hFileFollow {
+    height: 10px;
+}
+body .dp-highlighter {
+    background: none;
+}
+body .dp-highlighter ol li,
+body .dp-highlighter .columns div {
+    background: #fff;
+}

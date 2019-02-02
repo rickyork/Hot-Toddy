@@ -1,0 +1,19 @@
+<!--
+{!isText?<script src='/Library/Ace/build/src/mode-{mode}.js'></script>}
+<script src='/Library/Ace/build/src/theme-textmate.js'></script>
+<script>
+    $(document).ready(
+        function()
+        {
+            editor.ace = ace.edit('hEditorDocumentTextEditor');
+            editor.ace.setTheme('ace/theme/textmate');
+
+            {!isText?
+                var editorMode = require('ace/mode/{mode}').Mode;
+                editor.ace.getSession().setMode(new editorMode());
+            }
+        }
+    );
+</script>
+-->
+<div id='hEditorDocumentTextEditor' data-editor-mode='{mode}'>{hFileDocument}</div>

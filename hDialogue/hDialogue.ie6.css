@@ -1,0 +1,29 @@
+form.hDialogue {
+    z-index: 2000;
+    position: absolute;
+}
+form.hDialogue fieldset {
+    position: relative;
+}
+div.hDialogueShadow * {
+    background: none !important;
+}
+div.hDialogueShadow {
+    display: none;
+}
+h4.hDialogueTitlebar {
+    top: -12px;
+    overflow: hidden;
+}
+div.hDialogueTitlebarLeft {
+    background: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/themes/aqua/backgrounds/dialogueTitlebarLeft.png', sizingMethod='scale');
+}
+div.hDialogueTitlebarRight {
+    background: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/themes/aqua/backgrounds/dialogueTitlebarRight.png', sizingMethod='scale');
+}
+div.hDialogueContent {
+    width: 100%;
+    height: 100%;
+}

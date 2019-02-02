@@ -1,0 +1,50 @@
+{
+    plugin : {
+        name : "Finder",
+        library : {
+            name : "Finder Library"
+        },
+        service : {
+            name : "Finder Service",
+            methods : [
+                "getDirectory",
+                "getBranch",
+                "saveSize",
+                "setDefaultView",
+                "getColumnFileProperties",
+                "search",
+                "searchByPreset"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hFinder",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hFinder"
+        }
+    },
+    file : {
+        title : "Finder",
+        path : "/Applications/Finder/index.html",
+        directory : {
+            properties : {
+                isApplication : true,
+                icon : {
+                    name : "Finder.png",
+                    icns : "FinderIcon.icns",
+                    mime : "plugins/finder"
+                }
+            }
+        },
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

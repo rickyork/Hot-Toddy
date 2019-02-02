@@ -1,0 +1,167 @@
+@import '/hApplication/hApplicationUI/hApplicationUIListView/hApplicationUIListView.css';
+
+{compile.css:{
+    "master" : "/hFinder/hFinder.css",
+    "files" : [
+        "/hFinder/CSS/Views/Views.css",
+        "/hFinder/CSS/Views/Tiles.css",
+        "/hFinder/CSS/Views/Icons.css",
+        "/hFinder/CSS/Views/Columns.css",
+        "/hFinder/CSS/Views/List.css",
+        "/hFinder/CSS/Dialogue.css",
+        "/hFinder/CSS/Search.css",
+        "/hFinder/CSS/Drag and Drop.css"
+    ]
+}}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    min-width: 500px;
+    min-height: 300px;
+    overflow: hidden;
+    background: rgb(200, 200, 200);
+    padding: 0;
+    margin: 0;
+}
+html {
+    background: rgb(150, 150, 150);
+}
+body {
+    background: rgb(223, 223, 223);
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+}
+div#hFinderWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+div.hFinderFiles {
+    margin: 32px 0 23px 251px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgb(148, 148, 148);
+    border-bottom: 1px solid rgb(148, 148, 148);
+    background: #fff;
+    padding: 5px;
+    overflow: auto;
+    z-index: 1;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div.hFinderFilesListHeader {
+    border-top: none;
+    margin-top: 49px;
+}
+div#hFinderFilesInner {
+    width: 100%;
+    height: 100%;
+}
+h4.hFinderError {
+    color: crimson;
+    margin: 0;
+    border-bottom: 1px solid #000;
+    padding: 3px;
+    text-align: left;
+}
+p.hFinderErrorText {
+    margin: 3px;
+    text-align: left;
+}
+div.hFinderPopup form {
+    margin: 0;
+    padding: 0;
+}
+div#hFinderUploadInner {
+    height: 165px;
+    overflow: auto;
+    margin: 20px;
+    padding: 10px;
+}
+div#hFinderView,
+div#hFinderHomeDirectory,
+div#hFinderServer {
+    display: none;
+}
+.hFinderSelected {
+    background: #3470CB;
+    color: white;
+}
+a {
+    color: #369;
+}
+.hFinderSelected a,
+.hFinderSelected a:hover {
+    color: lightblue;
+}
+div.hFrameworkDebug {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    top: 5px;
+    left: 5px;
+    overflow: auto;
+    z-index: 3000;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid rgb(180, 180, 180);
+}
+div.hFinderBottomBox {
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div.hFinderBottomBoxTopOuter {
+    background: url('/images/themes/aqua/finder/BottomBox_01.png') no-repeat top left;
+}
+div.hFinderBottomBoxTopMiddle {
+    background: url('/images/themes/aqua/finder/BottomBox_04.png') no-repeat top right;
+}
+div.hFinderBottomBoxTopInner {
+    background: url('/images/themes/aqua/finder/BottomBox_02.png') repeat-x top;
+    height: 20px;
+    margin: 0 10px 0 8px;
+}
+div.hFinderBottomBoxTopInner h4 {
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    padding: 3px 0 0 0;
+}
+div.hFinderBottomBoxOuter {
+    background: url('/images/themes/aqua/finder/BottomBox_05.png') repeat-y left;
+}
+div.hFinderBottomBoxMiddle {
+    background: url('/images/themes/aqua/finder/BottomBox_07.png') repeat-y right;
+}
+div.hFinderBottomBoxInner {
+    margin: 0 10px 0 8px;
+    padding: 5px;
+}
+div.hFinderBottomBoxInner form {
+    margin: 0;
+    padding: 0;
+}
+div.hFinderBottomBoxBottomOuter {
+    background: url('/images/themes/aqua/finder/BottomBox_10.png') no-repeat bottom left;
+}
+div.hFinderBottomBoxBottomMiddle {
+    background: url('/images/themes/aqua/finder/BottomBox_13.png') no-repeat bottom right;
+}
+div.hFinderBottomBoxBottomInner {
+    background: url('/images/themes/aqua/finder/BottomBox_11.png') repeat-x bottom;
+    height: 11px;
+    margin: 0 10px 0 8px;
+}
+div#hFinderCopyTexareaInputWrapper {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: -10000px;
+}

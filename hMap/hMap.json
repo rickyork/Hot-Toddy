@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Map Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hMap",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hMap"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "types" : [
+        {
+            mime: ["image/png", "image/x-png"],
+            png: "png.png",
+            icns: "png.icns",
+            ext: "png"
+        },
+        {
+            mime: ["image/jpeg", "image/jpg"],
+            png: "jpeg.png",
+            icns: "jpeg.icns",
+            ext: ["jpg", "jpeg", "jpe"]
+        },
+    ]
+}

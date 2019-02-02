@@ -1,0 +1,126 @@
+@import '/hApplication/hApplicationUI/hApplicationUIListView/hApplicationUIListView.css';
+
+div.hUserSelect {
+    position: relative;
+    margin: 0 0 10px 0;
+}
+ul.hUserSelectList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 21px;
+    border: 1px solid rgb(180, 180, 180);
+    border-bottom: none;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+    background: rgb(253, 253, 253);
+    {userAgent.isWebkit?
+        background: -webkit-gradient(linear, left top, left bottom, from(rgb(253, 253, 253)), to(rgb(215, 215, 215)));
+    }
+    background: {userAgent.vendorPrefix}linear-gradient(top, rgb(253, 253, 253), rgb(215, 215, 215));
+    background: linear-gradient(to bottom, rgb(253, 253, 253), rgb(215, 215, 215));
+    {userAgent.isTridentLTE9?
+        background: none;
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfd', endColorstr='#d7d7d7')";
+        {userAgent.isTridentLTE7?
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfd', endColorstr='#d7d7d7');
+        }
+    }
+}
+li.hUserSelectLetter {
+    height: 19px;
+    width: 15px;
+    text-align: center;
+    float: left;
+    border-right: 1px solid rgb(200, 200, 200);
+}
+li.hUserSelectLetterOver,
+table.hApplicationUIListView tbody tr.hUserSelected {
+    background: #3470CB url("/hApplication/hApplicationUI/Pictures/Selection/Generic.png") repeat-x;
+    color: white;
+    text-shadow: rgb(97, 95, 106) 1px 1px 1px;
+}
+table.hApplicationUIListView tbody tr.hUserSelected td {
+    border: none;
+}
+table.hApplicationUIListView tbody tr td {
+    height: 14px;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+}
+li.hUserAction {
+    float: left;
+    border-right: 1px solid rgb(200, 200, 200);
+    padding: 0 5px;
+}
+li.hUserSelectLetter span,
+li.hUserAction span {
+    line-height: 21px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+ul.hUserSearchFields,
+ul.hUserSearchFields ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.hUserSearchFields {
+    padding: 5px;
+    z-index: 5;
+}
+div.hUserManageFields ul.hUserSearchFields {
+    top: 21px;
+    bottom: auto;
+}
+ul.hUserSearchFields ul {
+    padding-top: 5px;
+    border-top: 1px solid #fff;
+    margin-top: 5px;
+}
+div.hUserSelectTableWrapper {
+    height: 168px;
+    overflow: auto;    
+}
+td.hUserSelectUserId {
+    width: 65px;    
+}
+span.hUserGroupSwitch {
+    display: none;    
+}
+div.hUserSelectControl {
+    text-align: left;
+    position: absolute;
+    top: 21px;
+    right: 0;
+    bottom: 34px;
+    left: 0;
+    overflow: auto;
+    background: #fff;
+}
+div.hUserSelectControl table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+div.hUserSelectControl table th {
+    background: rgb(200, 200, 200);
+}
+div.hUserSelectControl tr.on,
+div.hUserSelectControl tr.selected {
+    background-color: #3470CB;
+    color: #fff;
+}
+div.hUserSelectControl tr.on a,
+div.hUserSelectControl tr.selected a {
+    color: #fff;
+    text-decoration: none;
+}
+div.hUserSelectControl tbody td {
+    overflow: hidden;
+    white-space: nowrap;
+}
+div.hUserSelectFollow {
+    clear: both;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 13.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 14948)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="10px" height="11px" viewBox="0 0 10 11" enable-background="new 0 0 10 11" xml:space="preserve">
+<g>
+    <defs>
+        <rect id="SVGId_1_" width="10" height="11"/>
+    </defs>
+    <clipPath id="SVGId_2_">
+        <use xlink:href="#SVGId_1_"  overflow="visible"/>
+    </clipPath>
+    <g clip-path="url(#SVGId_2_)">
+        <defs>
+            <rect id="SVGId_3_" width="10" height="11"/>
+        </defs>
+        <clipPath id="SVGId_4_">
+            <use xlink:href="#SVGId_3_"  overflow="visible"/>
+        </clipPath>
+        <g opacity="0.75" clip-path="url(#SVGId_4_)">
+            <g>
+                <defs>
+                    <rect id="SVGId_5_" y="5.498" width="10" height="5.502"/>
+                </defs>
+                <clipPath id="SVGId_6_">
+                    <use xlink:href="#SVGId_5_"  overflow="visible"/>
+                </clipPath>
+                <path clip-path="url(#SVGId_6_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M9.949,5.498
+                    C9.697,8.022,7.592,10,5.001,10s-4.696-1.977-4.95-4.5C0.034,5.667,0,5.829,0,6c0,2.762,2.239,5,5.001,5C7.762,11,10,8.762,10,6
+                    C10,5.828,9.967,5.666,9.949,5.498"/>
+            </g>
+        </g>
+        <g opacity="0.75" clip-path="url(#SVGId_4_)">
+            <g>
+                <defs>
+                    <rect id="SVGId_7_" width="10" height="10"/>
+                </defs>
+                <clipPath id="SVGId_8_">
+                    <use xlink:href="#SVGId_7_"  overflow="visible"/>
+                </clipPath>
+                <path clip-path="url(#SVGId_8_)" fill-rule="evenodd" clip-rule="evenodd" d="M5.001,0C7.762,0,10,2.238,10,5
+                    c0,2.762-2.238,5-4.999,5C2.239,10,0,7.762,0,5C0,2.238,2.239,0,5.001,0"/>
+            </g>
+        </g>
+        <polygon clip-path="url(#SVGId_4_)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="8.051,3.322 6.678,1.951 
+            4.971,3.658 3.262,1.951 1.891,3.322 3.598,5.03 1.951,6.678 3.322,8.05 4.971,6.402 6.678,8.11 8.051,6.738 6.342,5.03         "/>
+    </g>
+</g>
+</svg>

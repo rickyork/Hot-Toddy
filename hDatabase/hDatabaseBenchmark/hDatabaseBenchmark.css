@@ -1,0 +1,20 @@
+div#hDatabaseOptimization {
+    background: white;
+    padding: 5px;
+    border: 1px solid rgb(200, 200, 200);
+    text-align: left;
+}
+div#hDatabaseOptimization table {
+    table-layout: fixed;
+    width: 100%;
+}
+div#hDatabaseOptimization table td.hDatabaseData {
+    overflow: hidden;    
+}
+div#hDatabaseOptimization table td.hDatabaseData:hover {
+    overflow: visible;
+}
+td.hDatabaseQuery div {
+    white-space: pre;
+    overflow-x: auto;
+}

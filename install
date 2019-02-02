@@ -1,0 +1,218 @@
+#!/usr/bin/php -q
+<?php
+
+if (!isset($argv) || !is_array($argv))
+{
+    echo "This script must be called from the command line.\n";
+    exit;
+}
+
+// Set-up the default Hot Toddy installation.
+//
+// THIS SCRIPT DOES EVERYTHING FOR YOU!
+//
+//   This script does the following:
+//     * checks hierophant out from the SVN repository
+//     * automatically generates the Hot Toddy database
+//     * creates a hFramework.conf configuration file
+//     * creates all relevant framework folders.
+//     * automatically generates an Apache include file with a new virtual
+//       host configuration, and appends that include to the httpd.conf file
+//     * Restarts Apache
+//
+// REQUIREMENTS
+//
+//   This script DOES NOT check for dependencies.  You need all of the following to
+//   successfully install and run Hot Toddy.
+//
+//   * A Mac OS X, Linux, or Unix server (Windows is not supported)
+//          The default configurations in this file reflect Mac OS X server.
+//
+//   * Apache 2
+//   * PHP 5.2.6 or greater with the following extensions:
+//       * mbstring
+//       * json
+//   * MySQL 4 or greater
+//   * Subversion
+//
+//
+// This script should be ran from the command line with root privileges specifying
+// the following variables.
+//
+// e.g., sudo php setup.php
+//
+// If you have installed MAMP, you'll need to use MAMP's PHP binary...
+// sudo /Applications/MAMP/bin/php5/bin/php setup.php
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// DATABASE OPTIONS
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// MySQL database to create.
+//
+// WARNING: THE INSTALLER SCRIPT WILL DESTROY THIS DATABASE
+// EACH TIME THE INSTALLER SCRIPT IS RAN!!
+$db = 'database';
+
+// MySQL user.
+// MySQL user should have the ability to create databases, tables, etc.
+// MySQL user can be changed after installation by editing hierophant.ini
+$dbUser      = 'root';
+
+// MySQL password.
+$dbPass      = '';
+
+// MySQL host
+$dbHost      = 'localhost';
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// APACHE OPTIONS
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Whether or not this script should touch your httpd.conf file.
+$appendConf        = false;
+
+// The location of Apache's httpd.conf file.
+$httpdConfLocation = '/etc/apache2/httpd.conf'; // '/Applications/MAMP/conf/apache/httpd.conf'; // MAMP
+
+// The hostname of the website to be created.
+// e.g., example.com.
+$hostname          = 'localhost';
+
+// Aliases for the hostname (separate each hostname with a space)
+// e.g., www.example.com dev.example.com beta.example.com
+// If none, set to null.
+$aliases           = 'localhost.local';
+
+// The hostname of the website as it will be in a live
+// production enviornment.  Include the "www" subdomain, if applicable.
+// e.g., www.example.com
+$frameworkSite     = 'www.example.com';
+
+// The IP address of the website to be created.
+$ip                = '127.0.0.1';
+
+// The Port
+$port              = 80;
+
+// Whether a new "NameVirtualHost 127.0.0.1:80" directive
+// should be added to httpd.conf with the specified IP address
+$nameVirtualHost   = false;
+
+// The user that will own framework folders and files
+$user              = 'www';
+
+// The group Apache runs as
+$group             = 'www';
+
+// Command to restart Apache
+$apacheRestart     = 'apachectl restart'; // '/Applications/MAMP/Library/bin/apachectl'; // MAMP
+
+// The directory the Hot Toddy website should be installed to
+// (an absolute path should be provided).
+$installPath       = '/Websites';
+
+// Whether or not the hostname and IP should be added in your /etc/hosts file
+$setEtcHosts       = false;
+
+$pathToPHP         = '/Server/bin/php';
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SVN OPTIONS
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// The location of the SVN reporitory to download Hot Toddy from.
+
+$svnHost           = 'http://hierophant.googlecode.com/svn/branches/stable';
+$svnFilesHost      = 'http://hierophant.googlecode.com/svn/trunk';
+
+// The SVN username
+$svnUser           = '';
+
+// The SVN password
+$svnPass           = '';
+
+// SVN operation, do you want an export or a checkout?
+$svnOperation      = 'checkout';
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// DO NOT EDIT BELOW THIS LINE
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$parent = dirname($installPath);
+
+if (!file_exists($parent))
+{
+    echo "Making directory {$parent}\n";
+    `mkdir $parent`;
+}
+
+`chmod 755 {$parent}`;
+`chown {$user} {$parent}`;
+`chgrp {$group} {$parent}`;
+
+$installPath = $installPath.'/'.$hostname;
+
+if (!file_exists($installPath))
+{
+    echo "Making directory {$installPath}\n";
+    `mkdir {$installPath}`;
+}
+
+`chmod 755 {$installPath}`;
+`chown {$user} {$installPath}`;
+`chgrp {$group} {$installPath}`;
+
+if (!empty($svnUser))
+{
+    $svnUser =
+        ' --username "'.$svnUser.'"'.
+        ' --password "'.$svnPass.'"';
+}
+
+/*
+if (!file_exists($installPath.'/Hot Toddy'))
+{
+    echo "\nChecking out Hot Toddy from SVN to {$installPath}/www\n";
+    echo "This will probably take several minutes to complete.\n\n";
+
+    echo "svn {$svnOperation} {$svnHost} {$installPath}/Hot Toddy {$svnUser}\n";
+    echo `svn {$svnOperation} {$svnHost} "{$installPath}/Hot Toddy" {$svnUser}`;
+}
+else
+{
+    echo "Path {$installPath}/Hot Toddy already exists, delete to reinstall this folder.\n";
+}
+*/
+
+/*
+`chmod -R 775 "{$installPath}/Hot Toddy"`;
+`chown -R {$user} "{$installPath}/Hot Toddy"`;
+`chgrp -R {$group} "{$installPath}/Hot Toddy"`;
+
+echo "Verifying SVN {$svnOperation}...\n";
+
+$index = $installPath.'/Hot Toddy/index.php';
+
+if (file_exists($index))
+{
+    echo "SVN {$svnOperation} appears intact.\n";
+}
+else
+{
+    echo "SVN {$svnOperation} does not appear to have been successful, verify SVN settings and try again.\n";
+}
+*/
+
+$installFramework = $installPath .'/Hot Toddy/hFramework/hFrameworkInstall/hFrameworkInstall.php';
+
+if (file_exists($installFramework))
+{
+    include $installFramework;
+}
+else
+{
+    echo "Maybe the SVN install didn't work out after all.  The installer script, {$installFramework}, could not be located.\n";
+}
+
+?>

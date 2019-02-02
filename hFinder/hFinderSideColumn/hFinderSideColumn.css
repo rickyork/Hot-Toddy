@@ -1,0 +1,104 @@
+div#hFinderSideColumn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: 32px 0 23px 0;
+    width: 250px;
+    padding: 5px 0 0 0;
+    overflow: auto;
+    border-top: 1px solid rgb(148, 148, 148);
+    border-bottom: 1px solid rgb(148, 148, 148);
+    border-right: 1px solid rgb(169, 169, 169);
+    z-index: 1;
+    background: rgb(239, 239, 239);
+    font-size: 11px;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+div#hFinderSideColumnResizeGrip {
+    position: absolute;
+    top: 32px;
+    left: 248px;
+    bottom: 23px;
+    width: 5px;
+    cursor: col-resize;
+    z-index: 100;
+}
+div#hFinderSideColumn h4 {
+    color: rgb(94, 94, 94);
+    /*text-transform: uppercase;*/
+    margin: 0 0 5px 5px;
+    font-size: 11px;
+    padding: 0 0 0 15px;
+    position: relative;
+}
+div#hFinderSideColumn h4 span.hFinderTreeHasChildren {
+    left: 0;
+    top: 3px;
+}
+h4.hFinderSideColumnFolders span.hFinderTreeHasChildren,
+h4.hFinderSideColumnCategories span.hFinderTreeHasChildren {
+    display: none;
+}
+div#hFinderSideColumn h4.hFinderSideColumnHeading {
+    margin-top: 15px;
+}
+ul.hFinderSideColumnOptions {
+    margin: 4px 0 0 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+li.hFinderSideColumnOption {
+    height: 18px;
+    padding: 2px 0 2px 20px;
+    margin: 0 0 2px 0;
+}
+li.hFinderSideColumnOption div {
+    padding: 4px 0 4px 20px;
+    background: url("/images/icons/16x16/sidebar_file.png") no-repeat left;
+    background-size: 16px 16px;
+}
+li.hFinderSideColumnOption span {
+
+}
+li.hFinderSearchTime div {
+    background-image: url("/images/icons/16x16/sidebar_recents.png");
+    background-size: 16px 16px;
+}
+li.hFinderSearchType div {
+    background-image: url("/images/icons/16x16/sidebar_smart_folder.png");
+    background-size: 16px 16px;
+}
+li.hFinderSideColumnPlaceServer div {
+    background-image: url("/images/icons/16x16/internal.png");
+    background-size: 16px 16px;
+}
+li.hFinderSideColumnRoot div {
+    background-image: url("/images/icons/16x16/sidebar_network.png");
+    background-size: 16px 16px;
+}
+li.hFinderSideColumnApplications div {
+    background-image: url("/images/icons/16x16/sidebar_applications.png");
+    background-size: 16px 16px;
+}
+li.hFinderSideColumnHome div {
+    background-image: url("/images/icons/16x16/home_folder.png");
+    background-size: 16px 16px;
+}
+li.hFinderSideColumnSelected {
+    background: url('/hApplication/hApplicationUI/Pictures/Selection/Generic.png');
+    color: #fff;
+}
+div.hFinderTreeRoot {
+    display: none;
+}
+div#hFinderTree {
+    padding: 0 0 0 0;
+}
+div#hFinderSideColumn div.hFinderTree {
+    position: relative;
+    z-index: 1;
+}

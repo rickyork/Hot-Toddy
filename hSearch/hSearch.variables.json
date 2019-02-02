@@ -1,0 +1,84 @@
+{
+    hSearchHistoryRecent : {
+        defaultValue : 0,
+        description : ""
+    },
+    hSearchMethod : {
+        defaultValue : "Default",
+        values : [
+            "Source",
+            "Recent",
+            "History",
+            "Like",
+            "Default"
+        ],
+        description : ""
+    },
+    hSearchPage : {
+        defaultValue : 1,
+        description : ""
+    },
+    hSearchChapter : {
+        defaultValue : 1,  
+        description : ""
+    },
+    hSearchChapterUpper : {
+        defaultValue : 0,  
+        description : ""
+    },
+    hSearchChapterLower : {
+        defaultValue : 0,  
+        description : ""
+    },
+    hSearchChapterCount : {
+        defaultValue : 0,  
+        description : ""
+    },
+    hSearchResultCount : {
+        defaultValue : 0,  
+        description : ""
+    },
+    hSearchPageCount : {
+        defaultValue : 0,
+        description : ""  
+    },
+    hSearchResultsPerPage : {
+        defaultValue : 10,
+        description : ""
+    },
+    hSearchFormTemplate : {
+        defaultValue : "",
+        description : ""
+    },
+    hSearchOrderBy : {
+        defaultValue : "ASC",
+        values : [
+            "ASC",
+            "DESC"
+        ],
+        description : ""
+    },
+    hSearchLimitFileType : {
+        defaultValue : 1,
+        values : [1, 0],
+        description : ""
+    },
+    hSearchSource : {
+        defaultValue : 0,
+        values : [1, 0],
+        description : ""
+    },
+    hSearchFileLastModifiedFormat : {
+        defaultValue : "m/d/y h:i a",
+        description : ""
+    },
+    hSearchFileLastAccessedFormat : {
+        defaultValue : "m/d/y h:i a",
+        description : ""
+    },
+    hSearchIncludeCreated : {
+        defaultValue : 0,
+        values : [0, 1],
+        description : ""
+    }
+}

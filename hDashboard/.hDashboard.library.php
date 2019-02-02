@@ -1,0 +1,2 @@
+<?php
+  class hDashboardLibrary extends hPlugin { public function hConstructor() { $this->hFileCSS = ''; $this->hFileJavaScript = ''; $this->HotToddyNavigation = ''; $this->HotToddyLogo = ''; $this->getPluginCSS('hTemplate/hTemplateDefault'); $this->getPluginFiles(); $this->hTemplatePath = '/hTemplate/hTemplateDefault/hTemplateDefault.template.php'; } } ?>

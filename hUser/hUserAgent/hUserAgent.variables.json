@@ -1,0 +1,142 @@
+{
+    // Framework Variables set by hUserAgent.php
+    
+    // Robot Variables
+    hUserAgentIsRobot : '',             // Whether or not the user agent is a robot.  At least with regards to robots
+                                        // it's been programmed to recognize.
+    isRobot : false,
+    isGoogleBot : false,
+    isYahooBot : false,
+    isAskJeevesBot : false,
+    isBingBot : false,
+
+    // Operating System / Device Variables.
+    hUserAgentOS : '',                  // The user agent OS string.  (isMac OS X, iOS, isWindows, etc)
+    os : '',                            // Alias
+    OS : '',                            // Alias
+    
+    hUserAgentOSVersion : 0,            // The user agent OS version.
+    osVersion : 0,                      // Alias
+    OSVersion : 0,                      // Alias
+
+    
+    hUserAgentIsMobile : false ,          // Whether or not the user agent is mobile.
+    hUserInterfaceIdiom : 'Desktop',      // What kind of device the user agent is.
+                                          // Desktop, Phone, Pad, TV, etc.
+    hUserInterfaceIdiomIsPad : false,     // Whether or not the user agent is a generic tablet (iPad, others).
+    hUserInterfaceIdiomIsPhone : false,   // Whether or not the user agent is a generic phone.
+    hUserInterfaceIdiomIsTV : false,      // Whether or not the user agent is a generic TV.
+    hUserInterfaceIdiomIsDesktop : false, // Whether or not the user agent is a generic desktop computer.
+
+    isDesktop : true,                   // Whether or not the user agent is a desktop computer (or laptop)
+    desktop : true,                     // Alias of isDesktop
+
+    iOS : false,
+    iPad : false,                       // Whether or not the user agent is an iPad (iPad only)
+    iPhone : false,                     // Whether or not the user agent is an iPhone (iPhone only)
+    isAppleTV : false,                  // Whether or not the user agent is an Apple TV, specifically.
+    AppleTV : false,                    // Alias
+    isAndroid : false,
+    isBlackberry : false,
+    isWindowsPhone : false,
+    isNokia : false,
+    isNintendoWii : false,
+
+    
+    isWindows : false,                  // Whether or not the user agent is generic Windows.  This is set for any version of Windows.
+    windows : false,                    // Alias of isWindows
+    isWindowsCE : false,
+    isWindows95 : false,
+    isWindows98 : false,
+    isWindowsNT : false,
+    isWindowsME : false,
+    isWindowsServer2003 : false,
+    isWindowsXP : false,
+    isWindows2000 : false,
+    isWindowsVista : false,
+    isWindows7 : false,
+    isWindows8 : false,
+
+
+    isMac : false,                        // Whether or not the user agent is generic Mac.  This is set for any version of Mac OS X.
+    mac : false,                          // Alias of isMac
+    isMacMountainLion : false,
+    isMacLion : false,
+    isMacSnowLeopard : false,
+    isMacLeopard : false,
+    isMacTiger : false,
+    isMacPanther : false,
+    isMacJaguar : false,
+    isMacPuma : false,
+    isMacCheetah : false,
+
+    isNinux : false,
+
+    // Browser Variables
+    hUserAgent : 'webkit',              // The name of the browser.
+                                        // opera, ie, trident, webkit, khtml, gecko, bing, askJeeves, yahoo, netscape
+    browser : 'webkit',                 // Alias of hUserAgent
+
+    hUserAgentVersion : 0,              // Ther version number of the browser.
+    browserVersion : 0,                 // Alias of hUserAgentVersion
+
+    hUserAgentPrefix : '-webkit-',      // The browser's user agent prefix used in style sheets.
+                                        // One of: -webkit-, -moz, -o-, or -ms-
+    vendorPrefix : '-webkit-',          // Alias of hUserAgentPrefix
+
+    isOpera : false,                    // All other browser variables are determined in this order.  Whichever is the first to match, wins.
+    opera : false,                      // Alias of isOpera
+
+    isIE : false,    
+    ie : false,                         // Alias of isIE
+
+    isTrident : false,                  // A browser based on IE's rendering engine (this is set true if the browser is IE or IE-based)
+    trident : false,                    // Alias of isTrident
+
+    isWebkit : false,                   // Any webkit-based browser.  Safari, iPhone, iPad, Chrome, Chromium, Adroid Browser, etc.
+    webkit : false,                     // Alias of isWebkit.
+
+    isKHTML : false,
+    khtml : false,                      // Alias of isKHTML
+
+    isGecko : false,                    // Any Gecko-based browser
+    gecko : false,                      // Alias of isGecko
+    
+    isW3C : false,                      // The W3C validation service.
+    w3c : false,                        // Alias of isW3C
+
+    isGoogle : false,                   // Google Search crawler.
+    google : false,                     // Alias of isGoogle.
+    
+    isBing : false,                     // Bing search crawler.
+    bing : false,                       // Alias of isBing.
+
+    isAskJeeves : false,                // Ask Jeeves Search Crawler
+    askJeeves : false,                  // Alias of isAskJeeves
+
+    isYahoo : false,                    // Yahoo Search Crawler.
+    yahoo : false,                      // Alias of isYahoo.
+
+    isNetscape : false,                 // Netscape browser.
+    netscape : false,                   // Alias of isNetscape.
+    
+    isChrome : false,                   // Whether or not the user agent is Google Chrome (user agent will be Webkit if it is Chrome,
+                                        // this variable can be used to distinguish Google Chrome from Safari, for example).
+    chrome : false,                     // Alias of isChrome.
+    
+    isSafari : false,                   // If the webkit browser is Safari (not true if 'isChrome' is true), can be set true if other 
+                                        // Webkit brwosers masquarade as Safari.
+    safari : false,                     // Alias of isSafari.
+
+    
+    // Other
+    hFileActivityEnabled : false,       // Whether or not user agent data should be gathered and stored in the database.
+    
+    isGoogleChromeFrame : false,        // Whether or not Google Chrome Frame is the user agent (installed as an IE plugin).
+    hUserAgentChromeFrame : false,      // alias of isGoogleChromeFrame.
+    
+    useGoogleChromeFrame : false,       // Whether or not Google Chrome Frame is enabled.
+    hGoogleChromeFrame : false,         // Alias of useGoogleChromeFrame.
+
+
+}

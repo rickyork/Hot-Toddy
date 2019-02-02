@@ -1,0 +1,9 @@
+{
+    hMailTemplateDescription: "User Login Activation",
+    hMailSubject: "Activate Your {hFrameworkNickName} Account",
+    hMailTo: "{hContactDisplayName} <{hUserEmailAddress}>",
+    hMailFrom: "{hFrameworkName} <{hFrameworkAdministrator}>",
+    hMailReplyTo: "{hFrameworkName} <{hFrameworkAdministrator}>",
+    hMailHTML : "Login Activation",
+    hMailText : "Login Activation"
+}

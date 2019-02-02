@@ -1,0 +1,11 @@
+{
+    plugin : {
+        name : "Server DNS Plugin",
+        library : {
+            name : "Server DNS Library Plugin"
+        },
+        shell : {
+            name : "Server DNS Library Shell"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+Command + S or Control + S                   Save
+Command + E or Control + E                   Toggle Edit
+Command + P or Control + P                   Paragraph
+Command + L or Control + L                   Unordered List
+Command + O or Control + O                   Ordered List
+Command + Option + 1 or Control + Alt + 1    H1
+Command + Option + 2 or Control + Alt + 2    H2
+Command + Option + 3 or Control + Alt + 3    H3
+Command + Option + 4 or Control + Alt + 4    H4
+Command + Option + 5 or Control + Alt + 5    H5
+Command + Option + 6 or Control + Alt + 6    H6
+Command + ]  or Control + ]                  Indent element
+Command + [  or Control + [                  Outdent element
+
+While dragging resize handles on objects:
+
+  No key modifier           Resize
+  Option / Alt Key          Resize Margin
+  Command / Windows Key     Resize Padding
+  Shift Key                 Resize to Aspect Ratio 

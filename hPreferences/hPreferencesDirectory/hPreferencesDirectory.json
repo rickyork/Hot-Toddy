@@ -1,0 +1,25 @@
+{
+    plugin : {
+        name : "Directory Utility"
+    },
+    file : {
+        title : "Directory Utility",
+        path : "/Applications/Preferences/Directory Utility/index.html",
+        directory : {
+            properties : {
+                isApplication: 1,
+                icon : {
+                    name : "Directory Access.png",
+                    icns : "directory_access.icns",
+                    mime : "plugins/preferences-directory"
+                }
+            }
+        },
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw"
+            }
+        }
+    }
+}

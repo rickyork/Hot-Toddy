@@ -1,0 +1,15 @@
+{
+    plugin : {
+        name : "File Quick Look"
+    },
+    file: {
+        title : "File Quick Look",
+        path : "/System/Applications/File/Quick Look.plugin",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw"
+            }
+        }
+    }
+}

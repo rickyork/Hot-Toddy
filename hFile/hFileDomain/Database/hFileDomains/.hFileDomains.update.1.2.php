@@ -1,0 +1,2 @@
+<?php
+  class hFileDomains_1to2 extends hPlugin { public function hConstructor() { $this->hFileDomains ->addColumn('hServerHost', hDatabase::name, 'hFileId') ->addColumn('hFileDomainIsDefault', hDatabase::is, 'hServerHost') ->addIndex('hFileDomain') ->addIndex('hFileDomainIsDefault'); } public function undo() { $this->hFileDomains ->dropColumns('hServerHost', 'hFileDomainIsDefault') ->dropIndex('hFileDomain') ->dropIndex('hFileDomainIsDefault'); } } ?>

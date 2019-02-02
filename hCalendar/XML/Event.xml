@@ -1,0 +1,14 @@
+<hCalendarEvent date='{hCalendarDate}'>
+    <hCalendarId>{hCalendarId}</hCalendarId>
+    <hCalendarCategoryId>{hCalendarCategoryId}</hCalendarCategoryId>
+    <hCalendars>
+        {hCalendars[]?<hCalendarId>{hCalendarId}</hCalendarId>
+        }
+    </hCalendars>
+    <hFileId>{hFileId}</hFileId>
+    <hFileTitle>{hFileTitle}</hFileTitle>
+    <hFileTitleShort>{hFileTitleShort}</hFileTitleShort>
+    <hFileDescription><![CDATA[{hFileDescription}]]></hFileDescription>
+    <hFileDocument><![CDATA[{hFileDocument}]]></hFileDocument>
+    <hFilePath>{hFilePath}</hFilePath>
+</hCalendarEvent>

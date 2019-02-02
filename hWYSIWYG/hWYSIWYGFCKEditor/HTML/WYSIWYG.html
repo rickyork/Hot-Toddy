@@ -1,0 +1,22 @@
+                <script src='{$this->hFrameworkLibraryRoot}/fckeditor/fckeditor.js'></script>
+                <script>
+                    var FCKConfig;
+                    var hWYSIWYG = {
+                        editors : [],
+                        ready : function()
+                        {
+                            this.editors = new Array();
+
+                            {editors}
+                        }
+                    };
+
+                    {.hWYSIWYGAutoLoad(true)?
+                    $(document).ready(
+                        function()
+                        {
+                            hWYSIWYG.ready();
+                        }
+                    );
+                    }
+                </script>

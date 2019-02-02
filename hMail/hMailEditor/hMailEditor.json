@@ -1,0 +1,38 @@
+{
+    plugin : {
+        name : "Mail Editor",
+        library : {
+            name : "Mail Editor Library"
+        },
+        service : {
+            name : "Mail Editor Listener",
+            methods : [
+                "get",
+                "save"
+            ]
+        }
+    },
+    file : {
+        title : "Mail Editor",
+        path : "/Applications/Mail Editor/index.html",
+        directory : {
+            properties : {
+                isApplication: 1,
+                icon : {
+                    name : "mail_document.png",
+                    icns : "document2.icns",
+                    mime : "plugins/maileditor"
+                }
+            }
+        },
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                groups : [
+                    ["Website Administrators", "rw"]
+                ]
+            }
+        }
+    }
+}

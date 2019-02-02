@@ -1,0 +1,31 @@
+/*
+div#hEditorTemplatePreviewWrapper {
+    margin: 0 10px 5px 10px;
+    position: relative;
+}
+div#hEditorTemplatePreviewWrapper h4 {
+    color: white;
+    margin: 3px 0;
+    font-weight: normal;
+}
+div#hEditorTemplatePreviewSliderWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+div#hEditorTemplatePreview {
+    border: 1px solid black;
+    background: white;
+    height: 75px;
+    overflow: auto;
+    padding: 5px;
+    max-width: 600px;
+}
+div#hEditorTemplatePreview div {
+    zoom: 0.5;
+}
+*/
+div#hEditorTemplateFormatWrapper,
+div#hEditorTemplateLayoutWrapper {
+    overflow: hidden;
+}

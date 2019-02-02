@@ -1,0 +1,11 @@
+div.hApplicationMenuWrapper {
+    z-index: auto;
+    position: static;
+}
+div.hApplicationSubMenu {
+    margin-top: 1px;
+    z-index: 2;
+}
+ul.hApplicationMenu ul {
+    position: static;    
+}

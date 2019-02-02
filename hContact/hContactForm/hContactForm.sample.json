@@ -1,0 +1,16 @@
+{ /* Sample configuration options */
+  hContactFormAddressBookId : 0,
+  hContactFormPlugin : "",
+  hContactFormWhyLabel : "",
+  hContactFormWhyFirstOption : "",
+  hContactFormWhy : [ 
+  
+  ],
+  hContactFormThankYouTemplate : "",
+  hContactFormTo : "",
+  hContactFormCc : "",
+  hContactFormBcc : "",
+  hContactFormFrom : "",
+  hContactFormReplyTo : "",
+  hContactFormMailerSubject : ""
+}

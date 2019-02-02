@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Editor Directory"
+    },
+    file : {
+        path : "/Applications/Editor/Directory.html",
+        title : "Editor",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "w"
+            }
+        }
+    }
+}

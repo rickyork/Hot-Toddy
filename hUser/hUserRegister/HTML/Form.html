@@ -1,0 +1,15 @@
+<div id='hUserRegisterMessage'>
+    {hUserRegisterMessage}
+</div>
+<form action='{hUserRegisterFormAction}' method='post'>
+{hUserRegisterForm}
+{hUserRegisterRenderForm?
+    <div class='hUserRegisterButtons'>
+        {!$hUserRegisterButtons?<input type='submit' name='hUserRegister' value='Continue' />}
+        {hUserRegisterButtons?{hUserRegisterButtons}}
+    </div>
+    <p class='hFormRequired'>
+        * Fields marked with asterisks are required.
+    </p>
+}
+</form>

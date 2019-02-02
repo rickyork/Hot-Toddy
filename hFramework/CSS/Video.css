@@ -1,0 +1,11 @@
+video,
+div.me-plugin {
+    background: black url('/hFramework/Pictures/Play.png') no-repeat center center;
+    background: rgba(0, 0, 0, 0.8) url('/hFramework/Pictures/Play.png') no-repeat center center;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+video:hover,
+div.me-plugin:hover {
+    background-image: url('/hFramework/Pictures/Play On.png');
+}

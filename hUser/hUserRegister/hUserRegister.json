@@ -1,0 +1,22 @@
+{
+    plugin : {
+        name : "User Register",
+        service : {
+            name : "User Register Service",
+            methods : [
+                "save"
+            ]
+        }
+    },
+    file : {
+        title : "Register",
+        path : "/Applications/Users/Register.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

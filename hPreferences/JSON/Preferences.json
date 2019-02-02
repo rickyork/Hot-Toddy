@@ -1,0 +1,10 @@
+{
+    hPanels: [
+        {
+            hPanelName: "Network",
+            hPanelApplications: [
+                "/Applications/Preferences/Directory Utility"
+            ]
+        }
+    ]
+}

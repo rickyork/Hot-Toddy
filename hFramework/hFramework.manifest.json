@@ -1,0 +1,245 @@
+{
+    framework : {
+        installAllPlugins : false
+    },
+    plugins : [
+        {
+            plugin : "hApplication",
+            optional : false
+        },
+        {
+            plugin : "hBlog",
+            optional : true,
+            install : true
+        },
+        {
+            plugin : "hCalendar",
+            optional : true,
+            install : true
+        },
+        {
+            plugin : "hConsole",
+            optional : true,
+            install : true
+        },
+        {
+            plugin : "hContact",
+            optional : false
+        },
+        {
+            plugin : "hDashboard",
+            optional : true,
+            install : true
+        },
+        {
+            plugin : "hDatabase",
+            optional : false
+        },
+        {
+            plugin : "hDesktopApplication",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hDHTML",
+            optional : true,
+            install : true
+        },
+        {
+            plugin : "hDialogue",
+            optional : false
+        },
+        {
+            plugin : "hDocumentation",
+            optional : true,
+            install : true
+        },
+        {
+            plugin : "hEditor",
+            optional : true,
+            install : true
+        },
+        {
+            plugin : "hFacebook",
+            optional : true,
+            install : true
+        },
+        {
+            plugin : "hFile",
+            optional : false
+        },
+        {
+            plugin : "hFinder",
+            optional : false
+        },
+        {
+            plugin : "hFlickr",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hForm",
+            optional : false
+        },
+        {
+            plugin : "hForum",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hFramework",
+            optional : false
+        },
+        {
+            plugin : "hGoogle",
+            optional : true,
+            install : true
+        },
+        {
+            plugin : "hHTTP",
+            optional : false
+        },
+        {
+            plugin : "hImage",
+            optional : false
+        },
+        {
+            plugin : "hInternetMarketing",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hJSON",
+            optional : false
+        },
+        {
+            plugin : "hLanguage",
+            optional : false
+        },
+        {
+            plugin : "hList",
+            optional : true,
+            install : true
+        },
+        {
+            plugin : "hLocation",
+            optional : false
+        },
+        {
+            plugin : "hMail",
+            optional : false
+        },
+        {
+            plugin : "hMap",
+            optional : false
+        },
+        {
+            plugin : "hMovie",
+            optional : true,
+            install : true
+        },
+        {
+            plugin : "hPagination",
+            optional : false
+        },
+        {
+            plugin : "hPanel",
+            optional : false
+        },
+        {
+            plugin : "hPhoto",
+            optional : true,
+            install : true
+        },
+        {
+            plugin : "hPHP",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hPlugin",
+            optional : false
+        },
+        {
+            plugin : "hPreferences",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hQuery",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hRSS",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hSearch",
+            optional : false
+        },
+        {
+            plugin : "hServer",
+            optional : false
+        },
+        {
+            plugin : "hShell",
+            optional : false
+        },
+        {
+            plugin : "hSmartyPants",
+            optional : false
+        },
+        {
+            plugin : "hSoap",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hSpotlight",
+            optional : false
+        },
+        {
+            plugin : "hString",
+            optional : false
+        },
+        {
+            plugin : "hSubscription",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hTemplate",
+            optional : false
+        },
+        {
+            plugin : "hTerminal",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hTidy",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hTwitter",
+            optional : true,
+            install : false
+        },
+        {
+            plugin : "hUser",
+            optional : false
+        },
+        {
+            plugin : "hWYSIWYG",
+            optional : false
+        },
+        {
+            plugin : "hYahoo",
+            optional : true,
+            install : false
+        }
+    ]
+}

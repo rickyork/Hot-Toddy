@@ -1,0 +1,67 @@
+<div id='hEditorTemplateToolset'>
+    <script type='text/javascript'>
+        editor.documentSelector = '{hFileDocumentSelector}';
+        {hFileDocumentContainerSelector?editor.documentContainerSelector = '{hFileDocumentContainerSelector}';}
+        editor.titleSelector = '{.hFileTitleSelector(null)}';
+        editor.fileId = {hFileId};
+        editor.filePath = "{hFilePath}";
+        editor.wildcardPath = "{.hFileWildcardPath(null)}";
+        editor.templatePath = "{hEditorTemplatePath}";
+    </script>
+    <div id='hEditorTemplate'>
+        <div class='hEditorTemplateNodeControl hEditorTemplateNodeWrapper hEditorTemplate' contenteditable='false'>
+            <div class='hEditorTemplateNodeControl hEditorTemplateNodeHandle' contenteditable='false'></div>
+            <ul class='hEditorTemplateNodeControls' contenteditable='false'>
+                <li class='hEditorTemplateNodeControl' id='hEditorTemplateNodeControlRemove'><button value='remove' title='Remove'>X</button></li>
+            </ul>
+            <div class='hEditorTemplateNodeControl hEditorTemplatePlaceholder hEditorTemplatePlaceholderPrevious'></div>
+            <div class='hEditorTemplateNodeControl hEditorTemplatePlaceholder hEditorTemplatePlaceholderNext'></div>
+            <div class='hEditorTemplateNodeControl hEditorTemplateResize hEditorTemplateResizeNW' contenteditable='false'></div>
+            <div class='hEditorTemplateNodeControl hEditorTemplateResize hEditorTemplateResizeN' contenteditable='false'></div>
+            <div class='hEditorTemplateNodeControl hEditorTemplateResize hEditorTemplateResizeNE' contenteditable='false'></div>
+            <div class='hEditorTemplateNodeControl hEditorTemplateResize hEditorTemplateResizeW' contenteditable='false'></div>
+            <div class='hEditorTemplateNodeControl hEditorTemplateResize hEditorTemplateResizeE' contenteditable='false'></div>
+            <div class='hEditorTemplateNodeControl hEditorTemplateResize hEditorTemplateResizeSW' contenteditable='false'></div>
+            <div class='hEditorTemplateNodeControl hEditorTemplateResize hEditorTemplateResizeS' contenteditable='false'></div>
+            <div class='hEditorTemplateNodeControl hEditorTemplateResize hEditorTemplateResizeSE' contenteditable='false'></div>
+        </div>
+        <div id='hEditorTemplateActionsWrapper' class='hEditorTemplateIslandWrapper'>
+            <ul id='hEditorTemplateActions3' class='hEditorTemplateIsland'>
+                <li id='hEditorTemplateEdit'>
+                    <button value='edit'><span>Edit</span></button>
+                </li>
+            </ul>
+            <ul id='hEditorTemplateActions2' class='hEditorTemplateIsland'>
+                <li id='hEditorTemplateCancel'>
+                    <button value='cancel'><span>Cancel</span></button>
+                </li>
+            </ul>
+            <ul id='hEditorTemplateActions' class='hEditorTemplateIsland'>
+                <li id='hEditorTemplateSave'>
+                    <button value='save'><span>Save</span></button>
+                </li>
+            </ul>
+        </div>
+        <div id='hEditorTemplateSourceWrapper' class='hEditorTemplateIslandWrapper'>
+            <ul id='hEditorTemplateSourceUL' class='hEditorTemplateIsland'>
+                <li id='hEditorTemplateSource'>
+                    <button value='source'><span>&lt;html&gt;</span></button>
+                </li>
+            </ul>
+        </div>
+        <div id='hEditorTemplateInner'>
+       
+        </div>
+        <div id='hEditorTemplateInnerBottom'>
+      
+        </div>
+    </div>
+    {objects}
+    <div id='hEditorTemplateDebug'>
+    
+    </div>
+    <div class='hEditorTemplateSource'></div>
+    <span class='hEditorCaret hEditorCaretTemplate'>&nbsp;</span>
+    <div id='hEditorTemplateTemporary'></div>
+</div>
+<div id='hEditorTemplateModalDialogueJammer'></div>

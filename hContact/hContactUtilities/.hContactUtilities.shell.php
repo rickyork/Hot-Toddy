@@ -1,0 +1,2 @@
+<?php
+  class hContactUtilitiesShell extends hShell { private $hContactUtilities; public function hConstructor() { $this->hContactUtilities = $this->library('hContact/hContactUtilities'); if ($this->shellArgumentExists('cleanUpEmailAddresses', '--cleanUpEmailAddresses')) { $this->hContactUtilities->cleanUpEmailAddresses(); } if ($this->shellArgumentExists('cleanUpPhoneNumbers', '--cleanUpPhoneNumbers')) { $this->hContactUtilities->cleanUpPhoneNumbers(); } } } ?>

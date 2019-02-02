@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "WYSIWYG Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hWYSIWYG",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hWYSIWYG"
+        }
+    }
+}

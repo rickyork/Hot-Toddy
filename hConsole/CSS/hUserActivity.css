@@ -1,0 +1,30 @@
+th.hUserActivityLog-hUserId,
+td.hUserActivityLog-hUserId {
+    width: 65px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hUserActivityLog-hUserName,
+td.hUserActivityLog-hUserName {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hUserActivityLog-hUserFullName,
+td.hUserActivityLog-hUserFullName {
+    width: 125px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hUserActivityLog-hUserActivityIP,
+td.hUserActivityLog-hUserActivityIP {
+    width: 125px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hUserActivityLog-hUserActivityTime,
+td.hUserActivityLog-hUserActivityTime {
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+}

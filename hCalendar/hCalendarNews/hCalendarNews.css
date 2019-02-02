@@ -1,0 +1,39 @@
+div#hCalendarNews {
+    padding: 25px 1px 1px 1px;
+}
+div#hCalendarNewsNavigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 27px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+div#hCalendarNewsNavigation ul li {
+    margin: 0 10px 0 0;
+    float: left;
+    cursor: pointer;
+    height: 27px;
+}
+div#hCalendarNewsNavigation ul li a {
+    display: block;
+    padding: 0 10px;
+    height: 27px;
+    text-decoration: none;
+    color: #000;
+}
+div#hCalendarNewsNavigation ul li span {
+    line-height: 27px;
+    vertical-align: middle;
+}
+li.hCalendarNewsCategoryTabSelected {
+    background: rgb(230, 230, 230);
+}
+div#hCalendarNewsCategoryNoStories {
+    padding: 25px 0;
+    text-align: center;
+}
+div.hCalendarNewsCategory ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

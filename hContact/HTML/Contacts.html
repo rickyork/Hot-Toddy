@@ -1,0 +1,117 @@
+<script type='text/javascript'>
+    contact.width = {user.getVariable('hContactWindowWidth', 1200)};
+    contact.height = {user.getVariable('hContactWindowHeight', 600)};
+
+    contact.groupWidth = {user.getVariable('hContactGroupColumnWidth', 0)};
+    contact.resultsWidth = {user.getVariable('hContactResultsColumnWidth', 0)};
+</script>
+<div id='hContactSearch'>
+{hSpotlightSearch}
+</div>
+<div id='hContactRolodex'>
+    <ul>
+        <li><span>A</span></li>
+        <li><span>B</span></li>
+        <li><span>C</span></li>
+        <li><span>D</span></li>
+        <li><span>E</span></li>
+        <li><span>F</span></li>
+        <li><span>G</span></li>
+        <li><span>H</span></li>
+        <li><span>I</span></li>
+        <li><span>J</span></li>
+        <li><span>K</span></li>
+        <li><span>L</span></li>
+        <li><span>M</span></li>
+        <li><span>N</span></li>
+        <li><span>O</span></li>
+        <li><span>P</span></li>
+        <li><span>Q</span></li>
+        <li><span>R</span></li>
+        <li><span>S</span></li>
+        <li><span>T</span></li>
+        <li><span>U</span></li>
+        <li><span>V</span></li>
+        <li><span>W</span></li>
+        <li><span>X</span></li>
+        <li><span>Y</span></li>
+        <li><span>Z</span></li>
+    </ul>
+</div>
+<div id='hContacts'>
+    {hContactEnableGroups?
+        <div id='hContactGroupWrapper'>
+            <div id='hContactGroupTabs'>
+                <div id='hContactGroupLabel'><span>{hContactGroupLabel}</span></div>
+                <div id='hContactGroupButtons'>
+                    {!hContactReadOnly?
+                        <img src='/images/themes/aqua/contacts/Edit.png' alt='Edit' id='hContactEditGroup' class='hContactButton' />
+                        <img src='/images/themes/aqua/contacts/Add.png' alt='Add' id='hContactNewGroup' class='hContactButton' />
+                        <img src='/images/themes/aqua/contacts/Remove.png' alt='Remove' id='hContactDeleteGroup' class='hContactButton' />
+                    }
+                </div>
+            <!--
+            <ul>
+                <li id='hContact-Groups'><span>Groups</span></li>
+                <li id='hContact-Companies'><span>Companies</span></li>
+            </ul>
+            -->
+            </div>
+            <ul class='hContactGroupPane' id='hContactGroups'>
+                <li id='hContactGroup-0' class='hContactGroupTemplate'>
+                 <div>
+                     <span></span>
+                 </div>
+                </li>
+            {hContactGroups[]?
+                 <li class='hContactGroup' id='hContactGroup-{hUserId}' title='{hUserName}'>
+                     <div>
+                         <span>{hUserName}</span>
+                     </div>
+                     <ul class='hContactGroupAddress{!hContactAddress? hContactNoGroupAddress}' id='hContactGroupAddress-{hContactId}'>
+                         <li>{hContactAddress}</li>
+                     </ul>
+                 </li>
+            }
+            </ul>
+            <!-- <ul class='hContactGroupPane' id='hContactCompanies'></ul> -->
+        </div>
+        <div id='hContactGroupResizeGrip'></div>
+    }
+    {hContactSortColumns?
+    <div id='hContactSortButton'>
+         <div id='hContactSortButtonInner'>
+            <span>Sort</span>
+        </div>
+    </div>
+    <ul id='hContactSortColumns'>
+    {hContactSortColumns[]?
+        <li id='hContactSortColumn-{hContactSortColumnId}'>
+            <span class='hContactSortColumn'>{hContactSortColumn}</span>
+            <span class='hContactSortLabel'>{hContactSortColumnLabel}</span>
+        </li>
+    }
+    </ul>
+    }
+    <div id='hContactResultsWrapper'>
+        <div id='hContactSort'>
+            <div id='hContactResultsLabel'><span>Contacts</span></div>
+            <div id='hContactResultsButtons'>
+                {!hContactReadOnly?
+                    <img src='/images/themes/aqua/contacts/Add.png' alt='Add' id='hContactNew' class='hContactButton' />
+                    <img src='/images/themes/aqua/contacts/Remove.png' alt='Remove' id='hContactDelete' class='hContactButton' />
+                }
+            </div>
+        </div>
+        <div id='hContactResults'>
+        </div>
+    </div>
+    <div id='hContactResultsResizeGrip'></div>
+    {hContactSummary}
+</div>
+<div id='hContactButtons'>
+{!hContactReadOnly?
+    <input type='submit' value='Edit Contact' id='hContactEdit' disabled='disabled' />
+    <input type='submit' value='Save Contact' id='hContactSave' disabled='disabled' />
+}
+</div>

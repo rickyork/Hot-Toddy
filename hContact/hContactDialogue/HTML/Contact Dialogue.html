@@ -1,0 +1,66 @@
+<div id='hContactDialogue'>
+    <div id='hContactDialogueSearch'>
+        <div id='hContactSearch'>
+            {spotlightSearch}
+        </div>
+    </div>
+    <div id='hContactDialogueToggle'>
+        <ul>
+            <li><img src='/images/icons/16x16/user.png' alt='User' /> <span>Select a Person</span></li>
+            <li><img src='/images/icons/16x16/group.png' alt='Group' /> <span>Select Groups</span></li>
+        </ul>
+    </div>
+    <div id='hContactRolodex'>
+        <ul>
+            <li><span>A</span></li>
+            <li><span>B</span></li>
+            <li><span>C</span></li>
+            <li><span>D</span></li>
+            <li><span>E</span></li>
+            <li><span>F</span></li>
+            <li><span>G</span></li>
+            <li><span>H</span></li>
+            <li><span>I</span></li>
+            <li><span>J</span></li>
+            <li><span>K</span></li>
+            <li><span>L</span></li>
+            <li><span>M</span></li>
+            <li><span>N</span></li>
+            <li><span>O</span></li>
+            <li><span>P</span></li>
+            <li><span>Q</span></li>
+            <li><span>R</span></li>
+            <li><span>S</span></li>
+            <li><span>T</span></li>
+            <li><span>U</span></li>
+            <li><span>V</span></li>
+            <li><span>W</span></li>
+            <li><span>X</span></li>
+            <li><span>Y</span></li>
+            <li><span>Z</span></li>
+        </ul>
+    </div>
+    <div id='hContactDialogueInner'>
+        <div id='hContactDialogueGroups'>
+            <ul>
+            {groups[]?
+                <li class='hUserGroup' id='hUserGroup-{hUserId}' data-userId='{hUserId}' data-contactId='{hContactId}' title='{hUserName}'>
+                    <div><span>{hUserName}</span></div>
+                    <ul class='hUserGroupAddress{!hContactAddress? hUserGroupAddressNone}' id='hUserGroupAddress-{hUserId}'>
+                        <li>{hContactAddress}</li>
+                    </ul>
+                </li>
+            }
+            </ul>
+        </div>
+        <div id='hContactDialogueUsers'>
+
+        </div>
+    </div>
+    <div id='hContactDialogueButtons'>
+        <div id='hContactDialogueButtonsRight'>
+            <input type='submit' value='Select' id='hContactDialogueSelect' name='hContactDialogueSelect' />
+            <input type='submit' value='Cancel' id='hContactDialogueCancel' name='hContactDialogueCancel' />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title>Forum Post</title>
+  </head>
+  <body style="font: 12px Helvetica, Arial, sans-serif;">
+    <p>
+      Hello {hContactFirstName},
+    </p>
+    <p>
+      Forum member {hForumPostUserName} has posted a reply to the topic <b>{hForumPostSubject}</b> in the 
+      <b>{hForumTopic}</b> forum.
+    </p>
+    <p>
+      You are being notified because you are subscribed to the <b>{hForumTopic}</b> forum.
+    </p>
+    <p>
+      Topic: <b>{hForumPostReplySubject}</b><br />
+      Message:
+    </p>
+    <div style="border: 1px solid rgb(200, 200, 200); padding: 15px 10px 50px; font-size: 14px; background-color: rgb(234, 234, 234);">
+      <div>{hForumPost}</div>
+    </div>
+    <p>
+      <a href="{hForumPostLink}">View this post.</a>
+    </p>
+    <p>
+      <a href="{hForumPostReplyLink}">Reply to this post.</a>
+    </p>
+    <p style="font-size: 10px;">
+      To stop receiving email for any forum or topic, login at <a href="{hForumPath}">{hForumPath}</a>,
+      and click the appropriate unsubscribe link(s).
+    </p>
+    <table></table>
+  </body>
+</html>

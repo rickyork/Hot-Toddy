@@ -1,0 +1,25 @@
+{
+    plugin : {
+        name : "Calendar View",
+        library : {
+            name : "Calendar View Library"
+        },
+        service : {
+            name: "Calendar View Listener",
+            methods: [
+                "get"
+            ]
+        }
+    },
+    file : {
+        title : "Calendar View",
+        path : "/Applications/Calendar/view.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

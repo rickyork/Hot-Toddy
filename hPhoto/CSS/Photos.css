@@ -1,0 +1,85 @@
+div#hPhotoTree div.hFinderTreeRoot {
+    background-image: url('/hPhoto/Pictures/iPhoto.png');
+    background-position: 10px 0;
+    padding: 0 0 5px 35px;
+    height: 14px;
+}
+div#hPhotoTree div[title="/Categories/.Photos/Photos"] div.hFinderDirectoryIcon-16x16 {
+    background-image: url('/hPhoto/Pictures/Library.png') !important;
+    width: 16px;
+    height: 16px;
+}
+div#hPhotoTree div[title="/Categories/.Photos/Events"] > div.hFinderDirectoryIcon-16x16 {
+    background-image: url('/hPhoto/Pictures/Events.png');
+    width: 16px;
+    height: 16px;
+}
+div#hPhotoView ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0 0 0;
+    background: none;
+}
+div#hPhotoView ul li {
+    float: left;
+    padding: 10px 11px 10px 11px;
+    width: 110px;
+    overflow: hidden;
+    text-align: center;
+    background: none;
+    height: 140px;
+}
+div#hPhotoView ul li button {
+    border: none;
+    padding: 0;
+    background: none;
+    display: block;
+    outline: none;
+}
+div#hPhotoView ul li button:focus {
+    outline: none;
+    border: none;
+}
+div.hPhotoThumbnail {
+    position: relative;
+}
+div.hPhotoThumbnailHack {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+div.hPhotoThumbnail img {
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    {userAgent.vendorPrefix}box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+li.hPhotoSelected div.hPhotoThumbnail img {
+    box-shadow: none;
+    {userAgent.vendorPrefix}box-shadow: none;
+    outline: 5px auto rgb(248, 210, 101);
+}
+div.hPhotoCaption {
+    padding: 10px 0 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+div.hPhotoCaption span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+li.hPhoto {
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+    {userAgent.isWebkit?
+        -webkit-user-drag: element;
+    }
+}
+{userAgent.isWebkit?
+    li.hPhoto:-webkit-drag {
+        opacity: 0.5;
+        background: none;
+    }
+}

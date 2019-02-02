@@ -1,0 +1,8 @@
+body form.hDialogue div#hEditorDocumentContent {
+    width: expression(document.getElementById('hDialogueFullScreen').offsetWidth);
+    height: expression(document.getElementById('hDialogueFullScreen').offsetHeight);
+}
+body form.hDialogue div.hFormWYSIWYGWrapper iframe {
+    width: expression(document.getElementById('hEditorDocumentContent').offsetWidth) !important;
+    height: expression(document.getElementById('hEditorDocumentContent').offsetHeight) !important;
+}

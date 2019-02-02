@@ -1,0 +1,17 @@
+{
+    plugin : {
+        name : "Shell",
+        library : {
+            name : "Shell Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hShell",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hShell"
+        }
+    }
+}

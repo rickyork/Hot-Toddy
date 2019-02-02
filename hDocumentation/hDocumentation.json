@@ -1,0 +1,42 @@
+{
+    plugin : {
+        name : "Documentation",
+        library : {
+            name : "Documentation Library"
+        },
+        database : {
+            name : "Documentation Database"
+        },
+        shell : {
+            name : "Documentation Shell"
+        },
+        service : {
+            name : "Documentation Service",
+            methods : [
+                "search",
+                "getMethods",
+                "getMethodArguments"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hDocumentation",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hDocumentation"
+        }
+    },
+    file : {
+        title : "Documentation",
+        path : "/Hot Toddy/Documentation/index.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

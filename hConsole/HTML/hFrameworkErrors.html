@@ -1,0 +1,40 @@
+<table>
+    <thead>
+        <tr>
+            <th class='hFrameworkErrors-hFrameworkError'><div>Error</div></th>
+            <th class='hFrameworkErrors-hFilePath'><div>Path</div></th>
+            <th class='hFrameworkErrors-hUserId'><div>User Id</div></th>
+            <th class='hFrameworkErrors-hUserName'><div>User Name</div></th>
+            <th class='hFrameworkErrors-hUserFullName'><div>Full Name</div></th>
+            <th class='hFrameworkErrors-hFrameworkErrorDate'><div>Error Date</div></th>
+            <th class='hFrameworkErrors-hUserAgent'><div>User Agent</div></th>
+            <th class='hFrameworkErrors-hUserRemoteIP'><div>IP Address</div></th>
+        </tr>
+    </thead>
+</table>
+<div id='hConsoleLogContainer'>
+    <table>
+        <tbody>
+            {log[]?
+                <tr>
+                    <td class='hFrameworkErrors-hFrameworkError'>
+                        <div class='hFrameworkErrorWrapper'>
+                            <div class='hFrameworkError'><div>{hFrameworkError}</div></div>
+                            <div class='hFrameworkBacktrace'><div>{hFrameworkBackTrace}</div></div>
+                        </div>
+                    </td>
+                    <td class='hFrameworkErrors-hFilePath' title='{hFilePath}'><a href='{hFilePath}' target='_blank'>{hFilePath}</a></td>
+                    <td class='hFrameworkErrors-hUserId'>{hUserId}</td>
+                    <td class='hFrameworkErrors-hUserName'>{hUserId_hUserName}</td>
+                    <td class='hFrameworkErrors-hUserFullName'>{hUserId_hUserFullName}</td>
+                    <td class='hFrameworkErrors-hFrameworkErrorDate'>{php.date('m/d/y h:i:s a', {hFrameworkErrorDate})}</td>
+                    <td class='hFrameworkErrors-hUserAgent'>
+                        <div class='hUserAgent'>{hUserAgent}</div>
+                    </td>
+                    <td class='hFrameworkErrors-hUserRemoteIP'>{hUserRemoteIP}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

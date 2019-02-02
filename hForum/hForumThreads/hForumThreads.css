@@ -1,0 +1,165 @@
+div#hForumPosts {
+    clear: both;
+    min-height: 500px;
+    padding: 0 0 20px 0;
+}
+div#hForumPosts h4 {
+    font: normal 16px sans-serif;
+    padding: 0 0 0 5px;
+    height: 24px;
+    margin: 0;
+    border: 1px solid rgb(200, 200, 200);
+    border-bottom: none;
+}
+div#hForumPosts h4 span {
+    line-height: 24px;
+    vertical-align: middle;    
+}
+table.hForumPosts {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 1px solid rgb(179, 179, 179);
+    color: #000;
+}
+table.hForumPosts th {
+    font-weight: normal;
+    font-size: 12px;
+    background: url('/hApplication/hApplicationUI/Pictures/List Header.png') repeat-x;
+    height: 15px;
+    border: 1px solid rgb(179, 179, 179);
+    text-align: left;
+    padding: 0 0 0 5px;
+}
+table.hForumPosts td {
+    text-align: left;
+    padding: 5px 0 5px 8px;
+    vertical-align: top;
+}
+table.hForumPosts tbody tr:nth-child(even) {
+    background: rgb(237, 243, 254);
+}
+col#hForumPostSubject {
+
+}
+th.hForumPostSubject,
+td.hForumPostSubject {
+    padding: 0 10px 0 0;
+}
+col.hForumPostReadCount,
+col.hForumPostReplyCount {
+    width: 60px;
+}
+td.hForumPostReplyCount,
+th.hForumPostReplyCount,
+td.hForumPostReadCount,
+th.hForumPostReadCount {
+    width: 50px;
+}
+col.hForumLastPostDate {
+    width: 200px;
+}
+th.hForumLastPostDate,
+td.hForumLastPostDate {
+    white-space: nowrap;
+    overflow: hidden;
+}
+td.hForumLastPostDate {
+    font-size: 10px;
+    padding: 10px 0;
+}
+td.hForumNoPosts div {
+}
+ul.hForumLinks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+ul.hForumLinks li {
+    display: inline;
+}
+col.hForumPostAuthor {
+    width: 100px;
+}
+td.hForumPostAuthor {
+    width: 100px;
+    overflow: hidden;
+}
+col.hForumPostOperations,
+td.hForumPostOperations {
+    width: 135px;
+    white-space: nowrap;
+}
+p.hForumSearchCount {
+    float: left;
+    padding: 7px 5px 0 10px;
+    margin: 0;
+}
+img.hForumPostStatus {
+    vertical-align: middle;
+    float: left;
+    margin: 0 5px 0 10px;
+}
+td.hForumPostSubject a {
+    display: block;
+    text-decoration: none;
+    margin: 0 0 0 60px;
+}
+td.hForumPostOperations a {
+    float: left;
+    width: 16px;
+    height: 20px;
+    text-indent: -20000px;
+    margin: 0 2px 0 0;
+}
+td.hForumPostOperations a.hForumPostSticky {
+    background: url('/hForum/Pictures/pushPin.png') no-repeat;
+}
+td.hForumPostOperations a.hForumPostUnsticky {
+    background-image: url('/hForum/Pictures/pushPinYellow.png');
+}
+td.hForumPostOperations a.hForumPostEdit {
+    background: url('/hForum/Pictures/edit.png') no-repeat;
+    width: 29px;
+}
+td.hForumPostOperations a.hForumPostDelete {
+    background: url('/hForum/Pictures/trash.png') no-repeat;
+    width: 20px;
+}
+td.hForumPostOperations a.hForumPostReply {
+    background: url('/hForum/Pictures/reply.png') no-repeat;
+    width: 29px;
+}
+td.hForumPostOperations a.hForumPostLock {
+    background: url('/hForum/Pictures/lock.png') no-repeat;
+    width: 21px;
+}
+td.hForumPostOperations a.hForumPostUnlock {
+    background-image: url('/hForum/Pictures/unlock.png');
+}
+span.hForumPostSubjectLock {
+    background: url('/hForum/Pictures/lock.png') no-repeat;
+    width: 21px;
+    height: 20px;
+    float: left;
+    margin: 0 5px 0 0;
+    text-indent: -20000px;
+    display: none;
+}
+span.hForumPostSubjectSticky {
+    background: url('/hForum/Pictures/pushPin.png') no-repeat;
+    width: 16px;
+    height: 20px;
+    float: left;
+    margin: 0 5px 0 0;
+    text-indent: -20000px;
+    display: none;
+}
+span.hForumPostSubjectStickyOn,
+span.hForumPostSubjectLockOn {
+    display: block;
+}
+a.hForumPostReplyLocked {
+    display: none;
+}

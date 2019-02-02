@@ -1,0 +1,226 @@
+<div id='hEditor'>
+    <div id='hEditorModes'>
+        <ul>
+            <li id='hEditorModeSource' class='hEditorModeActive'>
+                <span>Source</span>
+                <span class='hEditorModeChevron'></span>
+            </li>
+            <li id='hEditorModeWYSIWYG'>
+                <span>WYSIWYG</span>
+                <span class='hEditorModeChevron'></span>
+            </li>
+            <li id='hEditorModePreview'>
+                <span>Preview</span>
+                <span class='hEditorModeChevron'></span>
+            </li>
+            <li id='hEditorModeMetaData'>
+                <span>Meta Data</span>
+                <span class='hEditorModeChevron'></span>
+            </li>
+        </ul>
+    </div>
+    <div id='hEditorActions'>
+        <div id='hEditorActionsWYSIWYG' class='hEditorActionPallet'>
+            <div id='hEditorTemplateFormatWrapper'>
+                <!-- WYSIWYG Toolbox -->
+                <div id='hEditorTemplateFontStyleWrapper' class='hEditorContentEditableButtons hEditorTemplateDisabledButtons hEditorTemplateIslandWrapper'>
+                    <ul id='hEditorTemplateFontStyle' class='hEditorTemplateIsland'>
+                        <!-- <button> element is required for preservation of the user's selection -->
+                        <li id='hEditorTemplateBold'>
+                            <button value='bold' title='Bold'><span>B</span></button>
+                        </li>
+                        <li id='hEditorTemplateItalic'>
+                            <button value='italic' title='Italic'><span>I</span></button>
+                        </li>
+                        <li id='hEditorTemplateUnderline'>
+                            <button value='underline' title='Underline'><span>u</span></button>
+                        </li>
+                        <li id='hEditorTemplateStrikeThrough'>
+                            <button value='strikeThrough' title='Strike-Through'><span>abc</span></button>
+                        </li>
+                    </ul>
+                </div>
+                <div id='hEditorTemplateSubSuperWrapper' class='hEditorContentEditableButtons hEditorTemplateDisabledButtons hEditorTemplateIslandWrapper'>
+                <ul id='hEditorTemplateSubSuper' class='hEditorTemplateIsland'>
+                    <!-- <button> element is required for preservation of the user's selection -->
+                    <li id='hEditorTemplateSubscript'>
+                        <button value='subscript' title='Subscript'><span>X</span><sub>2</sub></button>
+                    </li>
+                    <li id='hEditorTemplateSuperscript'>
+                        <button value='superscript' title='Superscript'><span>X</span><sup>2</sup></button>
+                    </li>
+                </ul>
+                </div>
+                <div id='hEditorTemplateAlignWrapper' class='hEditorContentEditableButtons hEditorTemplateDisabledButtons hEditorTemplateIslandWrapper'>
+                    <ul id='hEditorTemplateAlign' class='hEditorTemplateIsland'>
+                        <li id='hEditorTemplateAlignLeft'>
+                            <button value='justifyLeft' title='Align Left'><span><img src='/hEditor/hEditorTemplate/Pictures/Align Text Left.png' alt='Align Left' /></span></button>
+                        </li>
+                        <li id='hEditorTemplateAlignCenter'>
+                            <button value='justifyCenter' title='Align Center'><span><img src='/hEditor/hEditorTemplate/Pictures/Align Text Center.png' alt='Align Center' /></span></button>
+                        </li>
+                        <li id='hEditorTemplateAlignRight'>
+                            <button value='justifyRight' title='Align Right'><span><img src='/hEditor/hEditorTemplate/Pictures/Align Text Right.png' alt='Align Right' /></span></button>
+                        </li>
+                        <li id='hEditorTemplateAlignJustify'>
+                            <button value='justifyFull' title='Align Justify'><span><img src='/hEditor/hEditorTemplate/Pictures/Align Text Justify.png' alt='Align Justify' /></span></button>
+                        </li>
+                    </ul>
+                </div>
+                <div id='hEditorTemplatePathWrapper' class='hEditorContentEditableButtons hEditorTemplateDisabledButtons hEditorTemplateIslandWrapper' style='border-right: none;'>
+                    <ul id='hEditorTemplatePath' class='hEditorTemplateIsland'>
+                        <li id='hEditorTemplateLink'>
+                            <button value='link' title='Add or Modify a Link'><span>Link</span></button>
+                        </li>
+                        <li id='hEditorTemplateImage'>
+                            <button value='image' title='Add or Modify a Picture'><span>Picture</span></button>
+                        </li>
+                        <!--<li id='hEditorTemplateMovie'>
+                            <button value='movie' title='Add or Modify a Movie'><span>Movie</span></button>
+                        </li>-->
+                    </ul>
+                </div>
+
+                <div id='hEditorTemplateFloatWrapper' class='hEditorContentEditableButtons hEditorTemplateDisabledButtons hEditorTemplateIslandWrapper'>
+                    <ul id='hEditorTemplateAlign' class='hEditorTemplateIsland'>
+                        <li id='hEditorTemplateFloatNone'>
+                            <button value='floatNone' title='Float None'><span><img src='/hEditor/Pictures/floatNone.png' alt='Float None' /></span></button>
+                        </li>
+                        <li id='hEditorTemplateFloatLeft'>
+                            <button value='floatLeft' title='Float Left'><span><img src='/hEditor/Pictures/floatLeft.png' alt='Float Left' /></span></button>
+                        </li>
+                        <li id='hEditorTemplateFloatRight'>
+                            <button value='floatRight' title='Float Right'><span><img src='/hEditor/Pictures/floatRight.png' alt='Float Right' /></span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='hEditorTabsLeft'>
+        <ul>
+            <li id='hEditorTabFiles' class='hEditorTabFileSelected'>
+                <span>Files</span>
+            </li>
+            <li id='hEditorTabTemplates'>
+                <span>Templates</span>
+            </li>
+        </ul>
+    </div>
+    <div id='hEditorTabs'>
+        <div id='hEditorTabsInner'>
+        {hEditorTabs}
+        </div>
+        {!hEditorEnableDocumentTabs?
+            <ul id='hEditorButtons' class='hEditorTabs'>
+                <li class='hEditorSave'><span>Save</span></li>
+                <li class='hEditorCancel'><span>Cancel</span></li>
+            </ul>
+        }
+    </div>
+    <div id='hEditorFindLeft'>
+
+    </div>
+    <div id='hEditorFind'>
+        <div id='hEditorFindInner'>
+            {.hEditorDocumentEnableWYSIWYG(true)?
+            <table>
+                <colgroup>
+                    <col style='width: 1px;' />
+                    <col />
+                    <col style='width: 1px;' />
+                    <col style='width: 1px;' />
+                    <col />
+                    <col style='width: 1px;' />
+                    <col style='width: 1px;' />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href='#' id='hEditorFindOptions'></a>
+                        </td>
+                        <td>
+                            <input type='text' id='hEditorFindString' />
+                        </td>
+                        <td>
+                            <button id='hEditorFindPrevious'>Previous</button>
+                        </td>
+                        <td>
+                            <button id='hEditorFindNext'>Find</button>
+                        </td>
+                        <td>
+                            <input type='text' id='hEditorReplaceString' />
+                        </td>
+                        <td>
+                            <input type='submit' id='hEditorReplaceButton' value='Replace' />
+                        </td>
+                        <td>
+                            <input type='submit' id='hEditorReplaceAllButton' value='All' />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            }
+        </div>
+    </div>
+    <div id='hEditorButtons'>
+        <!--
+        <div id='hEditorButtonsInner'>
+            <input type='submit' class='hEditorSave' value='Save' />
+            <input type='submit' class='hEditorSaveAs' value='Save As' />
+        </div>
+        -->
+    </div>
+    <div id='hEditorContent'>
+        {hEditorLeft}
+        <ul id='hEditorTemplates'>
+
+        </ul>
+        <div id='hEditorResizeGrip'></div>
+        <div id='hEditorDocument'>
+            {hEditorDocument}
+        </div>
+        <div id='hEditorDocumentProperties'>
+        </div>
+    </div>
+    <div id='hEditorBottom'>
+        <span id='hEditorContentSelected'></span>
+        <span id='hEditorContentSelectedLabel'>Selected: <span>Nothing</span></span>
+        <div id='hEditorTemplateActionsWrapper' class='hEditorTemplateIslandWrapper'>
+            <ul id='hEditorTemplateActionsSave' class='hEditorTemplateIsland'>
+                <li id='hEditorTemplateSave'>
+                    <button value='save'><span>Save</span></button>
+                </li>
+            </ul>
+            <ul id='hEditorTemplateActionsCancel' class='hEditorTemplateIsland'>
+                <li id='hEditorTemplateCancel'>
+                    <button value='cancel'><span>Cancel</span></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    editor.defaultLanguage = {.hEditorDefaultLanguage(1)};
+    editor.treeWidth = {user.getVariable('hEditorTreeWidth', 287)};
+
+    editor.width = {user.getVariable('hEditorWindowWidth', 1200)};
+    editor.height = {user.getVariable('hEditorWindowHeight', 600)};
+
+    editor.findReplace = {
+        backwards : {user.getVariable('hEditorFindReplaceBackwards', 0)},
+        wrap : {user.getVariable('hEditorFindReplaceWrap', 0)},
+        caseSensitive : {user.getVariable('hEditorFindReplaceCaseSensitive', 0)},
+        wholeWord : {user.getVariable('hEditorFindReplaceWholeWord', 0)},
+        regExp : {user.getVariable('hEditorFindReplaceRegularExpression', 0)}
+    };
+</script>
+<div class='hFinderContextMenu' id='hEditorFindReplaceContextMenu'>
+    <ul>
+        <li class='hFinderContextMenuBoolean' id='hEditorFindReplaceBackwards'><span>Backwards</span></li>
+        <li class='hFinderContextMenuBoolean' id='hEditorFindReplaceWrap'><span>Wrap</span></li>
+        <li class='hFinderContextMenuBoolean' id='hEditorFindReplaceCaseSensitive'><span>Case-Sensitive</span></li>
+        <li class='hFinderContextMenuBoolean' id='hEditorFindReplaceWholeWord'><span>Whole Word</span></li>
+        <li class='hFinderContextMenuBoolean' id='hEditorFindReplaceRegularExpression'><span>Regular Expression</span></li>
+    </ul>
+</div>

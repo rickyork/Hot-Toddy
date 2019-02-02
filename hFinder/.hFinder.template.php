@@ -1,0 +1,2 @@
+<?php
+  $html .= $this->getTemplate( dirname(__FILE__).'/HTML/Template.html', array( 'hFinderBodyId' => $this->hFinderBodyId('hFinderTemplate'), 'dialogue' => isset($_GET['dialogue']), 'hFinderBodyClass' => $this->hFinderBodyClass(null), 'hFinderView' => $this->hFinderView('Icons'), 'hFileDocument' => $this->hFileDocument ) ); ?>

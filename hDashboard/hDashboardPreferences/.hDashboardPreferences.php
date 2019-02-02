@@ -1,0 +1,2 @@
+<?php
+  class hDashboardPreferences extends hPlugin { public function hConstructor() { $this->hFileCSS = ''; $this->hFileJavaScript = ''; $this->getPluginCSS('hTemplate/hTemplateDefault'); $this->getPluginFiles(); $this->hTemplatePath = '/hTemplate/hTemplateDefault/hTemplateDefault.template.php'; $this->HotToddySideBoxHeading = "Preferences"; $this->HotToddySideBoxContent = ""; $this->hFileDocument = $this->getTemplate('Preferences'); } } ?>

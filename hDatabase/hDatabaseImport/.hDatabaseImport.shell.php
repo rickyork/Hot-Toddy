@@ -1,0 +1,2 @@
+<?php
+  class hDatabaseImportShell extends hShell { private $hDatabaseImport; public function hConstructor() { $this->hDatabaseImport = $this->library('hDatabase/hDatabaseImport'); $this->hDatabaseImport->execute( $this->shellArgumentExists('-from', 'from')? $this->getShellArgumentValue('-from', 'from') : nil ); } } ?>

@@ -1,0 +1,7 @@
+{
+    plugin : {
+        shell : {
+            name : "User Install Shell"
+        }
+    }
+}

@@ -1,0 +1,164 @@
+@import '/hApplication/hApplicationUI/hApplicationUIButton/CSS/Segmented+Aqua.css';
+@import '/hApplication/hApplicationUI/hApplicationUIListView/hApplicationUIListView.css';
+@import '/hCalendar/CSS/Datepicker.css';
+
+
+html,
+body {
+    background: rgb(232, 232, 232);
+    padding: 0;
+    margin: 0;
+    font: 12px "Lucida Grande", Arial;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+div#hApplication {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    bottom: 40px;
+    left: 0;
+    border-top: 1px solid rgb(180, 180, 180);
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+div#hApplicationColumn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    overflow: hidden;
+    border-right: 1px solid rgb(190, 190, 190);
+    background: rgb(214, 221, 229);
+    user-select: none;
+    {userAgent.isWebkit?
+        -webkit-user-select: none;
+    }
+    {userAgent.isGecko?
+        -moz-user-select: none;
+    }
+    {userAgent.isTrident?
+        -ms-user-select: none;
+    }
+}
+div#hApplicationColumn ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 26px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    overflow-x: hidden;
+}
+div#hApplicationColumn li div {
+    padding: 5px 5px 5px 5px;
+    height: 14px;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+li.hApplicationColumnItem {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    {userAgent.isWebkit?
+        -webkit-user-select: none;
+    }
+    {userAgent.isGecko?
+        -moz-user-select: none;
+    }
+    {userAgent.isTrident?
+        -ms-user-select: none;
+    }
+}
+li.hApplicationColumnItem div {
+    min-width: 200px;
+}
+li.hApplicationColumnItemSelected {
+    background: rgb(50, 102, 184) url('/hApplication/hApplicationUI/Pictures/Selection/Generic.png') repeat-x top;
+    color: white;
+    text-shadow: rgb(97, 95, 106) 1px 1px 1px;
+}
+div.hApplicationColumnHeading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 23px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    box-shadow: 0 3px 3px rgba(100, 100, 100, 0.7);
+    background: linear-gradient(to bottom, rgb(253, 253, 253), rgb(215, 215, 215));
+    {userAgent.isWebkit?
+        background: -webkit-gradient(linear, left top, left bottom, from(rgb(253, 253, 253)), to(rgb(215, 215, 215)));
+        background: -webkit-linear-gradient(top, rgb(253, 253, 253), rgb(215, 215, 215));
+        -webkit-box-shadow: 0 3px 3px rgba(100, 100, 100, 0.7);
+        z-index: 2;
+    }
+    {userAgent.isGecko?
+        background: -moz-linear-gradient(top, rgb(253, 253, 253), rgb(215, 215, 215));
+        -moz-box-shadow: 0 3px 3px rgba(100, 100, 100, 0.7);
+    }
+    {userAgent:(ie < 9)?
+        background: none;
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fdfdfd', endColorstr='#d7d7d7')";
+    }
+    {userAgent.isTrident?
+        background: -ms-linear-gradient(top, rgb(253, 253, 253), rgb(215, 215, 215));
+    }
+}
+div.hApplicationColumnHeadingLabel {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    font-size: 13px;
+}
+div.hFormDivisionLegend {
+    display: none;
+}
+div#hApplication > form {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 201px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    background: rgb(244, 244, 244);
+    border: none;
+    box-shadow: none;
+    {userAgent.isWebkit?
+        -webkit-box-shadow: none;
+    }
+    {userAgent.isGecko?
+        -moz-box-shadow: none;
+    }
+}
+div#hApplication > form div.hDialogueContentWrapper {
+    padding: 20px;
+}
+div#hApplication > form div.hDialogueContent {
+    border: none;
+}
+div.hFormWYSIWYGWrapper {
+    outline: 1px solid rgb(180, 180, 180);
+}
+div#hApplicationButtons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+div.hApplicationStatus {
+    bottom: 50px;
+    right: 10px;
+    z-index: 100;
+    width: 210px;
+}

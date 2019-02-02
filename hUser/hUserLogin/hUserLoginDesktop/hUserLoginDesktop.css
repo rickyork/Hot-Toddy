@@ -1,0 +1,120 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+form#hUserLoginDesktopDialogue,
+div#hUserLoginDesktopDiv {
+    display: block;
+}
+html body#hDialogueFullScreen form#hUserLoginDesktopDialogue {
+    padding-top: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 250px;
+    margin: -125px 0 0 -300px;
+    box-shadow: 0 7px 100px rgba(0, 0, 0, 0.6);
+    {userAgent.vendorPrefix}box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    {userAgent.vendorPrefix}border-radius: 10px;
+}
+body#hDialogueFullScreen form#hUserLoginDesktopDialogue div.hDialogueContent {
+    top: 0;
+    height: 250px;
+    background: none !important;
+}
+form#hUserLoginDesktopDialogue div.hFormLegend {
+    font-size: 32px;
+    top: -33px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+div#hUserLoginDesktopHotToddyIcon {
+    width: 155px;
+    height: 214px;
+    background: url("/hUser/hUserLogin/hUserLoginDesktop/Pictures/Hot+Toddy.png") no-repeat 0 0;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+div#hUserLoginDesktopTitle {
+    position: absolute;
+    top: 35px;
+    left: 235px;
+}
+div#hUserLoginDesktopTitle p {
+    color: rgb(100, 100, 100);
+    margin: 3px 0 0 0;
+}
+div#hUserLoginDesktopTitle h1 {
+    margin: 0;
+}
+div#hUserLoginDesktopDiv {
+    position: absolute;
+    top: 80px;
+    left: 195px;
+}
+div#hUserLoginDesktopDiv input {
+    width: 200px;
+}
+form#hUserLoginDesktopDialogue fieldset {
+    border-top: none;
+}
+h4#hUserLoginDesktopProfileHeader {
+    margin: 0;
+    padding: 0 0 0 10px;
+    position: relative;
+    top: -10px;
+}
+div.hUserLoginDesktopProfile {
+    float: left;
+    min-width: 120px;
+    text-align: center;
+    margin: 0 5px;
+    height: 80px;
+    padding: 5px 0;
+    border: 1px solid transparent;
+    position: relative;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+}
+div.hUserLoginDesktopEditProfile {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top:2px;
+    right: 2px;
+    -webkit-border-radius: 8px;
+    color: #000;
+    display: none;
+    font: italic 14px "Times New Roman";
+}
+div.hUserLoginDesktopProfile img {
+
+}
+div.hUserLoginDesktopProfile span {
+    display: block;
+    padding: 3px 0 0 0;
+}
+input#hFrameworkServer,
+input#hFrameworkPort {
+    color: rgb(128, 128, 128);
+}
+form#hUserLoginDesktopDialogue input.hUserLoginDesktopNonDefaultInput {
+    color: black;
+}
+fieldset#hUserDesktopProfiles {
+    display: none;
+}
+div#hUserLoginDesktopButtons {
+    position: absolute;
+    bottom: 20px;
+    right: 80px;
+}
+div#hUserLoginDesktopButtons input {
+    float: right;
+    margin: 0 0 0 10px;
+}

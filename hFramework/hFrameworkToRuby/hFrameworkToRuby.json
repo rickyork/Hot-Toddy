@@ -1,0 +1,8 @@
+{
+    plugin : {
+        name : "Framework To Ruby",
+        library : {
+            name : "Framework To Ruby Library"
+        }
+    }
+}

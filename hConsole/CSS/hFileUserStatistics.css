@@ -1,0 +1,36 @@
+th.hFileUserStatistics-hUserId,
+td.hFileUserStatistics-hUserId,
+th.hFileUserStatistics-hFileId,
+td.hFileUserStatistics-hFileId {
+    width: 65px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFileUserStatistics-hFileAccessCount,
+td.hFileUserStatistics-hFileAccessCount {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFileUserStatistics-hUserName,
+td.hFileUserStatistics-hUserName {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFileUserStatistics-hUserFullName,
+td.hFileUserStatistics-hUserFullName {
+    width: 125px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+td.hFileUserStatistics-hFilePath {
+    white-space: nowrap;
+    overflow: hidden;
+}
+th.hFileUserStatistics-hFileLastAccessed,
+td.hFileUserStatistics-hFileLastAccessed {
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+}

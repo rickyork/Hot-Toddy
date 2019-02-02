@@ -1,0 +1,12 @@
+div.google-infobox {
+   display: block;
+}
+div#map {
+   display: none;
+}
+ul.google-infobox {
+   width: auto;
+}
+ul.google-infobox span.label {
+   width: 1in;
+}

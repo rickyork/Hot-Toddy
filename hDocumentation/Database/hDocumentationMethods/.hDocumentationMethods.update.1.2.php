@@ -1,0 +1,2 @@
+<?php
+  class hDocumentationMethods_1to2 extends hPlugin { public function hConstructor() { $this->hDocumentationMethods ->addColumn('hDocumentationMethodBody', hDatabase::mediumText, 'hDocumentationMethodSignature') ->modifyColumn('hDocumentationMethodSignature', hDatabase::text) ->addColumn('hDocumentationMethodReturnDescription', hDatabase::text); } public function undo() { $this->hDocumentationMethods ->dropColumn('hDocumentationMethodBody') ->modifyColumn('hDocumentationMethodSignature', hDatabase::name) ->dropColumn('hDocumentationMethodReturnDescription'); } } ?>

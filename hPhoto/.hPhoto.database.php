@@ -1,0 +1,2 @@
+<?php
+  class hPhotoDatabase extends hPlugin { private $hCategoryDatabase; public function hConstructor() { $this->hCategoryDatabase = $this->database('hCategory'); } public function getAllPhotoFiles() { return $this->hDatabase->getResults( $this->getTemplateSQL() ); } public function addPhoto($fileId, array $categories = array()) { $this->hCategoryDatabase->addFileToCategory( $fileId, '/Categories/.Photos' ); if (count($categories)) { foreach ($categories as $categoryId) { $this->hCategoryDatabase->addFileToCategory( $fileId, $categoryId ); } } } } ?>

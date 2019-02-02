@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Open Search"
+    },
+    file : {
+        title : "Open Search",
+        path : "/Applications/Search/open.xml",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

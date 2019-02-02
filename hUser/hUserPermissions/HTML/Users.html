@@ -1,0 +1,25 @@
+<div>
+    <label for='hUserPermissionsUsersRead'>Users with Read Access</label>
+    <div class='hUserPermissionsAccessControl'>
+        <select name='hUsers[r][]' id='hUserPermissionsUsersRead' multiple='multiple' size='5'>
+            {hUserPermissionsUsersRead}
+        </select>
+        <div id='hUserPermissionsUsersReadButtons' class='hUserPermissionsButtons'>
+            <input type='submit' value=' &darr; ' id='hUserPermissionsUsersReadRemove' class='hUserPermissionsAction hUserPermissionsRemove' title='Revoke read access from the selected user.' />
+            <input type='submit' value=' &uarr; ' id='hUserPermissionsUsersReadAdd' class='hUserPermissionsAction hUserPermissionsAdd' title='Grant the selected user read access.' />
+        </div>
+    </div>
+    <label for='hUserPermissionsUsersWrite'>Users with Write Access</label>
+    <div class='hUserPermissionsAccessControl'>
+        <select name='hUsers[w][]' id='hUserPermissionsUsersWrite' multiple='multiple' size='5'>
+            {hUserPermissionsUsersWrite}
+        </select>
+        <div id='hUserPermissionsUsersWriteButtons' class='hUserPermissionsButtons'>
+            <input type='submit' value=' &darr; ' id='hUserPermissionsUsersWriteRemove' class='hUserPermissionsAction hUserPermissionsRemove' title='Revoke write access from the selected user.' />
+            <input type='submit' value=' &darr;&darr; ' id='hUserPermissionsUsersBothRemove' class='hUserPermissionsAction hUserPermissionsRemoveBoth' title='Revoke read and write access from the selected user.' />
+            <input type='submit' value=' &uarr; ' id='hUserPermissionsUsersWriteAdd' class='hUserPermissionsAction hUserPermissionsAdd' title='Grant the selected user write access.' />
+            <input type='submit' value=' &uarr;&uarr; ' id='hUserPermissionsUsersBothAdd' class='hUserPermissionsAction hUserPermissionsAddBoth' title='Grant the selected user read and write access.' />
+        </div>
+    </div>
+    {hUserPermissionsUsers}
+</div>

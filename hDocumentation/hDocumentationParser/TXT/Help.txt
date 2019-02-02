@@ -1,0 +1,9 @@
+
+    ./hot -p hDocumentation/hDocumentationParser tokenize <file>
+    
+        Process a specific PHP file for documentation.
+        
+    ./hot -p hDocumentation/hDocumentationParser tokenize all
+    
+        Process all PHP files for documentation, in both the Hot Toddy and 
+        Plugins folders.

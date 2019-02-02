@@ -1,0 +1,91 @@
+div.hApplicationUIButtonSegmentedAquaOuter {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    zoom: 1;
+    user-select: none;
+    {userAgent.vendorPrefix}user-select: none;
+}
+ul.hApplicationUIButtonSegmentedAqua {
+    list-style: none;
+    margin: 15px 0 0 0;
+    padding: 0;
+    display: inline-block;
+}
+ul.hApplicationUIButtonSegmentedAqua li {
+    float: left;
+    border-top: 1px solid rgb(119, 119, 119);
+    border-left: 1px solid rgb(188, 188, 188);
+    border-bottom: 1px solid rgb(94, 94, 94);
+    border-right: none;
+    padding: 0;
+    color: #000;
+    font: 12px "Helvetica Neue", Arial, sans-serif;
+    background: url('/hApplication/hApplicationUI/Pictures/Buttons/Aqua.png') repeat-x;
+    height: 19px;
+    padding: 0 10px;
+    box-shadow: 0px 1px 1px rgba(100, 100, 100, 0.7);
+    {userAgent.vendorPrefix}box-shadow: 0px 1px 1px rgba(100, 100, 100, 0.7);
+}
+ul.hApplicationUIButtonSegmentedAqua li span {
+    line-height: 19px;
+    vertical-align: middle;
+}
+ul.hApplicationUIButtonSegmentedAqua li:active {
+    background-image: url('/hApplication/hApplicationUI/Pictures/Buttons/Aqua Down.png');
+}
+ul.hApplicationUIButtonSegmentedAqua li.hApplicationUIButtonSegmentedAquaSelected {
+    background-image: url('/hApplication/hApplicationUI/Pictures/Buttons/Aqua On.png');
+    border-top: 1px solid rgb(59, 56, 150);
+    border-left: 1px solid rgb(99, 155, 210);
+    border-right: none;
+}
+ul.hApplicationUIButtonSegmentedAqua li.hApplicationUIButtonSegmentedAquaSelected:last-child,
+ul.hApplicationUIButtonSegmentedAqua li.hApplicationUIButtonSegmentedAquaSelected.hApplicationUIButtonSegmentedAquaLast {
+    border-right: 1px solid rgb(59, 56, 150);
+}
+ul.hApplicationUIButtonSegmentedAqua li.hApplicationUIButtonSegmentedAquaSelected + li {
+    border-left: 1px solid rgb(99, 155, 210);
+}
+ul.hApplicationUIButtonSegmentedAqua li:last-child,
+ul.hApplicationUIButtonSegmentedAqua li.hApplicationUIButtonSegmentedAquaLast {
+    border-right: 1px solid rgb(141, 141, 141);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    {userAgent.vendorPrefix}border-top-right-radius: 3px;
+    {userAgent.vendorPrefix}border-bottom-right-radius: 3px;
+    {isGecko?
+        -moz-border-radius-topright: 3px;
+        -moz-border-radius-bottomright: 3px;
+    }
+}
+ul.hApplicationUIButtonSegmentedAqua li:first-child {
+    border-left: 1px solid rgb(119, 119, 119);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    {userAgent.vendorPrefix}border-top-left-radius: 3px;
+    {userAgent.vendorPrefix}border-bottom-left-radius: 3px;
+    {isGecko?
+        -moz-border-radius-topleft: 3px;
+        -moz-border-radius-bottomleft: 3px;
+    }
+}
+div.hApplicationUIButtonSegmentedAquaContentWrapper {
+    border-top: 1px solid rgb(171, 171, 171);
+    border-left: 1px solid rgb(199, 199, 199);
+    border-right: 1px solid rgb(199, 199, 199);
+    border-bottom: 1px solid rgb(219, 219, 219);
+    background: rgb(230, 230, 230);
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    bottom: 40px;
+    left: 20px;
+    z-index: 1;
+    padding: 20px 0 5px 0;
+    overflow: auto;
+    border-radius: 5px;
+    {userAgent.vendorPrefix}border-radius: 5px;
+    box-shadow: inset 0px 1px 1px rgba(150, 150, 150, 0.7);
+    {userAgent.vendorPrefix}box-shadow: inset 0px 1px 1px rgba(150, 150, 150, 0.7);
+}

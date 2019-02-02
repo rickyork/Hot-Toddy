@@ -1,0 +1,40 @@
+<table>
+    <thead>
+        <tr>
+            <th class='hErrorLog-hErrorText'><div>Error</div></th>
+            <th class='hErrorLog-hErrorPath'><div>Path</div></th>
+            <th class='hErrorLog-hUserId'><div>User Id</div></th>
+            <th class='hErrorLog-hUserName'><div>User Name</div></th>
+            <th class='hErrorLog-hUserFullName'><div>Full Name</div></th>
+            <th class='hErrorLog-hErrorDate'><div>Error Date</div></th>
+            <th class='hErrorLog-hErrorUserAgent'><div>User Agent</div></th>
+            <th class='hErrorLog-hErrorRemoteIP'><div>IP Address</div></th>
+        </tr>
+    </thead>
+</table>
+<div id='hConsoleLogContainer'>
+    <table>
+        <tbody>
+            {log[]?
+                <tr>
+                    <td class='hErrorLog-hErrorText'>
+                        <div class='hErrorTextWrapper'>
+                            <div class='hErrorText'><div>{hErrorText}</div></div>
+                            <div class='hErrorBackTrace'><div>{hErrorBackTrace}</div></div>
+                        </div>
+                    </td>
+                    <td class='hErrorLog-hErrorPath' title='{hErrorPath}'><a href='{hErrorPath}' target='_blank'>{hErrorPath}</a></td>
+                    <td class='hErrorLog-hUserId'>{hUserId}</td>
+                    <td class='hErrorLog-hUserName'>{hUserId_hUserName}</td>
+                    <td class='hErrorLog-hUserFullName'>{hUserId_hUserFullName}</td>
+                    <td class='hErrorLog-hErrorDate'>{hErrorDate}</td>
+                    <td class='hErrorLog-hErrorUserAgent'>
+                        <div class='hErrorUserAgent'>{hErrorUserAgent}</div>
+                    </td>
+                    <td class='hErrorLog-hErrorRemoteIP'>{hErrorRemoteIP}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

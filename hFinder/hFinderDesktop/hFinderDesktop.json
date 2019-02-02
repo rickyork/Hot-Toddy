@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Finder Desktop"
+    },
+    file : {
+        title : "Finder Desktop",
+        path : "/Applications/Finder/Desktop.html",
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                world : "r"
+            }
+        }
+    }
+}

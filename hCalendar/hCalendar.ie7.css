@@ -1,0 +1,3 @@
+div#hCalendarSelected {
+    height: expression(documentElement.clientHeight - 33);
+}

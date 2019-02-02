@@ -1,0 +1,41 @@
+{
+    plugin : {
+        name : "Forum",
+        library : {
+            name : "Forum Library"
+        },
+        database : {
+            name : "Forum Database"
+        },
+        service : {
+            name : "Forum Service",
+            methods : [
+                "toggleTopicLock",
+                "togglePostLock",
+                "toggleTopicModeration",
+                "togglePostApproval",
+                "togglePostStickiness",
+                "deleteForum",
+                "deleteTopic",
+                "deletePost",
+                "renameForum",
+                "saveTopic",
+                "sortForums",
+                "sortTopics",
+                "getTopic",
+                "toggleForumSubscription",
+                "toggleTopicSubscription",
+                "toggleThreadSubscription"
+            ]
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hForum",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hForum"
+        }
+    }
+}

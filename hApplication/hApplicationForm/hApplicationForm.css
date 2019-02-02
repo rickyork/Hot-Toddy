@@ -1,0 +1,30 @@
+html {
+    background: rgb(214, 221, 229);
+}
+body {
+    background: rgb(214, 221, 229);
+    font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+fieldset {
+    border: none;
+}
+legend {
+    display: none;
+}
+td.hFormLabel,
+td.hFormLabelLong {
+    text-align: right;
+    padding: 5px;
+}
+td.hFormInput {
+    padding: 5px;
+}
+td.hFormLabelLong {
+    vertical-align: top;
+    padding-top: 15px;
+}
+div.hFormLegend {
+    font-size: 14px;
+    position: relative;
+    left: 0;
+}

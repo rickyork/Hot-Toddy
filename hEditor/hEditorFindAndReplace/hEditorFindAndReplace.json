@@ -1,0 +1,37 @@
+{
+    plugin : {
+        name : "Editor Find and Replace",
+        library : {
+            name : "Editor Find and Replace Library"
+        },
+        service : {
+            name : "Editor Find and Replace Service",
+            methods : [
+                "find",
+                "replace"
+            ]
+        }
+    },
+    file : {
+        title : "Find and Replace",
+        path : "/System/Applications/Find and Replace/index.html",
+        directory : {
+            properties : {
+                isApplication : 1,
+                icon : {
+                    name : "search.png",
+                    mime : "plugins/editorFindAndReplace"
+                }
+            }
+        },
+        user : {
+            id : 1,
+            permissions : {
+                owner : "rw",
+                groups : [
+                    ["root", "rw"]
+                ]
+            }
+        }
+    }
+}

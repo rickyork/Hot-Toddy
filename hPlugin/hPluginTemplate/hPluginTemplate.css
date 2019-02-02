@@ -1,0 +1,10 @@
+p#hPluginCreated {
+    color: crimson;
+    font-weight: bold;
+    padding: 15px;
+    border: 1px solid crimson;
+    font-size: 18px;
+}
+input.hPluginListenerMethodSelected {
+    background: lightgreen;
+}

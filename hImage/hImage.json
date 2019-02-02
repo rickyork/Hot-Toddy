@@ -1,0 +1,16 @@
+{
+    plugin : {
+        library : {
+            name : "Image Library"
+        }
+    },
+    source : {
+        destination : "/Hot Toddy/hImage",
+        repository : {
+            checkout : false,
+            software : "svn",
+            baseURI : "http://svn.deadmarshes.com",
+            path : "/hImage"
+        }
+    }
+}

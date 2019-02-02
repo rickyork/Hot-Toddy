@@ -1,0 +1,58 @@
+        <!-- Begin Finder Files Inner -->
+        <div id='hFinderFilesInner'>
+    {hFiles[]?
+        {isDirectory?
+            <!-- Begin Finder Directory -->
+            <div id='hFinderDirectory-{hDirectoryId}' 
+                 class='hFinderNode hFinderDirectory{hFinderClass}' 
+                 title='{hFilePath}' 
+                 data-interface-object-id='{hFinderInterfaceObjectId}' 
+                 data-file-path='{hFilePath}'>
+                <div class='hFinderNodeWrapper hFinderDirectoryWrapper{hFinderWrapperClass}'> 
+                    <div class='hFinderIcon{hFinderIconClass}'></div>
+                    <div class='hFinderCaptionWrapper'>
+                        <span class='hFinderDirectoryName' id='hFinderDirectoryName-{hDirectoryId}'>
+                            {hFileLink?<a href='{hFilePath}'>}<span>{hFileName}</span>{hFileLink?</a>}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- End Finder Directory -->
+        }
+        {!isDirectory?
+            <!-- Begin Finder File -->
+            <div id='hFinderFileId-{hFileId}' 
+                 class='hFinderNode hFinderFile{hFinderClass}' 
+                 title='{hFilePath}' 
+                 data-interface-object-id='{hFinderInterfaceObjectId}' 
+                 data-file-path='{hFilePath}'>
+                <div class='hFinderNodeWrapper hFinderFileWrapper{hFinderWrapperClass}'>
+                    {hFinderThumbnailPath?<div class='hFinderThumbnail'>
+                        <div style="background: url('{hFinderThumbnailPath}') no-repeat top center; width: 100%; height: 100%;"></div>
+                    </div>}
+                    <div class='hFinderIcon{hFinderIconClass}'>
+                        {hFileSymbolicLinkTo?<img src='{!hDesktopApplicationStyle?/}images/themes/aqua/finder/arrow.png' alt='Symbolic Link' class='hFinderSymbolicLink' />}
+                    </div>
+                    <div class='hFinderCaptionWrapper'>
+                        <span class='hFinderFileSize'>{hFileSize}</span>
+                        <span class='hFinderFileMIME'>{hFileMIME}</span>
+                        <span class='hFinderFileLastModified'>
+                            <span class='hFinderFileLastModifiedLabel'>Last Modified:</span>
+                            <span class='hFinderFileLastModifiedDate'>{hFileLastModifiedDate}</span>
+                            <span class='hFinderFileLastModifiedTimestamp'>{hFileLastModified}</span>
+                        </span>
+                        <h4 class='hFinderFileTitle' id='hFinderFileTitle-{hFileId}'>{hFileTitle}</h4>
+                        <span class='hFinderFileName' id='hFinderFileName-{hFileId}'>    
+                            {hFileLink?<a href='{hFilePath}'>}<span>{hFileName}</span>{hFileLink?</a>}
+                        </span>
+                        <p class='hFinderFileDescription'>
+                            {hFileDescription}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Finder File -->
+        }
+    }
+        </div>
+        <!-- End Finder Files Inner -->

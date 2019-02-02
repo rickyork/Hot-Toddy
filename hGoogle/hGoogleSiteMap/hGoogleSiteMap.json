@@ -1,0 +1,16 @@
+{
+    plugin : {
+        name : "Google Site Map"
+    },
+    file : {
+        title : "Google Site Map",
+        path : "/sitemap.xml",
+        user: {
+            id : 1,
+            permissions: {
+               owner : "rw",
+               world : "r"
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+body,
+div#hFinderWrapper {
+    background: rgb(232, 232, 232);
+}
+body.hFinderDialogue div.hFinderFiles, 
+body.hFinderDialogue div.hFinderSideColumn {
+    margin-top: 42px;
+    margin-bottom: 42px;
+    border-top: 1px solid rgb(153, 153, 153);
+    border-bottom: 1px solid rgb(153, 153, 153);
+}
+body.hFinderDialogue ul#hFinderToolbar {
+    position: relative;
+    top: 5px;
+}
+body.hFinderDialogue div#hFinderListHeader {
+    border-top: 1px solid rgb(153, 153, 153);
+    margin-top: 10px;
+}
+
+div#hFinderDialogueChooseButtons {
+    position: absolute;
+    right: 22px;
+    bottom: 10px;
+}
+div#hFinderDialogueChooseButtons input {
+    float: right;
+    margin-left: 10px;
+}
+div#hFinderActions {
+    position: absolute;
+    bottom: 5px;
+    left: 2px;
+    right: 2px;
+}
+iframe#hFinderFile {
+    z-index: 20;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: white;
+    display: none;
+}
+div#hFinderUploadButtons {
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+}
+div#hFinderUploadDialogue {
+    width: 600px;
+    height: 250px;
+    margin: -125px 0 0 -300px;
+}
+td#hFinderDialogueButtons {
+   text-align: right;
+}
+body.hFinderDialogue div.hFinderUpload,
+body.hFinderDialogue div.hFinderCategories,
+body#hFinderButtonDialogue div.hFinderCategories,
+body.hFinderDialogue div.hFinderEditFile {
+    bottom: 42px;
+    border-bottom: 1px solid rgb(153, 153, 153);
+    border-top: 1px solid rgb(153, 153, 153);
+}

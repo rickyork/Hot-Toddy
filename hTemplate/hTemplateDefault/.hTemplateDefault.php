@@ -1,0 +1,2 @@
+<?php
+  class HotToddy extends hPlugin implements hPrivatePlugin { public function hConstructor() { $this->getPluginFiles(); } public function getPrivateHeaders(&$pluginPath, &$method, &$file, &$path) { } public function &getPrivateForm() { $nothing = ''; return $nothing; } } ?>
