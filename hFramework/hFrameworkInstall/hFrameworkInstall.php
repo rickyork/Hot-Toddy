@@ -204,7 +204,7 @@ echo `chown -R {$user}:{$group} "{$installPath}/Plugins"`;
 
 if (!file_exists($installPath.'/Library'))
 {
-    echo "Checking out 3rd-Party Libraries from SVN to {$installPath}/Library\n\n";
+    echo "Checking out 3rd-Party Libraries from git to {$installPath}/Library\n\n";
     echo "git {$gitOperation} {$gitLibraryHost} '{$installPath}/Library'\n";
     echo `git {$gitOperation} {$gitLibraryHost} '{$installPath}/Library'`;
 }

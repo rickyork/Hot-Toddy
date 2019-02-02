@@ -6,12 +6,6 @@
         }
     },
     source : {
-        destination : "/Hot Toddy/hApplication",
-        repository : {
-            checkout : false,
-            software : "svn",
-            baseURI : "http://svn.deadmarshes.com",
-            path : "/hApplication"
-        }
+        destination : "/Hot Toddy/hApplication"
     }
 }
