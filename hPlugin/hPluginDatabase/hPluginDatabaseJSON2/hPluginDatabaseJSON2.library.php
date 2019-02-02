@@ -84,7 +84,7 @@ class hPluginDatabaseJSON2Library extends hPlugin {
 
         $this->walkTemplateObject($json);
 
-        if (empty($plugin))
+        if (empty($plugin) && !empty($json->plugin->path))
         {
             $plugin = $json->plugin->path;
 
@@ -445,6 +445,9 @@ class hPluginDatabaseJSON2Library extends hPlugin {
 
             if (isset($json->source->repository))
             {
+                // Disable this feature
+                return;
+                
                 $this->console("Found a plugin source repository");
 
                 $data = array();
