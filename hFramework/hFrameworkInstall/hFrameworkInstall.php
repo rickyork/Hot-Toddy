@@ -23,78 +23,78 @@ if (!isset($argv) || !is_array($argv))
 if (!file_exists($installPath.'/Configuration'))
 {
     echo "Making directory {$installPath}/Configuration\n";
-    `mkdir "{$installPath}/Configuration"`;
+    echo `mkdir "{$installPath}/Configuration"`;
 }
 else
 {
     echo "Directory {$installPath}/Configuration already exists\n";
 }
 
-`chmod -R 775 "{$installPath}/Configuration"`;
-`chown -R {$user}:{$group} "{$installPath}/Configuration"`;
+echo `chmod -R 775 "{$installPath}/Configuration"`;
+echo `chown -R {$user}:{$group} "{$installPath}/Configuration"`;
 
 if (!file_exists($installPath.'/Pictures'))
 {
     echo "Making directory {$installPath}/Pictures\n";
-    `mkdir "{$installPath}/Pictures"`;
+    echo `mkdir "{$installPath}/Pictures"`;
 }
 else
 {
     echo "Directory {$installPath}/Pictures already exists\n";
 }
 
-`chmod -R 777 "{$installPath}/Pictures"`;
-`chown -R {$user}:{$group} "{$installPath}/Pictures"`;
+echo `chmod -R 777 "{$installPath}/Pictures"`;
+echo `chown -R {$user}:{$group} "{$installPath}/Pictures"`;
 
 if (!file_exists($installPath.'/HtFS'))
 {
     echo "Making directory {$installPath}/HtFS\n";
-    `mkdir "{$installPath}/HtFS"`;
+    echo `mkdir "{$installPath}/HtFS"`;
 }
 else
 {
     echo "Directory {$installPath}/HtFS already exists\n";
 }
 
-`chmod -R 775 "{$installPath}/HtFS"`;
-`chown -R {$user}:{$group} "{$installPath}/HTFS"`;
+echo `chmod -R 775 "{$installPath}/HtFS"`;
+echo `chown -R {$user}:{$group} "{$installPath}/HTFS"`;
 
 if (!file_exists($installPath.'/Compiled'))
 {
     echo "Making directory {$installPath}/Compiled\n";
-    `mkdir "{$installPath}/Compiled"`;
+    echo `mkdir "{$installPath}/Compiled"`;
 }
 else
 {
     echo "Directory {$installPath}/Compiled already exists\n";
 }
 
-`chmod -R 775 "{$installPath}/Compiled"`;
-`chown -R {$user}:{$group} "{$installPath}/Compiled"`;
+echo `chmod -R 775 "{$installPath}/Compiled"`;
+echo `chown -R {$user}:{$group} "{$installPath}/Compiled"`;
 
 
 if (!file_exists($installPath.'/www'))
 {
     echo "Making directory {$installPath}/www\n";
-    `mkdir "{$installPath}/www"`;
+    echo `mkdir "{$installPath}/www"`;
 }
 else
 {
     echo "Directory {$installPath}/www already exists\n";
 }
 
-`chmod -R 775 "{$installPath}/www"`;
-`chown -R {$user}:{$group} "{$installPath}/www"`;
+echo `chmod -R 775 "{$installPath}/www"`;
+echo `chown -R {$user}:{$group} "{$installPath}/www"`;
 
-`cp "{$installPath}/Hot Toddy/hFramework/hFramework.default.php" "{$installPath}/www/index.php"`;
+echo `cp "{$installPath}/Hot Toddy/hFramework/hFramework.default.php" "{$installPath}/www/index.php"`;
 
-`cp "{$installPath}/Hot Toddy/hFramework/hFramework.shell.php" "{$installPath}/hot"`;
-`chown -R {$user}:{$group} "{$installPath}/hot"`;
+echo `cp "{$installPath}/Hot Toddy/hFramework/hFramework.shell.php" "{$installPath}/hot"`;
+echo `chown -R {$user}:{$group} "{$installPath}/hot"`;
 
 if (!file_exists($installPath.'/images/Icons'))
 {
     echo "Making directory {$installPath}/Icons\n";
-    `mkdir "{$installPath}/Icons"`;
+    echo `mkdir "{$installPath}/Icons"`;
 }
 else
 {
@@ -107,6 +107,8 @@ $dimensions = array(
     '32x32',
     '48x48',
     '96x96',
+    '128x128',
+    '512x512',
     'Source',
     'Applications'
 );
@@ -115,18 +117,19 @@ foreach ($dimensions as $dimension)
 {
     if (!file_exists($installPath.'/Icons/'.$dimension))
     {
-        `mkdir "{$installPath}/Icons/{$dimension}"`;
+        echo `mkdir "{$installPath}/Icons/{$dimension}"`;
     }
 
-    `chmod -R 775 "{$installPath}/Icons/{$dimension}"`;
-    `chown -R {$user}:{$group} "{$installPath}/Icons/{$dimension}"`;
+    echo `chmod -R 775 "{$installPath}/Icons/{$dimension}"`;
+    echo `chown -R {$user}:{$group} "{$installPath}/Icons/{$dimension}"`;
 
     if (!file_exists($installPath.'/Icons/'.$dimension.'/flags'))
     {
-        `mkdir "{$installPath}/Icons/{$dimension}/flags"`;
+        echo `mkdir "{$installPath}/Icons/{$dimension}/flags"`;
     }
 }
 
+/*
 if (!file_exists($installPath.'/images/Icons/128x128'))
 {
     echo "Checking out 128x128 icons from SVN to {$installPath}/Icons/128x128\n\n";
@@ -140,76 +143,77 @@ if (!file_exists($installPath.'/images/Icons/512x512'))
     echo "svn {$svnOperation} {$svnFilesHost}/Icons/512x512 {$installPath}/Icons/512x512 {$svnUser}\n";
     echo `svn {$svnOperation} {$svnFilesHost}/Icons/512x512 "{$installPath}/Icons/512x512" {$svnUser}`;
 }
+*/
 
-`chmod -R 775 "{$installPath}/Icons"`;
-`chown -R {$user}:{$group} "{$installPath}/Icons"`;
+echo `chmod -R 775 "{$installPath}/Icons"`;
+echo `chown -R {$user}:{$group} "{$installPath}/Icons"`;
 
 if (!file_exists($installPath.'/Log'))
 {
     echo "Making directory {$installPath}/Log\n";
-    `mkdir "{$installPath}/Log"`;
+    echo `mkdir "{$installPath}/Log"`;
 }
 else
 {
     echo "Directory {$installPath}/Log already exists\n";
 }
 
-`chmod -R 775 "{$installPath}/Log"`;
-`chown -R {$user}:{$group} "{$installPath}/Log"`;
+echo `chmod -R 775 "{$installPath}/Log"`;
+echo `chown -R {$user}:{$group} "{$installPath}/Log"`;
 
 if (!file_exists($installPath.'/Log/PHP.log'))
 {
-    `touch "{$installPath}/Log/PHP.log"`;
-    `chmod 775 "{$installPath}/Log/PHP.log"`;
-    `chown {$user}:{$group} "{$installPath}/Log/PHP.log"`;
+    echo `touch "{$installPath}/Log/PHP.log"`;
+    echo `chmod 775 "{$installPath}/Log/PHP.log"`;
+    echo `chown {$user}:{$group} "{$installPath}/Log/PHP.log"`;
 }
 
-if (!file_exists($installPath.'/Log/httpd.log'))
+if (!file_exists($installPath.'/Log/Apache Errors.log'))
 {
-    `touch "{$installPath}/Log/httpd.log"`;
-    `chmod 775 "{$installPath}/Log/httpd.log"`;
-    `chown {$user}:{$group} "{$installPath}/Log/httpd.log"`;
+    echo `touch "{$installPath}/Log/httpd.log"`;
+    echo `chmod 775 "{$installPath}/Log/httpd.log"`;
+    echo `chown {$user}:{$group} "{$installPath}/Log/Apache Errors.log"`;
 }
 
 if (!file_exists($installPath.'/Temporary'))
 {
     echo "Making directory {$installPath}/Temporary";
-    `mkdir "{$installPath}/Temporary"`;
+    echo `mkdir "{$installPath}/Temporary"`;
 }
 else
 {
     echo "Directory {$installPath}/Temporary already exists\n";
 }
 
-`chmod -R 775 "{$installPath}/Temporary"`;
-`chown -R {$user}:{$group} "{$installPath}/Temporary"`;
+echo `chmod -R 775 "{$installPath}/Temporary"`;
+echo `chown -R {$user}:{$group} "{$installPath}/Temporary"`;
 
 if (!file_exists($installPath.'/Plugins'))
 {
     echo "Making directory {$installPath}/Plugins\n";
-    `mkdir "{$installPath}/Plugins"`;
+    echo `mkdir "{$installPath}/Plugins"`;
 }
 else
 {
     echo "Directory {$installPath}/Plugins already exists\n";
 }
 
-`chmod -R 775 "{$installPath}/Plugins"`;
-`chown -R {$user}:{$group} "{$installPath}/Plugins"`;
+echo `chmod -R 775 "{$installPath}/Plugins"`;
+echo `chown -R {$user}:{$group} "{$installPath}/Plugins"`;
 
 if (!file_exists($installPath.'/Library'))
 {
     echo "Checking out 3rd-Party Libraries from SVN to {$installPath}/Library\n\n";
-    echo "svn {$svnOperation} {$svnFilesHost}/Library/ {$installPath}/Library {$svnUser}\n";
-    echo `svn {$svnOperation} {$svnFilesHost}/Library/ "{$installPath}/Library" {$svnUser}`;
+    echo "git {$gitOperation} {$gitLibraryHost} '{$installPath}/Library'\n";
+    echo `git {$gitOperation} {$gitLibraryHost} '{$installPath}/Library'`;
 }
 else
 {
     echo "Path {$installPath}/Library already exists, delete to reinstall this folder\n";
 }
 
-`chmod -R 775 "{$installPath}/Library"`;
-`chown -R {$user}:{$group} "{$installPath}/Library"`;
+echo `chmod -R 775 "{$installPath}/Library"`;
+echo `chown -R {$user}:{$group} "{$installPath}/Library"`;
 
 $createDB = $installPath.'/Hot Toddy/hDatabase/hDatabaseInstall/hDatabaseInstall.php';
 
@@ -219,7 +223,8 @@ if (file_exists($createDB))
 }
 else
 {
-    echo "Error: The setup script was unable to locate the database creation script, {$createDB}, generation of the database has failed\n";
+    echo "Fatal Error: The setup script was unable to locate the database creation script, {$createDB}, generation of the database has failed\n";
+    exit;
 }
 
 if (isset($tables) && is_array($tables) && count($tables))
@@ -236,12 +241,14 @@ if (isset($tables) && is_array($tables) && count($tables))
     }
     else
     {
-        echo "Error: The setup script was unable to location the configuration script, {$conf}, generation of the configuration files has failed\n";
+        echo "Fatal Error: The setup script was unable to location the configuration script, {$conf}, generation of the configuration files has failed\n";
+        exit;
     }
 }
 else
 {
     // Something went wrong with the database installation.
+    echo "Fatal Error: Database tables do not exist. Something went wrong with the database installation.\n";
     exit;
 }
 
@@ -275,7 +282,8 @@ if (file_exists($hot))
 }
 else
 {
-    echo "Unable to locate the Hot Toddy Command Line Interface, hShell: {$hShell}\n";
+    echo "Fatal Error: Unable to locate the Hot Toddy Command Line Interface, hShell: {$hShell}\n";
+    exit;
 }
 
 ?>

@@ -12,12 +12,15 @@
 #//@@@@@@\     \@@@@@|
 #//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-
 Installing Hot Toddy
 
-1. Configure the install script with all the right settings.
+1. Copy and paste or download the install script.
 
-2. Run the install script from the command line:
+2. Configure the install script with all the right settings.
 
- # ./install 
-  
+3. Make the install script executable.
+
+4. Run the install script from the command line with root privileges:
+
+ # sudo ./install
+ 

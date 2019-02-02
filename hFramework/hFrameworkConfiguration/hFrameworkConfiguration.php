@@ -59,7 +59,8 @@ if (file_exists($conf))
 
     if (!file_put_contents($installPath.'/Configuration/hFramework.conf', $conf))
     {
-        echo "Error: Creation of the hFramework.conf file at {$installPath}/Configuration/hFramework.conf failed.\n";
+        echo "Fatal Error: Creation of the hFramework.conf file at {$installPath}/Configuration/hFramework.conf failed.\n";
+        exit;
     }
     else
     {
@@ -79,11 +80,12 @@ if (file_exists($json))
 
     if (!file_put_contents($installPath.'/Configuration/'.$frameworkSite.'.json', $json))
     {
-        echo "Error: Creation of the {$hostname}.json file at {$installPath}/Configuration/{$frameworkSite}.json failed.\n";
+        echo "Fatal Error: Creation of the {$hostname}.json file at {$installPath}/Configuration/{$frameworkSite}.json failed.\n";
+        exit;
     }
     else
     {
-        echo "hFramework.json successfully created!\n";
+        echo "{$hostname}.json successfully created!\n";
     }
 }
 
@@ -102,12 +104,14 @@ $virtualHost = str_replace(
         $hostname,
         $aliases
     ),
-    file_get_contents(dirname(__FILE__).'/Apache Virtual Host.conf')
+    file_get_contents(
+        dirname(__FILE__).'/Apache Virtual Host.conf'
+    )
 );
 
 if (!file_put_contents($installPath.'/Configuration/'.$hostname.'.'.$port.'.conf', $virtualHost))
 {
-    echo "Error: Creation of the virtual host configuration file at, {$installPath}/Configuration/{$host}.{$port}.conf, failed.\n";
+    echo "Fatal Error: Creation of the virtual host configuration file at, {$installPath}/Configuration/{$host}.{$port}.conf, failed.\n";
     exit;
 }
 else
@@ -130,7 +134,7 @@ if ($appendConf)
             # Make a backup of httpd.conf
             if (!file_put_contents(dirname($httpdConfLocation).'/httpd.backup.conf', $file))
             {
-                echo "Error: Unable to make a backup of httpd.conf.\n";
+                echo "Fatal Error: Unable to make a backup of httpd.conf.\n";
                 exit;
             }
             else
@@ -155,7 +159,7 @@ if ($appendConf)
 
         if (!file_put_contents($httpdConfLocation, $file))
         {
-            echo "Error: Was unable to append the Include/NameVirtualHost directive(s) to httpd.conf\n";
+            echo "Fatal Error: Was unable to append the Include/NameVirtualHost directive(s) to httpd.conf\n";
             exit;
         }
         else

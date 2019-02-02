@@ -57,84 +57,90 @@ $db = 'database';
 // MySQL user.
 // MySQL user should have the ability to create databases, tables, etc.
 // MySQL user can be changed after installation by editing hierophant.ini
-$dbUser      = 'root';
+$dbUser = 'root';
 
 // MySQL password.
-$dbPass      = '';
+$dbPass = '';
 
 // MySQL host
-$dbHost      = 'localhost';
+$dbHost = 'localhost';
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // APACHE OPTIONS
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Whether or not this script should touch your httpd.conf file.
-$appendConf        = false;
+$appendConf = false;
 
 // The location of Apache's httpd.conf file.
 $httpdConfLocation = '/etc/apache2/httpd.conf'; // '/Applications/MAMP/conf/apache/httpd.conf'; // MAMP
 
 // The hostname of the website to be created.
 // e.g., example.com.
-$hostname          = 'localhost';
+$hostname = 'localhost';
 
 // Aliases for the hostname (separate each hostname with a space)
 // e.g., www.example.com dev.example.com beta.example.com
 // If none, set to null.
-$aliases           = 'localhost.local';
+$aliases = 'localhost.local';
 
 // The hostname of the website as it will be in a live
 // production enviornment.  Include the "www" subdomain, if applicable.
 // e.g., www.example.com
-$frameworkSite     = 'www.example.com';
+$frameworkSite = 'www.example.com';
 
 // The IP address of the website to be created.
-$ip                = '127.0.0.1';
+$ip = '127.0.0.1';
 
 // The Port
-$port              = 80;
+$port = 80;
 
 // Whether a new "NameVirtualHost 127.0.0.1:80" directive
 // should be added to httpd.conf with the specified IP address
-$nameVirtualHost   = false;
+$nameVirtualHost = false;
 
 // The user that will own framework folders and files
-$user              = 'www';
+$user = 'www';
 
 // The group Apache runs as
-$group             = 'www';
+$group = 'www';
 
 // Command to restart Apache
-$apacheRestart     = 'apachectl restart'; // '/Applications/MAMP/Library/bin/apachectl'; // MAMP
+$apacheRestart = 'apachectl restart'; // '/Applications/MAMP/Library/bin/apachectl'; // MAMP
 
 // The directory the Hot Toddy website should be installed to
 // (an absolute path should be provided).
-$installPath       = '/Websites';
+$installPath = '/Websites';
 
 // Whether or not the hostname and IP should be added in your /etc/hosts file
-$setEtcHosts       = false;
+$setEtcHosts = false;
 
-$pathToPHP         = '/Server/bin/php';
+$pathToPHP = '/Server/bin/php';
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// SVN OPTIONS
+// GIT OPTIONS
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// The location of the SVN reporitory to download Hot Toddy from.
+// The location of the git reporitory to download Hot Toddy from.
 
-$svnHost           = 'http://hierophant.googlecode.com/svn/branches/stable';
-$svnFilesHost      = 'http://hierophant.googlecode.com/svn/trunk';
+// The git username
+$gitUser = '';
 
-// The SVN username
-$svnUser           = '';
+// The GIT password
+$gitPass = '';
 
-// The SVN password
-$svnPass           = '';
+// LEAVE EMPTY
+$userPass = '';
 
-// SVN operation, do you want an export or a checkout?
-$svnOperation      = 'checkout';
+if (!empty($gitUser) && !empty($gitPass))
+{
+    $userPass = urlencode($gitUser).':'.urlencode($gitPass).'@';    
+}
 
+$gitHost = 'https://'.$userPass.'github.com/rickyork/Hot-Toddy.git';
+$gitLibraryHost = 'https://'.$userPass.'github.com/rickyork/Hot-Toddy-Library.git';
+
+$gitOperation = 'clone';
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // DO NOT EDIT BELOW THIS LINE
@@ -144,65 +150,54 @@ $parent = dirname($installPath);
 if (!file_exists($parent))
 {
     echo "Making directory {$parent}\n";
-    `mkdir $parent`;
+    echo `mkdir $parent`;
 }
 
-`chmod 755 {$parent}`;
-`chown {$user} {$parent}`;
-`chgrp {$group} {$parent}`;
+echo `chmod 755 {$parent}`;
+echo `chown {$user} {$parent}`;
+echo `chgrp {$group} {$parent}`;
 
 $installPath = $installPath.'/'.$hostname;
 
 if (!file_exists($installPath))
 {
     echo "Making directory {$installPath}\n";
-    `mkdir {$installPath}`;
+    echo `mkdir {$installPath}`;
 }
 
-`chmod 755 {$installPath}`;
-`chown {$user} {$installPath}`;
-`chgrp {$group} {$installPath}`;
+echo `chmod 755 {$installPath}`;
+echo `chown {$user} {$installPath}`;
+echo `chgrp {$group} {$installPath}`;
 
-if (!empty($svnUser))
-{
-    $svnUser =
-        ' --username "'.$svnUser.'"'.
-        ' --password "'.$svnPass.'"';
-}
-
-/*
 if (!file_exists($installPath.'/Hot Toddy'))
 {
-    echo "\nChecking out Hot Toddy from SVN to {$installPath}/www\n";
+    echo "\nChecking out Hot Toddy from git to {$installPath}/Hot Toddy\n";
     echo "This will probably take several minutes to complete.\n\n";
 
-    echo "svn {$svnOperation} {$svnHost} {$installPath}/Hot Toddy {$svnUser}\n";
-    echo `svn {$svnOperation} {$svnHost} "{$installPath}/Hot Toddy" {$svnUser}`;
+    echo "git {$gitOperation} {$gitHost} '{$installPath}/Hot Toddy'\n";
+    echo `git {$gitOperation} {$gitHost} '{$installPath}/Hot Toddy'`;
 }
 else
 {
-    echo "Path {$installPath}/Hot Toddy already exists, delete to reinstall this folder.\n";
+    echo "Path '{$installPath}/Hot Toddy' already exists, delete to reinstall this folder.\n";
 }
-*/
 
-/*
-`chmod -R 775 "{$installPath}/Hot Toddy"`;
-`chown -R {$user} "{$installPath}/Hot Toddy"`;
-`chgrp -R {$group} "{$installPath}/Hot Toddy"`;
+echo `chmod -R 775 "{$installPath}/Hot Toddy"`;
+echo `chown -R {$user} "{$installPath}/Hot Toddy"`;
+echo `chgrp -R {$group} "{$installPath}/Hot Toddy"`;
 
-echo "Verifying SVN {$svnOperation}...\n";
+echo "Verifying SVN {$gitOperation}...\n";
 
-$index = $installPath.'/Hot Toddy/index.php';
+$index = $installPath.'/Hot Toddy/hFramework/hFramework.default.php';
 
 if (file_exists($index))
 {
-    echo "SVN {$svnOperation} appears intact.\n";
+    echo "SVN {$gitOperation} appears intact.\n";
 }
 else
 {
-    echo "SVN {$svnOperation} does not appear to have been successful, verify SVN settings and try again.\n";
+    echo "SVN {$gitOperation} does not appear to have been successful, verify SVN settings and try again.\n";
 }
-*/
 
 $installFramework = $installPath .'/Hot Toddy/hFramework/hFrameworkInstall/hFrameworkInstall.php';
 
