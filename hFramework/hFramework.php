@@ -2282,6 +2282,11 @@ class hFramework extends hHTTP {
         if ($this->hPrivatePlugin && !$this->hDesktopApplication(false))
         {
             $this->hPrivateFramework = $this->plugin($this->hPrivatePlugin, array(), true);
+
+            if (!is_object($this->hPrivateFramework))
+            {
+                $this->hPrivateFramework = $this->plugin('hTemplate/hTemplateDefault', array(), true);    
+            }
         }
         else
         {

@@ -530,8 +530,8 @@ class hDocumentationLibrary extends hPlugin {
             'hDocumentationPluginNavigation',
             0,
             array(
-                $this->hPlugins->getLastModified(),
-                $this->hPluginsPrivate->getLastModified()
+                0,//$this->hPlugins->getLastModified(),
+                0 //$this->hPluginsPrivate->getLastModified()
             )
         );
 

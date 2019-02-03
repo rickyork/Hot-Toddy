@@ -72,7 +72,6 @@ else
 echo `chmod -R 775 "{$installPath}/Compiled"`;
 echo `chown -R {$user}:{$group} "{$installPath}/Compiled"`;
 
-
 if (!file_exists($installPath.'/www'))
 {
     echo "Making directory {$installPath}/www\n";
@@ -284,6 +283,9 @@ if (file_exists($hot))
 
     echo "{$pathToPHP} {$hot} database versions\n";
     echo `{$pathToPHP} "{$hot}" database versions`;
+    
+    echo "{$pathToPHP} {$hot} plugin hDocumentation/hDocumentationParser --hFrameworkInstall\n";
+    echo `{$pathToPHP} {$hot} plugin hDocumentation/hDocumentationParser --hFrameworkInstall`;
 
     if (PHP_OS == 'Darwin')
     {

@@ -12,13 +12,16 @@
 #//@@@@@@\     \@@@@@|
 #//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-Installing Hot Toddy
+Installing Hot Toddy on Mac OS X.
 
-1. Copy and paste or download the install script.
+The installer has not been tested on a Linux system, though it has worked on Linux in the 
+past.
+
+1. Copy and paste or download the install script to a new file called 'install'.
 
 2. Configure the install script with all the right settings.
 
-3. Make the install script executable.
+3. Make the install script executable with chmod 775.
 
 4. Run the install script from the command line with root privileges:
 
