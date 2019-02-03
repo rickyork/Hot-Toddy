@@ -284,8 +284,8 @@ if (file_exists($hot))
     echo "{$pathToPHP} {$hot} database versions\n";
     echo `{$pathToPHP} "{$hot}" database versions`;
     
-    echo "{$pathToPHP} {$hot} plugin hDocumentation/hDocumentationParser --hFrameworkInstall\n";
-    echo `{$pathToPHP} {$hot} plugin hDocumentation/hDocumentationParser --hFrameworkInstall`;
+    echo "{$pathToPHP} {$hot} plugin hDocumentation/hDocumentationParser tokenize all --hFrameworkInstall\n";
+    echo `{$pathToPHP} {$hot} plugin hDocumentation/hDocumentationParser tokenize all --hFrameworkInstall`;
 
     if (PHP_OS == 'Darwin')
     {

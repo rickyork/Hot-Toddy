@@ -186,17 +186,17 @@ echo `chmod -R 775 "{$installPath}/Hot Toddy"`;
 echo `chown -R {$user} "{$installPath}/Hot Toddy"`;
 echo `chgrp -R {$group} "{$installPath}/Hot Toddy"`;
 
-echo "Verifying SVN {$gitOperation}...\n";
+echo "Verifying git {$gitOperation}...\n";
 
 $index = $installPath.'/Hot Toddy/hFramework/hFramework.default.php';
 
 if (file_exists($index))
 {
-    echo "SVN {$gitOperation} appears intact.\n";
+    echo "git {$gitOperation} appears intact.\n";
 }
 else
 {
-    echo "SVN {$gitOperation} does not appear to have been successful, verify SVN settings and try again.\n";
+    echo "git {$gitOperation} does not appear to have been successful, verify git settings and try again.\n";
 }
 
 $installFramework = $installPath .'/Hot Toddy/hFramework/hFrameworkInstall/hFrameworkInstall.php';
@@ -207,7 +207,7 @@ if (file_exists($installFramework))
 }
 else
 {
-    echo "Maybe the SVN install didn't work out after all.  The installer script, {$installFramework}, could not be located.\n";
+    echo "Maybe the git install didn't work out after all.  The installer script, {$installFramework}, could not be located.\n";
 }
 
 ?>
