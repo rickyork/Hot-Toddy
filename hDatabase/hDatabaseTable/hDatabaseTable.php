@@ -707,7 +707,7 @@ class hDatabaseTable {
 
     public function getResourceId()
     {
-        # @return boolean
+        # @return integer
 
         # @description
         # <h2>Getting a Framework Resource Id</h2>
@@ -724,7 +724,7 @@ class hDatabaseTable {
         #    of <var>1</var>.
         # </p>
         # @end
-        return $GLOBALS['hFramework']->getResourceId($this->table);
+        return (int) $GLOBALS['hFramework']->getResourceId($this->table);
     }
 
     public function getResource()
@@ -1314,7 +1314,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $GLOBALS['hFramework']->hasWorldRead(
+        return (bool) $GLOBALS['hFramework']->hasWorldRead(
             $this->table.':'.$frameworkResourceKey
         );
     }
@@ -1514,7 +1514,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $this->hDatabase->isAutoIncrementColumn(
+        return (bool) $this->hDatabase->isAutoIncrementColumn(
             $column,
             $this->table
         );
@@ -1532,7 +1532,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $this->hDatabase->tableExists($this->table);
+        return (bool) $this->hDatabase->tableExists($this->table);
     }
 
     public function tableExists()
@@ -1546,7 +1546,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $this->hDatabase->tableExists($this->table);
+        return (bool) $this->hDatabase->tableExists($this->table);
     }
 
     public function columnExists($column)
@@ -1564,7 +1564,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $this->hDatabase->columnExists(
+        return (bool) $this->hDatabase->columnExists(
             $column,
             $this->table
         );
@@ -1582,7 +1582,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $this->hDatabase->columnsInTable(
+        return (bool) $this->hDatabase->columnsInTable(
             $columns,
             $this->table
         );
@@ -1599,7 +1599,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        $this->hDatabase->columnsInTable(
+        return (bool) $this->hDatabase->columnsInTable(
             $columns,
             $this->table
         );
@@ -1618,7 +1618,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $this->hDatabase->columnInTable(
+        return (bool) $this->hDatabase->columnInTable(
             $column,
             $this->table
         );
@@ -1635,7 +1635,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $this->hDatabase->columnInTable(
+        return (bool) $this->hDatabase->columnInTable(
             $column,
             $this->table
         );
@@ -1670,7 +1670,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $this->hDatabase->columnIsNumeric(
+        return (bool) $this->hDatabase->columnIsNumeric(
             $column,
             $this->table
         );
@@ -1688,7 +1688,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $this->hDatabase->hasPrimaryKey(
+        return (bool) $this->hDatabase->hasPrimaryKey(
             $this->table
         );
     }
@@ -1705,7 +1705,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $this->hDatabase->isPrimaryKey(
+        return (bool) $this->hDatabase->isPrimaryKey(
             $column,
             $this->table
         );
@@ -1723,7 +1723,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $this->hDatabase->hasIncrementKey(
+        return (bool) $this->hDatabase->hasIncrementKey(
             $this->table
         );
     }
@@ -1855,7 +1855,13 @@ class hDatabaseTable {
 
         if (!count($columns))
         {
-            $GLOBALS['hFramework']->warning("Unable to delete columns from table '{$this->table}', because no columns were specified.", __FILE__, __LINE__);
+            $GLOBALS['hFramework']->warning(
+                "Unable to delete columns from table '{$this->table}', ".
+                "because no columns were specified.", 
+                __FILE__, 
+                __LINE__
+            );
+
             return $this;
         }
 
@@ -2552,7 +2558,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $this->subscription()->isSubscribed(
+        return (bool) $this->subscription()->isSubscribed(
             $this->table,
             $frameworkResourceKey,
             $userId
@@ -2601,9 +2607,17 @@ class hDatabaseTable {
         # @return integer
 
         # @description
-        # <h2>Getting a Subscription Id For a Resource</h2>
+        # <h2>Getting a subscriptionId For a Resource</h2>
         # <p>
-        #
+        #   Returns the <var>subscriptionId</var> for the provided 
+        #   <var>frameworkResourceKey</var>. For example <var>$this-&gt;hForums-&gt;getSubscriptionId(1)</var>
+        #   will return the <var>subscriptionId</var> for <var>forumId = 1</var>. 
+        #   The <var>frameworkResourceKey</var> represents the unique id of
+        #   the thing being subscribed to. Another example: <var>$this-&gt;hForumTopics-&gt;getSubscriptionId(1)</var>
+        #   will return the <var>subscriptionId</var> for <var>forumTopicId = 1</var>.
+        # </p>
+        # <p>
+        #   See: <a href='#subscribe' class='code'>subscribe()</a> for more information.
         # </p>
         # @end
 
@@ -2618,9 +2632,12 @@ class hDatabaseTable {
         # @return hDatabaseTable
 
         # @description
-        # <h2>Deleting a Subscribe-able Resource</h2>
+        # <h2>Deleting a Subscription Resource</h2>
         # <p>
-        #
+        #   This method deletes a subscription resource. 
+        # </p>
+        # <p>
+        #   See: <a href='#subscribe' class='code'>subscribe()</a> for more information.
         # </p>
         # @end
 
@@ -2637,13 +2654,17 @@ class hDatabaseTable {
         # @return integer
 
         # @description
-        # <h2>Creating a Subscribe-able Resource</h2>
+        # <h2>Saving a Subscription Resource</h2>
         # <p>
-        #
+        #   This method inserts or updates a subscription, it returns 
+        #   the <var>subscriptionId</var>.
+        # </p>
+        # <p>
+        #   See: <a href='#subscribe' class='code'>subscribe()</a> for more information.
         # </p>
         # @end
 
-        return $this->subscription()->save(
+        return (int) $this->subscription()->save(
             $this->table,
             $frameworkResourceKey
         );
@@ -2656,8 +2677,48 @@ class hDatabaseTable {
         # @description
         # <h2>Subscribing a User to a Resource</h2>
         # <p>
-        #
+        #   
         # </p>
+        # <p>
+        #   A resource is
+        #   defined as a database table that has all the components necessary
+        #   for a database table to be handled a certain way. When a database
+        #   table is designated a resource, its records each have a unique id. 
+        #   There is a name column. There is a last modified 
+        #   column. There is a last modified by column. There is a userId 
+        #   column. The userId column means that the record can be owned by 
+        #   someone, which means that permissions can be assigned to the 
+        #   resource. The resource can be tracked as to who owns it, who last
+        #   modified it. Who has permission to see it. When it was created
+        #   When it was last modified. A subscription can also be made to a resource.
+        #   You can create something that people can subscribe to. For example, 
+        #   the table <var>hForums</var> is a resource, someone can own a forum based, 
+        #   on the <var>$forumId</var>. Permission can be assigned to a forum.
+        #   You can track what users or groups are able to either view the forum
+        #   or which users or groups are able to modify the forum (moderators). 
+        #   Finally, you can assign users and groups a subscription to a forum.
+        # </p>
+        # <p>
+        #   Resources are tracked in the <var>hFrameworkResources</var> database
+        #   table. Subscription resources are tracked in the <var>hSubscriptions</var>
+        #   database table. To create a subscription resource, first you 
+        #   create a resource in <var>hFrameworkResources</var>, then once you have 
+        #   the <var>frameworkResourceKey</var> you can create a subscription. The 
+        #   <var>frameworkResourceKey</var> is simply the unique id assigned to a 
+        #   row in the resource table. For example, <var>$this-&gt;hForums-&gt;deleteSubscription(1)</var>
+        #   would delete all the subscriptions and the subscription resource itself for
+        #   <var>$forumId = 1</var>. <var>hForums</var> in the method call is the 
+        #   <var>frameworkResource</var>. The <var>frameworkResourceId</var> is 
+        #   automatically retrieved based on the name of the database table.
+        # </p>
+        # <p>
+        #   If I pass <var>$forumId</var> as the <var>$frameworkResourceKey</var> then
+        #   this method deletes from <var>hSubscriptionUsers</var> all subscriptions 
+        #   associated with <var>$forumId</var>, then the subscription resource itself
+        #   is deleted from <var>hSubscriptions</var>. 
+        # </p>
+        # @end
+
         # @end
 
         $this->subscription()->subscribe(

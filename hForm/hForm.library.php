@@ -1345,7 +1345,7 @@ class hFormLibrary extends hFrameworkApplication {
 
                     break;
                 }
-                case strstr($attrs, ',') || strstr($attrs, ';'):
+                case (strstr($attrs, ',') || strstr($attrs, ';')):
                 {
                     $attrs = hString::trimEach(str_replace(';', ',', $attrs), ',');
 
@@ -1386,7 +1386,7 @@ class hFormLibrary extends hFrameworkApplication {
                     # :id:name
                     # class::name
 
-                    if (substr_count($attrs, ':') == 1)
+                    if (is_string($attrs) && substr_count($attrs, ':') == 1)
                     {
                         $attrs .= ':';
                     }
@@ -1404,7 +1404,7 @@ class hFormLibrary extends hFrameworkApplication {
                 }
                 default:
                 {
-                    $attributes['id'] = $attrs;
+                    $attributes['id'] = is_string($attrs)? $attrs : '';
                     $attributes['name'] = $attrs;
                 }
             }
