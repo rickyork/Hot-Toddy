@@ -292,6 +292,13 @@ if (file_exists($hot))
         echo "{$pathToPHP} {$hot} plugin hFile/hFileIcon/hFileIconInstall icns\n";
         echo `{$pathToPHP} "{$hot}" plugin hFile/hFileIcon/hFileIconInstall icns`;
     }
+
+    echo
+        "\n\n\n\n".
+        "Installation complete.\n".
+        "The default user is:\n".
+        "   Username: administrator\n".
+        "   Password: password\n\n";
 }
 else
 {

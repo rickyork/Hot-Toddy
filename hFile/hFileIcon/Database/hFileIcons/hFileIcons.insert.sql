@@ -93,4 +93,11 @@ INSERT INTO `hFileIcons` (
     (87, 'video/mp4', 'mpeg4.png', 'iTunes-mpeg4.icns', ''),
     (88, 'video/x-ms-wmv', 'qt_generic.png', 'Movie.icns', 'wmv'),
     (89, 'application/json', 'js.png', 'doc-js.icns', 'json'),
-    (90, 'text/json', 'js.png', 'doc-js.icns', 'json');
+    (90, 'text/json', 'js.png', 'doc-js.icns', 'json'),
+    (91, 'directory/sidebar', 'sidebar_folder.png', 'SidebarGenericFolder.icns', ''),
+    (92, 'directory/sidebar-recents', 'sidebar_recents.png', 'SidebarRecents.icns', ''),
+    (93, 'directory/sidebar-network', 'sidebar_network.png', 'SidebarNetwork.icns', ''),
+    (94, 'directory/sidebar-applications', 'sidebar_applications.png', 'SidebarApplicationsFolder.icns', ''),
+    (95, 'directory/sidebar-file', 'sidebar_file.png', 'SidebarGenericFile.icns', ''),
+    (96, 'directory/sidebar-smart-folder', 'sidebar_smart_folder.png', 'SidebarSmartFolder.icns', '')
+;

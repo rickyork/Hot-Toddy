@@ -53,8 +53,8 @@ class hFrameworkUpdateShell extends hShell {
 
         if (!$this->hFrameworkVersion)
         {
-            $this->setVersion('0.9.0');
-            $this->hFrameworkVersion = '0.9.0';
+            $this->setVersion('1.0.7');
+            $this->hFrameworkVersion = '1.0.7';
         }
 
         $hServerDocumentRoot = $this->hServerDocumentRoot;
