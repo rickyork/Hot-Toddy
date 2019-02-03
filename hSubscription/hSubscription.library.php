@@ -271,8 +271,6 @@ class hSubscriptionLibrary extends hPlugin {
         }
         else
         {
-            $this->user->whichUserId($userId);
-
             return $this->hSubscriptionUsers->selectExists(
                 'hUserId',
                 array(

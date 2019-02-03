@@ -274,10 +274,9 @@ ul#hDocumentationPluginNavigation ul li {
     cursor: pointer;
 }
 ul#hDocumentationPluginNavigation ul li:hover {
-    background: rgb(91, 111, 141);
-    color: #fff;
+
 }
 ul#hDocumentationPluginNavigation ul li:hover a {
-    color: #fff;
-    text-decoration: none;
+    color: rgb(91, 111, 141);
+    text-decoration: underline;
 }

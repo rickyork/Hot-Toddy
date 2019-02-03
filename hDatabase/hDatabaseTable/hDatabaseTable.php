@@ -2592,7 +2592,9 @@ class hDatabaseTable {
         # @description
         # <h2>Getting Subscriptions</h2>
         # <p>
-        #
+        #   Returns all the users subscribed to a given resource. If there
+        #   are groups subscribed, then the users within that group are 
+        #   returned too. 
         # </p>
         # @end
 

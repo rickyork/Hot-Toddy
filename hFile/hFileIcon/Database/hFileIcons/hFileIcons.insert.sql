@@ -68,7 +68,7 @@ INSERT INTO `hFileIcons` (
     (62, '', 'adobe_dw_cs3_cfm.png', 'GenericFolderIcon.icns', 'cfm'),
     (63, '', 'asp.png', 'doc-asp.icns', 'asp'),
     (64, 'application/javascript', 'js.png', 'doc-js.icns', 'js'),
-    (65, '', 'safari_document.png', 'document.icns', ''),
+    (65, '', 'safari_document.png', 'html.icns', ''),
     (66, '', 'firefox_document.png', 'document0.icns', ''),
     (67, '', 'opera_document.png', 'OperaDocs.icns', ''),
     (68, '', 'clock.png', 'Clock.icns', ''),
@@ -99,5 +99,7 @@ INSERT INTO `hFileIcons` (
     (93, 'directory/sidebar-network', 'sidebar_network.png', 'SidebarNetwork.icns', ''),
     (94, 'directory/sidebar-applications', 'sidebar_applications.png', 'SidebarApplicationsFolder.icns', ''),
     (95, 'directory/sidebar-file', 'sidebar_file.png', 'SidebarGenericFile.icns', ''),
-    (96, 'directory/sidebar-smart-folder', 'sidebar_smart_folder.png', 'SidebarSmartFolder.icns', '')
-;
+    (96, 'directory/sidebar-smart-folder', 'sidebar_smart_folder.png', 'SidebarSmartFolder.icns', ''),
+    (97, '', 'group.png', 'GroupIcon.icns', ''),
+    (98, '', 'everyone.png', 'Everyone.icns', ''),
+    (99, '', 'user.png', 'UserIcon.icns', '');

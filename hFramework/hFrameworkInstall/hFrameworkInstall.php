@@ -296,9 +296,10 @@ if (file_exists($hot))
     echo
         "\n\n\n\n".
         "Installation complete.\n\n".
-        "The default user is:\n".
+        "The default user is:\n\n".
         "   Username: administrator\n".
-        "   Password: password\n\n";
+        "   Password: password\n\n".
+        "Log into Hot Toddy and change this password as soon as possible.\n\n";
 }
 else
 {
