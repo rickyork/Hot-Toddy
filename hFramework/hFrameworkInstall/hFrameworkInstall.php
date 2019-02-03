@@ -295,7 +295,7 @@ if (file_exists($hot))
 
     echo
         "\n\n\n\n".
-        "Installation complete.\n".
+        "Installation complete.\n\n".
         "The default user is:\n".
         "   Username: administrator\n".
         "   Password: password\n\n";

@@ -12,7 +12,7 @@ if (!isset($argv) || !is_array($argv))
 // THIS SCRIPT DOES EVERYTHING FOR YOU!
 //
 //   This script does the following:
-//     * checks hierophant out from the SVN repository
+//     * checks Hot Toddy out from the git repository
 //     * automatically generates the Hot Toddy database
 //     * creates a hFramework.conf configuration file
 //     * creates all relevant framework folders.

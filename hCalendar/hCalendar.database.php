@@ -33,7 +33,7 @@ class hCalendarDatabase extends hPlugin {
     private $resultCount = 0;
     private $fileCalendars = array();
 
-    public function saveCalendar()
+    public function saveCalendar($calendarId = 0, $userId = 0, $calendarName = '')
     {
         # @return integer
 
@@ -53,11 +53,20 @@ class hCalendarDatabase extends hPlugin {
         # </p>
         # @end
 
-        $columns = func_get_args();
-
         $this->hCalendars->activity(
-            (empty($columns[0])? 'Created' : 'Modified').' Calendar: '.$columns[2]
+            (empty($calendarId)? 'Created' : 'Modified').' Calendar: '.$calendarName
         );
+
+        $columns = array(
+            'hCalendarId' => $calendarId,
+            'hUserId' => $userId,
+            'hCalendarName' => $calendarName
+        );
+
+        if (empty($calendarId))
+        {
+            $columns['hCalendarCreated'] = mktime();
+        }
 
         $calendarId = $this->hCalendars->save($columns);
 
