@@ -19,15 +19,6 @@
             ]
         }
     },
-    source : {
-        destination : "/Hot Toddy/hDocumentation",
-        repository : {
-            checkout : false,
-            software : "svn",
-            baseURI : "http://svn.deadmarshes.com",
-            path : "/hDocumentation"
-        }
-    },
     file : {
         title : "Documentation",
         path : "/Hot Toddy/Documentation/index.html",

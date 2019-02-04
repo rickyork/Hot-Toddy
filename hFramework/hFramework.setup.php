@@ -239,5 +239,4 @@ if (ini_get('magic_quotes_gpc'))
     $hFramework->warning('The PHP configuration directive "magic_quotes_gpc" must be turned off.', __FILE__, __LINE__);
 }
 
-
 ?>

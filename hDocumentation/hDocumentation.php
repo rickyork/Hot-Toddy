@@ -124,6 +124,9 @@ class hDocumentation extends hPlugin {
             }
         }
 
+        // This is very important, don't want to parse template markup in comments.
+        $this->hFileDocumentParseEnabled = false;
+        
         $this->getPluginCSS('/Library/SyntaxHighlighter/Styles/shCore', true);
         $this->getPluginCSS('/Library/SyntaxHighlighter/Styles/shThemeDefault', true);
 
@@ -150,7 +153,7 @@ class hDocumentation extends hPlugin {
         {
             $html = $this->hDocumentation->getFileTemplate($documentationFileId);
         }
-
+        
         $this->getPluginFiles();
         $this->getPluginCSS('/hDocumentation/CSS/Syntax Coloring', true);
 
