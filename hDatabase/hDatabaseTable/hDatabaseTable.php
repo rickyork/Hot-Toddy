@@ -99,7 +99,7 @@ class hDatabaseTable {
             );
         }
 
-        if (!$GLOBALS['hFramework']->isResource($this->table))
+        if (!$this->frameworkResource()->isResource($this->table))
         {
             $GLOBALS['hFramework']->warning(
                 "Table '{$this->table}' is not a resource.  Called by {$this->method}.",

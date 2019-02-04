@@ -466,6 +466,7 @@ class hFramework extends hHTTP {
             # The <var>getFile()</var> method call queries the framework's database file system for the file
             # specified in the request.  See <var>getFiles()'s</var> documentation for more information.
             # </p>
+           
             $this->getFile();
 
             # <h4>HTML Documents</h4>
@@ -538,7 +539,7 @@ class hFramework extends hHTTP {
                 );
 
                 if (file_exists($path))
-                {
+                {                    
                     # <h3>In Page WYSIWYG Editor</h3>
                     # <p>
                     # <a href='/Hot Toddy/Documentation?hEditor/hEditor.library.php' class='code'>hEditorLibrary</a>
@@ -659,7 +660,7 @@ class hFramework extends hHTTP {
                     # </p>
 
                     $this->hFileDocument = ($this->hFileHTMLHeaders(true)? $this->getFileHeaders() : '').$body;
-                    
+
                     # <h3>Parsing the Document and Caching</h3>
                     # <p>
                     #   If the <var>hFileDocumentParseEnabled</var> framework variable is <var>true</var> (it is, by default), the
@@ -1628,7 +1629,7 @@ class hFramework extends hHTTP {
     }
 
     protected function getFile()
-    {
+    {        
         # @return void
 
         # @description
@@ -1683,7 +1684,7 @@ class hFramework extends hHTTP {
         {
             $this->hDesktopApplication = true;
         }
-
+       
         # <h2>Password-Protected Documents</h2>
         # <p>
         #   If the framework variable <var>hFilePasswordsEnabled</var> is set to <var>true</var>
@@ -1745,7 +1746,7 @@ class hFramework extends hHTTP {
 
             $this->hFileAuthorized = $this->hFiles->hasPermission($this->hFileId, 'r');
         }
-
+        
         if ($this->hFileAuthorized)
         {
             # <h2>Retrieving the File From Hot Toddy's File System</h2>

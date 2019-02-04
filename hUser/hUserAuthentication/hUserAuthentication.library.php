@@ -30,6 +30,30 @@ class hUserAuthenticationLibrary extends hPlugin {
     private $permissionsIds = array();
     private $calendarDates = array();
     private $backtrace = false;
+    
+    private $hFrameworkResource;
+
+    public function &frameworkResource()
+    {
+        # @return hFrameworkResourceLibrary
+        
+        # @description
+        # <h2>Using the Framework Resource API</h2>
+        # <p>
+        #   Intializes the <a href='/Hot Toddy/Documentation?hFrameworkResource.library.php' class='code'>hFrameworkResourceLibrary</a> 
+        #   object the first time it's used, and then it returns the 
+        #   <a href='/Hot Toddy/Documentation?hFrameworkResource.library.php' class='code'>hFrameworkResourceLibrary</a> 
+        #   object.
+        # </p>
+        # @end
+
+        if (!is_object($this->hFrameworkResource))
+        {
+            $this->hFrameworkResource = $this->library('hFramework/hFrameworkResource');
+        }
+
+        return $this->hFrameworkResource;
+    }
 
     public function isLoggedIn($userId = 0)
     {
@@ -293,7 +317,7 @@ class hUserAuthenticationLibrary extends hPlugin {
             $result = $this->hUserPermissions->selectExists(
                 'hUserPermissionsId',
                 array(
-                    'hFrameworkResourceId'  => $this->getResourceId($table),
+                    'hFrameworkResourceId'  => $this->frameworkResource()->getResourceId($table),
                     'hFrameworkResourceKey' => (int) $key,
                     'hUserPermissionsWorld' => array('LIKE', 'r%')
                 )
@@ -513,9 +537,9 @@ class hUserAuthenticationLibrary extends hPlugin {
             $field[1] = $ln;
         }
 
-        $frameworkResourceId = $this->getResourceId($table);
+        $frameworkResourceId = $this->frameworkResource()->getResourceId($table);
 
-        $table = $this->getResource($frameworkResourceId);
+        $table = $this->frameworkResource()->getResource($frameworkResourceId);
 
         if (empty($userId) && $frameworkResourceId == 1)
         {

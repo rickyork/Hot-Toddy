@@ -83,7 +83,7 @@ class hFileLibrary extends hPlugin {
     # hFileIcons is used to retrieve MIME types for files, which the framework uses to
     # set the Content-Type header.
     public function hConstructor()
-    {
+    {   
         # hFrameworkFilePath is a boolean variable that is set true when a request comes in
         # to www.example.com
         if ($this->hFrameworkFilePath)
@@ -100,7 +100,6 @@ class hFileLibrary extends hPlugin {
             }
 
             #$this->hFilePath = $this->hFileWildcardPath;
-
             #$this->hFilePath = substr($path, -strlen($this->hFileWildcardPath));
 
             $this->hFilePath = $this->getEndOfPath($path, $this->hFileSystemPath);
