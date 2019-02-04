@@ -207,10 +207,8 @@ class hDashboardUser extends hPlugin {
                         'class' => 'hContactAddressCity',
                         'name' => 'hContactAddressCity[]'
                     ),
-                    array(
-                        'label' => 'City:'
-                    ),
-                    '40,100'
+                    'City:',
+                    '40,40'
                 )
                 ->addSelectState(
                     array(
@@ -229,6 +227,7 @@ class hDashboardUser extends hPlugin {
                     'Postal Code:',
                     '25,15'
                 )
+                ->addTableCell('')
                 ->addSelectCountry(
                     array(
                         'id' => 'hLocationCountryId-0',

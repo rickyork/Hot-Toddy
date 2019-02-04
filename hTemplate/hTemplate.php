@@ -400,7 +400,7 @@ class hTemplate extends hPlugin {
 
         if (substr($block, 0, 1) == '/' || substr($block, 0, 1) == '\\')
         {
-            return '&#123;'.substr($block, 1).'&#125;';
+            return '&lbrace;'.substr($block, 1).'&rbrace;';
         }
 
         # <h2>Compile CSS or JavaScript</h2>
@@ -800,7 +800,7 @@ class hTemplate extends hPlugin {
         #   Decrementing:
         # </p>
         # <code>
-        # {/variable--}
+        # {variable--}
         # </code>
 
         preg_match(

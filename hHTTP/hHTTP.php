@@ -21,7 +21,7 @@
 # </p>
 # @end
 
-class hHTTP extends hFrameworkResources {
+class hHTTP extends hFilePath {
 
     public function &setDownload($mime, $name = null)
     {

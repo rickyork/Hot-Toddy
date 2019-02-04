@@ -47,9 +47,12 @@
 class hDatabaseTable {
 
     private $table;
+
     private $hDatabase;
     private $hDatabaseEditor;
     private $hContactDatabase;
+    private $hFrameworkResource;
+    
     private $user;
     private $contact;
     private $userPermissions;
@@ -165,6 +168,28 @@ class hDatabaseTable {
         }
 
         return $this->hContactDatabase;
+    }
+    
+    public function &frameworkResource()
+    {
+        # @return hFrameworkResourceLibrary
+        
+        # @description
+        # <h2>Using the Framework Resource API</h2>
+        # <p>
+        #   Intializes the <a href='/Hot Toddy/Documentation?hFrameworkResource.library.php' class='code'>hFrameworkResourceLibrary</a> 
+        #   object the first time it's used, and then it returns the 
+        #   <a href='/Hot Toddy/Documentation?hFrameworkResource.library.php' class='code'>hFrameworkResourceLibrary</a> 
+        #   object.
+        # </p>
+        # @end
+
+        if (!is_object($this->hFrameworkResource))
+        {
+            $this->hFrameworkResource = $GLOBALS['hFramework']->library('hFramework/hFrameworkResource');
+        }
+
+        return $this->hFrameworkResource;
     }
 
     public function &renameThisTable($table)
@@ -702,7 +727,7 @@ class hDatabaseTable {
         #    The preceding returns <var>true</var> because <var>hFiles</var> is a resource.
         # </p>
         # @end
-        return $GLOBALS['hFramework']->isResource($this->table);
+        return $this->frameworkResource()->isResource($this->table);
     }
 
     public function getResourceId()
@@ -724,7 +749,7 @@ class hDatabaseTable {
         #    of <var>1</var>.
         # </p>
         # @end
-        return (int) $GLOBALS['hFramework']->getResourceId($this->table);
+        return (int) $this->frameworkResource()->getResourceId($this->table);
     }
 
     public function getResource()
@@ -779,7 +804,7 @@ class hDatabaseTable {
         #   </tbody>
         # </table>
         # @end
-        return $GLOBALS['hFramework']->getResource($this->table);
+        return $this->frameworkResource()->getResource($this->table);
     }
 
     public function getResourceName($frameworkResourceKey)
@@ -802,7 +827,7 @@ class hDatabaseTable {
         #    In other tables, the framework resource's name will be different.
         # </p>
         # @end
-        return $GLOBALS['hFramework']->getResourceName(
+        return $this->frameworkResource()->getResourceName(
             $this->table,
             $frameworkResourceKey
         );
@@ -826,7 +851,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        return $GLOBALS['hFramework']->getResourceLastModified(
+        return $this->frameworkResource()->getResourceLastModified(
             $this->table,
             $frameworkResourceKey
         );
@@ -842,7 +867,7 @@ class hDatabaseTable {
         #    Alias for: <a href='#getLastModified'>getLastModified()</a>
         # </p>
         # @end
-        return $GLOBALS['hFramework']->getResourceLastModified(
+        return $this->frameworkResource()->getResourceLastModified(
             $this->table,
             $frameworkResourceKey
         );
@@ -859,7 +884,7 @@ class hDatabaseTable {
         # </p>
         # @end
 
-        $GLOBALS['hFramework']->modifyResource(
+        $this->frameworkResource()->modifyResource(
             $this->table,
             $frameworkResourceKey
         );
@@ -884,7 +909,7 @@ class hDatabaseTable {
         #    only the specified row is updated.
         # </p>
         # @end
-        $GLOBALS['hFramework']->modifyResource(
+        $this->frameworkResource()->modifyResource(
             $this->table,
             $frameworkResourceKey
         );

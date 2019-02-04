@@ -25,6 +25,7 @@ class hUserPermissions extends hPlugin {
     private $hFrameworkResourceOwner;
     private $hUserSelect;
     private $hUserPermissions;
+    private $hFrameworkResource;
 
     private $hForm;
     private $hDialogue;
@@ -36,6 +37,7 @@ class hUserPermissions extends hPlugin {
         $this->hFileTitle = 'Permissions Manager';
         #$this->hTemplatePath = '/hUser/hUserPermissions/hUserPermissions.template.php';
 
+        $this->hFrameworkResource = $this->library('hFramework/hFrameworkResource');
         $this->hUserPermissions = $this->library('hUser/hUserPermissions');
         $this->hUserSelect = $this->library('hUser/hUserSelect');
 
@@ -69,7 +71,7 @@ class hUserPermissions extends hPlugin {
             $this->hFrameworkResourceId = hString::scrubWord($_GET['hFrameworkResourceId']);
             $this->hFrameworkResourceKey = (int) $_GET['hFrameworkResourceKey'];
 
-            $resource = $this->getResource($this->hFrameworkResourceId);
+            $resource = $this->hFrameworkResource->getResource($this->hFrameworkResourceId);
 
             $this->hFrameworkResourceTable      = $resource['hFrameworkResourceTable'];
             $this->hFrameworkResourcePrimaryKey = $resource['hFrameworkResourcePrimaryKey'];
@@ -417,7 +419,7 @@ class hUserPermissions extends hPlugin {
     }
 
     private function dialogue()
-    {
+    {        
         $this->hForm = $this->library('hForm');
         $this->hDialogue = $this->library('hDialogue');
 

@@ -254,7 +254,7 @@ class hPlugin extends hFrameworkApplication {
         }
 
         if (method_exists($GLOBALS['hFramework'], $method))
-        {
+        {    
             return call_user_func_array(
                 array(
                     $GLOBALS['hFramework'],

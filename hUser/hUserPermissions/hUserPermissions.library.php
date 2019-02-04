@@ -38,6 +38,8 @@
 
 
 class hUserPermissionsLibrary extends hPlugin  {
+    
+    private $hFrameworkResource;
 
     private $groups = array();
     private $setInherit = 0;
@@ -49,6 +51,11 @@ class hUserPermissionsLibrary extends hPlugin  {
     private $resourceNameColumn;
     private $resourceName;
     private $resourceOwner;
+    
+    public function hConstructor()
+    {
+        $this->hFrameworkResource = $this->library('hFramework/hFrameworkResource');
+    }
 
     public function saveForm($resourceId, $resourceKey, $owner, $world, array $users, array $groups)
     {
@@ -62,7 +69,7 @@ class hUserPermissionsLibrary extends hPlugin  {
             return -6;
         }
 
-        $resource = $this->getResource($resourceId);
+        $resource = $this->hFrameworkResource->getResource($resourceId);
 
         $where = array();
         $where[$resource['hFrameworkResourcePrimaryKey']] = $resourceKey;
@@ -231,7 +238,7 @@ class hUserPermissionsLibrary extends hPlugin  {
             $frameworkResourceKey
         );
 
-        $frameworkResourceId = $this->getResourceId($frameworkResource);
+        $frameworkResourceId = $this->hFrameworkResource->getResourceId($frameworkResource);
 
         $userPermissionsId = $this->getPermissionsId(
             $frameworkResourceId,
@@ -267,15 +274,13 @@ class hUserPermissionsLibrary extends hPlugin  {
 
     public function exist($frameworkResourceId, $frameworkResourceKey)
     {
-        return (
-            $this->numericResource($frameworkResourceId)
-                ->hUserPermissions
-                ->selectExists(
-                    'hUserPermissionsId',
-                    array(
-                        'hFrameworkResourceId' => (int) $frameworkResourceId,
-                        'hFrameworkResourceKey' => (int) $frameworkResourceKey
-                    )
+        $this->hFrameworkResource->numericResourceId($frameworkResourceId);
+
+        return $this->hUserPermissions->selectExists(
+            'hUserPermissionsId',
+            array(
+                'hFrameworkResourceId' => (int) $frameworkResourceId,
+                'hFrameworkResourceKey' => (int) $frameworkResourceKey
             )
         );
     }
@@ -285,25 +290,16 @@ class hUserPermissionsLibrary extends hPlugin  {
 
     }
 
-    public function &numericResource(&$frameworkResource)
-    {
-        if (!is_numeric($frameworkResource))
-        {
-            $frameworkResource = $this->getResourceId($frameworkResource);
-        }
-
-        return $this;
-    }
-
     public function save($frameworkResourceId, $frameworkResourceKey, $userPermissionsOwner = 'rw', $userPermissionsWorld = '')
     {
         $this->deleteCache(
-                $frameworkResourceId,
-                $frameworkResourceKey
-            )
-            ->numericResource(
-                $frameworkResourceId
-            );
+            $frameworkResourceId,
+            $frameworkResourceKey
+        );
+            
+        $this->hFrameworkResource->numericResourceId(
+            $frameworkResourceId
+        );
 
         $userPermissionsId = $this->getPermissionsId(
             $frameworkResourceId,
@@ -418,7 +414,7 @@ class hUserPermissionsLibrary extends hPlugin  {
     {
         if (is_numeric($frameworkResource))
         {
-            $frameworkResource = $this->getResource($frameworkResource);
+            $frameworkResource = $this->hFrameworkResource->getResource($frameworkResource);
             $frameworkResource = $frameworkResource['hFrameworkResourceTable'];
         }
 
@@ -539,21 +535,20 @@ class hUserPermissionsLibrary extends hPlugin  {
 
     private function getPermissionsId($frameworkResourceId, $frameworkResourceKey)
     {
-        return
-            $this->numericResource($frameworkResourceId)
-                ->hUserPermissions
-                ->selectColumn(
-                    'hUserPermissionsId',
-                    array(
-                        'hFrameworkResourceId'  => (int) $frameworkResourceId,
-                        'hFrameworkResourceKey' => (int) $frameworkResourceKey
-                    )
-                );
+        $this->hFrameworkResource->numericResourceId($frameworkResourceId);
+        
+        return $this->hUserPermissions->selectColumn(
+            'hUserPermissionsId',
+            array(
+                'hFrameworkResourceId'  => (int) $frameworkResourceId,
+                'hFrameworkResourceKey' => (int) $frameworkResourceKey
+            )
+        );
     }
 
     public function setInherit($frameworkResourceId = 0, $frameworkResourceKey = 0)
     {
-        $this->numericResource($frameworkResourceId);
+        $this->hFrameworkResource->numericResourceId($frameworkResourceId);
 
         if (empty($frameworkResourceId) && empty($frameworkResourceKey))
         {
@@ -588,20 +583,18 @@ class hUserPermissionsLibrary extends hPlugin  {
 
     public function getPermissions($frameworkResourceId, $frameworkResourceKey)
     {
-        $rtn = (
-            $this->numericResource($frameworkResourceId)
-                ->hUserPermissions
-                ->selectAssociative(
-                    array(
-                        'hUserPermissionsId',
-                        'hUserPermissionsOwner',
-                        'hUserPermissionsWorld'
-                    ),
-                    array(
-                        'hFrameworkResourceId' => (int) $frameworkResourceId,
-                        'hFrameworkResourceKey' => (int) $frameworkResourceKey
-                    )
-                )
+        $this->hFrameworkResource->numericResourceId($frameworkResourceId);
+        
+        $rtn = $this->hUserPermissions->selectAssociative(
+            array(
+                'hUserPermissionsId',
+                'hUserPermissionsOwner',
+                'hUserPermissionsWorld'
+            ),
+            array(
+                'hFrameworkResourceId' => (int) $frameworkResourceId,
+                'hFrameworkResourceKey' => (int) $frameworkResourceKey
+            )
         );
 
         if (count($rtn))
@@ -637,7 +630,7 @@ class hUserPermissionsLibrary extends hPlugin  {
 
     public function isAuthorized($frameworkResourceId, $frameworkResourceKey, $userId = 0)
     {
-        $this->numericResource($frameworkResourceId);
+        $this->hFrameworkResource->numericResourceId($frameworkResourceId);
 
         $this->user->whichUserId($userId);
 
@@ -653,7 +646,7 @@ class hUserPermissionsLibrary extends hPlugin  {
             }
         }
 
-        $resource = $this->getResource($frameworkResourceId);
+        $resource = $this->hFrameworkResource->getResource($frameworkResourceId);
 
         $frameworkResourceTable      = $resource['hFrameworkResourceTable'];
         $frameworkResourcePrimaryKey = $resource['hFrameworkResourcePrimaryKey'];
@@ -739,11 +732,11 @@ class hUserPermissionsLibrary extends hPlugin  {
         # </p>
         # @end
 
-        $this->numericResource($frameworkResourceId);
+        $this->hFrameworkResource->numericResourceId($frameworkResourceId);
 
         $this->user->whichUserId($userId)->setNumericUserId($userId);
 
-        $resource = $this->getResource($frameworkResourceId);
+        $resource = $this->hFrameworkResource->getResource($frameworkResourceId);
 
         $where = array();
         $where[$resource['hFrameworkResourcePrimaryKey']] = $frameworkResourceKey;

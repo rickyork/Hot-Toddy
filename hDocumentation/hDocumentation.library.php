@@ -33,6 +33,7 @@ class hDocumentationLibrary extends hPlugin {
 
     private $hFileUtilities;
     private $hFileCache;
+    private $hDocumentationParser;
 
     public function hConstructor($options)
     {
@@ -310,6 +311,15 @@ class hDocumentationLibrary extends hPlugin {
         #   reference other files or to quickly pull up the documentation for a given file.
         # </p>
         # @end
+        if ($this->hDocumentationDebug(false))
+        {
+            $this->hDocumentationParser = $this->library('hDocumentation/hDocumentationParser');
+
+            $this->hDocumentationParser->tokenize(
+                $this->hFrameworkPath.
+                $this->hDocumentationFiles->selectColumn('hDocumentationFile', $documentationFileId)
+            );
+        }
 
         $file = $this->getFile($documentationFileId);
 
@@ -386,7 +396,8 @@ class hDocumentationLibrary extends hPlugin {
         );
 
         return $this->getTemplate(
-            'Methods', $variables
+            'Methods', 
+            $variables
         );
     }
 

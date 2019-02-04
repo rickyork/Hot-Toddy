@@ -24,6 +24,13 @@
 
 class hSubscriptionLibrary extends hPlugin {
 
+    private $hFrameworkResource;
+    
+    public function hConstructor()
+    {
+        $this->hFrameworkResource = $this->library('hFramework/hFrameworkResource');
+    }
+
     public function toggleSubscription($frameworkResource, $frameworkResourceKey, $userId = 0)
     {
         $this->user->whichUserId($userId);
@@ -96,7 +103,8 @@ class hSubscriptionLibrary extends hPlugin {
 
     public function getSubscriptions($frameworkResource, $frameworkResourceKey)
     {
-        $frameworkResourceId = $this->getResourceId($frameworkResource);
+        $frameworkResourceId = $this->$this->hFrameworkResource->getResourceId($frameworkResource);
+
         $subscriptionId = $this->getSubscriptionId($frameworkResourceId, $frameworkResourceKey);
 
         $userIds = $this->hSubscriptionUsers->select(
@@ -163,7 +171,7 @@ class hSubscriptionLibrary extends hPlugin {
     {
         if (!is_numeric($frameworkResourceId))
         {
-            $frameworkResourceId = $this->getResourceId($frameworkResourceId);
+            $frameworkResourceId = $this->hFrameworkResource->getResourceId($frameworkResourceId);
         }
 
         return $this->hSubscriptions->selectColumn(
@@ -177,7 +185,7 @@ class hSubscriptionLibrary extends hPlugin {
 
     public function delete($frameworkResource, $frameworkResourceKey)
     {
-        $frameworkResourceId = $this->getResourceId($frameworkResource);
+        $frameworkResourceId = $this->hFrameworkResource->getResourceId($frameworkResource);
 
         $subscriptionId = $this->getSubscriptionId(
             $frameworkResourceId,
@@ -197,16 +205,20 @@ class hSubscriptionLibrary extends hPlugin {
 
     public function save($frameworkResource, $frameworkResourceKey)
     {
-        $frameworkResourceId = $this->getResourceId($frameworkResource);
+        $frameworkResourceId = $this->hFrameworkResource->getResourceId($frameworkResource);
 
-        return (!$this->getSubscriptionId($frameworkResourceId, $frameworkResourceKey))?
-            $this->hSubscriptions->insert('null', $frameworkResourceId, $frameworkResourceKey) : 0;
+        if (!$this->getSubscriptionId($frameworkResourceId, $frameworkResourceKey))
+        {
+            return $this->hSubscriptions->insert('null', $frameworkResourceId, $frameworkResourceKey);
+        }
+
+        return 0;
     }
 
     public function subscribe($frameworkResource, $frameworkResourceKey, $userId = 0)
     {
         $this->user->whichUserId($userId);
-        $frameworkResourceId = $this->getResourceId($frameworkResource);
+        $frameworkResourceId = $this->hFrameworkResource->getResourceId($frameworkResource);
 
         $subscriptionId = $this->getSubscriptionId(
             $frameworkResourceId,
@@ -235,7 +247,7 @@ class hSubscriptionLibrary extends hPlugin {
     {
         $this->user->whichUserId($userId);
 
-        $frameworkResourceId = $this->getResourceId($frameworkResource);
+        $frameworkResourceId = $this->hFrameworkResource->getResourceId($frameworkResource);
 
         $subscriptionId = $this->getSubscriptionId(
             $frameworkResourceId,
@@ -254,7 +266,7 @@ class hSubscriptionLibrary extends hPlugin {
 
         if (!is_numeric($frameworkResourceId))
         {
-            $frameworkResourceId = $this->getResourceId($frameworkResourceId);
+            $frameworkResourceId = $this->hFrameworkResource->getResourceId($frameworkResourceId);
         }
 
         $subscriptionId = $this->hSubscriptions->selectColumn(

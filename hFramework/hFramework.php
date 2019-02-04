@@ -40,7 +40,6 @@ hFrameworkInclude($pluginPath.'/hFramework/hFrameworkApplication/hFrameworkAppli
 hFrameworkInclude($pluginPath.'/hPlugin/hPlugin.php');
 hFrameworkInclude($pluginPath.'/hFramework/hFrameworkVariables/hFrameworkVariables.php');
 hFrameworkInclude($pluginPath.'/hFile/hFilePath/hFilePath.php');
-hFrameworkInclude($pluginPath.'/hFramework/hFrameworkResources/hFrameworkResources.php');
 hFrameworkInclude($pluginPath.'/hHTTP/hHTTP.php');
 
 class hFramework extends hHTTP {
@@ -584,7 +583,7 @@ class hFramework extends hHTTP {
                     # variable. The value of <var>hFileDocument</var> will be reset to <var>nil</var> immediately following
                     # template script execution.
                     # </p>
-
+                    
                     include_once $path;
 
                     # <p>
@@ -660,7 +659,7 @@ class hFramework extends hHTTP {
                     # </p>
 
                     $this->hFileDocument = ($this->hFileHTMLHeaders(true)? $this->getFileHeaders() : '').$body;
-
+                    
                     # <h3>Parsing the Document and Caching</h3>
                     # <p>
                     #   If the <var>hFileDocumentParseEnabled</var> framework variable is <var>true</var> (it is, by default), the
@@ -681,7 +680,7 @@ class hFramework extends hHTTP {
                     if ($this->hFileDocumentParseEnabled(true))
                     {
                         // parseDocument() is defined later in this document.
-                        $this->hFileDocument = $this->parseTemplateMarkup($this->hFileDocument);
+                        $this->hFileDocument = $this->parseTemplateMarkup($this->hFileDocument);                        
                         $this->hFileDocument = $this->parseDocument($this->hFileDocument);
                     }
 
@@ -1295,7 +1294,7 @@ class hFramework extends hHTTP {
             }
 
             // If the output buffer is turned on, flush it.
-            if ($this->hServerOutputBuffer(false))
+            if ($this->hServerOutputBuffer(true))
             {
                 @ob_end_flush();
             }

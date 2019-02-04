@@ -61,6 +61,7 @@ class hContactDatabase extends hPlugin {
     private $hForm;
     private $hContactEmailAddress;
     private $hContactDirectory;
+    private $hFrameworkResource;
 
     private $hMap;
 
@@ -96,6 +97,28 @@ class hContactDatabase extends hPlugin {
         {
             $this->hContactDirectory = $this->library('hContact/hContactDirectory');
         }
+    }
+    
+    public function &frameworkResource()
+    {
+        # @return hFrameworkResourceLibrary
+        
+        # @description
+        # <h2>Using the Framework Resource API</h2>
+        # <p>
+        #   Intializes the <a href='/Hot Toddy/Documentation?hFrameworkResource.library.php' class='code'>hFrameworkResourceLibrary</a> 
+        #   object the first time it's used, and then it returns the 
+        #   <a href='/Hot Toddy/Documentation?hFrameworkResource.library.php' class='code'>hFrameworkResourceLibrary</a> 
+        #   object.
+        # </p>
+        # @end
+
+        if (!is_object($this->hFrameworkResource))
+        {
+            $this->hFrameworkResource = $this->library('hFramework/hFrameworkResource');
+        }
+
+        return $this->hFrameworkResource;
     }
 
     public function getAddressBookId($addressBook)
@@ -2805,7 +2828,7 @@ class hContactDatabase extends hPlugin {
         # </p>
         # @end
 
-        $this->numericResourceId($frameworkResourceId);
+        $this->frameworkResource()->numericResourceId($frameworkResourceId);
 
         $query = $this->hContactFields->select(
             array(
@@ -3075,7 +3098,7 @@ class hContactDatabase extends hPlugin {
         # </table>
         # @end
 
-        $this->numericResourceId($frameworkResourceId);
+        $this->frameworkResource()->numericResourceId($frameworkResourceId);
 
         return $this->hContactFields->selectColumnsAsKeyValue(
             array(

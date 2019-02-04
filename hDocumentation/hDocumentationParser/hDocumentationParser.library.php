@@ -94,7 +94,7 @@ class hDocumentationParserLibrary extends hPlugin {
 
             )
         );
-
+        
         $functionName = '';
         $functionSignature = '';
         $function = '';
@@ -883,7 +883,7 @@ class hDocumentationParserLibrary extends hPlugin {
         {
             $this->hDocumentationDatabase->saveMethods($file, $this->files[$file]);
             unset($this->files[$file]);
-        }
+        }   
     }
 }
 
