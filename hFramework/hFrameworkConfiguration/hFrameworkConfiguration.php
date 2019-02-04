@@ -286,19 +286,4 @@ if ($appendConf)
     }
 }
 
-if ($setEtcHosts)
-{
-    echo "Appending IP and Hostname to /etc/hosts\n";
-
-    $file = file_get_contents('/etc/hosts');
-
-    if (!strstr($file, $ip.' '.$hostname))
-    {
-        $file .= $ip.' '.$hostname."\n";
-        file_put_contents('/etc/hosts', $file);
-
-        echo "Appended IP and hostname to /etc/hosts\n";
-    }
-}
-
 ?>

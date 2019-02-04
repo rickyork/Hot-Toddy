@@ -122,9 +122,6 @@ $apacheRestart = 'apachectl restart'; // '/Applications/MAMP/Library/bin/apachec
 // (an absolute path should be provided).
 $installPath = '/Websites';
 
-// Whether or not the hostname and IP should be added in your /etc/hosts file
-$setEtcHosts = false;
-
 $pathToPHP = '/Server/bin/php';
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
