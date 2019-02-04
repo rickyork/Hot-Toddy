@@ -15,15 +15,36 @@
 Installing Hot Toddy on Mac OS X.
 
 The installer has not been tested on a Linux system, though it has worked on Linux in the 
-past.
+past. It has been a very long time since it was tested on Windows, it makes extensive use
+of shell commands like mkdir and chmod. Do not expect this framework to work with a 
+Windows server. It is made for Mac OS X. It will run on Linux, it just won't have app icons
+in the Finder app.
 
-1. Copy and paste or download the install script to a new file called 'install'.
+Hot Toddy makes use of OS X features, whenever possible, for example, it pulls out application 
+icons from the OS to use as icons in framework applications.
 
-2. Configure the install script with all the right settings.
+To install Hot Toddy:
+
+1. Copy and paste or download the install script to a new file called 'install'. The install 
+script is located in the same folder this README appears in. Don't bother cloning the git
+repository yet. The install script will do that for you.
+
+2. Configure the install script with all the right settings. It should be obvious to you. Hot
+Toddy is made for Apache and MySQL. Everything is hand tailored to a Mac, Apache, and MySQL
+server environment. 
 
 3. Make the install script executable with chmod 775.
 
-4. Run the install script from the command line with root privileges:
+4. Run the install script from the command line with root privileges.
 
  # sudo ./install
- 
+
+
+If you want to disable the OS X Server Apache install and use a custom install or MAMP, run 
+the following:
+
+ # sudo launchctl unload -w /Applications/Server.app/Contents/ServerRoot/System/Library/LaunchDaemons/com.apple.serviceproxy.plist
+ # sudo launchctl unload -w /Applications/Server.app/Contents/ServerRoot/System/Library/LaunchDaemons/com.apple.server.httpd.plist
+
+
+

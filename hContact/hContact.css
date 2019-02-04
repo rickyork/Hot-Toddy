@@ -251,6 +251,7 @@ ul#hContactGroups li {
 }
 ul#hContactGroups div {
     background: url('/images/icons/16x16/group.png') no-repeat 5px 2px;
+    background-size: 16px 16px;
     padding: 4px 0 4px 28px;
 }
 li.hContactGroupTemplate {

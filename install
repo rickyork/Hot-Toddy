@@ -1,3 +1,4 @@
+
 #!/usr/bin/php -q
 <?php
 
@@ -72,6 +73,14 @@ $dbHost = 'localhost';
 // Whether or not this script should touch your httpd.conf file.
 $appendConf = false;
 
+// Whether or not Apache is within Mac OS X Server.app
+//
+// In order to automatically modify Mac OS X Server.app's Apache configuration,
+// you will need to have already created the website in the Websites portion of
+// Server.app. Once you have created and configured the website, you may use this
+// installer to make the website Hot Toddy capable. 
+$macOSXServer = false;
+
 // The location of Apache's httpd.conf file.
 $httpdConfLocation = '/etc/apache2/httpd.conf'; // '/Applications/MAMP/conf/apache/httpd.conf'; // MAMP
 
@@ -86,11 +95,13 @@ $aliases = 'localhost.local';
 
 // The hostname of the website as it will be in a live
 // production enviornment.  Include the "www" subdomain, if applicable.
-// e.g., www.example.com
+// e.g., www.example.com. Hot Toddy uses this name as a name, so 
+// include this even if this is the dev server.
 $frameworkSite = 'www.example.com';
 
 // The IP address of the website to be created.
-$ip = '127.0.0.1';
+// Make the value * if it is any IP address.
+$ip = '*';
 
 // The Port
 $port = 80;

@@ -89,39 +89,148 @@ if (file_exists($json))
     }
 }
 
-$virtualHost = str_replace(
-    array(
-        '{$ip}',
-        '{$port}',
-        '{$installPath}',
-        '{$hostname}',
-        '{$aliases}'
-    ),
-    array(
-        $ip,
-        $port,
-        $installPath,
-        $hostname,
-        $aliases
-    ),
-    file_get_contents(
-        dirname(__FILE__).'/Apache Virtual Host.conf'
-    )
-);
+$configurationFilePath = $installPath.'/Configuration/'.$hostname.'.'.$port.'.conf';
 
-if (!file_put_contents($installPath.'/Configuration/'.$hostname.'.'.$port.'.conf', $virtualHost))
+if (!$macOSXServer)
 {
-    echo "Fatal Error: Creation of the virtual host configuration file at, {$installPath}/Configuration/{$host}.{$port}.conf, failed.\n";
-    exit;
+    $virtualHost = str_replace(
+        array(
+            '{$ip}',
+            '{$port}',
+            '{$installPath}',
+            '{$hostname}',
+            '{$aliases}'
+        ),
+        array(
+            $ip,
+            $port,
+            $installPath,
+            $hostname,
+            $aliases
+        ),
+        file_get_contents(
+            dirname(__FILE__).'/Apache Virtual Host.conf'
+        )
+    );
+    
+    if (!file_put_contents($configurationFilePath, $virtualHost))
+    {
+        echo "Fatal Error: Creation of the virtual host configuration file at, {$configurationFilePath}, failed.\n";
+        exit;
+    }
+    else
+    {
+        echo "Virtual Host configuration successfully created.\n";
+    }
 }
 else
 {
-    echo "Virtual Host configuration successfully created.\n";
+    $apacheConfPath = '';
+
+    $macOSXApacheConfPath = '/Library/Server/Web/Config/apache2/sites/';
+    
+    if ($ip == '*')
+    {    
+        $apacheConfFile = '0000_any_80_'.$hostname.'.conf';
+        
+        if (file_exists($macOSXApacheConfPath.$apacheConfFile))
+        {
+            $apacheConfPath = $macOSXApacheConfPath.$apacheConfFile;
+        }
+    }
+
+    if (!$apacheConfPath && $ip == '*')
+    {
+        $apacheConfFile = '0000_any_80_.conf';
+
+        if (file_exists($macOSXApacheConfPath.$apacheConfFile))
+        {
+            $apacheConfPath = $macOSXApacheConfPath.$apacheConfFile;
+        }
+    }
+
+    if (!$apacheConfPath && ($ip =='*' || $ip == '127.0.0.1'))
+    {   
+        $apacheConfFile = '0000_127.0.0.1_'.($port == 80? '345' : '').$port.'_'.$hostname.'.conf';
+
+        if (file_exists($macOSXApacheConfPath.$apacheConfFile))
+        {
+            $apacheConfPath = $macOSXApacheConfPath.$apacheConfFile;
+        }
+    }
+    
+    if (!$apacheConfPath)
+    {
+        $apacheConfFile = '0000_'.$ip.'_'.($port == 80? '345' : '').$port.'_'.$hostname.'.conf';
+        
+        if (file_exists($macOSXApacheConfPath.$apacheConfFile))
+        {
+            $apacheConfPath = $macOSXApacheConfPath.$apacheConfFile;
+        }
+    }
+    
+    if (!$apacheConfPath)
+    {
+        // Try a default
+        $apacheConfFile = '0000_'.$ip.'_'.($port == 80? '345' : '').$port.'_.conf';
+        
+        if (file_exists($macOSXApacheConfPath.$apacheConfFile))
+        {
+            $apacheConfPath = $macOSXApacheConfPath.$apacheConfFile;
+        }
+    }
+    
+    if (!$apacheConfPath)
+    {
+        echo "Fatal Error: Mac OS X Server.app could not be configured automatically.\n";
+        exit;
+    }
+    else
+    {
+        $apacheConfiguration = file_get_contents(dirname(__FILE__).'/Mac OS X Server Apache.conf');
+        
+        if (!file_put_contents($configurationFilePath, $apacheConfiguration))
+        {
+            echo "Fatal Error: Creation of the virtual host configuration file at, {$installPath}/Configuration/{$host}.{$port}.conf, failed.\n";
+            exit;
+        }
+        else
+        {
+            $apacheConf = file_get_contents($apacheConfPath);
+            
+            # Include "{$configurationFilePath}"
+           
+            if (!stristr($apacheConf, "Include \"{$configurationFilePath}\""))
+            {
+                $apacheConf = str_replace(
+                    '</VirtualHost>',
+ 
+                    "        Include \"{$configurationFilePath}\"\n".
+                    ($aliases? "        ServerAlias ".$aliases."\n" : '').
+                    "</VirtualHost>", 
+                    
+                    $apacheConf
+                );
+                
+                if (file_put_contents($apacheConfPath, $apacheConf))
+                {
+                    echo "Mac OS X Server.app Apache configuration successfully modified.\n";
+                }
+                else
+                {
+                    echo "Fatal Error: Unable to modify Mac OS X Server.app Apache configuration located at {$apacheConfPath}.\n";
+                    exit;
+                }
+            }
+
+            echo "Mac OS X Server.app Virtual Host configuration successfully modified.\n";
+        }
+    }
 }
 
-`chown -R {$user} {$installPath}/Configuration`;
-`chgrp -R {$group} {$installPath}/Configuration`;
-`chmod -R 775 {$installPath}/Configuration`;
+echo `chown -R {$user} {$installPath}/Configuration`;
+echo `chgrp -R {$group} {$installPath}/Configuration`;
+echo `chmod -R 775 {$installPath}/Configuration`;
 
 if ($appendConf)
 {

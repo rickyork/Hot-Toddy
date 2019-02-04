@@ -219,4 +219,25 @@ if (ini_get('register_globals'))
     $hFramework->warning('The PHP configuration directive "register_globals" must be turned off.', __FILE__, __LINE__);
 }
 
+if ($hFramework->hFrameworkErrorLog(true))
+{
+    ini_set('error_log', dirname($_SERVER['DOCUMENT_ROOT']).'/Log/PHP.log');
+}
+
+if ($hFramework->hFrameworkErrorReportingDefault('E_ALL'))
+{
+    ini_set('error_reporting', $hFramework->hFrameworkErrorReportingDefault);
+}
+
+if ($hFramework->hFrameworkErrorReporting(false))
+{
+    ini_set('display_errors', true);
+}
+
+if (ini_get('magic_quotes_gpc'))
+{
+    $hFramework->warning('The PHP configuration directive "magic_quotes_gpc" must be turned off.', __FILE__, __LINE__);
+}
+
+
 ?>

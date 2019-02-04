@@ -239,6 +239,8 @@ else
 
 if (isset($tables) && is_array($tables) && count($tables))
 {
+    /
+    / This configures Apache.
     $conf = $installPath.'/Hot Toddy/hFramework/hFrameworkConfiguration/hFrameworkConfiguration.php';
 
     // A database has been successfully created,
