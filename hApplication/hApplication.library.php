@@ -21,12 +21,6 @@ class hApplicationLibrary extends hPlugin {
 
     public function hConstructor()
     {
-        /**
-          ButtonShaded
-          ButtonShadedCombo
-          ButtonAqua
-          ButtonAquaCombo
-        **/
 
     }
 

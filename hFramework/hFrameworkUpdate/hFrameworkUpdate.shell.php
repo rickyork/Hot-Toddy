@@ -64,34 +64,16 @@ class hFrameworkUpdateShell extends hShell {
 
         $frameworkPath = '';
 
-        if (file_exists($hServerDocumentRootBase.'/Hot Toddy/.svn'))
+        if (file_exists($hServerDocumentRootBase.'/Hot Toddy/.git'))
         {
             $frameworkPath = escapeShellArg("{$hServerDocumentRootBase}/Hot Toddy");
-            echo `svn update {$frameworkPath}`;
-        }
-        else if (file_exists($hServerDocumentRootBase.'/www/.svn'))
-        {
-            $frameworkPath = escapeShellArg("{$hServerDocumentRootBase}/www");
-            echo `svn update {$frameworkPath}`;
+            echo `git --git-dir={$frameworkPath} pull`;
         }
 
-        if (file_exists($this->hFrameworkLibraryPath.'/.svn'))
+        if (file_exists($this->hFrameworkLibraryPath.'/.git'))
         {
             $libraryPath = escapeShellArg($this->hFrameworkLibraryPath);
-
-            echo `svn update {$libraryPath}`;
-        }
-
-        if (file_exists($this->hFrameworkIconPath.'/512x512/.svn'))
-        {
-            $iconPath = escapeShellArg($this->hFrameworkIconPath.'/512x512');
-            echo `svn update {$iconPath}`;
-        }
-
-        if (file_exists($this->hFrameworkIconPath.'/128x128/.svn'))
-        {
-            $iconPath = escapeShellArg($this->hFrameworkIconPath.'/128x128');
-            echo `svn update {$iconPath}`;
+            echo `git --git-dir={$libraryPath} pull`;
         }
 
         $this->console("Updating Hot Toddy Database");

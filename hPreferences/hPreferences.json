@@ -12,15 +12,6 @@
             ]
         }
     },
-    source : {
-        destination : "/Hot Toddy/hPreferences",
-        repository : {
-            checkout : false,
-            software : "svn",
-            baseURI : "http://svn.deadmarshes.com",
-            path : "/hPreferences"
-        }
-    },
     file : {
         title : "Hot Toddy Preferences",
         path : "/Applications/Preferences/index.html",
