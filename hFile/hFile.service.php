@@ -121,7 +121,6 @@ class hFileService extends hService {
     private $hFile;
     private $hFileIcon;
     private $hFileDatabase;
-    private $hUserPermissions;
     private $hPluginInstall;
     private $hCategoryDatabase;
     private $hFileZip;
@@ -133,8 +132,7 @@ class hFileService extends hService {
         # <p>
         #    The class constructor includes some libraries such as
         #    <a href='/Hot Toddy/Documentation?hFinder/hFinder.library.php'>hFinderLibrary</a>,
-        #    <a href='/Hot Toddy/Documentation?hFile/hFile.library.php'>hFileLibrary</a>,
-        #    and <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php'>hUserPermissionsLibrary</a>.
+        #    <a href='/Hot Toddy/Documentation?hFile/hFile.library.php'>hFileLibrary</a>
         # </p>
         # <p>
         #    If you are in the <i>root</i> user group, you are allowed to turn off the "duplicate
@@ -155,7 +153,6 @@ class hFileService extends hService {
         {
             $this->hFinder = $this->library('hFinder');
             $this->hFile = $this->library('hFile');
-            $this->hUserPermissions = $this->library('hUser/hUserPermissions');
 
             if ($this->inGroup('root'))
             {

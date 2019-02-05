@@ -25,7 +25,6 @@ class hPluginDatabaseJSON2Library extends hPlugin {
     private $hFile;
     private $hFileImport;
     private $hFileDatabase;
-    private $hUserPermissions;
     private $hTemplateDatabase;
     private $hFileIconDatabase;
     private $hFileIconInstall;
@@ -524,7 +523,6 @@ class hPluginDatabaseJSON2Library extends hPlugin {
         # @end
 
         $this->hFile = $this->library('hFile');
-        $this->hUserPermissions = $this->library('hUser/hUserPermissions');
         $this->hFileDatabase = $this->database('hFile');
 
         //$table = $this->getPluginDatabaseTable($pluginPath);
@@ -547,7 +545,7 @@ class hPluginDatabaseJSON2Library extends hPlugin {
             {
                 $this->console("Creating HtFS directory: {$directoryPath}");
                 $directoryId = $this->makePath($directoryPath);
-                $this->hUserPermissions->save(2, $directoryId, 'rw', 'r');
+                $this->hDirectories->savePermissions($directoryId, 'rw', 'r');
             }
             else
             {

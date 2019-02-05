@@ -529,14 +529,17 @@ contact.record = {
                         {
                             var country = this.value.split(':');
                             $(this).parent().find('span').text(label);
+                            
+                            var countryAbbr = country[1] && country[1].length? country[1].toLowerCase() : 'us';                                
 
                             $(this)
                                 .parents('.hContactAddress')
                                 .find('img.hContactAddressCountryFlag')
                                 .attr({
-                                    src: hot.path('/images/icons/48x48/flags/' + country[1].toLowerCase() + '.png'),
-                                    alt: country[1]
+                                    src: hot.path('/images/icons/48x48/flags/' + countryAbbr + '.png'),
+                                    alt: countryAbbr.toUpperCase()
                                 });
+
                             break;
                         };
                         default:
@@ -1000,6 +1003,8 @@ contact.record = {
 
     getFieldData : function(field, plural)
     {
+        alert(field);
+        
         plural = field + plural;
 
         var i = 0;
@@ -1110,7 +1115,9 @@ keyboard
             {
                 if ($(focus.selected).prev(focus.item).length)
                 {
-                    $(focus.selected).prev(focus.item).select(focus.select);
+                    $(focus.selected)
+                        .prev(focus.item)
+                        .select(focus.select);
                 }
             }
             else

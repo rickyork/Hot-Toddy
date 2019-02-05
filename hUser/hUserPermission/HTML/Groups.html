@@ -1,0 +1,25 @@
+<div>
+    <label for='hUserPermissionsGroupsRead'>Groups with Read Access</label>
+    <div class='hUserPermissionsAccessControl'>
+        <select name='hUserGroups[r][]' id='hUserPermissionsGroupsRead' multiple='multiple' size='5'>
+            {hUserPermissionsGroupsRead}
+        </select>
+        <div id='hUserPermissionsGroupsReadButtons' class='hUserPermissionsButtons'>
+            <input type='submit' value=' &darr; ' id='hUserPermissionsGroupsReadRemove' class='hUserPermissionsAction hUserPermissionsRemove' title='Revoke read access from the selected group.' />
+            <input type='submit' value=' &uarr; ' id='hUserPermissionsGroupsReadAdd' class='hUserPermissionsAction hUserPermissionsAdd' title='Grant read access to the selected group.' />
+        </div>
+    </div>
+    <label for='hUserPermissionGroupsWrite'>Groups with Write Access</label>
+    <div class='hUserPermissionsAccessControl'>
+        <select name='hUserGroups[w][]' id='hUserPermissionsGroupsWrite' multiple='multiple' size='5'>
+            {hUserPermissionsGroupsWrite}
+        </select>
+        <div id='hUserPermissionsGroupsWriteButtons' class='hUserPermissionsButtons'>
+            <input type='submit' value=' &darr; ' id='hUserPermissionsGroupsWriteRemove' class='hUserPermissionsAction hUserPermissionsRemove' title='Revoke write access from the selected group.' />
+            <input type='submit' value=' &darr;&darr; ' id='hUserPermissionsGroupsBothRemove' class='hUserPermissionsAction hUserPermissionsRemoveBoth' title='Revoke read and write access from the selected group.' />
+            <input type='submit' value=' &uarr; ' id='hUserPermissionsGroupsWriteAdd' class='hUserPermissionsAction hUserPermissionsAdd' title='Grant the selected group write access.' />
+            <input type='submit' value=' &uarr;&uarr; ' id='hUserPermissionsGroupsBothAdd' class='hUserPermissionsAction hUserPermissionsAddBoth' title='Grant the selected group read and write access.' />
+        </div>
+    </div>
+    {hUserPermissionsGroups}
+</div>

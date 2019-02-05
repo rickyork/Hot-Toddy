@@ -19,7 +19,6 @@ class hFinderInfo extends hPlugin {
     private $hFile;
     private $hFileIcon;
     private $hDialogue;
-    private $hUserPermissions;
     private $hFinderLabel;
 
     public function hConstructor()
@@ -74,12 +73,14 @@ class hFinderInfo extends hPlugin {
 
         $this->hDialogue->newDialogue('hFinderProperties');
 
-        $this->hUserPermissions = $this->library('hUser/hUserPermissions');
-
-        $resource = $this->hUserPermissions->isAuthorized(
-            $this->hFile->isDirectory? 'hDirectories' : 'hFiles',
-            $this->hFile->isDirectory? $this->hFile->directoryId : $this->hFile->fileId
-        );
+		if ($this->hFile->isDirectory)
+		{
+			$resource = $this->hDirectories->isAuthorized($this->hFile->directoryId);
+		}
+		else
+		{
+			$resource = $this->hFiles->isAuthorized($this->hFile->fileId);
+		}
 
         $resourceKey = 0;
         $resourceId = 0;

@@ -21,7 +21,6 @@ class hEditorProperties extends hPlugin {
     private $hFileIcon;
     private $hFileDatabase;
     private $hCategoryDatabase;
-    private $hUserPermissions;
     private $hTidy;
 
     public function hConstructor()
@@ -48,8 +47,6 @@ class hEditorProperties extends hPlugin {
             $this->hFile = $this->library('hFile');
             $this->hFileIcon = $this->library('hFile/hFileIcon');
             $this->hFileDatabase = $this->database('hFile');
-            $this->hUserPermissions = $this->library('hUser/hUserPermissions');
-
             $this->hFileTitle = 'Edit File Properties';
 
             if (isset($_GET['path']))

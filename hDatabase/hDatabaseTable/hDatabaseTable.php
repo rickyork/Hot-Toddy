@@ -55,7 +55,7 @@ class hDatabaseTable {
     
     private $user;
     private $contact;
-    private $userPermissions;
+    private $hUserPermission;
     private $hFramework;
     private $where = nil;
     private $method = nil;
@@ -69,34 +69,20 @@ class hDatabaseTable {
         $this->hDatabase = $hDatabase;
     }
 
-    private function &permissions()
+    private function &userPermission()
     {
-        # @return hUserPermissionsLibrary
+        # @return hUserPermissionLibrary
 
         # @description
-        # <h2>Including the User Permissions Library Object</h2>
+        # <h2>Including the User Permission Library Object</h2>
         # <p>
         #
         # </p>
         # @end
 
-        if (!is_object($this->userPermissions))
+        if (!is_object($this->hUserPermission))
         {
-            $this->userPermissions = $GLOBALS['hFramework']->library('hUser/hUserPermissions');
-        }
-
-        if ($this->table == 'hUserPermissions')
-        {
-            // Since the hUserPermissions database table is not a resource, it
-            // will never be called in this context.  Therefore, if one of the
-            // permissions methods gets called on this object, this is almost certain
-            // what's happening.
-            $GLOBALS['hFramework']->warning(
-                "Object 'hUserPermissions' called as a database table instead of as an object.  ".
-                "'hUserPermissions' must be declared as a private property within the object to avoid this error message. ",
-                __FILE__,
-                __LINE__
-            );
+            $this->hUserPermission = $GLOBALS['hFramework']->library('hUser/hUserPermission');
         }
 
         if (!$this->frameworkResource()->isResource($this->table))
@@ -108,7 +94,7 @@ class hDatabaseTable {
             );
         }
 
-        return $this->userPermissions;
+        return $this->hUserPermission;
     }
 
     private function &editor()
@@ -1154,11 +1140,11 @@ class hDatabaseTable {
         #    to modify permissions on a user's behalf without these limitations.
         # </p>
         # <p>
-        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php#isAuthorized'>hUserPermissionsLibrary::isAuthorized()</a>
+        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermission/hUserPermission.library.php#isAuthorized'>hUserPermissionLibrary::isAuthorized()</a>
         # </p>
         # @end
 
-        return $this->permissions()->isAuthorized($this->table, $frameworkResourceKey, $userId);
+        return $this->userPermission()->isAuthorized($this->table, $frameworkResourceKey, $userId);
     }
 
     public function isResourceOwner($frameworkResourcePrimaryKey, $frameworkResourceKey, $userId = 0)
@@ -1173,11 +1159,11 @@ class hDatabaseTable {
          #    a record.
          # </p>
          # <p>
-        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php#isResourceOwner'>hUserPermissionsLibrary::isResourceOwner()</a>
+        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermission/hUserPermission.library.php#isResourceOwner'>hUserPermissionLibrary::isResourceOwner()</a>
         # </p>
          # @end
 
-        return $this->permissions()->isResourceOwner(
+        return $this->userPermission()->isResourceOwner(
             $this->table,
             $frameworkResourcePrimaryKey,
             $frameworkResourceKey,
@@ -1196,10 +1182,10 @@ class hDatabaseTable {
         #    resource.
         # </p>
         # <p>
-        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php#getPermissions'>hUserPermissionsLibrary::getPermissions()</a>
+        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermission/hUserPermission.library.php#getPermissions'>hUserPermissionLibrary::getPermissions()</a>
         # </p>
         # @end
-        return $this->permissions()->getPermissions($this->table, $frameworkResourceKey);
+        return $this->userPermission()->getPermissions($this->table, $frameworkResourceKey);
     }
 
     public function &inheritPermissionsFrom($frameworkResourceKey)
@@ -1209,16 +1195,16 @@ class hDatabaseTable {
         # @description
         # <h2>Inheriting Permissions</h2>
         # <p>
-        #    Sets up <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php'>hUser/hUserPermissions/hUserPermissions.library.php</a>
+        #    Sets up <a href='/Hot Toddy/Documentation?hUser/hUserPermission/hUserPermission.library.php'>hUser/hUserPermission/hUserPermission.library.php</a>
         #    so that a resource will inherit permissions from the specified table and specified key referencing a primary row'
         #    in <var>$from</var>.
         # </p>
         # <p>
-        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php#setInherit'>hUserPermissionsLibrary::setInherit()</a>
+        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermission/hUserPermission.library.php#setInherit'>hUserPermissionLibrary::setInherit()</a>
         # </p>
         # @end
 
-        $this->permissions()->setInherit($this->table, $frameworkResourceKey);
+        $this->userPermission()->setInherit($this->table, $frameworkResourceKey);
         return $this;
     }
 
@@ -1247,11 +1233,11 @@ class hDatabaseTable {
         #    Changes made are not final until <a href='#savePermissions'>savePermissions()</a> is called.
         # </p>
         # <p>
-        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php#setGroup'>hUserPermissionsLibrary::setGroup()</a>
+        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermission/hUserPermission.library.php#setGroup'>hUserPermissionLibrary::setGroup()</a>
         # </p>
         # @end
 
-        $this->permissions()->setGroup($group, $level = 'r');
+        $this->userPermission()->setGroup($group, $level = 'r');
         return $this;
     }
 
@@ -1294,10 +1280,10 @@ class hDatabaseTable {
         #    Changes made are not final until <a href='#savePermissions'>savePermissions()</a> is called.
         # </p>
         # <p>
-        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php#setGroups'>hUserPermissionsLibrary::setGroups()</a>
+        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermission/hUserPermission.library.php#setGroups'>hUserPermissionLibrary::setGroups()</a>
         # </p>
         # @end
-        $this->permissions()->setGroups($groups);
+        $this->userPermission()->setGroups($groups);
         return $this;
     }
 
@@ -1314,10 +1300,10 @@ class hDatabaseTable {
         #    <var>$owner</var> and <var>$world</var> (world access is synonomous with public access).
         # </p>
         # <p>
-        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php#save'>hUserPermissionsLibrary::save()</a>
+        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermission/hUserPermission.library.php#save'>hUserPermissionLibrary::save()</a>
         # </p>
         # @end
-        $this->permissions()->save(
+        $this->userPermission()->save(
             $this->table,
             $frameworkResourceKey,
             $owner,
@@ -1354,10 +1340,10 @@ class hDatabaseTable {
         #    This method saves only modifications to world permissions (public access).
         # </p>
         # <p>
-        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php#saveWorldAccess'>hUserPermissionsLibrary::saveWorldAccess()</a>
+        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermission/hUserPermission.library.php#saveWorldAccess'>hUserPermissionLibrary::saveWorldAccess()</a>
         # </p>
         # @end
-        $this->permissions()->saveWorldAccess(
+        $this->userPermission()->saveWorldAccess(
             $this->table,
             $frameworkResourceKey,
             $world
@@ -1377,10 +1363,10 @@ class hDatabaseTable {
         #    The resource itself is untouched.
         # </p>
         # <p>
-        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php#delete'>hUserPermissionsLibrary::delete()</a>
+        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermission/hUserPermission.library.php#delete'>hUserPermissionLibrary::delete()</a>
         # </p>
         # @end
-        $this->permissions()->delete(
+        $this->userPermission()->delete(
             $this->table,
             $frameworkResourceKey
         );
@@ -1388,7 +1374,7 @@ class hDatabaseTable {
         return $this;
     }
 
-    public function &deletePermissionsCache($frameworkResourceKey, $userPermissionsType = 'hUserPermissions')
+    public function &deletePermissionsCache($frameworkResourceKey, $userPermissionType = 'hUserPermissions')
     {
         # @return hDatabaseTable
 
@@ -1398,13 +1384,13 @@ class hDatabaseTable {
         #    Clears all cached permissions for the specified resource.
         # </p>
         # <p>
-        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php#deleteCache'>hUserPermissionsLibrary::deleteCache()</a>
+        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermission/hUserPermission.library.php#deleteCache'>hUserPermissionLibrary::deleteCache()</a>
         # </p>
         # @end
-        $this->permissions()->deleteCache(
+        $this->userPermission()->deleteCache(
             $this->table,
             $frameworkResourceKey,
-            $userPermissionsType
+            $userPermissionType
         );
 
         return $this;
@@ -1421,10 +1407,10 @@ class hDatabaseTable {
         #    or the user specified in <var>$userId</var>, if a user is provided.
         # </p>
         # <p>
-        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermissions/hUserPermissions.library.php#chown'>hUserPermissionsLibrary::chown()</a>
+        #    See: <a href='/Hot Toddy/Documentation?hUser/hUserPermission/hUserPermission.library.php#chown'>hUserPermissionLibrary::chown()</a>
         # </p>
         # @end
-        $this->permissions()->chown(
+        $this->userPermission()->chown(
             $this->table,
             $frameworkResourceKey,
             $userId

@@ -17,12 +17,10 @@
 class hUserHomeFolderLibrary extends hPlugin {
 
     private $hFile;
-    private $hUserPermissions;
 
     public function hConstructor()
     {
         $this->hFile = $this->library('hFile');
-        $this->hUserPermissions = $this->library('hUser/hUserPermissions');
     }
 
     public function save($userId, $userName, $oldUserName = nil)
@@ -42,8 +40,6 @@ class hUserHomeFolderLibrary extends hPlugin {
 
         $homePath = '/Users/'.$userName;
 
-        $this->hUserPermissions = $this->library('hUser/hUserPermissions');
-
         if (!$this->hFile->exists($homePath))
         {
             $homeId = $this->hFile->newDirectory(
@@ -54,14 +50,13 @@ class hUserHomeFolderLibrary extends hPlugin {
 
             if ($this->groupExists('Finder Administrators'))
             {
-                $this->hUserPermissions->setGroup(
+                $this->hFiles->setGroup(
                     'Finder Administrators',
                     'rw'
                 );
             }
 
-            $this->hUserPermissions->save(
-                'hDirectories',
+            $this->hDirectories->savePermissions(
                 $homeId,
                 $special? 'rw' : 'r'
             );
@@ -110,13 +105,7 @@ class hUserHomeFolderLibrary extends hPlugin {
                         )
                     );
 
-                    $this->hUserPermissions = $this->library('hUser/hUserPermissions');
-
-                    $this->hUserPermissions->save(
-                        'hDirectories',
-                        $sid,
-                        'rw'
-                    );
+                    $this->hDirectories->savePermissions($sid, 'rw');
                 }
             }
         }

@@ -1,0 +1,20 @@
+<p>
+    <b>{hFrameworkResourceName}</b> is a resource that is owned by the user 
+    <b>{hFrameworkResourceOwner}</b>.  Using this utility you can setup options for 
+    who can access or modify this resource.
+</p>
+<ul>
+    <li>
+        <b>Read:</b> Those granted <em>read</em> can access all data associated 
+        with <b>{hFrameworkResourceName}</b>.
+    </li>
+    <li style='margin-top: 10px;'>
+        <b>Write:</b> Those granted <em>write</em> can modify or delete data 
+        associated with <b>{hFrameworkResourceName}</b>
+    </li>
+</ul>
+{isPosted?
+<script type='text/javascript'>
+    user.permissions.isPosted = true;
+</script>
+}

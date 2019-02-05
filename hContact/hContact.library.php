@@ -950,10 +950,10 @@ class hContactLibrary extends hPlugin {
                     )
                 );
 
-                $this->hUserPermissions = $this->library('hUser/hUserPermissions');
+                $this->hUserPermission = $this->library('hUser/hUserPermission');
 
                 // Give the owner rw access to their new address book.
-                $this->hUserPermissions->save(
+                $this->hUserPermission->save(
                     'hContactAddressBooks',
                     $contactAddressBookId
                 );

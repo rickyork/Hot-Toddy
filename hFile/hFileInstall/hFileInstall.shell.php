@@ -21,7 +21,7 @@ class hFileInstallShell extends hShell {
 
     private $hFile;
     private $hFileUtilities;
-    private $hUserPermissions;
+    private $hUserPermission;
     private $hFileDatabase;
     private $hForumDatabase;
     private $hCalendarDatabase;
@@ -38,7 +38,7 @@ class hFileInstallShell extends hShell {
         }
 
         $this->hFile = $this->library('hFile');
-        $this->hUserPermissions = $this->library('hUser/hUserPermissions');
+        $this->hUserPermission = $this->library('hUser/hUserPermission');
 
         // Insert the root directory.
         $this->hDirectories->insert(
@@ -52,7 +52,7 @@ class hFileInstallShell extends hShell {
             )
         );
 
-        $this->hUserPermissions->save(2, 1, 'rw', 'r');
+        $this->hUserPermission->save(2, 1, 'rw', 'r');
 
         $this->console("HtFS root directory created.");
 
@@ -70,7 +70,7 @@ class hFileInstallShell extends hShell {
 
         foreach ($directories as $directory)
         {
-            $this->hUserPermissions->save(
+            $this->hUserPermission->save(
                 2,
                 $this->mkdir('/', $directory),
                 'rw',
@@ -82,7 +82,7 @@ class hFileInstallShell extends hShell {
 
         if (!$this->hFile->exists('/Applications/Utilities'))
         {
-            $this->hUserPermissions->save(
+            $this->hUserPermission->save(
                 2,
                 $this->mkdir('/Applications', 'Utilities'),
                 'rw',
@@ -94,7 +94,7 @@ class hFileInstallShell extends hShell {
 
         if (!$this->hFile->exists('/'.$this->hFrameworkSite.'/Pictures'))
         {
-            $this->hUserPermissions->save(
+            $this->hUserPermission->save(
                 2,
                 $this->mkdir('/'.$this->hFrameworkSite, 'Pictures'),
                 'rw',
@@ -106,7 +106,7 @@ class hFileInstallShell extends hShell {
 
         if (!$this->hFile->exists('/Template/Pictures'))
         {
-            $this->hUserPermissions->save(
+            $this->hUserPermission->save(
                 2,
                 $this->mkdir('/Template', 'Pictures'),
                 'rw',
@@ -118,7 +118,7 @@ class hFileInstallShell extends hShell {
 
         if (!$this->hFile->exists('/'.$this->hFrameworkSite.'/Events'))
         {
-            $this->hUserPermissions->save(
+            $this->hUserPermission->save(
                 2,
                 $this->mkdir('/'.$this->hFrameworkSite, 'Events'),
                 'rw',
@@ -137,7 +137,7 @@ class hFileInstallShell extends hShell {
 
         foreach ($directories as $directory)
         {
-            $this->hUserPermissions->save(
+            $this->hUserPermission->save(
                 2,
                 $this->mkdir('/System', $directory),
                 'rw',
@@ -170,7 +170,7 @@ class hFileInstallShell extends hShell {
             )
         );
 
-        $this->hUserPermissions->save(1, $hFileId, 'rw', 'r');
+        $this->hUserPermission->save(1, $hFileId, 'rw', 'r');
 
 /*
         echo "Making a Forum...\n";
@@ -192,7 +192,7 @@ class hFileInstallShell extends hShell {
             )
         );
 
-        $this->hUserPermissions->save(1, $hFileId, 'rw', 'r');
+        $this->hUserPermission->save(1, $hFileId, 'rw', 'r');
 
         $this->hForumDatabase = $this->database('hForum');
 
@@ -215,8 +215,8 @@ class hFileInstallShell extends hShell {
             )
         );
 
-        $this->hUserPermissions->setGroup(1, 'rw');
-        $this->hUserPermissions->save(4, $hForumTopicId, 'rw', 'r');
+        $this->hUserPermission->setGroup(1, 'rw');
+        $this->hUserPermission->save(4, $hForumTopicId, 'rw', 'r');
 */
 
         $this->console("Making a blog...");
@@ -242,7 +242,7 @@ class hFileInstallShell extends hShell {
             )
         );
 
-        $this->hUserPermissions->save(1, $hFileId, 'rw', 'r');
+        $this->hUserPermission->save(1, $hFileId, 'rw', 'r');
 
         $this->console("Adding a Blog Post...");
 
@@ -271,7 +271,7 @@ class hFileInstallShell extends hShell {
             )
         );
 
-        $this->hUserPermissions->save(1, $hFileId, 'rw', 'r');
+        $this->hUserPermission->save(1, $hFileId, 'rw', 'r');
 
         $this->hFileUtilities = $this->library('hFile/hFileUtilities');
         $files = $this->hFileUtilities->getFiles();

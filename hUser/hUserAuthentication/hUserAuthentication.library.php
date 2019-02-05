@@ -186,10 +186,10 @@ class hUserAuthenticationLibrary extends hPlugin {
         # <p>
         #   This function determines if the <var>$userPermissionsType</var> and <var>$userPermissionsVariable</var>
         #   exists in the
-        #   <a href='/System/Framework/Hot Toddy/hUser/hUserPermissions/Database/hUserPermissionsCache/hUserPermissionsCache.sql'>hUserPermissionsCache</a>
+        #   <a href='/System/Framework/Hot Toddy/hUser/hUserPermission/Database/hUserPermissionsCache/hUserPermissionsCache.sql'>hUserPermissionsCache</a>
         #   for the specified <var>$userId</var>.  If the
         #   <var>$userPermissionsType</var> and <var>$userPermissionsVariable</var> do not exist in the
-        #   <a href='/System/Framework/Hot Toddy/hUser/hUserPermissions/Database/hUserPermissionsCache/hUserPermissionsCache.sql'>hUserPermissionsCache</a>,
+        #   <a href='/System/Framework/Hot Toddy/hUser/hUserPermission/Database/hUserPermissionsCache/hUserPermissionsCache.sql'>hUserPermissionsCache</a>,
         #   the <var>$userPermissionsValue</var> is inserted.
         # </p>
         # @end
@@ -226,10 +226,10 @@ class hUserAuthenticationLibrary extends hPlugin {
         # <h2>Getting a Value From the User Permissions Cache</h2>
         # <p>
         #   This function returns a cached value from the
-        #   <a href='/System/Framework/Hot Toddy/hUser/hUserPermissions/Database/hUserPermissionsCache/hUserPermissionsCache.sql' class='code' target='_blank'>hUserPermissionsCache</a>.  Values are
+        #   <a href='/System/Framework/Hot Toddy/hUser/hUserPermission/Database/hUserPermissionsCache/hUserPermissionsCache.sql' class='code' target='_blank'>hUserPermissionsCache</a>.  Values are
         #   first created and stored in memory in the <var>$cache</var> member property.  If the value
         #   if not found in the <var>$cache</var> array, the database table
-        #   <a href='/System/Framework/Hot Toddy/hUser/hUserPermissions/Database/hUserPermissionsCache/hUserPermissionsCache.sql' class='code' target='_blank'>hUserPermissionsCache</a>
+        #   <a href='/System/Framework/Hot Toddy/hUser/hUserPermission/Database/hUserPermissionsCache/hUserPermissionsCache.sql' class='code' target='_blank'>hUserPermissionsCache</a>
         #   is queried for the specified <var>$userId</var>, <var>$userPermissionsType</var>, and
         #   <var>$userPermissionsVariable</var>.
         # </p>

@@ -324,7 +324,7 @@ finder.info = {
             );
 
             http.post(
-                '/hUser/hUserPermissions/save', {
+                '/hUser/hUserPermission/save', {
                     resourceId : this.resourceId, 
                     resourceKey : this.resourceKey
                 }, {
