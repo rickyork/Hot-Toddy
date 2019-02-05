@@ -22,6 +22,9 @@
                 "saveInstructionsDefault",
                 "saveWindowDimensions"
             ]
+        },
+        shell : {
+            name : "Contacts Shell"
         }
     },
     source : {
