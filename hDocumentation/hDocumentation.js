@@ -204,7 +204,7 @@ var documentation = {
             function(html)
             {
                 $('p#hDocumentationActivity').slideUp();
-                $('div#hDocumentationSearchResults').html(html);
+                $('div#hDocumentationBody').html(html);
             }
         );
     },

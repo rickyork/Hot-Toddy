@@ -34,13 +34,55 @@ class hDocumentationLibrary extends hPlugin {
     private $hFileUtilities;
     private $hFileCache;
     private $hDocumentationParser;
+    private $hDashboard;
 
     public function hConstructor($options)
     {
 
-
     }
 
+    public function setUpTemplate()
+    {
+        $this->hDashboard = $this->library('hDashboard');   
+
+        $this->getPluginCSS('/Library/SyntaxHighlighter/Styles/shCore', true);
+        $this->getPluginCSS('/Library/SyntaxHighlighter/Styles/shThemeDefault', true);
+
+        $this->getPluginJavaScript('/Library/SyntaxHighlighter/Scripts/shCore', true);
+
+        $brushes = array(
+            'Bash',
+            'Css',
+            'JScript',
+            'Php',
+            'Sql',
+            'Xml',
+            'Plain'
+        );
+
+        foreach ($brushes as $brush)
+        {
+            $this->getPluginJavascript('/Library/SyntaxHighlighter/Scripts/shBrush'.$brush, true);
+        }
+
+        $this->getPluginFiles();
+        $this->getPluginCSS('/hDocumentation/CSS/Syntax Coloring', true);
+
+        $this->HotToddySideBoxHeading = 'Topics';
+        $this->HotToddySideBoxContent = $this->getTemplate('Navigation');
+    }
+
+    public function setDocument($html, $pluginNavigation = '')
+    {
+        $this->hFileDocument = $this->getTemplate(
+            'Search',
+            array(
+                'html' => $html,
+                'pluginNavigation' => $pluginNavigation
+            )
+        );    
+    }
+    
     public function getFile($documentationFileId)
     {
         # @return array

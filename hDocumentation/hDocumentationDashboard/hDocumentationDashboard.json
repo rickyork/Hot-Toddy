@@ -1,0 +1,63 @@
+{
+    plugin : {
+        name : "Hot Toddy Documentation"
+    },
+    files : [
+        {
+            title : "Installation Documentation",
+            path : "/Hot Toddy/Documentation/Installation.html",
+            user : {
+                id : 1,
+                permissions : {
+                    owner : "rw",
+                    world : "r",
+                    groups : [
+                        ["Website Administrators", "rw"]
+                    ]
+                }
+            }
+        },
+        {
+            title : "HtFS, Hot Toddy File System Documentation",
+            path : "/Hot Toddy/Documentation/HtFS.html",
+            user : {
+                id : 1,
+                permissions : {
+                    owner : "rw",
+                    world : "r",
+                    groups : [
+                        ["Website Administrators", "rw"]
+                    ]
+                }
+            }
+        },
+        {
+            title : "Framework Variables and Database Reflection Documentation",
+            path : "/Hot Toddy/Documentation/Framework Variables Reflection.html",
+            user : {
+                id : 1,
+                permissions : {
+                    owner : "rw",
+                    world : "r",
+                    groups : [
+                        ["Website Administrators", "rw"]
+                    ]
+                }
+            }
+        },
+        {
+            title : "3rd-Party Library Documentation",
+            path : "/Hot Toddy/Documentation/3rd-Party Libraries.html",
+            user : {
+                id : 1,
+                permissions : {
+                    owner : "rw",
+                    world : "r",
+                    groups : [
+                        ["Website Administrators", "rw"]
+                    ]
+                }
+            }
+        }
+    ]
+}

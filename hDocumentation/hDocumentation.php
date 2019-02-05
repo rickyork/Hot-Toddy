@@ -40,7 +40,6 @@ class hDocumentation extends hPlugin {
 
     private $hDocumentation;
     private $hFileCache;
-    private $hDashboard;
 
     public function hConstructor()
     {
@@ -55,7 +54,7 @@ class hDocumentation extends hPlugin {
         #   documentation API together.
         # </p>
 
-        $this->hDashboard = $this->library('hDashboard');
+        $this->hDocumentation = $this->library('hDocumentation');
 
         $html = '';
 
@@ -127,28 +126,6 @@ class hDocumentation extends hPlugin {
         // This is very important, don't want to parse template markup in comments.
         $this->hFileDocumentParseEnabled = false;
         
-        $this->getPluginCSS('/Library/SyntaxHighlighter/Styles/shCore', true);
-        $this->getPluginCSS('/Library/SyntaxHighlighter/Styles/shThemeDefault', true);
-
-        $this->getPluginJavaScript('/Library/SyntaxHighlighter/Scripts/shCore', true);
-
-        $brushes = array(
-            'Bash',
-            'Css',
-            'JScript',
-            'Php',
-            'Sql',
-            'Xml',
-            'Plain'
-        );
-
-        foreach ($brushes as $brush)
-        {
-            $this->getPluginJavascript('/Library/SyntaxHighlighter/Scripts/shBrush'.$brush, true);
-        }
-
-        $this->hDocumentation = $this->library('hDocumentation');
-
         if (!empty($documentationFileId))
         {
             $html = $this->hDocumentation->getFileTemplate($documentationFileId);
@@ -159,10 +136,6 @@ class hDocumentation extends hPlugin {
 
         $this->hFileTitle = 'Hot Toddy Documentation';
 
-        $this->HotToddySideBoxHeading = 'Topics';
-
-        $this->HotToddySideBoxContent = $this->getTemplate('Navigation');
-
         $pluginNavigation = '';
 
         if (empty($documentationFileId))
@@ -171,13 +144,10 @@ class hDocumentation extends hPlugin {
             $pluginNavigation = $this->hDocumentation->getNavigation();
         }
 
-        $this->hFileDocument = $this->getTemplate(
-            'Search',
-            array(
-                'html' => $html,
-                'pluginNavigation' => $pluginNavigation
-            )
-        );
+        
+        $this->hDocumentation->setUpTemplate();
+        
+        $this->hDocumentation->setDocument($html, $pluginNavigation);
     }
 }
 

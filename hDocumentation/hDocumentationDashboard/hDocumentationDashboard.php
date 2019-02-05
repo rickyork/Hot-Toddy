@@ -14,7 +14,7 @@
 #//@@@@@@\     \@@@@@|
 #//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-class hDashboardUserGuides extends hPlugin {
+class hDocumentationDashboard extends hPlugin {
 
     private $hDocumentation;
 
@@ -25,7 +25,10 @@ class hDashboardUserGuides extends hPlugin {
         $this->hDocumentation->setUpTemplate();
 
         $this->hDocumentation->setDocument(
-            $this->getTemplate($this->hFileName)
+            $this->getTemplate(
+                str_replace('.html', '', $this->hFileName)
+            ),
+            ''  
         );
     }
 }
