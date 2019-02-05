@@ -644,7 +644,7 @@ class hContactDatabase extends hPlugin {
         # @end
         $contactId = $this->hContactAddresses->selectColumn(
             'hContactId',
-            $contactInternetAccountId
+            $contactAddressId
         );
 
         $contactAddressBookId = $this->hContacts->selectColumn(
