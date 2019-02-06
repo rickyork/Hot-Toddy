@@ -17,6 +17,8 @@
 class hDashboardAccount extends hPlugin {
 
     private $hDashboard;
+    private $hForm;
+    private $hDialogue;
 
     public function hConstructor()
     {
@@ -31,7 +33,8 @@ class hDashboardAccount extends hPlugin {
             $this->hFileDocument = $this->getTemplate(
                 'Account',
                 array(
-                    'contact' => $contact
+                    'contact' => $contact,
+                    'userDialogue' => $this->getUserForm()
                 )
             );
         }
@@ -39,6 +42,60 @@ class hDashboardAccount extends hPlugin {
         {
             $this->notLoggedIn();
         }
+    }
+    
+    private function getUserForm()
+    {
+        $this->hDialogue = $this->library('hDialogue');
+        $this->hForm = $this->library('hForm');
+
+        $this->hForm
+            ->addDiv(
+                'hDashboardAdminUserAccount',
+                'Account'
+            )
+            ->addFieldset(
+                'Account Information',
+                '100%',
+                '175px,'
+            )
+                ->addTextInput(
+                    'hUserName',
+                    'User Name:',
+                    '25,255',
+                    $this->hUser->getUserName()
+                )
+                ->addTextInput(
+                    'hUserEmail',
+                    'Email Address:',
+                    '30,255',
+                    $this->hUser->getUserEmail()
+                )
+                ->addPasswordInput(
+                    'hUserOldPassword',
+                    'Old Password:',
+                    25
+                )
+                ->addPasswordInput(
+                    'hUserPassword',
+                    'New Password:',
+                    25
+                )
+                ->addPasswordInput(
+                    'hUserConfirmPassword',
+                    'Confirm New Password',
+                    25
+                );
+
+        $dialogue = $this->hDialogue
+            ->newDialogue('hDashboardAdminUser')
+            ->setForm($this->hForm)
+            ->addButtons('Save', 'Cancel')
+            ->getDialogue(nil, 'Modify User Account');
+
+        $this->hForm->reset();
+
+        return $dialogue;
     }
 }
 

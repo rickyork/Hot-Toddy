@@ -1,19 +1,44 @@
-div#HotToddyAccount {
+div#hDashboardAccount {
     padding: 10px 5px;
 }
-ul.HotToddyAccountPanel {
+ul.hDashboardAccountPanel {
     list-style: none;
     margin: 10px 0;
     padding: 10px;
     background: rgb(244, 244, 244);
     border: 1px solid rgb(233, 233, 233);
     border-radius: 4px;
+    width: 400px;
+    height: 250px;
+    position: relative;
 }
-li.HotToddyAccountLabel,
-li.HotToddyAccountData {
+li.hDashboardAccountLabel,
+li.hDashboardAccountData {
     padding: 5px;
+    float: left;
+    width: 140px;
 }
-li.HotToddyAccountAction {
-    padding: 5px;
+li.hDashboardAccountLabel {
     text-align: right;
+    width: 140px;
+    font-weight: bold;
+}
+li.hDashboardAccountData {
+    width: 240px;
+}
+li.hDashboardAccountAction {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    white-space: nowrap;
+}
+li.hDashboardAccountAction div.hDashboardActionButton {
+    position: static;
+}
+div.hDashboardAccountDataWrapper {
+    float: left;
+    margin: 0 20px 0 0;
+}
+form#hDashboardAdminUserDialogue {
+    width: 450px;
 }

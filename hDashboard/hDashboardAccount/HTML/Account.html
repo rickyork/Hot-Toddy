@@ -1,31 +1,50 @@
-<div id='HotToddyAccount'>
-    <h3>Login Information:</h3>
-    <ul class='HotToddyAccountPanel' id='HotToddyLoginPanel'>
-        <li class='HotToddyAccountLabel'>Screen Name:</li>
-        <li class='HotToddyAccountData'>{user.getUserName()}</li>
-        <li class='HotToddyAccountLabel'>Email Address:</li>
-        <li class='HotToddyAccountData'>{user.getUserEmail()}</li>
-        <li class='HotToddyAccountLabel'>Password:</li>
-        <li class='HotToddyAccountData'>&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;</li>
-        <li class='HotToddyAccountAction'>
-            <span id='HotToddyAccountEditLogin'>Edit Login</span>
-        </li>
-    </ul>
-    <h3>Contact Information:</h3>
-    <ul class='HotToddyAccountPanel' id='HotToddyContactPanel'>
-        <li class='HotToddyAccountLabel'>Name:</li>
-        <li class='HotToddyAccountData'>{contact.hContactDisplayName}</li>
-        {contact.hContactTitle?<li class='HotToddyAccountLabel'>Title:</li>
-        <li class='HotToddyAccountData'>{contact.hContactTitle}</li>}
-        {contact.hContactDepartment?<li class='HotToddyAccountLabel'>Department:</li>
-        <li class='HotToddyAccountData'>{contact.hContactDepartment}</li>}
-        {contact.hContactCompany?<li class='HotToddyAccountLabel'>Company:</li>
-        <li class='HotToddyAccountData'>{contact.hContactCompany}</li>}
-        {contact.hContactDateOfBirth?<li class='HotToddyAccountLabel'>Date of Birth:</li>
-        <li class='HotToddyAccountData'>{contact.hContactDateOfBirthFormatted}</li>}
-        
-        <li class='HotToddyAccountAction'>
-            <span id='HotToddyAccountEditLogin'>Edit Contact Information</span>
-        </li>
-    </ul>
+<div id='hDashboardAccount'>
+    <div class='hDashboardAccountDataWrapper'>
+        <h3>Login Information:</h3>
+        <ul class='hDashboardAccountPanel' id='hDashboardLoginPanel'>
+            <li class='hDashboardAccountLabel'>User Name:</li>
+            <li class='hDashboardAccountData'>{user.getUserName()}</li>
+            <li class='hDashboardAccountLabel'>Email Address:</li>
+            <li class='hDashboardAccountData'>{user.getUserEmail()}</li>
+            <li class='hDashboardAccountLabel'>Password:</li>
+            <li class='hDashboardAccountData'>&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;</li>
+            <li class='hDashboardAccountAction'>
+                <div id='hDashboardAccountEditLogin' class="hDashboardButton hDashboardActionButton">
+                    <span>Edit Login</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class='hDashboardAccountDataWrapper'>
+        <h3>Contact Information:</h3>
+        <ul class='hDashboardAccountPanel' id='hDashboardContactPanel'>
+            <li class='hDashboardAccountLabel'>Name:</li>
+            <li class='hDashboardAccountData'>{contact.hContactDisplayName}</li>
+            {contact.hContactTitle?
+                <li class='hDashboardAccountLabel'>Title:</li>
+                <li class='hDashboardAccountData'>{contact.hContactTitle}</li>
+            }
+            {contact.hContactDepartment?
+                <li class='hDashboardAccountLabel'>Department:</li>
+                <li class='hDashboardAccountData'>{contact.hContactDepartment}</li>
+            }
+            {contact.hContactCompany?
+                <li class='hDashboardAccountLabel'>Company:</li>
+                <li class='hDashboardAccountData'>{contact.hContactCompany}</li>
+            }
+            {contact.hContactWebsite?
+                <li class='hDashboardAccountLabel'>Website:</li>
+                <li class='hDashboardAccountData'><a href='{contact.hContactWebsite}' target='_blank'>{contact.hContactWebsite}</a></li>
+            }
+            {contact.hContactDateOfBirth?<li class='hDashboardAccountLabel'>Date of Birth:</li>
+            <li class='hDashboardAccountData'>{contact.hContactDateOfBirthFormatted}</li>}
+            
+            <li class='hDashboardAccountAction'>
+                <div id='hDashboardAccountEditContactInformation' class="hDashboardButton hDashboardActionButton">
+                    <span>Edit Contact Information</span>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
+{userDialogue}

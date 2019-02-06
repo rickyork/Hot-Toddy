@@ -1,0 +1,50 @@
+<p>
+    Hot Toddy is installed from the command line using the 
+    <a href='https://github.com/rickyork/Hot-Toddy/blob/master/install' class='code' target='_blank'>install</a>
+    script.
+</p>
+<h4>Installing Hot Toddy on Mac OS X</h4>
+<p>
+    The installer has not been tested on a Linux system, though it has worked on Linux in the 
+    past. It has been a very long time since it was tested on Windows, it makes extensive use
+    of shell commands like mkdir and chmod. Do not expect this framework to work with a 
+    Windows server. It is made for Mac OS X. It will run on Linux, it just won't have app icons
+    in the Finder app.
+</p>
+<p>
+    Hot Toddy makes use of OS X features, whenever possible, for example, it pulls out application 
+    icons from the OS to use as icons in framework applications.
+</p>
+<p>
+    To install Hot Toddy:
+</p>
+<ol>
+    <li>
+        Copy and paste or download the 
+        <a href='https://github.com/rickyork/Hot-Toddy/blob/master/install' class='code' target='_blank'>install</a> 
+        script to a new file called 'install'. The install script is located in the same folder 
+        this README appears in. Don't bother cloning the git repository yet. The install script 
+        will do that for you.
+    </li>
+    <li>
+        Configure the install script with all the right settings. It should be obvious to you. Hot
+        Toddy is made for Apache and MySQL. Everything is hand tailored to a Mac, Apache, and MySQL
+        server environment. 
+    </li>
+    <li>
+        Make the install script executable with chmod 775.
+    </li>
+    <li>
+        Run the install script from the command line with root privileges.
+        <code>
+# sudo ./install</code>
+    </li>
+</ol>
+<p>
+    If you want to disable the OS X Server Apache install and use a custom install or MAMP, run 
+    the following:
+</p>
+<code>
+    # sudo launchctl unload -w /Applications/Server.app/Contents/ServerRoot/System/Library/LaunchDaemons/com.apple.serviceproxy.plist
+    # sudo launchctl unload -w /Applications/Server.app/Contents/ServerRoot/System/Library/LaunchDaemons/com.apple.server.httpd.plist
+</code>
