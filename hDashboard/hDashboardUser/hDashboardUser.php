@@ -193,13 +193,23 @@ class hDashboardUser extends hPlugin {
                     'Address Location:',
                     $this->hContactAddresses->getFields()
                 )
+                ->addTextInput(
+                    array(
+                        'id' => 'hContactPhoneNumber-0',
+                        'class' => 'hContactPhoneNumber',
+                        'name' => 'hContactPhoneNumber[]'
+                    ),
+                    'Phone Number:', 
+                    '20,20'
+                )
                 ->addTextareaInput(
                     array(
                         'id' => 'hContactAddressStreet-0',
                         'class' => 'hContactAddressStreet',
                         'name' => 'hContactAddressStreet[]'
                     ),
-                    'Street:', '35,2'
+                    'Street:', 
+                    '35,2'
                 )
                 ->addTextInput(
                     array(
@@ -227,7 +237,6 @@ class hDashboardUser extends hPlugin {
                     'Postal Code:',
                     '25,15'
                 )
-                ->addTableCell('')
                 ->addSelectCountry(
                     array(
                         'id' => 'hLocationCountryId-0',

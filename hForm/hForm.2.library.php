@@ -589,7 +589,7 @@ class hFormLibrary extends hFrameworkApplication {
         # @description
         # <h2>Setting a Form Variable</h2>
         # <p>
-        #
+        #   
         # </p>
         # @end
 
@@ -717,14 +717,14 @@ class hFormLibrary extends hFrameworkApplication {
         #     This is also useful for giving certain fields extra class names beyond what might be applied
         #     by default.
         # </p>
-        # <h4>Specifying <var>size/maxsize</var> and <var>cols/rows</var> for Form Inputs</h4>
+        # <h4>Specifying <var>size/maxlength</var> and <var>cols/rows</var> for Form Inputs</h4>
         # <p>
         #     Methods accepting a <var>$size</var> argument, by default sets the <var>size</var>
         #     attribute.
         # </p>
         # <p>
-        #     It may also be used to specify the <var>maxsize</var> attribute.  The following table
-        #     reveals how <var>size</var> and <var>maxsize</var> attributes can be specified using
+        #     It may also be used to specify the <var>maxlength</var> attribute.  The following table
+        #     reveals how <var>size</var> and <var>maxlength</var> attributes can be specified using
         #     the <var>$size</var> argument.
         # </p>
         # <table>
@@ -737,12 +737,12 @@ class hFormLibrary extends hFrameworkApplication {
         #     </thead>
         #     <tbody class='code'>
         #         <tr>
-        #             <td>$size = "size,maxsize"</td>
-        #             <td>size="size" maxsize="maxsize"</td>
+        #             <td>$size = "size,maxlength"</td>
+        #             <td>size="size" maxlength="maxlength"</td>
         #         </tr>
         #         <tr>
-        #             <td>$size = ",maxsize"</td>
-        #             <td>maxsize="maxsize"</td>
+        #             <td>$size = ",maxlength"</td>
+        #             <td>maxlength="maxlength"</td>
         #         </tr>
         #     </tbody>
         # </table>
@@ -913,7 +913,7 @@ class hFormLibrary extends hFrameworkApplication {
         );
     }
 
-    public function &addColorInput($attributes, $labelPlaceholder, $sizeMaxSize = '25,255', $value = nil)
+    public function &addColorInput($attributes, $labelPlaceholder, $sizeMaxLength = '25,255', $value = nil)
     {
         # @return hFormLibrary
 
@@ -1016,7 +1016,7 @@ class hFormLibrary extends hFrameworkApplication {
         );
     }
 
-    public function &addEmailInput($attributes, $labelPlaceholder, $sizeMaxSize = '25,255', $value = nil)
+    public function &addEmailInput($attributes, $labelPlaceholder, $sizeMaxLength = '25,255', $value = nil)
     {
         # @return hFormLibrary
 
@@ -1032,7 +1032,7 @@ class hFormLibrary extends hFrameworkApplication {
         );
     }
 
-    public function &addFileInput($attributes, $labelPlaceholder, $sizeMaxSizeAccept = 25, $value = nil)
+    public function &addFileInput($attributes, $labelPlaceholder, $sizeMaxLengthAccept = 25, $value = nil)
     {
         # @return hFormLibrary
 
@@ -1242,7 +1242,7 @@ class hFormLibrary extends hFrameworkApplication {
         );
     }
 
-    public function &addPasswordInput($attributes, $labelPlaceholder, $sizeMaxSize = 25, $value = nil)
+    public function &addPasswordInput($attributes, $labelPlaceholder, $sizeMaxLength = 25, $value = nil)
     {
         # @return hFormLibrary
 
@@ -1258,7 +1258,7 @@ class hFormLibrary extends hFrameworkApplication {
         );
     }
 
-    public function &addPhoneInput($attributes, $labelPlaceholder, $sizeMaxSize = '25,255', $value = nil)
+    public function &addPhoneInput($attributes, $labelPlaceholder, $sizeMaxLength = '25,255', $value = nil)
     {
         # @return hFormLibrary
 
@@ -1306,7 +1306,7 @@ class hFormLibrary extends hFrameworkApplication {
         );
     }
 
-    public function &addSearchInput($attributes, $labelPlaceholder, $sizeMaxSize = '25,255', $value = nil)
+    public function &addSearchInput($attributes, $labelPlaceholder, $sizeMaxLength = '25,255', $value = nil)
     {
         # @return hFormLibrary
 
@@ -1462,7 +1462,7 @@ class hFormLibrary extends hFrameworkApplication {
         );
     }
 
-    public function &addTelephoneInput($attributes, $labelPlaceholder, $sizeMaxSize = 25, $value = nil)
+    public function &addTelephoneInput($attributes, $labelPlaceholder, $sizeMaxLength = 25, $value = nil)
     {
         # @return hFormLibrary
 
@@ -1478,7 +1478,7 @@ class hFormLibrary extends hFrameworkApplication {
         );
     }
 
-    public function &addTextInput($attributes, $labelPlaceholder, $sizeMaxSize = '25,255', $value = nil)
+    public function &addTextInput($attributes, $labelPlaceholder, $sizeMaxLength = '25,255', $value = nil)
     {
         # @return hFormLibrary
 
@@ -1527,7 +1527,7 @@ class hFormLibrary extends hFrameworkApplication {
         );
     }
 
-    public function &addUrlInput($attributes, $labelPlaceholder, $sizeMaxSize = '25,255', $value = nil)
+    public function &addUrlInput($attributes, $labelPlaceholder, $sizeMaxLength = '25,255', $value = nil)
     {
         # @return hFormLibrary
 
@@ -1638,7 +1638,7 @@ class hFormLibrary extends hFrameworkApplication {
                     break;
                 }
                 case 'minMaxStep':
-                case 'sizeMaxSize':
+                case 'sizeMaxLength':
                 case 'colsRows':
                 case 'size':
                 {
@@ -1780,8 +1780,6 @@ class hFormLibrary extends hFrameworkApplication {
 
         if ($addLabel && isset($label))
         {
-//            $this->addInputLabel(isset($attributes['id'])? $attributes['id'] : nil, $label, $attributes);
-
             $this->addInputLabel(
                 isset($attributes['id']) ? $attributes['id'] : nil,
                 $label,
@@ -1802,7 +1800,7 @@ class hFormLibrary extends hFrameworkApplication {
                         $numbers,
                         array(
                             'size',
-                            'maxsize'
+                            'maxlength'
                         ),
                         $attributes
                     );
