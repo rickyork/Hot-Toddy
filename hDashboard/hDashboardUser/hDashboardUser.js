@@ -294,6 +294,10 @@ dashboard.user = {
                 $('input#hUserName').val(json.hUserName);
                 $('input#hUserEmail').val(json.hUserEmail);
 
+                $('input#hContactPhoneNumberHome').val('');
+                $('input#hContactPhoneNumberWork').val('');
+                $('input#hContactPhoneNumberFax').val('');
+
                 for (var offset in json.hContactPhoneNumbers)
                 {    
                     var phone = json.hContactPhoneNumbers[offset];
@@ -417,17 +421,35 @@ dashboard.user = {
         $('input#hContactDepartment').val('');
         $('input#hContactWebsite').val('');
 
-        $('input[name="hContactGender"]').removeAttr('checked');
+        $('input[name="hContactGender"]')
+            .removeAttr('checked')
+            .first()
+                .attr('checked', 'checked');
 
         $('input#hUserName').val('');
         $('input#hUserEmail').val('');
         $('input#hUserPassword').val('');
         $('input#hUserPasswordConfirm').val('');
         
+        $('input#hContactPhoneNumberHome').val('');
+        $('input#hContactPhoneNumberWork').val('');
+        $('input#hContactPhoneNumberFax').val('');
+
         $('textarea#hContactAddressStreet').val('');
+
         $('input#hContactAddressCity').val('');
-        $('select#hLocationStateId').val('0');
+
+        $('select#hLocationStateId option')
+            .first()
+            .attr('selected', 'selected');
+            
         $('input#hContactAddressPostalCode').val('');
+        
+        $('select#hLocationCountryId option')
+            .first()
+            .attr('selected', 'selected');
+        
+        $('select#hUserGroups').html('');
     },
     
     save : function()
@@ -437,12 +459,44 @@ dashboard.user = {
         var post = $('form#HotToddyAdminUserDialogue').serialize();
 
         application.status.message('Saving User Account...');
+        
+        var groups = [];
+        
+        $('select#hUserGroups option').each(
+            function()
+            {
+                groups.push($(this).attr('value'));
+            }
+        );
 
         http.post(
             '/hDashboard/hDashboardUser/save', {
                 userId : this.id  
             }, {
-                hContactFirstName : $('input#hContactFirstName').val()
+                hContactFirstName : $('input#hContactFirstName').val(),
+                hContactLastName : $('input#hContactLastName').val(),
+                hContactCompany : $('input#hContactCompany').val(),
+                hContactTitle : $('input#hContactTitle').val(),
+                hContactDepartment : $('input#hContactDepartment').val(),
+                hContactWebsite : $('input#hContactWebsite').val(),
+                hContactGender : $('input[name="hContactGender"]:checked').val(),
+
+                hUserName : $('input#hUserName').val(),
+                hUserEmail : $('input#hUserEmail').val(),
+                hUserPassword : $('input#hUserPassword').val(),
+                hUserPasswordConfirm : $('input#hUserPasswordConfirm').val(),
+        
+                hContactPhoneNumberHome : $('input#hContactPhoneNumberHome').val(),
+                hContactPhoneNumberWork : $('input#hContactPhoneNumberWork').val(),
+                hContactPhoneNumberFax : $('input#hContactPhoneNumberFax').val(),
+
+                hContactAddressStreet : $('textarea#hContactAddressStreet').val(),
+                hContactAddressCity : $('input#hContactAddressCity').val(),
+                hLocationStateId : $('select#hLocationStateId option').val(),
+                hContactAddressPostalCode : $('input#hContactAddressPostalCode').val(),
+                hLocationCountryId : $('select#hLocationCountryId option').val(),
+
+                hUserGroups : groups 
             },
             function(json)
             {

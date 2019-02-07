@@ -23,6 +23,11 @@ in the Finder app.
 Hot Toddy makes use of OS X features, whenever possible, for example, it pulls out application 
 icons from the OS to use as icons in framework applications.
 
+Hot Toddy documentation installs with the framework, and is available once the framework is 
+fully installed. 
+
+To get started you'll need to have Apache and MySQL already up and running. 
+
 To install Hot Toddy:
 
 1. Copy and paste or download the install script to a new file called 'install'. The install 
