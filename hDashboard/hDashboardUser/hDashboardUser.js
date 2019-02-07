@@ -26,35 +26,35 @@ dashboard.user = {
                 $('form#HotToddyAdminUserDialogue').openDialogue(true);
             }
         );
-        
+
         $('input#HotToddyAdminUserDialogueCancel').click(
-            function(e)
+            function(event)
             {
-                e.preventDefault();
+                event.preventDefault();
                 $('form#HotToddyAdminUserDialogue').closeDialogue(true);
             }
         );
-        
+
         $('input#HotToddyAdminUserDialogueSave').click(
-            function(e)
+            function(event)
             {
-                e.preventDefault();
+                event.preventDefault();
                 dashboard.user.save();
             }
         );
 
         $('input#HotToddyAdminGroupDialogueCancel').click(
-            function(e)
+            function(event)
             {
-                e.preventDefault();
+                event.preventDefault();
                 $('form#HotToddyAdminGroupDialogue').closeDialogue(true);
             }
         );
         
         $('input#HotToddyAdminGroupDialogueSave').click(
-            function(e)
+            function(event)
             {
-                e.preventDefault();
+                event.preventDefault();
             }
         );
         
@@ -62,7 +62,7 @@ dashboard.user = {
             function()
             {
                 $('input#hUserGroupName').val('');
-                $('input#hUserGroupEmail').val('');   
+                $('input#hUserGroupEmail').val('');
                 $('form#HotToddyAdminGroupDialogue').openDialogue(true);
             }
         );
@@ -71,19 +71,23 @@ dashboard.user = {
             .on(
                 'click',
                 'ul.hPaginationNavigation a',
-                function(e)
+                function(event)
                 {
-                    e.preventDefault();
-                    dashboard.user.get(dashboard.letter, this.href.split('=').pop());
+                    event.preventDefault();
+
+                    dashboard.user.get(
+                        dashboard.letter,
+                        this.href.split('=').pop()
+                    );
                 }
-            )        
+            )
             .on(
                 'click',
                 'span.hDashboardUserAccountEdit',
-                function(e)
+                function(event)
                 {
-                    e.stopPropagation();
-                    e.preventDefault();
+                    event.stopPropagation();
+                    event.preventDefault();
 
                     dashboard.user.getUser(
                         $(this).parents('tr:first').attr('data-userId')
@@ -93,30 +97,30 @@ dashboard.user = {
             .on(
                 'click',
                 'span.hDashboardUserAccountEnable',
-                function(e)
+                function(event)
                 {
-                    e.preventDefault();
-                    e.stopPropagation();
+                    event.preventDefault();
+                    event.stopPropagation();
                     dashboard.user.enable($(this).parents('tr:first').attr('data-userId'));
                 }
             )
             .on(
                 'click',
                 'span.hDashboardUserAccountDisable',
-                function(e)
+                function(event)
                 {
-                    e.preventDefault();
-                    e.stopPropagation();
+                    event.preventDefault();
+                    event.stopPropagation();
                     dashboard.user.disable($(this).parents('tr:first').attr('data-userId'));
                 }
             )
             .on(
                 'click',
                 'span.hDashboardUserAccountDelete',
-                function(e)
+                function(event)
                 {
-                    e.stopPropagation();
-                    e.preventDefault();
+                    event.stopPropagation();
+                    event.preventDefault();
                     dashboard.user.deleteUser($(this).parents('tr:first').attr('data-userId'));
                 }
             )
@@ -170,16 +174,16 @@ dashboard.user = {
             );
             
         $('input#hUserGroupsAdd').click(
-            function(e)
+            function(event)
             {
-                e.preventDefault();
+                event.preventDefault();
             }
         );
 
         $('input#hUserGroupsRemove').click(
-            function(e)
+            function(event)
             {
-                e.preventDefault();
+                event.preventDefault();
                 dashboard.user.removeGroups();
             }
         );
@@ -213,19 +217,22 @@ dashboard.user = {
             {
                 if (this.letter)
                 {
-                    $('li.hDashboardUserAccountGroupSelected').removeClass('hDashboardUserAccountGroupSelected');
+                    $('li.hDashboardUserAccountGroupSelected')
+                        .removeClass('hDashboardUserAccountGroupSelected');
                 }
-            
+
                 if (json.users)
                 {
-                    $('div#hDashboardUsers').html(json.users);
+                    $('div#hDashboardUsers')
+                        .html(json.users);
                 }
 
                 if (json.pagination)
                 {
-                    $('div#hDashboardUserPagination').html(json.pagination);
+                    $('div#hDashboardUserPagination')
+                        .html(json.pagination);
                 }
-                
+
                 if (!$('ul.hPaginationNavigation a').length)
                 {
                     $('div#hDashboardUserPagination').hide();
@@ -234,7 +241,7 @@ dashboard.user = {
                 {
                     $('div#hDashboardUserPagination').show();
                 }
-                
+
                 this.toggleEnabledDisabledVisability();
             },
             this
@@ -254,6 +261,8 @@ dashboard.user = {
             },
             function(json)
             {
+                hot.console.log(json);
+                
                 $('input#hContactFirstName').val(json.hContactFirstName);
                 $('input#hContactLastName').val(json.hContactLastName);
                 $('input#hContactCompany').val(json.hContactCompany);
@@ -284,7 +293,84 @@ dashboard.user = {
 
                 $('input#hUserName').val(json.hUserName);
                 $('input#hUserEmail').val(json.hUserEmail);
+
+                for (var offset in json.hContactPhoneNumbers)
+                {    
+                    var phone = json.hContactPhoneNumbers[offset];
+
+                    switch (parseInt(phone.hContactFieldId))
+                    {
+                        case 4:
+                        {
+                            $('input#hContactPhoneNumberHome').val(
+                                phone.hContactPhoneNumber
+                            );
+                            
+                            break;
+                        }
+                        case 6:
+                        {
+                            $('input#hContactPhoneNumberWork').val(
+                                phone.hContactPhoneNumber
+                            );
+                            
+                            break;
+                        }
+                        case 9:
+                        {
+                            $('input#hContactPhoneNumberFax').val(
+                                phone.hContactPhoneNumber
+                            )
+                            
+                            break;
+                        }
+                    }   
+                }
+
+                $('textarea#hContactAddressStreet').html('');
+                $('input#hContactAddressCity').val('');
                 
+                $('select#hLocationStateId option')
+                    .removeAttr('selected')
+                    .first()
+                        .attr('selected', 'selected');
+                    
+                $('input#hContactAddressPostalCode').val('');
+                
+                $('select#hLocationCountryId option')
+                    .removeAttr('selected')
+                    .first()
+                        .attr('selected', 'selected');
+                    
+                for (var offset in json.hContactAddresses)
+                {
+                    var address = json.hContactAddresses[offset];
+                    
+                    $('textarea#hContactAddressStreet').html(address.hContactAddressStreet);
+                    $('input#hContactAddressCity').val(address.hContactAddressCity);
+                    $('select#hLocationStateId option').each(
+                        function()
+                        {
+                            if ($(this).val() == address.hLocationStateId)
+                            {
+                                $(this).attr('selected', 'selected');
+                            }
+                        }
+                    );
+                    
+                    $('input#hContactAddressPostalCode').val(address.hContactAddressPostalCode);
+                    
+                    $('select#hLocationCountryId option').each(
+                        function()
+                        {
+                            if ($(this).val() == address.hLocationCountryId)
+                            {
+                                $(this).attr('selected', 'selected');
+                            }
+                        }
+                    );
+                }
+
                 $('select#hUserGroups').html('');
                 
                 if (json.hUserGroups && json.hUserGroups.length)

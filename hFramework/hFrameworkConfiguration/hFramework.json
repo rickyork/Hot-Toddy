@@ -95,5 +95,8 @@
 
     hUserAgentEnabled : true,
     hFileStatisticsEnabled : true,
-    hUserActivityLogEnabled : true
+    hUserActivityLogEnabled : true,
+    hPluginVersions : {
+        hFormLibrary : 2
+    }
 }

@@ -126,3 +126,6 @@ select#hUserGroupsSource {
 input#hUserGroupsAdd {
     float: right;
 }
+div#HotToddyAdminUserAddress {
+    display: none;
+}

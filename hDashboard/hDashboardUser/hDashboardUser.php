@@ -180,31 +180,45 @@ class hDashboardUser extends hPlugin {
                 'Address'
             )
             ->addFieldset(
+                'Phone Numbers',
+                '100%',
+                '175px,'
+            )
+                ->addTextInput(
+                    array(
+                        'id' => 'hContactPhoneNumberHome',
+                        'class' => 'hContactPhoneNumber',
+                        'name' => 'hContactPhoneNumber[]'
+                    ),
+                    'Home Number:', 
+                    '20,20'
+                )
+                ->addTextInput(
+                    array(
+                        'id' => 'hContactPhoneNumberWork',
+                        'class' => 'hContactPhoneNumber',
+                        'name' => 'hContactPhoneNumber[]'
+                    ),
+                    'Work Number:', 
+                    '20,20'
+                )
+                ->addTextInput(
+                    array(
+                        'id' => 'hContactPhoneNumberFax',
+                        'class' => 'hContactPhoneNumber',
+                        'name' => 'hContactPhoneNumber[]'
+                    ),
+                    'Fax Number:', 
+                    '20,20'
+                )
+            ->addFieldset(
                 'Address',
                 '100%',
                 '175px,'
             )
-                ->addSelectInput(
-                    array(
-                        'id' => 'hContactFieldId-0',
-                        'class' => 'hContactFieldId',
-                        'name' => 'hContactFieldId[]'
-                    ),
-                    'Address Location:',
-                    $this->hContactAddresses->getFields()
-                )
-                ->addTextInput(
-                    array(
-                        'id' => 'hContactPhoneNumber-0',
-                        'class' => 'hContactPhoneNumber',
-                        'name' => 'hContactPhoneNumber[]'
-                    ),
-                    'Phone Number:', 
-                    '20,20'
-                )
                 ->addTextareaInput(
                     array(
-                        'id' => 'hContactAddressStreet-0',
+                        'id' => 'hContactAddressStreet',
                         'class' => 'hContactAddressStreet',
                         'name' => 'hContactAddressStreet[]'
                     ),
@@ -213,7 +227,7 @@ class hDashboardUser extends hPlugin {
                 )
                 ->addTextInput(
                     array(
-                        'id' => 'hContactAddressCity-0',
+                        'id' => 'hContactAddressCity',
                         'class' => 'hContactAddressCity',
                         'name' => 'hContactAddressCity[]'
                     ),
@@ -222,7 +236,7 @@ class hDashboardUser extends hPlugin {
                 )
                 ->addSelectState(
                     array(
-                        'id' => 'hLocationStateId-0',
+                        'id' => 'hLocationStateId',
                         'class' => 'hLocationStateId',
                         'name' => 'hLocationStateId[]'
                     ),
@@ -230,24 +244,26 @@ class hDashboardUser extends hPlugin {
                 )
                 ->addTextInput(
                     array(
-                        'id ' => 'hContactAddressPostalCode-0',
+                        'id ' => 'hContactAddressPostalCode',
                         'class' => 'hContactAddressPostalCode',
                         'name' => 'hContactAddressPostalCode[]'
                     ),
                     'Postal Code:',
-                    '25,15'
+                    '16,15'
                 )
                 ->addSelectCountry(
                     array(
-                        'id' => 'hLocationCountryId-0',
+                        'id' => 'hLocationCountryId',
                         'class' => 'hLocationCountryId',
                         'name' => 'hLocationCountryId[]'
                     )
                 )
+/*
             ->addFieldset('', '100%', '100%', 'HotToddyAdminUserAddressControls')
                 ->addTableCell(
                     $this->getTemplate('Address Controls')
                 )
+*/
 
             ->addDiv(
                 'HotToddyAdminUserGroups',
@@ -317,7 +333,7 @@ class hDashboardUser extends hPlugin {
                 //->addPasswordInput('hUserGroupPasswordConfirm', 'Confirm Group Password:', 40);
 
         $dialogue = $this->hDialogue
-            ->newDialogue('HotToddyAdminGroup')
+            ->newDialogue('hDashboardAdminGroup')
             ->setForm($this->hForm)
             ->addButtons('Save', 'Cancel')
             ->getDialogue(nil, 'Create/Modify Group');

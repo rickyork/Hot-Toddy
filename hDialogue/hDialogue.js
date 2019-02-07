@@ -181,6 +181,15 @@ $.fn.extend({
             this,
             arguments
         );
+        
+        if (this.find('ul.hDialogueTabs').length)
+        {
+            this.find('ul.hDialogueTabs')
+                .children('li.hDialogueTab')
+                .first()
+                    .select('hDialogueTab')
+                    .click();
+        }
 
         // Whether or not the dialogue is modal
         if (options.isModal)

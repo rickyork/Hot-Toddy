@@ -2727,7 +2727,7 @@ class hFormLibrary extends hFrameworkApplication {
 
         return $this->hLocation->getCountries(
             true,
-            'Please select a country'
+            'Please select a Country'
         );
     }
 
